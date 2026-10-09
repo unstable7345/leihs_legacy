@@ -17,6 +17,9 @@ class Manage::AvailabilityController < Manage::ApplicationController
           model
             .availability_in(current_inventory_pool)
             .available_total_quantities,
+        # availability per time window booked by the reservations, keyed by
+        # "start_time-end_time" (empty without time slot reservations)
+        changes_by_window: changes_by_window(model),
         total_rentable: \
           model
             .items
@@ -64,6 +67,21 @@ class Manage::AvailabilityController < Manage::ApplicationController
         model_id: model.id
     end
     render :index
+  end
+
+  private
+
+  def changes_by_window(model)
+    running = current_inventory_pool.running_reservations.where(model_id: model.id)
+    Availability::Main
+      .time_windows_to_check(running, nil)
+      .compact
+      .to_h do |window|
+        [window.join('-'),
+         model
+           .availability_in(current_inventory_pool, time_window: window)
+           .available_total_quantities]
+      end
   end
 
 end

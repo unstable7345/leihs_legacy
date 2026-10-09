@@ -8,6 +8,13 @@ window.TimelineRenderReservations = {
       <span key='label'>{label}</span>
     ]
 
+    var timeSlot = TimelineUtil.timeSlotLabel(rr)
+    if(timeSlot) {
+      elements.push(
+        <span key='time_slot' style={{marginLeft: '10px', fontWeight: 'bold'}}>{timeSlot}</span>
+      )
+    }
+
     var inventoryCode = TimelineUtil.inventoryCode(timeline_availability, rr)
     if(inventoryCode) {
       elements.push(

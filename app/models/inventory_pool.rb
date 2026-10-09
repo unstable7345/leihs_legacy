@@ -122,6 +122,8 @@ class InventoryPool < ApplicationRecord
      reservations.quantity,
      reservations.start_date,
      reservations.end_date,
+     reservations.start_time,
+     reservations.end_time,
      reservations.returned_date,
      reservations.status,
      ARRAY(

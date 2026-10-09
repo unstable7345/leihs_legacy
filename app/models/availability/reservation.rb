@@ -5,6 +5,11 @@ module Availability
 
     #################################
 
+    # [start_time, end_time] for a time slot reservation, nil for whole days
+    def time_window
+      [start_time, end_time] if start_time and end_time
+    end
+
     def timeout?
       status == :unsubmitted and
         (updated_at < (Time.zone.now - Setting.first.timeout_minutes.minutes))
@@ -37,19 +42,22 @@ module Availability
         else
           # if an item is already assigned, but the start_date is in the future,
           # we only consider the real start-end range dates
-          a = model.availability_in(inventory_pool)
-          # NOTE doesn't work self.allocated_group_id because
-          # is not a running_reservation
-          group_id = \
-            a.running_reservations.detect { |x| x == self }.allocated_group_id
+          model
+            .availabilities_in(inventory_pool, time_window: time_window)
+            .all? do |a|
+              # NOTE doesn't work self.allocated_group_id because
+              # is not a running_reservation
+              group_id = \
+                a.running_reservations.detect { |x| x == self }.allocated_group_id
 
-          # first we check if the user is member of the
-          # allocated group (if false, then it's a soft-overbooking)
-          (group_id.nil? or self.user.entitlement_group_ids.include?(group_id)) and
-            # then we check if all changes related to the time range
-            # and allocated group are non-negative (then it's a real-overbooking)
-            a.changes.between(start_date, end_date)
-              .all? { |k, v| v[group_id][:in_quantity] >= 0 }
+              # first we check if the user is member of the
+              # allocated group (if false, then it's a soft-overbooking)
+              (group_id.nil? or self.user.entitlement_group_ids.include?(group_id)) and
+                # then we check if all changes related to the time range
+                # and allocated group are non-negative (then it's a real-overbooking)
+                a.changes.between(start_date, end_date)
+                  .all? { |k, v| v[group_id][:in_quantity] >= 0 }
+            end
         end
 
       # OPTIMIZE
@@ -67,10 +75,13 @@ module Availability
 
     def maximum_available_quantity
       model
-        .availability_in(inventory_pool)
-        .maximum_available_in_period_for_groups(start_date,
-                                                end_date,
-                                                entitlement_group_ids)
+        .availabilities_in(inventory_pool, time_window: time_window)
+        .map do |a|
+          a.maximum_available_in_period_for_groups(start_date,
+                                                   end_date,
+                                                   entitlement_group_ids)
+        end
+        .min
     end
 
   end

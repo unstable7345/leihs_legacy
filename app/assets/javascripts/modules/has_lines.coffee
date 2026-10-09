@@ -22,7 +22,8 @@ App.Modules.HasLines =
   groupByDateRange: (reservations, mergeModels = false, actionDate = false)->
     return [] if reservations.length is 0
     hash = {}
-    (hash[JSON.stringify {start_date: reservation.start_date, end_date: reservation.end_date}] ?= []).push(reservation) for reservation in reservations
+    # time slot reservations are grouped separately (null for whole days)
+    (hash[JSON.stringify {start_date: reservation.start_date, end_date: reservation.end_date, start_time: reservation.start_time ? null, end_time: reservation.end_time ? null}] ?= []).push(reservation) for reservation in reservations
     result = []
     $.each hash, (key, value) ->
       key_obj = JSON.parse key
@@ -34,7 +35,7 @@ App.Modules.HasLines =
         v2 = "#{r2.model().name()} #{r2.id}"
         if v1 < v2 then -1 else 1
 
-      result.push {start_date: key_obj.start_date, end_date: key_obj.end_date, reservations: reservations}
+      result.push {start_date: key_obj.start_date, end_date: key_obj.end_date, start_time: key_obj.start_time, end_time: key_obj.end_time, reservations: reservations}
     result.sort (a,b)->
       if moment(a.start_date).toDate() < moment(b.start_date).toDate()
         return false

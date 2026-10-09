@@ -12,6 +12,8 @@
           \-
           = l(dates[1], :format => "%A")
           = l(dates[1])
+          - if dates[2].present?
+            %strong= "#{dates[2][0, 5]}–#{dates[3][0, 5]}"
           
       .col1of2.padding-inset-s.text-align-right
         %p.paragraph-s.inline

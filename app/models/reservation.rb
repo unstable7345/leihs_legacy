@@ -81,6 +81,20 @@ class Reservation < ApplicationRecord
     end
   end
 
+  # Time slot as plain "HH:MM:SS" strings (a time of day, not to be converted
+  # between time zones like Rails does for time columns by default).
+  attribute :start_time, :string
+  attribute :end_time, :string
+
+  # A time slot only exists for a single day. If the dates are changed to a
+  # range (e.g. hand over earlier), the reservation becomes a whole-day one.
+  before_validation do
+    if start_time and start_date != end_date
+      self.start_time = nil
+      self.end_time = nil
+    end
+  end
+
   validates_numericality_of :quantity, greater_than: 0, only_integer: true
   validates_presence_of :user, :inventory_pool, :status
   validates_presence_of(:contract,

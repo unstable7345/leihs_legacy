@@ -156,7 +156,10 @@ class Manage::UsersController < Manage::ApplicationController
     @user = User.find(params[:id]) if params[:id]
     @group_ids = @user.entitlement_group_ids
     yield
-    @grouped_lines = @reservations.group_by { |g| [g.start_date, g.end_date] }
+    @grouped_lines = @reservations.group_by do |g|
+      # time slot reservations are grouped separately ("" for whole days)
+      [g.start_date, g.end_date, g.start_time.to_s, g.end_time.to_s]
+    end
     @grouped_lines.each_pair do |k, reservations|
       @grouped_lines[k] = \
         reservations.sort_by { |line| [line.model.name, line.id] }

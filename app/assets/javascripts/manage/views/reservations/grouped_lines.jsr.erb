@@ -10,6 +10,9 @@
         -
         {{day end_date/}}
         {{date end_date/}}
+        {{if start_time}}
+        <strong>{{>start_time.substr(0, 5)}}–{{>end_time.substr(0, 5)}}</strong>
+        {{/if}}
       </p>
     </div>
     <div class='col1of2 padding-inset-s text-align-right'>

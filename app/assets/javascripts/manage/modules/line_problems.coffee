@@ -2,6 +2,13 @@ window.App.Modules.LineProblems =
 
   anyProblems: -> !! @getProblems().length
 
+  # availabilities matching the time slot of the line (see App.Availability.forTimeWindow)
+  _availabilities: ->
+    avail = @model().availability()
+    return [] unless avail?
+    line = if @subreservations? then @subreservations[0] else @
+    avail.forTimeWindow(line.start_time, line.end_time)
+
   _isSoftOverbooked: (avail, reservationsToExclude) ->
     _.any avail.changes, (change) =>
       _.any change[2], (allocation) =>
@@ -12,22 +19,25 @@ window.App.Modules.LineProblems =
 
   effectiveAvailableForUser: ->
     return null unless @model_id?
-    avail = @model().availability()
-    return null unless avail?
+    avails = @_availabilities()
+    return null unless avails.length
     reservationsToExclude = if @subreservations? then @subreservations else [@]
-    maxAvailableForUser = avail.withoutLines(reservationsToExclude).maxAvailableForGroups(@start_date, @end_date, @user().groupIds)
     quantity = if @subreservations?
       _.reduce @subreservations, ((mem, l)-> mem + l.quantity), 0
     else
       @quantity
-    if @_isSoftOverbooked(avail, reservationsToExclude) then maxAvailableForUser - quantity else maxAvailableForUser
+    _.min _.map avails, (avail) =>
+      maxAvailableForUser = avail.withoutLines(reservationsToExclude).maxAvailableForGroups(@start_date, @end_date, @user().groupIds)
+      if @_isSoftOverbooked(avail, reservationsToExclude) then maxAvailableForUser - quantity else maxAvailableForUser
 
   getProblems: ->
     problems = []
 
     if @model_id?
       reservationsToExclude = if @subreservations? then @subreservations else [@]
-      avail = @model().availability()
+      # the most constrained time slot counts
+      avail = _.min @_availabilities(), (a) =>
+        a.withoutLines(reservationsToExclude).maxAvailableForGroups(@start_date, @end_date, @user().groupIds)
       maxAvailableForUser = avail.withoutLines(reservationsToExclude).maxAvailableForGroups(@start_date, @end_date, @user().groupIds)
       softOverbooked = @_isSoftOverbooked(avail, reservationsToExclude)
       quantity = if @subreservations?

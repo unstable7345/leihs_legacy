@@ -52,10 +52,37 @@ module Availability
                 :changes,
                 :inventory_pool_and_model_group_ids)
 
+    # Whole-day reservations and late ones compete with every time window.
+    def self.conflicting_with_time_window(reservations, time_window)
+      start_time, end_time = time_window
+      reservations.where(<<-SQL, end_time, start_time, Time.zone.today)
+        reservations.start_time IS NULL
+        OR (reservations.start_time < ? AND reservations.end_time > ?)
+        OR reservations.end_date < ?
+      SQL
+    end
+
+    # The time windows to compute the availability for. A request for a window
+    # needs only that one. A whole-day request (nil) has to be fulfilled in
+    # every window booked by the reservations; without any, all of them are
+    # whole-day reservations.
+    def self.time_windows_to_check(running_reservations, time_window)
+      return [time_window] if time_window
+
+      windows = running_reservations
+                .where.not(start_time: nil)
+                .reorder(nil)
+                .distinct
+                .pluck(:start_time, :end_time)
+      windows.presence || [nil]
+    end
+
     # exclude_reservations are used in borrow for dealing with the self-blocking
     # aspect of the reservations (context: change quantity for a model
     # in current order)
-    def initialize(model:, inventory_pool:, exclude_reservations:, sanitize_invalid_entitled_quantity: false)
+    # time_window: [start_time, end_time] of a time slot; only the reservations
+    # conflicting with it are considered. nil considers all of them.
+    def initialize(model:, inventory_pool:, exclude_reservations:, sanitize_invalid_entitled_quantity: false, time_window: nil)
       exclude_reservations = (exclude_reservations.presence || [])
 
       @model          = model
@@ -67,6 +94,10 @@ module Availability
         .running_reservations
         .where(model_id: @model.id)
         .where.not(id: exclude_reservations)
+      if time_window
+        @running_reservations = \
+          self.class.conflicting_with_time_window(@running_reservations, time_window)
+      end
 
       @entitlements = Entitlement.hash_with_generals(@inventory_pool, @model,
                                                      sanitize_invalid_entitled_quantity: sanitize_invalid_entitled_quantity)

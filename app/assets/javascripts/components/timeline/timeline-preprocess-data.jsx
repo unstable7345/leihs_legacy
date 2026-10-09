@@ -408,7 +408,9 @@ window.TimelinePreprocessData = {
 
   changesAlgorithm(timeline_availability, changes, userEntitlementGroupsForModel, relevantItemsCount) {
     return changes.map((c) => {
-      var reservations = TimelinePreprocessData.calculateChangesReservations(timeline_availability, c)
+      var reservations = TimelineUtil.concurrentReservations(
+        TimelinePreprocessData.calculateChangesReservations(timeline_availability, c)
+      )
       return {
         change: c,
         date: c,
@@ -464,10 +466,15 @@ window.TimelinePreprocessData = {
     var numberOfDays = TimelineUtil.numberOfDays(firstMoment, lastMoment)
     var relevantItemsCount = TimelinePreprocessData.relevantItemsCount(timeline_availability)
     var totalCounts = TimelinePreprocessData.totalCounts(lastMoment, relevantItemsCount)
-    var handoutCounts = TimelinePreprocessData.handoutCounts(timeline_availability, lastMoment).map((hc) => - hc.length)
+    var handouts = TimelinePreprocessData.handoutCounts(timeline_availability, lastMoment)
+    var handoutCounts = handouts.map((hc) => - TimelineUtil.concurrentReservations(hc).length)
     var borrowableCounts = _.zip(totalCounts, handoutCounts).map((p) => _.first(p) + _.last(p))
-    var reservationCounts = TimelinePreprocessData.reservationCounts(timeline_availability, lastMoment).map((rc) => - rc.length)
-    var unusedCounts = _.zip(borrowableCounts, reservationCounts).map((p) => _.first(p) + _.last(p))
+    var reservationsOfDays = TimelinePreprocessData.reservationCounts(timeline_availability, lastMoment)
+    var reservationCounts = reservationsOfDays.map((rc) => - TimelineUtil.concurrentReservations(rc).length)
+    // morning and afternoon reservations of the same day can share the items
+    var unusedCounts = _.zip(totalCounts, handouts, reservationsOfDays).map((p) => {
+      return p[0] - TimelineUtil.concurrentReservations(p[1].concat(p[2])).length
+    })
     var allLayoutedReservationFrames = TimelinePreprocessData.layoutReservationFrames(timeline_availability.running_reservations)
     var userEntitlementGroupsForModel = TimelinePreprocessData.userEntitlementGroupsForModel(timeline_availability)
     var entitlementQuantities = TimelinePreprocessData.entitlementQuantities(timeline_availability, relevantItemsCount)

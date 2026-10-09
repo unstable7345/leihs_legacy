@@ -9,7 +9,7 @@
 
 class window.App.Availability extends Spine.Model
 
-  @configure "Availability", "inventory_pool_id", "model_id", "changes", "total_borrowable", "total_rentable", "in_stock"
+  @configure "Availability", "inventory_pool_id", "model_id", "changes", "changes_by_window", "total_borrowable", "total_rentable", "in_stock"
   
   @belongsTo "inventory_pool", "App.InventoryPool", "inventory_pool_id"
   @belongsTo "model", "App.Model", "model_id"
@@ -18,6 +18,18 @@ class window.App.Availability extends Spine.Model
 
   constructor: (data)->
     super
+
+  # The availabilities to check for a line: the one of its time slot, or for a
+  # whole-day line the one of every time slot booked (see changes_by_window)
+  forTimeWindow: (startTime, endTime) ->
+    byWindow = @changes_by_window or {}
+    keys = if startTime? then ["#{startTime}-#{endTime}"] else _.keys(byWindow)
+    windowed = _.compact _.map keys, (key) =>
+      if byWindow[key]?
+        clone = $.extend true, {}, @
+        clone.changes = byWindow[key]
+        clone
+    if windowed.length then windowed else [@]
 
   availabilityForGroups: (change, groupIds) ->
     _.reduce change[2], ((mem, partition)=> if @groupIsIn(groupIds, partition.group_id) then mem+partition.in_quantity else mem), 0 
