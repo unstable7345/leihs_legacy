@@ -15,8 +15,9 @@
         %ul
           - accessories.each do |accessory|
             %li= accessory
-    %td.end_date= l line.end_date
+    %td.start_date= l_date_with_time_of_day(line.start_date, line.start_time)
+    %td.end_date= l_date_with_time_of_day(line.end_date, line.end_time)
     %td.returning_date
       - if line.returned_date
-        = l line.returned_date
+        = line.returned_at ? l_date_time(line.returned_at) : l(line.returned_date)
         != "#{line.returned_to_user.try(:short_name)}"

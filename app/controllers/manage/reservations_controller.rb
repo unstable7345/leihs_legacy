@@ -205,7 +205,8 @@ class Manage::ReservationsController < Manage::ApplicationController
 
         reservations.each do |l|
           l.update!(returned_date: Time.zone.today,
-                               returned_to_user_id: current_user.id)
+                    returned_at: Time.zone.now,
+                    returned_to_user_id: current_user.id)
 
           if l.last_closed_reservation_of_contract?
             l.contract.update!(state: :closed)
