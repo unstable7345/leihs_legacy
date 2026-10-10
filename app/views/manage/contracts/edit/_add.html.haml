@@ -17,14 +17,7 @@
           %i.fa.fa-calendar
 
   - if (time_slots = current_inventory_pool.time_slots.to_a).any?
-    .col2of8
-      .padding-right-xs
-        %label.row.margin-bottom-xxs{:for => "add-time-slot"}= _("Time slot")
-        .row
-          %select.width-full{:id => "add-time-slot", :name => "time-slot"}
-            %option{:value => ""}= _("Whole day")
-            - time_slots.each do |slot|
-              %option{:value => "#{slot.start_time}-#{slot.end_time}"}= "#{slot.name} (#{slot.start_time.first(5)}–#{slot.end_time.first(5)})"
+    = render 'manage/reservations/time_slot_select', time_slots: time_slots
 
   %div{class: (time_slots.any? ? 'col2of8' : 'col4of8')}
     %label.row.margin-bottom-xxs{:for => "add-input"}= _("Add")

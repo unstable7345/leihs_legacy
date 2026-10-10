@@ -177,6 +177,12 @@
                 {this._date(groupedLine.start_date)}
                 {' - '}
                 {this._date(groupedLine.end_date)}
+                {groupedLine.start_time ? (
+                  <strong>
+                    {' '}
+                    {groupedLine.start_time.substr(0, 5)}–{groupedLine.end_time.substr(0, 5)}
+                  </strong>
+                ) : null}
               </p>
             </div>
             <div className='col1of2 text-align-right'>
