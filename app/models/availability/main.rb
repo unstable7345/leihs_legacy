@@ -52,13 +52,17 @@ module Availability
                 :changes,
                 :inventory_pool_and_model_group_ids)
 
-    # Whole-day reservations and late ones compete with every time window.
+    # Whole-day reservations and late ones compete with every time window. So
+    # do handed over time slot reservations not returned after their end time.
     def self.conflicting_with_time_window(reservations, time_window)
       start_time, end_time = time_window
-      reservations.where(<<-SQL, end_time, start_time, Time.zone.today)
+      reservations.where(<<-SQL, end_time, start_time, Time.zone.today, Time.zone.now.strftime('%F %T'))
         reservations.start_time IS NULL
         OR (reservations.start_time < ? AND reservations.end_time > ?)
         OR reservations.end_date < ?
+        OR (reservations.status = 'signed'
+            AND reservations.returned_date IS NULL
+            AND reservations.end_date + reservations.end_time <= ?::timestamp)
       SQL
     end
 
