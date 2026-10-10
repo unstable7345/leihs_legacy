@@ -1,8 +1,16 @@
 class window.App.ReservationsChangeController extends window.App.ManageBookingCalendarDialogController
 
+  # the time slot of new reservations: the selected one, else the one of the
+  # reservations
+  timeWindowForNewReservations: =>
+    @getTimeWindow() or (if @initialTimeSlot in ["", "keep"] then [null, null] else @initialTimeSlot.split("-"))
+
   createReservation: =>
+    [startTime, endTime] = @timeWindowForNewReservations()
     App.Reservation.createOne
       model_id: _.first(@models).id
+      start_time: startTime or ""
+      end_time: endTime or ""
       start_date: @getStartDate().format("YYYY-MM-DD")
       end_date: @getEndDate().format("YYYY-MM-DD")
       order_id: @order?.id
@@ -67,8 +75,9 @@ class window.App.ReservationsChangeController extends window.App.ManageBookingCa
       do @changeRange
 
   changeRange: => 
-    if @getStartDate().format("YYYY-MM-DD") != @startDate or @getEndDate().format("YYYY-MM-DD") != @endDate
-      App.Reservation.changeTimeRange(@reservations, (@getStartDate() unless @startDateDisabled), @getEndDate())
+    timeWindow = @getTimeWindow() if @timeSlotEl.val() != @initialTimeSlot
+    if @getStartDate().format("YYYY-MM-DD") != @startDate or @getEndDate().format("YYYY-MM-DD") != @endDate or timeWindow?
+      App.Reservation.changeTimeRange(@reservations, (@getStartDate() unless @startDateDisabled), @getEndDate(), timeWindow)
       .done(@done)
       .fail @fail
     else

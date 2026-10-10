@@ -52,7 +52,8 @@ class Manage::ReservationsController < Manage::ApplicationController
                                           record,
                                           1,
                                           params[:start_date],
-                                          params[:end_date])
+                                          params[:end_date],
+                                          time_window_param)
       end
     rescue => e
       render status: :bad_request, plain: e
@@ -105,11 +106,13 @@ class Manage::ReservationsController < Manage::ApplicationController
     start_date = params[:start_date].try { |x| Date.parse(x) },
     end_date = params[:end_date].try { |x| Date.parse(x) } || Date.tomorrow)
     begin
+      time_window = time_window_param
       reservations.each do |line|
         line.update_time_line \
           (start_date || line.start_date),
           end_date,
-          current_user
+          current_user,
+          time_window
       end
       render status: :ok, json: reservations
     rescue => e
@@ -339,6 +342,20 @@ class Manage::ReservationsController < Manage::ApplicationController
     Integer(params[:quantity].presence || 1)
   end
 
+  # The time slot of the params: [start_time, end_time] of a time slot the
+  # pool offers, [nil, nil] for "whole day" (blank start_time), :keep when
+  # the params have none.
+  def time_window_param
+    return :keep unless params.key?(:start_time)
+    return [nil, nil] if params[:start_time].blank?
+
+    slot = current_inventory_pool
+             .time_slots
+             .find_by(start_time: params[:start_time], end_time: params[:end_time])
+    raise _('The inventory pool does not offer this time slot.') unless slot
+    [slot.start_time, slot.end_time]
+  end
+
   def start_date_param
     params[:start_date].try { |x| Date.parse(x) } || Time.zone.today
   end
@@ -380,7 +397,8 @@ class Manage::ReservationsController < Manage::ApplicationController
                          record,
                          quantity,
                          start_date,
-                         end_date)
+                         end_date,
+                         time_window = :keep)
     if record.is_a? Model
       reservation = user.item_lines.new(model: record)
     elsif record.is_a? Option
@@ -393,6 +411,10 @@ class Manage::ReservationsController < Manage::ApplicationController
     reservation.start_date = \
       start_date.try { |x| Date.parse(x) } || Time.zone.today
     reservation.end_date = end_date.try { |x| Date.parse(x) } || Date.tomorrow
+    if record.is_a?(Model) and time_window.is_a?(Array) and time_window.first
+      reservation.start_time, reservation.end_time = time_window
+      reservation.end_date = reservation.start_date
+    end
 
     # NOTE we need to store because the availability reads the persisted
     # reservations (as running_reservations)
@@ -450,15 +472,20 @@ class Manage::ReservationsController < Manage::ApplicationController
                 .first
           end
           # add new line
-          line ||= \
+          line ||= begin
+            start_time, end_time = time_window_param
+            start_time = nil if start_time == :keep
             ItemLine.create(
               status: :approved,
               user: user,
               model: model,
               inventory_pool: current_inventory_pool,
               start_date: start_date_param,
-              end_date: end_date_param
+              end_date: (start_time ? start_date_param : end_date_param),
+              start_time: start_time,
+              end_time: end_time
             )
+          end
           if model_group_id_param.nil? \
             and item \
             and line \

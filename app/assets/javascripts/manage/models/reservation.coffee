@@ -46,17 +46,26 @@ window.App.Reservation.destroyMultiple = (ids)->
     try App.Reservation.trigger "destroy", ids
     try App.Order.trigger "refresh"
 
-window.App.Reservation.changeTimeRange = (reservations, startDate, endDate)=>
+# timeWindow: [start_time, end_time] of a time slot, [null, null] for whole
+# days, undefined to keep the time slots
+window.App.Reservation.changeTimeRange = (reservations, startDate, endDate, timeWindow)=>
   startDate = moment(startDate).format("YYYY-MM-DD") if startDate
   endDate = moment(endDate).format("YYYY-MM-DD")
-  $.post "/manage/#{App.InventoryPool.current.id}/reservations/change_time_range",
+  params =
     line_ids: _.map(reservations,(l)->l.id)
     start_date: startDate
     end_date: endDate
+  if timeWindow?
+    params.start_time = timeWindow[0] or ""
+    params.end_time = timeWindow[1] or ""
+  $.post "/manage/#{App.InventoryPool.current.id}/reservations/change_time_range", params
   .done =>
     for line in reservations
       data = {end_date: endDate}
       data["start_date"] = startDate if startDate
+      if timeWindow?
+        data["start_time"] = timeWindow[0]
+        data["end_time"] = timeWindow[1]
       line.refresh data
     App.Reservation.trigger "refresh"
     App.Order.trigger "refresh"

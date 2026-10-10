@@ -2,10 +2,37 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
     
   # overwrite
   setupModal: =>
-    @dialog = $ App.Render "manage/views/booking_calendar/calendar_dialog", {user: @user}, {startDateDisabled: @startDateDisabled, quantityDisabled: @quantityDisabled}
+    do @setupTimeSlots
+    @dialog = $ App.Render "manage/views/booking_calendar/calendar_dialog", {user: @user},
+      startDateDisabled: @startDateDisabled
+      quantityDisabled: @quantityDisabled
+      timeSlots: @timeSlots
+      mixedTimeSlots: @initialTimeSlot == "keep"
     @listOfLines = @dialog.find("#booking-calendar-lines .list-of-lines")
     @partitionsEl = @dialog.find("#booking-calendar-partitions")
-    super    
+    @timeSlotEl = @dialog.find("#booking-calendar-time-slot")
+    super
+    @timeSlotEl.val @initialTimeSlot
+    # a time slot is always booked for a single day
+    @timeSlotEl.on "change", => @endDateEl.val @startDateEl.val() if @getTimeWindow()?[0]
+
+  # The pool's time slots as options; the one of the reservations is selected
+  # ("" = whole day, "keep" = they have different ones)
+  setupTimeSlots: =>
+    @timeSlots = App.InventoryPool.current.timeSlotOptions()
+    values = _.uniq _.map(@reservations, (l)-> if l.start_time then "#{l.start_time}-#{l.end_time}" else "")
+    @initialTimeSlot = if values.length == 1 then values[0] else "keep"
+    if @initialTimeSlot not in ["", "keep"] and not _.find(@timeSlots, (o)=> o.value == @initialTimeSlot)
+      # a time slot the pool doesn't offer anymore
+      [start, end] = @initialTimeSlot.split("-")
+      @timeSlots.push {value: @initialTimeSlot, label: "#{start[0..4]}–#{end[0..4]}"}
+
+  # [start_time, end_time] of the selected time slot, [null, null] for whole
+  # days, undefined to keep the time slots of the reservations
+  getTimeWindow: =>
+    value = @timeSlotEl?.val()
+    return undefined if not value? or value == "keep"
+    if value == "" then [null, null] else value.split("-")
 
   # overwrite
   setupDates: =>
@@ -108,6 +135,11 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
     else
       @errorsContainer.html ""
 
-  valid: => true
+  valid: =>
+    if @getTimeWindow()?[0] and not @getStartDate().isSame(@getEndDate(), "day")
+      @showError _jed("A time slot can only be reserved for a single day")
+      false
+    else
+      true
 
   store: => # virtual

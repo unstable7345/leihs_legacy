@@ -16,6 +16,7 @@ class InventoryPool < ApplicationRecord
   end
 
   has_one :workday, dependent: :delete
+  has_many :time_slots
   accepts_nested_attributes_for :workday, update_only: true
 
   has_many :holidays, -> { order(:start_date, :end_date) }, dependent: :delete_all do

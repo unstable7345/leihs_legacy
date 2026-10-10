@@ -3,6 +3,7 @@ class window.App.ReservationAssignOrCreateController extends Spine.Controller
   elements:
     "#add-start-date": "addStartDate"
     "#add-end-date": "addEndDate"
+    "#add-time-slot": "addTimeSlot"
 
   constructor: ->
     super
@@ -49,9 +50,12 @@ class window.App.ReservationAssignOrCreateController extends Spine.Controller
 
   submit: (inventoryCode)=>
     return false unless inventoryCode?.length
+    [startTime, endTime] = @addTimeSlot.val()?.split("-") or []
     App.Reservation.assignOrCreate
       start_date: @getStartDate().format("YYYY-MM-DD")
-      end_date: @getEndDate().format("YYYY-MM-DD")
+      end_date: (if startTime then @getStartDate() else @getEndDate()).format("YYYY-MM-DD")
+      start_time: startTime or ""
+      end_time: endTime or ""
       code: inventoryCode
       order_id: @order?.id
       user_id: (@order?.user_id or @user.id)

@@ -3,6 +3,7 @@ class window.App.ReservationsAddController extends Spine.Controller
   elements:
     "#add-start-date": "addStartDate"
     "#add-end-date": "addEndDate"
+    "#add-time-slot": "addTimeSlot"
 
   events:
     "click [type='submit']": "handleEvents"
@@ -54,8 +55,16 @@ class window.App.ReservationsAddController extends Spine.Controller
     @addStartDate.datepicker "option", "onSelect", (newStartDate)=>
       newStartDate = moment(newStartDate, i18n.date.L).startOf("day")
       endDate = moment(@addEndDate.val(), i18n.date.L).startOf("day")
-      if newStartDate.toDate() > endDate.toDate()
+      if newStartDate.toDate() > endDate.toDate() or @getTimeWindow()?
         @addEndDate.val newStartDate.format(i18n.date.L)
+    # a time slot is always booked for a single day
+    @addTimeSlot.on "change", => @addEndDate.val @addStartDate.val() if @getTimeWindow()?
+    @addEndDate.on "change", => @addTimeSlot.val "" unless @getStartDate().isSame(@getEndDate(), "day")
+
+  # [start_time, end_time] of the selected time slot, undefined for whole days
+  getTimeWindow: =>
+    value = @addTimeSlot.val()
+    value.split("-") if value
 
   getStartDate: => moment(@addStartDate.val(), i18n.date.L)
 
@@ -176,10 +185,13 @@ class window.App.ReservationsAddController extends Spine.Controller
       # just continue in callback from ReservationAssignOrCreateController
       @onSubmitInventoryCode?(inventoryCode)
     else
+      [startTime, endTime] = @getTimeWindow() or []
       App.Reservation.createOne
         inventory_pool_id: App.InventoryPool.current.id
         start_date: moment(startDate).format "YYYY-MM-DD"
-        end_date: moment(endDate).format "YYYY-MM-DD"
+        end_date: moment(if startTime then startDate else endDate).format "YYYY-MM-DD"
+        start_time: startTime or ""
+        end_time: endTime or ""
         order_id: @order?.id
         user_id: (@order?.user_id or @user.id)
         inventory_pool_id: (@order?.inventory_pool_id or App.InventoryPool.current.id)

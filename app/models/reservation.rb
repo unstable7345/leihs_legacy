@@ -237,12 +237,18 @@ class Reservation < ApplicationRecord
     errors.empty?
   end
 
-  def update_time_line(start_date, end_date, user)
+  # time_window: [start_time, end_time] of a time slot (the reservation
+  # becomes single-day), [nil, nil] for whole days, :keep to leave it as is.
+  def update_time_line(start_date, end_date, user, time_window = :keep)
     Reservation.transaction(requires_new: true) do
       start_date ||= self.start_date
       end_date ||= self.end_date
-      unless update(start_date: start_date,
-                               end_date: [start_date, end_date].max)
+      attrs = { start_date: start_date, end_date: [start_date, end_date].max }
+      unless time_window == :keep
+        attrs[:start_time], attrs[:end_time] = time_window
+        attrs[:end_date] = start_date if attrs[:start_time]
+      end
+      unless update(attrs)
         raise errors.full_messages.uniq.join(', ')
       end
       if user.access_right_for(inventory_pool).role == :group_manager \
