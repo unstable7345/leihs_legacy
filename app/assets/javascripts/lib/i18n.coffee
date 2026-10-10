@@ -12,16 +12,21 @@ window._jed = (args...)->
 
   isKeyPresent = (key)-> i18n.jed.options.locale_data.leihs[key]? and key.length
 
+  # Without a translation the English text is used, with its placeholders
+  # (e.g. "Save %s") filled in like a translated one.
+  untranslated = (text, sArr) ->
+    if sArr? and text then Jed.sprintf(text, sArr) else text
+
   if typeof args[0] == "number"
     if (key = args[1]) and isKeyPresent(key)
       i18n.jed.translate(args[1]).ifPlural(args[0], args[2]).fetch args[3]
     else
-      key
+      untranslated((if args[0] != 1 and args[2]? then args[2] else key), args[3])
   else
     if (key = args[0]) and isKeyPresent(key)
       i18n.jed.translate(args[0]).fetch args[1]
     else
-      key
+      untranslated(key, args[1])
 
 jQuery ()->
 
