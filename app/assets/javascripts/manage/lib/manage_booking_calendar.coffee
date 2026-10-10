@@ -17,6 +17,8 @@ class window.App.ManageBookingCalendar extends App.BookingCalendar
       @startDate_el.val moment().format("YYYY-MM-DD")
     @reservations = options.reservations
     @models = options.models
+    # [start_time, end_time] of the chosen time slot, undefined for whole days
+    @getTimeWindow = options.getTimeWindow or (-> undefined)
     do @setupPartitionSelector
 
   getGroupIds: =>
@@ -42,8 +44,11 @@ class window.App.ManageBookingCalendar extends App.BookingCalendar
 
   setDayElement: (date, dayElement, holidays)=>
     available = true
+    [startTime, endTime] = @getTimeWindow() or []
     for model in @models
-      availability = model.availability().withoutLines(@reservations, true)
+      # the availability of the chosen time slot (of every booked one for whole days)
+      availabilities = _.map model.availability().forTimeWindow(startTime, endTime), (a)=>
+        a.withoutLines(@reservations, true)
       requiredQuantity = if @quantity_el.val().length
           parseInt @quantity_el.val()
         else
@@ -52,8 +57,8 @@ class window.App.ManageBookingCalendar extends App.BookingCalendar
               mem+l.quantity
             else mem
           , 0
-      totalQuantity = availability.maxAvailableInTotal(date, date)
-      availableQuantity = availability.maxAvailableForGroups date, date, @getGroupIds()
+      totalQuantity = _.min _.map availabilities, (a)-> a.maxAvailableInTotal(date, date)
+      availableQuantity = _.min _.map availabilities, (a)=> a.maxAvailableForGroups date, date, @getGroupIds()
       console.log('date = ' + new Date(date).toString() + ' total = ' + totalQuantity + ' available = ' + availableQuantity + ' required = ' + requiredQuantity)
       console.log('group ids = ' + @getGroupIds())
       available = availableQuantity >= requiredQuantity and available

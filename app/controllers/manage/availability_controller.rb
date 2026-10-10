@@ -17,9 +17,9 @@ class Manage::AvailabilityController < Manage::ApplicationController
           model
             .availability_in(current_inventory_pool)
             .available_total_quantities,
-        # availability per time window booked by the reservations, keyed by
-        # "start_time-end_time" (empty without time slot reservations)
-        changes_by_window: changes_by_window(model),
+        # availability per time window booked by the reservations and the
+        # requested one, keyed by "start_time-end_time"
+        changes_by_window: changes_by_window(model, requested_time_window),
         total_rentable: \
           model
             .items
@@ -71,17 +71,23 @@ class Manage::AvailabilityController < Manage::ApplicationController
 
   private
 
-  def changes_by_window(model)
+  # The [start_time, end_time] ("HH:MM:SS") of the params, e.g. the time slot
+  # chosen when adding or changing reservations; nil without one.
+  def requested_time_window
+    window = [params[:start_time], params[:end_time]]
+    window if window.all? { |t| t.to_s.match?(/\A\d{2}:\d{2}:\d{2}\z/) }
+  end
+
+  def changes_by_window(model, requested_window = nil)
     running = current_inventory_pool.running_reservations.where(model_id: model.id)
-    Availability::Main
-      .time_windows_to_check(running, nil)
-      .compact
-      .to_h do |window|
-        [window.join('-'),
-         model
-           .availability_in(current_inventory_pool, time_window: window)
-           .available_total_quantities]
-      end
+    windows = Availability::Main.time_windows_to_check(running, nil).compact
+    windows |= [requested_window] if requested_window
+    windows.to_h do |window|
+      [window.join('-'),
+       model
+         .availability_in(current_inventory_pool, time_window: window)
+         .available_total_quantities]
+    end
   end
 
 end

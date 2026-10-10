@@ -13,8 +13,11 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
     @timeSlotEl = @dialog.find("#booking-calendar-time-slot")
     super
     @timeSlotEl.val @initialTimeSlot
-    # a time slot is always booked for a single day
-    @timeSlotEl.on "change", => @endDateEl.val @startDateEl.val() if @getTimeWindow()?[0]
+    @timeSlotEl.on "change", =>
+      # a time slot is always booked for a single day
+      @endDateEl.val @startDateEl.val() if @getTimeWindow()?[0]
+      # the calendar shows the availability of the chosen time slot
+      @fetchAvailability().done => @bookingCalendar?.render()
 
   # The pool's time slots as options; the one of the reservations is selected
   # ("" = whole day, "keep" = they have different ones)
@@ -44,16 +47,20 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
     @fetchWorkdays().done => do @initalizeDialog
     @fetchHolidays().done => do @initalizeDialog
     @fetchPartitions().done => @fetchGroups().done => do @initalizeDialog
-    if _.any(@models, (m)-> not m.availability?()?)
+    if _.any(@models, (m)-> not m.availability?()?) or @getTimeWindow()?[0]
       @fetchAvailability().done => do @initalizeDialog
     else
       @availabilities = true
 
+  # including the availability of the chosen time slot (see changes_by_window)
   fetchAvailability: =>
+    [startTime, endTime] = @getTimeWindow() or []
     App.Availability.ajaxFetch
       data: $.param
         model_ids: _.map @models, (m)-> m.id
         user_id: @user.id
+        start_time: startTime
+        end_time: endTime
     .done => @availabilities = true
 
   fetchPartitions: =>
@@ -93,7 +100,7 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
     @partitionsEl.html App.Render "manage/views/booking_calendar/partitions", data
 
   setupBookingCalendar: =>
-    new App.ManageBookingCalendar
+    @bookingCalendar = new App.ManageBookingCalendar
       calendarEl: @dialog.find "#booking-calendar"
       startDateEl: @startDateEl
       startDateDisabled: @startDateDisabled
@@ -103,6 +110,7 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
       partitions: @partitions
       reservations: @reservations
       models: @models
+      getTimeWindow: @getTimeWindow
       renderFunctionCallback: @calendarRendered
 
   calendarRendered: =>

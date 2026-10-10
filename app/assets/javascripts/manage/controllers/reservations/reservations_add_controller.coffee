@@ -73,8 +73,11 @@ class window.App.ReservationsAddController extends Spine.Controller
   pushModelsTo: (data)=>
     for model in @models
       if model.availability()?
-        maxAvailableForUser = model.availability().maxAvailableForGroups(@getStartDate(), @getEndDate(), @user.groupIds)
-        maxAvailableInTotal = model.availability().maxAvailableInTotal(@getStartDate(), @getEndDate())
+        # the availability of the chosen time slot (of every booked one for whole days)
+        [startTime, endTime] = @getTimeWindow() or []
+        avails = model.availability().forTimeWindow(startTime, endTime)
+        maxAvailableForUser = _.min _.map avails, (a)=> a.maxAvailableForGroups(@getStartDate(), @getEndDate(), @user.groupIds)
+        maxAvailableInTotal = _.min _.map avails, (a)=> a.maxAvailableInTotal(@getStartDate(), @getEndDate())
         data.push
           name: model.name()
           availability: "#{maxAvailableForUser}(#{maxAvailableInTotal})/#{model.availability().total_rentable}"
@@ -130,10 +133,13 @@ class window.App.ReservationsAddController extends Spine.Controller
 
   fetchAvailabilities: (callback)=>
     if @models? and @models.length
+      [startTime, endTime] = @getTimeWindow() or []
       App.Availability.ajaxFetch
         data: $.param
           model_ids: _.map @models, (m)-> m.id
           user_id: @user.id
+          start_time: startTime
+          end_time: endTime
       .done (data)=>
         @availabilities = (App.Availability.find(datum.id) for datum in data)
         do callback
