@@ -25,7 +25,7 @@ class MailTemplate < ApplicationRecord
        { quantity: l.quantity,
          model_name: l.model.name,
          start_date: l.start_date,
-         end_date: l.end_date }
+         end_date: l.end_date }.merge(time_slot_variables(l))
       end,
       comment: comment,
       purpose: order.purpose,
@@ -47,11 +47,21 @@ class MailTemplate < ApplicationRecord
          model_name: l.model.name,
          item_inventory_code: l.item.inventory_code,
          start_date: l.start_date,
-         end_date: l.end_date }
+         end_date: l.end_date }.merge(time_slot_variables(l))
       end,
       quantity: reservations.to_a.sum(&:quantity),
       due_date: reservations.first.end_date
     }.deep_stringify_keys
+  end
+
+  # The time slot of a reservation ("10:00–12:00"); nil for whole days, so
+  # templates can use {% if l.time_slot %}.
+  def self.time_slot_variables(reservation)
+    start_time = reservation.start_time.try(:first, 5)
+    end_time = reservation.end_time.try(:first, 5)
+    { start_time: start_time,
+      end_time: end_time,
+      time_slot: (start_time and "#{start_time}–#{end_time}") }
   end
 
   def self.get_template(inventory_pool, name, language)
