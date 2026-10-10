@@ -23,6 +23,14 @@ describe "availability of time slot reservations" do
       **attrs)
   end
 
+  # handed over during its time slot, which is over in the meantime
+  def hand_over_and_let_time_slot_end(day)
+    line = reserve("00:00:00", "23:59:00", day: day, item: @item)
+    Contract.sign!(@manager, @pool, @user, [line], "test")
+    line.update_columns(end_time: "00:01:00")
+    line.reload
+  end
+
   it "lends the same item in the morning and in the afternoon" do
     morning = reserve("08:00:00", "13:00:00")
     afternoon = reserve("13:00:00", "18:00:00")
@@ -44,9 +52,8 @@ describe "availability of time slot reservations" do
 
   it "counts an item not returned after its time slot as missing for the rest of the day" do
     today = Time.zone.today
-    handed_over = reserve("00:00:00", "00:01:00", day: today, item: @item)
-    Contract.sign!(@manager, @pool, @user, [handed_over], "test")
-    expect(handed_over.reload.status).to eq :signed
+    handed_over = hand_over_and_let_time_slot_end(today)
+    expect(handed_over.status).to eq :signed
     expect(handed_over.start_time).to eq "00:00:00"
 
     later = reserve("23:58:00", "23:59:00", day: today)
@@ -55,8 +62,7 @@ describe "availability of time slot reservations" do
 
   it "does not count an item returned in time" do
     today = Time.zone.today
-    handed_over = reserve("00:00:00", "00:01:00", day: today, item: @item)
-    Contract.sign!(@manager, @pool, @user, [handed_over], "test")
+    handed_over = hand_over_and_let_time_slot_end(today)
     ApplicationRecord.transaction do
       handed_over.reload.update!(returned_date: today,
         returned_at: Time.zone.now,

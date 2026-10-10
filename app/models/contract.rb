@@ -279,13 +279,45 @@ class Contract < ApplicationRecord
 
   #########################################################################
 
+  # Raised when handing over a time slot reservation before its time slot
+  # would leave other reservations without an item (see sign!).
+  class EarlyHandOverConflict < StandardError; end
+
+  # A time slot reservation is handed over on the day of its time slot. Before
+  # the time slot starts, it starts at the time of the hand over (the item is
+  # not available for others from then on); if that conflicts with other
+  # reservations, it needs `confirm_early_hand_over`.
+  def self.prepare_time_slot_hand_over!(line, confirm_early_hand_over)
+    now = Time.zone.now
+    slot = "#{line.start_time.first(5)}–#{line.end_time.first(5)}"
+
+    if line.start_date != Time.zone.today
+      raise(_('%{model} is reserved for %{date}, %{slot}. ' \
+              'To hand it over today, change the date of the reservation first.') % \
+            { model: line.model.name, date: I18n.l(line.start_date), slot: slot })
+    elsif line.end_time <= now.strftime('%T')
+      raise(_('The time slot %{slot} of %{model} is already over.') % \
+            { model: line.model.name, slot: slot })
+    elsif line.start_time > now.strftime('%T')
+      line.start_time = now.strftime('%H:%M:00')
+      if !confirm_early_hand_over and !line.available?
+        raise(EarlyHandOverConflict,
+              _('%{model} is reserved for %{slot}. Handed over now, ' \
+                'it is missing for other reservations before %{start}. ' \
+                'Hand over anyway?') % \
+              { model: line.model.name, slot: slot, start: slot.first(5) })
+      end
+    end
+  end
+
   def self.sign!(current_user,
                  current_inventory_pool,
                  user,
                  selected_lines,
                  purpose,
                  note = nil,
-                 delegated_user_id = nil)
+                 delegated_user_id = nil,
+                 confirm_early_hand_over: false)
     transaction(requires_new: true) do
       contract = Contract.new(state: :open,
                               purpose: purpose,
@@ -303,6 +335,10 @@ class Contract < ApplicationRecord
 
         if delegated_user_id
           attrs[:delegated_user] = user.delegated_users.find(delegated_user_id)
+        end
+
+        if cl.start_time
+          prepare_time_slot_hand_over!(cl, confirm_early_hand_over)
         end
 
         # Forces handover date to be today.

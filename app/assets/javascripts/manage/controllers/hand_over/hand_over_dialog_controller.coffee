@@ -56,12 +56,14 @@ class window.App.HandOverDialogController extends Spine.Controller
     @el = @modal.el
 
 
-  handOver: =>
-    if @purpose.length
-      if @purposeTextArea.val()
-        @purpose = "#{@purpose}; #{@purposeTextArea.val()}"
-    else
-      @purpose = @purposeTextArea.val()
+  handOver: (e, confirmEarlyHandOver = false) =>
+    # the purpose is already combined when confirming an early hand over
+    unless confirmEarlyHandOver
+      if @purpose.length
+        if @purposeTextArea.val()
+          @purpose = "#{@purpose}; #{@purposeTextArea.val()}"
+      else
+        @purpose = @purposeTextArea.val()
 
     if @validatePurpose() and @validateDelegatedUser()
       App.Contract.create
@@ -70,9 +72,14 @@ class window.App.HandOverDialogController extends Spine.Controller
         purpose: @purpose
         note: @noteTextArea.val()
         delegated_user_id: @delegatedUser?.id
+        confirm_early_hand_over: confirmEarlyHandOver
       .fail (e)=>
-        @errorContainer.find("strong").html(e.responseText)
-        @errorContainer.removeClass("hidden")
+        # a time slot handed over early would conflict with other reservations
+        if e.status == 409 and confirm(e.responseText)
+          @handOver(null, true)
+        else
+          @errorContainer.find("strong").html(e.responseText)
+          @errorContainer.removeClass("hidden")
       .done (data)=>
         @modal.undestroyable()
         @modal.el.detach()

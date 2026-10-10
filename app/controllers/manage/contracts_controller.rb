@@ -91,9 +91,13 @@ class Manage::ContractsController < Manage::ApplicationController
                                    reservations,
                                    params[:purpose],
                                    params[:note],
-                                   params[:delegated_user_id])
+                                   params[:delegated_user_id],
+                                   confirm_early_hand_over: \
+                                     params[:confirm_early_hand_over] == 'true')
 
         render json: @contract.to_json
+      rescue Contract::EarlyHandOverConflict => e
+        render status: :conflict, plain: e.message
       rescue => e
         render status: :bad_request, plain: e.message
       end
