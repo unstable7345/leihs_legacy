@@ -4587,6 +4587,38 @@ window.i18n.locale_data = {
       "The order has already been dealt with.": [
          null,
          "L'ordre a déjà été traité."
+      ],
+      "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first.": [
+         null,
+         "%{model} est réservé pour le %{date}, %{slot}. Pour le remettre aujourd'hui, modifiez d'abord la date de la réservation."
+      ],
+      "The time slot %{slot} of %{model} is already over.": [
+         null,
+         "La plage horaire %{slot} de %{model} est déjà terminée."
+      ],
+      "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?": [
+         null,
+         "%{model} est réservé pour %{slot}. S'il est remis maintenant, il manquera pour d'autres réservations avant %{start}. Le remettre quand même ?"
+      ],
+      "The inventory pool does not offer this time slot.": [
+         null,
+         "Le parc d'inventaire ne propose pas cette plage horaire."
+      ],
+      "A time slot can only be reserved for a single day": [
+         null,
+         "Une plage horaire ne peut être réservée que pour un seul jour"
+      ],
+      "Keep the time slots": [
+         null,
+         "Conserver les plages horaires"
+      ],
+      "Time slot": [
+         null,
+         "Plage horaire"
+      ],
+      "Whole day": [
+         null,
+         "Journée entière"
       ]
    }
 }

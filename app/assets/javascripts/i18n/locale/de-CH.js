@@ -4873,6 +4873,38 @@ window.i18n.locale_data = {
       "Sunday": [
          null,
          "Sonntag"
+      ],
+      "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first.": [
+         null,
+         "%{model} ist für den %{date}, %{slot} reserviert. Um es heute auszugeben, zuerst das Datum der Reservation ändern."
+      ],
+      "The time slot %{slot} of %{model} is already over.": [
+         null,
+         "Das Zeitfenster %{slot} von %{model} ist bereits vorbei."
+      ],
+      "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?": [
+         null,
+         "%{model} ist für %{slot} reserviert. Wird es jetzt ausgegeben, fehlt es für andere Reservationen vor %{start}. Trotzdem ausgeben?"
+      ],
+      "The inventory pool does not offer this time slot.": [
+         null,
+         "Der Gerätepark bietet dieses Zeitfenster nicht an."
+      ],
+      "A time slot can only be reserved for a single day": [
+         null,
+         "Ein Zeitfenster kann nur für einen einzelnen Tag reserviert werden"
+      ],
+      "Keep the time slots": [
+         null,
+         "Zeitfenster beibehalten"
+      ],
+      "Time slot": [
+         null,
+         "Zeitfenster"
+      ],
+      "Whole day": [
+         null,
+         "Ganzer Tag"
       ]
    }
 }

@@ -3757,3 +3757,27 @@ msgstr "Samstag"
 
 msgid "Sunday"
 msgstr "Sonntag"
+
+msgid "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first."
+msgstr "%{model} ist für den %{date}, %{slot} reserviert. Um es heute auszugeben, zuerst das Datum der Reservation ändern."
+
+msgid "The time slot %{slot} of %{model} is already over."
+msgstr "Das Zeitfenster %{slot} von %{model} ist bereits vorbei."
+
+msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
+msgstr "%{model} ist für %{slot} reserviert. Wird es jetzt ausgegeben, fehlt es für andere Reservationen vor %{start}. Trotzdem ausgeben?"
+
+msgid "The inventory pool does not offer this time slot."
+msgstr "Der Gerätepark bietet dieses Zeitfenster nicht an."
+
+msgid "A time slot can only be reserved for a single day"
+msgstr "Ein Zeitfenster kann nur für einen einzelnen Tag reserviert werden"
+
+msgid "Keep the time slots"
+msgstr "Zeitfenster beibehalten"
+
+msgid "Time slot"
+msgstr "Zeitfenster"
+
+msgid "Whole day"
+msgstr "Ganzer Tag"

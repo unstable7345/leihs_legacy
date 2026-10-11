@@ -3580,3 +3580,27 @@ msgstr "no se pueden entregar reservas que empiezan en el futuro"
 
 msgid "you cannot hand out reservations with unassigned inventory codes"
 msgstr "no se pueden entregar reservas con códigos de inventario sin asignar"
+
+msgid "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first."
+msgstr "%{model} está reservado para el %{date}, %{slot}. Para entregarlo hoy, cambie primero la fecha de la reserva."
+
+msgid "The time slot %{slot} of %{model} is already over."
+msgstr "La franja %{slot} de %{model} ya terminó."
+
+msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
+msgstr "%{model} está reservado para %{slot}. Si se entrega ahora, faltará para otras reservas antes de las %{start}. ¿Entregarlo de todos modos?"
+
+msgid "The inventory pool does not offer this time slot."
+msgstr "El grupo de inventario no ofrece esta franja horaria."
+
+msgid "A time slot can only be reserved for a single day"
+msgstr "Una franja horaria solo se puede reservar para un único día"
+
+msgid "Keep the time slots"
+msgstr "Mantener las franjas horarias"
+
+msgid "Time slot"
+msgstr "Franja horaria"
+
+msgid "Whole day"
+msgstr "Día completo"

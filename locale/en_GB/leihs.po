@@ -2829,3 +2829,27 @@ msgstr "The indication of a telephone number is recommended"
 
 msgid "The order has already been dealt with."
 msgstr "The order has already been dealt with."
+
+msgid "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first."
+msgstr ""
+
+msgid "The time slot %{slot} of %{model} is already over."
+msgstr ""
+
+msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
+msgstr ""
+
+msgid "The inventory pool does not offer this time slot."
+msgstr ""
+
+msgid "A time slot can only be reserved for a single day"
+msgstr ""
+
+msgid "Keep the time slots"
+msgstr ""
+
+msgid "Time slot"
+msgstr ""
+
+msgid "Whole day"
+msgstr ""

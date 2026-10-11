@@ -3,30 +3,30 @@ if (window.i18n == undefined) window.i18n = {};
 (function() {
 
   i18n.date = {
-    L: "DD.MM.YYYY",
-    XL: "dddd DD.MM.YYYY",
-    XXL: "DD.MM.YYYY LT",
-    XXXL: "dddd DD.MM.YYYY LT",
-    XS: 'DD.MM.YY'
+    L: "DD/MM/YYYY",
+    XL: "dddd DD/MM/YYYY",
+    XXL: "DD/MM/YYYY LT",
+    XXXL: "dddd DD/MM/YYYY LT",
+    XS: 'DD/MM/YY'
   };
 
   i18n.datepicker = {
-    L: "dd.mm.yy",
-    XS: "dd.mm.y"
+    L: "dd/mm/yy",
+    XS: "dd/mm/y"
   };
 
   i18n.months = {
-    full: ["Januar", "Februar", 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-    trunc: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
+    full: ["enero", "febrero", 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+    trunc: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
   };
 
   i18n.days = {
     first: 1,
-    full: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
-    trunc: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
+    full: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+    trunc: ['do', 'lu', 'ma', 'mi', 'ju', 'vi', 'sá']
   };
 
-  i18n.time = "H:mm U\\hr";
+  i18n.time = "H:mm";
 
   i18n.meridiem = {
     AM: 'AM',
@@ -36,28 +36,28 @@ if (window.i18n == undefined) window.i18n = {};
   };
 
   i18n.calendar = {
-    sameDay: "[Heute um] LT",
+    sameDay: "[Hoy a las] LT",
     sameElse: "L",
-    nextDay: '[Morgen um] LT',
-    nextWeek: 'dddd [um] LT',
-    lastDay: '[Gestern um] LT',
-    lastWeek: '[letzten] dddd [um] LT'
+    nextDay: '[Mañana a las] LT',
+    nextWeek: 'dddd [a las] LT',
+    lastDay: '[Ayer a las] LT',
+    lastWeek: 'dddd [pasado a las] LT'
   };
 
   i18n.relative = {
-    future: "in %s",
-    past: "vor %s",
-    s: "ein paar Sekunden",
-    m: "einer Minute",
-    mm: "%d Minuten",
-    h: "einer Stunde",
-    hh: "%d Stunden",
-    d: "einem Tag",
-    dd: "%d Tagen",
-    M: "einem Monat",
-    MM: "%d Monaten",
-    y: "einem Jahr",
-    yy: "%d Jahren"
+    future: "en %s",
+    past: "hace %s",
+    s: "unos segundos",
+    m: "un minuto",
+    mm: "%d minutos",
+    h: "una hora",
+    hh: "%d horas",
+    d: "un día",
+    dd: "%d días",
+    M: "un mes",
+    MM: "%d meses",
+    y: "un año",
+    yy: "%d años"
   };
 
   i18n.number = {
@@ -4799,6 +4799,38 @@ window.i18n.locale_data = {
       "you cannot hand out reservations with unassigned inventory codes": [
          null,
          "no se pueden entregar reservas con códigos de inventario sin asignar"
+      ],
+      "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first.": [
+         null,
+         "%{model} está reservado para el %{date}, %{slot}. Para entregarlo hoy, cambie primero la fecha de la reserva."
+      ],
+      "The time slot %{slot} of %{model} is already over.": [
+         null,
+         "La franja %{slot} de %{model} ya terminó."
+      ],
+      "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?": [
+         null,
+         "%{model} está reservado para %{slot}. Si se entrega ahora, faltará para otras reservas antes de las %{start}. ¿Entregarlo de todos modos?"
+      ],
+      "The inventory pool does not offer this time slot.": [
+         null,
+         "El grupo de inventario no ofrece esta franja horaria."
+      ],
+      "A time slot can only be reserved for a single day": [
+         null,
+         "Una franja horaria solo se puede reservar para un único día"
+      ],
+      "Keep the time slots": [
+         null,
+         "Mantener las franjas horarias"
+      ],
+      "Time slot": [
+         null,
+         "Franja horaria"
+      ],
+      "Whole day": [
+         null,
+         "Día completo"
       ]
    }
 }

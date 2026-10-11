@@ -3452,3 +3452,27 @@ msgstr "L'indication d'un numéro de téléphone est recommandée"
 
 msgid "The order has already been dealt with."
 msgstr "L'ordre a déjà été traité."
+
+msgid "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first."
+msgstr "%{model} est réservé pour le %{date}, %{slot}. Pour le remettre aujourd'hui, modifiez d'abord la date de la réservation."
+
+msgid "The time slot %{slot} of %{model} is already over."
+msgstr "La plage horaire %{slot} de %{model} est déjà terminée."
+
+msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
+msgstr "%{model} est réservé pour %{slot}. S'il est remis maintenant, il manquera pour d'autres réservations avant %{start}. Le remettre quand même ?"
+
+msgid "The inventory pool does not offer this time slot."
+msgstr "Le parc d'inventaire ne propose pas cette plage horaire."
+
+msgid "A time slot can only be reserved for a single day"
+msgstr "Une plage horaire ne peut être réservée que pour un seul jour"
+
+msgid "Keep the time slots"
+msgstr "Conserver les plages horaires"
+
+msgid "Time slot"
+msgstr "Plage horaire"
+
+msgid "Whole day"
+msgstr "Journée entière"

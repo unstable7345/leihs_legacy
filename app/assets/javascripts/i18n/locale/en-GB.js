@@ -3790,6 +3790,38 @@ window.i18n.locale_data = {
       "The order has already been dealt with.": [
          null,
          "The order has already been dealt with."
+      ],
+      "%{model} is reserved for %{date}, %{slot}. To hand it over today, change the date of the reservation first.": [
+         null,
+         ""
+      ],
+      "The time slot %{slot} of %{model} is already over.": [
+         null,
+         ""
+      ],
+      "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?": [
+         null,
+         ""
+      ],
+      "The inventory pool does not offer this time slot.": [
+         null,
+         ""
+      ],
+      "A time slot can only be reserved for a single day": [
+         null,
+         ""
+      ],
+      "Keep the time slots": [
+         null,
+         ""
+      ],
+      "Time slot": [
+         null,
+         ""
+      ],
+      "Whole day": [
+         null,
+         ""
       ]
    }
 }
