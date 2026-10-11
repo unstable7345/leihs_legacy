@@ -89,8 +89,8 @@ module Manage
              find('div.row > div > div > div', text: 'Total')
              find(
                "div[title='Entitlement Info #{@group.id}']",
-               text: "#{av} reserviert für Gruppe #{@group.name}"\
-                     ', davon zugewiesen'
+               text: "#{av} reserved for group #{@group.name}"\
+                     ', of which assigned'
              )
              expect(
                find("div[title='Entitlement #{@group.id}']")

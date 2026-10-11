@@ -98,7 +98,7 @@
              <input onChange={(event) => this._onChangeLocation(event, index)} value={allocation.location} className='width-full small text-align-center' data-room-allocation='true' name='item[properties][quantity_allocations][][room]' type='text' />
            </div>
            <div className='line-col col1of10'>
-             <button onClick={(event) => this._undoRemoveAllocation(event, index)} className='button inset small' data-remove=''>rückgängig</button>
+             <button onClick={(event) => this._undoRemoveAllocation(event, index)} className='button inset small' data-remove=''>{_jed('undo')}</button>
            </div>
         </div>
         )

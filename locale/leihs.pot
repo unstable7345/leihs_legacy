@@ -3753,3 +3753,12 @@ msgstr ""
 
 msgid "max. %s"
 msgstr ""
+
+msgid "must be taken from other groups"
+msgstr ""
+
+msgid "%s available for general use, of which assigned"
+msgstr ""
+
+msgid "%s reserved for group %s, of which assigned"
+msgstr ""

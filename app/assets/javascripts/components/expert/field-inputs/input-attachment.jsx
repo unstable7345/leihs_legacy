@@ -70,7 +70,7 @@
     _renderUploadIcon(fileModel) {
 
       return (
-        <div className='line-col text-align-center' title='Datei wird beim speichern hochgeladen'>
+        <div className='line-col text-align-center' title={_jed('File has to be uploaded on save')}>
           <i className='fa fa-cloud-upload'></i>
         </div>
       )
@@ -81,7 +81,7 @@
 
       if(fileModel.delete) {
         return (
-          <div className='line-col text-align-center' title='Datei wird beim speichern hochgeladen'>
+          <div className='line-col text-align-center' title={_jed('File has to be uploaded on save')}>
             <i className='fa fa-trash'></i>
           </div>
         )
@@ -206,7 +206,7 @@
 
             <div className='col1of2' data-type='value'>
               <button onClick={(event) => this.inputElement.click()} type='button' className='button inset width-full' data-type='select'>
-                Datei auswählen
+                {_jed('Select File')}
               </button>
               <input ref={(input) => this.inputElement = input} onChange={this._onFileChange} autoComplete='false' className='invisible height-full width-full position-absolute-topleft' type='file' />
             </div>

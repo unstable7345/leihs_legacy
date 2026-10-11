@@ -316,7 +316,7 @@
           <div className='col1of5 line-col'>
             <div className='row'>
               <div className='col1of2'>
-                <button onClick={_onItemClick} className='button inset small width-full' title='Gegenstände'>
+                <button onClick={_onItemClick} className='button inset small width-full' title={_jed('Items')}>
                   {downArrow}
                   <span>{' ' + itemCount}</span>
                 </button>
@@ -339,9 +339,9 @@
             </strong>
           </div>
           <div className='col1of5 line-col text-align-center'>
-            <span title='auf Lager'>{availability.in_stock}</span>
+            <span title={_jed('in stock')}>{availability.in_stock}</span>
             /
-            <span title='verleihbar'>{availability.total_rentable}</span>
+            <span title={_jed('borrowable')}>{availability.total_rentable}</span>
           </div>
           <div className='col1of5 line-col line-actions padding-right-xs' style={{paddingRight: '16px'}}>
 

@@ -13,24 +13,13 @@
 
 
     _monthTexts () {
+      return window.i18n.months.full
+    },
 
-      return [
-        'Januar',
-        'Februar',
-        'März',
-        'April',
-        'Mai',
-        'Juni',
-        'Juli',
-        'August',
-        'September',
-        'Oktober',
-        'November',
-        'Dezember'
-      ]
-
-
-
+    // Monday first, as the table is rendered
+    _weekdays () {
+      var days = window.i18n.days
+      return [1, 2, 3, 4, 5, 6, 0].map((i) => ({full: days.full[i], trunc: days.trunc[i]}))
     },
 
     _getMonthText () {
@@ -223,13 +212,9 @@
            <table className='ui-datepicker-calendar'>
               <thead>
                  <tr>
-                    <th scope='col'><span title='Montag'>Mo</span></th>
-                    <th scope='col'><span title='Dienstag'>Di</span></th>
-                    <th scope='col'><span title='Mittwoch'>Mi</span></th>
-                    <th scope='col'><span title='Donnerstag'>Do</span></th>
-                    <th scope='col'><span title='Freitag'>Fr</span></th>
-                    <th scope='col' className='ui-datepicker-week-end'><span title='Samstag'>Sa</span></th>
-                    <th scope='col' className='ui-datepicker-week-end'><span title='Sonntag'>So</span></th>
+                    {this._weekdays().map((day, index) =>
+                      <th key={index} scope='col' className={index > 4 ? 'ui-datepicker-week-end' : null}><span title={day.full}>{day.trunc}</span></th>
+                    )}
                  </tr>
               </thead>
               <tbody>

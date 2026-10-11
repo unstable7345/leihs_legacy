@@ -4055,6 +4055,18 @@ window.i18n.locale_data = {
       "Whole day": [
          null,
          ""
+      ],
+      "must be taken from other groups": [
+         null,
+         ""
+      ],
+      "%s available for general use, of which assigned": [
+         null,
+         ""
+      ],
+      "%s reserved for group %s, of which assigned": [
+         null,
+         ""
       ]
    }
 }

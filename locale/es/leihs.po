@@ -3754,3 +3754,12 @@ msgstr "Exportar"
 
 msgid "max. %s"
 msgstr "máx. %s"
+
+msgid "must be taken from other groups"
+msgstr "hay que tomarlos de otros grupos"
+
+msgid "%s available for general use, of which assigned"
+msgstr "%s disponibles para uso general; de ellos, asignados"
+
+msgid "%s reserved for group %s, of which assigned"
+msgstr "%s reservados para el grupo %s; de ellos, asignados"

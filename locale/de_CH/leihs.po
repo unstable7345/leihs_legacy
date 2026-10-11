@@ -3781,3 +3781,12 @@ msgstr "Zeitfenster"
 
 msgid "Whole day"
 msgstr "Ganzer Tag"
+
+msgid "must be taken from other groups"
+msgstr "müssen aus fremden Gruppen genommen werden"
+
+msgid "%s available for general use, of which assigned"
+msgstr "%s verfügbar für Allgemein, davon zugewiesen"
+
+msgid "%s reserved for group %s, of which assigned"
+msgstr "%s reserviert für Gruppe %s, davon zugewiesen"

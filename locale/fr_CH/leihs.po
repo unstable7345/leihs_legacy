@@ -3476,3 +3476,12 @@ msgstr "Plage horaire"
 
 msgid "Whole day"
 msgstr "Journée entière"
+
+msgid "must be taken from other groups"
+msgstr "doivent être pris dans d'autres groupes"
+
+msgid "%s available for general use, of which assigned"
+msgstr "%s disponibles pour l'usage général, dont attribués"
+
+msgid "%s reserved for group %s, of which assigned"
+msgstr "%s réservés pour le groupe %s, dont attribués"

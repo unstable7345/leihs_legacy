@@ -201,10 +201,10 @@ window.TimelineRender = {
       quantity = 0
     }
     if(groupId == '') {
-      label = quantity + ' verfügbar für Allgemein, davon zugewiesen'
+      label = _jed('%s available for general use, of which assigned', [quantity])
     } else {
       var name = TimelineRender.entitlementGroupNameForId(timeline_availability, groupId)
-      label = quantity + ' reserviert für Gruppe ' + name + ', davon zugewiesen'
+      label = _jed('%s reserved for group %s, of which assigned', [quantity, name])
     }
 
     return TimelineRender.renderBoldLabel(title, top, wholeWidth, label, 'label_' + groupId, firstMoment)

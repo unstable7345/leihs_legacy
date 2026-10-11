@@ -37,7 +37,7 @@
       }
 
       return (
-        <a onClick={(event) => this.props._onDeselect(event, selectedValue.field)} className='font-size-m link grey padding-inset-xs' data-placement='top' data-toggle='tooltip' data-type='remove-field' title='Dieses Feld beim Editieren von Gegenständen nicht mehr anzeigen'>
+        <a onClick={(event) => this.props._onDeselect(event, selectedValue.field)} className='font-size-m link grey padding-inset-xs' data-placement='top' data-toggle='tooltip' data-type='remove-field' title={_jed('Hide this field from all item forms')}>
           <i className='fa fa-times-circle'></i>
         </a>
 

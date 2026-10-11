@@ -644,7 +644,7 @@
               data-toggle="tooltip"
               id="show-all-fields"
               style={displayAllStyle}
-              title="Alle versteckten Felder wieder anzeigen">
+              title={_jed('Reset visibility of all fields on the item forms')}>
               Alle Felder anzeigen
             </button>
             <a
@@ -706,7 +706,7 @@
             data-toggle="tooltip"
             id="show-all-fields"
             style={displayAllStyle}
-            title="Alle versteckten Felder wieder anzeigen">
+            title={_jed('Reset visibility of all fields on the item forms')}>
             Alle Felder anzeigen
           </button>
           <a

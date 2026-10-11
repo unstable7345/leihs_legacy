@@ -4905,6 +4905,18 @@ window.i18n.locale_data = {
       "Whole day": [
          null,
          "Ganzer Tag"
+      ],
+      "must be taken from other groups": [
+         null,
+         "müssen aus fremden Gruppen genommen werden"
+      ],
+      "%s available for general use, of which assigned": [
+         null,
+         "%s verfügbar für Allgemein, davon zugewiesen"
+      ],
+      "%s reserved for group %s, of which assigned": [
+         null,
+         "%s reserviert für Gruppe %s, davon zugewiesen"
       ]
    }
 }

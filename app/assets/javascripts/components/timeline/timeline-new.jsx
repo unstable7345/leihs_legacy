@@ -149,19 +149,19 @@
           <div style={{position: 'absolute', top: topReservations + 'px', left: '0px', width: wholeWidth + 'px'}}>
             {TimelineRenderReservations.renderReservations(allLayoutedReservationFrames, firstMoment, lastMoment, this.props.timeline_availability, this.state.preprocessedData.invalidReservations, this._onToggle)}
           </div>
-          {TimelineRender.renderLabelSmall(firstMoment, 'Total:', topTotalQuantities)}
+          {TimelineRender.renderLabelSmall(firstMoment, _jed('Total') + ':', topTotalQuantities)}
           {TimelineRender.renderIndexedQuantitiesSmall(null, (i) => relevantItemsCount, firstMoment, lastMoment, unusedColors, topTotalQuantities, wholeWidth, undefined)}
 
           {TimelineRender.renderEntitlementQuantityLabels(entitlementLineHeight, this.props.timeline_availability, this.state.preprocessedData.changesForDays, reservationsInGroups, entitlementQuantities, topEntitlementQuantities, wholeWidth, firstMoment, lastMoment, relevantItemsCount)}
           {TimelineRender.renderEntitlementQuantities(entitlementLineHeight, this.props.timeline_availability, this.state.preprocessedData.changesForDays, reservationsInGroups, entitlementQuantities, topEntitlementQuantities + 20, wholeWidth, firstMoment, lastMoment, relevantItemsCount)}
 
-          {TimelineRender.renderBoldLabel(null, topTest, wholeWidth, 'müssen aus fremden Gruppen genommen werden', undefined, firstMoment)}
+          {TimelineRender.renderBoldLabel(null, topTest, wholeWidth, _jed('must be taken from other groups'), undefined, firstMoment)}
           {TimelineRender.renderNotAssignable(entitlementLineHeight, this.props.timeline_availability, this.state.preprocessedData.changesForDays, reservationsInGroups, entitlementQuantities, topTest + 20, wholeWidth, firstMoment, lastMoment, relevantItemsCount, unusedCounts)}
 
-          {TimelineRender.renderBoldLabel(null, topTest2, wholeWidth, 'Überbuchungen', undefined, firstMoment)}
+          {TimelineRender.renderBoldLabel(null, topTest2, wholeWidth, _jed('Overbooking'), undefined, firstMoment)}
           {TimelineRender.renderNotEnough(entitlementLineHeight, this.props.timeline_availability, this.state.preprocessedData.changesForDays, reservationsInGroups, entitlementQuantities, topTest2 + 20, wholeWidth, firstMoment, lastMoment, relevantItemsCount, unusedCounts)}
 
-          {TimelineRender.renderLabelSmall(firstMoment, 'Verfügbar:', topAvailabilities)}
+          {TimelineRender.renderLabelSmall(firstMoment, _jed('Available') + ':', topAvailabilities)}
           {TimelineRender.renderIndexedQuantities((i) => unusedCounts[i], firstMoment, lastMoment, unusedColors, topAvailabilities, wholeWidth, null)}
 
 

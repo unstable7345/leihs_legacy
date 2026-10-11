@@ -802,7 +802,7 @@
       var flashContent = (
         <div className='paragraph-m row emboss straight text-align-center padding-inset-xs error'>
           <strong key='key1'>{message}</strong>
-          <a key='key2' className='no-colors transparent-hover position-absolute-topright height-full padding-horizontal-m' data-remove='true' title='Hide notification'>
+          <a key='key2' className='no-colors transparent-hover position-absolute-topright height-full padding-horizontal-m' data-remove='true' title={_jed('Hide notification')}>
             <div className='table'>
               <div className='table-row'>
                 <div className='table-cell vertical-align-middle'>
@@ -1669,7 +1669,7 @@
 
                 return (
                   <div key={'property_' + index} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
-                    <div className='line-col' title='Wird beim speichern entfernt'>
+                    <div className='line-col' title={_jed('Removed on save')}>
                       <i className='fa fa-trash'></i>
                     </div>
                     <div className='line-col col1of10 text-align-left no-padding text-align-center cursor-move ui-sortable-handle' data-type='sort-handle'>
@@ -1828,7 +1828,7 @@
               if(image.delete) {
                 return (
                   <div key={'image_' + image.id} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
-                    <div className='line-col col1of10' title='Wird beim speichern entfernt'>
+                    <div className='line-col col1of10' title={_jed('Removed on save')}>
                       <i className='fa fa-trash'></i>
                     </div>
                     <div className='line-col col1of10 text-align-center'>
@@ -1884,7 +1884,7 @@
               return (
 
                 <div key={'image_' + image.id} className='row line font-size-xs focus-hover-thin' data-new='' data-type='inline-entry'>
-                  <div className='line-col col1of10 text-align-center' title='File has to be uploaded on save'>
+                  <div className='line-col col1of10 text-align-center' title={_jed('File has to be uploaded on save')}>
                     <i className='fa fa-cloud-upload'></i>
                   </div>
                   <div className='line-col col1of10 text-align-center'>
@@ -1984,7 +1984,7 @@
 
                 return (
                   <div key={'attachment_' + attachment.id} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
-                    <div className='line-col' title='Wird beim speichern entfernt'>
+                    <div className='line-col' title={_jed('Removed on save')}>
                       <i className='fa fa-trash'></i>
                     </div>
                     <div className='line-col col7of10 text-align-left'>
@@ -2022,7 +2022,7 @@
               return (
 
                 <div key={'attachment_' + attachment.id} className='row line font-size-xs focus-hover-thin' data-new='' data-type='inline-entry'>
-                  <div className='line-col col1of10 text-align-center' title='File has to be uploaded on save'>
+                  <div className='line-col col1of10 text-align-center' title={_jed('File has to be uploaded on save')}>
                     <i className='fa fa-cloud-upload'></i>
                   </div>
                   <div className='line-col col6of10 text-align-left' style={{wordBreak: 'break-all'}}>
@@ -2124,7 +2124,7 @@
               return (
 
                 <div key={'accessory_' + index} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
-                  <div className='line-col' title='Wird beim speichern entfernt'>
+                  <div className='line-col' title={_jed('Removed on save')}>
                     <i className='fa fa-trash'></i>
                   </div>
                   <label className='line-col col1of10 text-align-center no-padding'>
@@ -2268,7 +2268,7 @@
                 return (
                   <div key={s.group_id} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
                     {red}
-                    <div className='line-col' title='Wird beim speichern entfernt'>
+                    <div className='line-col' title={_jed('Removed on save')}>
                       <i className='fa fa-trash'></i>
                     </div>
                     <div className='line-col col3of5 text-align-left' data-name='AV-Services'>
@@ -2315,7 +2315,7 @@
 
                 return (
                   <div key={s.id} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
-                    <div className='line-col' title='Wird beim speichern entfernt'>
+                    <div className='line-col' title={_jed('Removed on save')}>
                       <i className='fa fa-trash'></i>
                     </div>
                     <div className='line-col col2of3 text-align-left'>

@@ -1282,7 +1282,7 @@
           <div className='col1of5 line-col'>
             <div className='row'>
               <div className='col1of2'>
-                <button onClick={(event) => this._onToggleModel(event, model)} className='button inset small width-full' data-type='inventory-expander' title='Packages'>
+                <button onClick={(event) => this._onToggleModel(event, model)} className='button inset small width-full' data-type='inventory-expander' title={_jed('Packages')}>
                   {this._renderArrow(model)}
                   {' '}
                   <span>{this._itemCount(model)}</span>

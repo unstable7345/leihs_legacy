@@ -5031,6 +5031,18 @@ window.i18n.locale_data = {
       "max. %s": [
          null,
          "máx. %s"
+      ],
+      "must be taken from other groups": [
+         null,
+         "hay que tomarlos de otros grupos"
+      ],
+      "%s available for general use, of which assigned": [
+         null,
+         "%s disponibles para uso general; de ellos, asignados"
+      ],
+      "%s reserved for group %s, of which assigned": [
+         null,
+         "%s reservados para el grupo %s; de ellos, asignados"
       ]
    }
 }
