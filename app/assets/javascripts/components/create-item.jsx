@@ -645,7 +645,7 @@
               id="show-all-fields"
               style={displayAllStyle}
               title={_jed('Reset visibility of all fields on the item forms')}>
-              Alle Felder anzeigen
+              {_jed('Show all fields')}
             </button>
             <a
               className="button grey"
@@ -707,7 +707,7 @@
             id="show-all-fields"
             style={displayAllStyle}
             title={_jed('Reset visibility of all fields on the item forms')}>
-            Alle Felder anzeigen
+            {_jed('Show all fields')}
           </button>
           <a
             className="button grey"
@@ -810,7 +810,7 @@
                     {this.state.errorMessage}
                     <div className="row text-align-right">
                       <button type="button" className="button small white" onClick={onClick}>
-                        Close
+                        {_jed('Close')}
                       </button>
                     </div>
                   </div>

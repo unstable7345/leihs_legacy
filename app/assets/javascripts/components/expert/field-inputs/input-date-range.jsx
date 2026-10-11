@@ -36,11 +36,11 @@
       return (
         <div className='col1of2' data-type='value'>
           <div className='col1of2'>
-            von:
+            {_jed('from')}:
             <DatePickerWithInput value={selectedValue.value.from} onChange={this._onChangeFrom} />
           </div>
           <div className='col1of2'>
-            bis:
+            {_jed('until')}:
             <DatePickerWithInput value={selectedValue.value.to} onChange={this._onChangeTo} />
           </div>
         </div>

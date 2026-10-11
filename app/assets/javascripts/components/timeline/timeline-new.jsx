@@ -136,7 +136,7 @@
           <div style={{position: 'fixed', zIndex: '1000000000', left: '0px', right: '0px', bottom: '0px', height: '40px', backgroundColor: 'white'}}>
             <a href={window.location.href.replace('/timeline', '/old_timeline')}>
               <div style={{borderRadius: '5px', color: '#eee', textAlign: 'center', fontSize: '12px', padding: '6px', backgroundColor: '#4e4e4e', width: '200px', margin: '5px auto 5px auto'}}>
-                Old Version
+                {_jed('Old version')}
               </div>
             </a>
           </div>

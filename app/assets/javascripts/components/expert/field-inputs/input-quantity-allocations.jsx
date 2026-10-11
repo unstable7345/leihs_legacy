@@ -86,14 +86,14 @@
 
         return (
           <div key={'key_' + index} className='row line font-size-xs focus-hover-thin striked' data-type='inline-entry'>
-           <div className='line-col' title='Wird beim speichern entfernt'>
+           <div className='line-col' title={_jed('Removed on save')}>
               <i className='fa fa-trash'></i>
            </div>
-           <div className='line-col col1of10 text-align-center'>Quantity:</div>
+           <div className='line-col col1of10 text-align-center'>{_jed('Quantity')}:</div>
            <div className='line-col col2of10'>
              <input onChange={(event) => this._onChangeQuantity(event, index)} value={allocation.quantity} className='width-full small text-align-center' data-quantity-allocation='true' name='item[properties][quantity_allocations][][quantity]' type='text' />
            </div>
-           <div className='line-col col1of10 text-align-center'>Location:</div>
+           <div className='line-col col1of10 text-align-center'>{_jed('Location')}:</div>
            <div className='line-col col5of10'>
              <input onChange={(event) => this._onChangeLocation(event, index)} value={allocation.location} className='width-full small text-align-center' data-room-allocation='true' name='item[properties][quantity_allocations][][room]' type='text' />
            </div>
@@ -109,16 +109,16 @@
       } else {
         return (
           <div key={'key_' + index} className='row line font-size-xs focus-hover-thin' data-type='inline-entry'>
-            <div className='line-col col1of10 text-align-center'>Quantity:</div>
+            <div className='line-col col1of10 text-align-center'>{_jed('Quantity')}:</div>
             <div className='line-col col2of10'>
               <input onChange={(event) => this._onChangeQuantity(event, index)} value={allocation.quantity} className='width-full small text-align-center' data-quantity-allocation='true' name='item[properties][quantity_allocations][][quantity]' type='text' />
             </div>
-            <div className='line-col col1of10 text-align-center'>Location:</div>
+            <div className='line-col col1of10 text-align-center'>{_jed('Location')}:</div>
             <div className='line-col col5of10'>
               <input onChange={(event) => this._onChangeLocation(event, index)} value={allocation.location} className='width-full small text-align-center' data-room-allocation='true' name='item[properties][quantity_allocations][][room]' type='text' />
             </div>
             <div className='line-col col1of10'>
-              <button onClick={(event) => this._removeAllocation(event, index)} className='button inset small' data-remove=''>Remove</button>
+              <button onClick={(event) => this._removeAllocation(event, index)} className='button inset small' data-remove=''>{_jed('Remove')}</button>
             </div>
           </div>
         )

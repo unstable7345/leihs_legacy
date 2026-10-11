@@ -243,7 +243,7 @@
         return _.compact([
           <div key="separator" className="separated-top margin-bottom-m"></div>,
           <h2 key="title" className="headline-m padding-bottom-m" style={{ clear: 'both' }}>
-            Software
+            {_jed('Software')}
           </h2>,
           <div key="content" className="row margin-bottom-l">
             {this._renderTechnicalDetail()}

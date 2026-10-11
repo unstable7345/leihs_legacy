@@ -5043,6 +5043,78 @@ window.i18n.locale_data = {
       "%s reserved for group %s, of which assigned": [
          null,
          "%s reservados para el grupo %s; de ellos, asignados"
+      ],
+      "Last checked before": [
+         null,
+         "Última revisión antes de"
+      ],
+      "Only visible if owner": [
+         null,
+         "Solo visible para el propietario"
+      ],
+      "min": [
+         null,
+         "mín."
+      ],
+      "max": [
+         null,
+         "máx."
+      ],
+      "Old version": [
+         null,
+         "Versión anterior"
+      ],
+      "Upload a comma separated CSV file (UTF-8 encoding).": [
+         null,
+         "Suba un archivo CSV separado por comas (codificación UTF-8)."
+      ],
+      "Room number": [
+         null,
+         "Número de sala"
+      ],
+      "has %s more...": [
+         null,
+         "%s más..."
+      ],
+      "The assigned contract reservations have to be marked either as signed or as closed": [
+         null,
+         "Las reservas asignadas al contrato deben estar marcadas como firmadas o cerradas"
+      ],
+      "Challenge Response/System ID": [
+         null,
+         "Challenge Response/ID del sistema"
+      ],
+      "Citrix": [
+         null,
+         "Citrix"
+      ],
+      "Dongle": [
+         null,
+         "Dongle"
+      ],
+      "Dongle ID": [
+         null,
+         "ID del dongle"
+      ],
+      "Linux": [
+         null,
+         "Linux"
+      ],
+      "Mac OS X": [
+         null,
+         "Mac OS X"
+      ],
+      "Web": [
+         null,
+         "Web"
+      ],
+      "Windows": [
+         null,
+         "Windows"
+      ],
+      "iOS": [
+         null,
+         "iOS"
       ]
    }
 }

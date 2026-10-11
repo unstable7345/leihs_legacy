@@ -1,3 +1,4 @@
+/* global i18n */
 import React from 'react'
 import createReactClass from 'create-react-class'
 import CalendarRow from './CalendarRow'
@@ -38,24 +39,24 @@ const CalendarContent = createReactClass({
                 <th
                   className="fc-day-header fc-mon fc-widget-header fc-first"
                   style={{ width: '102px' }}>
-                  Mo
+                  {i18n.days.trunc[1]}
                 </th>
                 <th className="fc-day-header fc-tue fc-widget-header" style={{ width: '102px' }}>
-                  Di
+                  {i18n.days.trunc[2]}
                 </th>
                 <th className="fc-day-header fc-wed fc-widget-header" style={{ width: '102px' }}>
-                  Mi
+                  {i18n.days.trunc[3]}
                 </th>
                 <th className="fc-day-header fc-thu fc-widget-header" style={{ width: '102px' }}>
-                  Do
+                  {i18n.days.trunc[4]}
                 </th>
                 <th className="fc-day-header fc-fri fc-widget-header" style={{ width: '102px' }}>
-                  Fr
+                  {i18n.days.trunc[5]}
                 </th>
                 <th className="fc-day-header fc-sat fc-widget-header" style={{ width: '102px' }}>
-                  Sa
+                  {i18n.days.trunc[6]}
                 </th>
-                <th className="fc-day-header fc-sun fc-widget-header fc-last">So</th>
+                <th className="fc-day-header fc-sun fc-widget-header fc-last">{i18n.days.trunc[0]}</th>
               </tr>
             </thead>
             <tbody>

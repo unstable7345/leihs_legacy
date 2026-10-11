@@ -1,4 +1,19 @@
 en-US:
+  activerecord:
+    errors:
+      models:
+        user_session:
+          attributes:
+            delegation:
+              required: 'is required.'
+        item_line:
+          attributes:
+            delegated_user:
+              required: 'is required.'
+        model:
+          attributes:
+            base:
+              restrict_with_exception_dependent_delete: 'Model is used by some other inventory pool and so cannot be deleted.'
   date:
     abbr_day_names:
     - Sun

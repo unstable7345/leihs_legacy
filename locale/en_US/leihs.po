@@ -3076,3 +3076,57 @@ msgstr ""
 
 msgid "%s reserved for group %s, of which assigned"
 msgstr ""
+
+msgid "Last checked before"
+msgstr ""
+
+msgid "Only visible if owner"
+msgstr ""
+
+msgid "min"
+msgstr ""
+
+msgid "max"
+msgstr ""
+
+msgid "Old version"
+msgstr ""
+
+msgid "Upload a comma separated CSV file (UTF-8 encoding)."
+msgstr ""
+
+msgid "Room number"
+msgstr ""
+
+msgid "The assigned contract reservations have to be marked either as signed or as closed"
+msgstr ""
+
+msgid "Challenge Response/System ID"
+msgstr ""
+
+msgid "Citrix"
+msgstr ""
+
+msgid "Dongle"
+msgstr ""
+
+msgid "Dongle ID"
+msgstr ""
+
+msgid "Linux"
+msgstr ""
+
+msgid "Mac OS X"
+msgstr ""
+
+msgid "Web"
+msgstr ""
+
+msgid "Windows"
+msgstr ""
+
+msgid "iOS"
+msgstr ""
+
+msgid "legacy_manage_inventory_pool_admin_section_notice"
+msgstr "Except for the management of entitlement groups are all other functions in the Admin section."

@@ -4068,6 +4068,78 @@ window.i18n.locale_data = {
       "%s reserved for group %s, of which assigned": [
          null,
          ""
+      ],
+      "Last checked before": [
+         null,
+         ""
+      ],
+      "Only visible if owner": [
+         null,
+         ""
+      ],
+      "min": [
+         null,
+         ""
+      ],
+      "max": [
+         null,
+         ""
+      ],
+      "Old version": [
+         null,
+         ""
+      ],
+      "Upload a comma separated CSV file (UTF-8 encoding).": [
+         null,
+         ""
+      ],
+      "Room number": [
+         null,
+         ""
+      ],
+      "The assigned contract reservations have to be marked either as signed or as closed": [
+         null,
+         ""
+      ],
+      "Challenge Response/System ID": [
+         null,
+         ""
+      ],
+      "Citrix": [
+         null,
+         ""
+      ],
+      "Dongle": [
+         null,
+         ""
+      ],
+      "Dongle ID": [
+         null,
+         ""
+      ],
+      "Linux": [
+         null,
+         ""
+      ],
+      "Mac OS X": [
+         null,
+         ""
+      ],
+      "Web": [
+         null,
+         ""
+      ],
+      "Windows": [
+         null,
+         ""
+      ],
+      "iOS": [
+         null,
+         ""
+      ],
+      "legacy_manage_inventory_pool_admin_section_notice": [
+         null,
+         "Except for the management of entitlement groups are all other functions in the Admin section."
       ]
    }
 }

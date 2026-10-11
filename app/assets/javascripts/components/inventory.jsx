@@ -1073,7 +1073,7 @@
       return (
         <div className='col1of5 padding-right-xs'>
           <label className='row'>
-          <input value={arguments.value} onChange={arguments.onChange} onFocus={arguments.onFocus} autoComplete='off' className='has-addon hasDatepicker' name='before_last_check' placeholder='Inventur vor' type='text' id='dp1509973221981' />
+          <input value={arguments.value} onChange={arguments.onChange} onFocus={arguments.onFocus} autoComplete='off' className='has-addon hasDatepicker' name='before_last_check' placeholder={_jed('Last checked before')} type='text' id='dp1509973221981' />
           <span className='addon' onClick={arguments.onFocus}>
             <i className='fa fa-calendar'></i>
           </span>

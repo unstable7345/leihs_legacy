@@ -4917,6 +4917,38 @@ window.i18n.locale_data = {
       "%s reserved for group %s, of which assigned": [
          null,
          "%s reserviert für Gruppe %s, davon zugewiesen"
+      ],
+      "Last checked before": [
+         null,
+         "Inventur vor"
+      ],
+      "Only visible if owner": [
+         null,
+         "Nur für Besitzer sichtbar"
+      ],
+      "min": [
+         null,
+         "min"
+      ],
+      "max": [
+         null,
+         "max"
+      ],
+      "Old version": [
+         null,
+         "Alte Version"
+      ],
+      "Upload a comma separated CSV file (UTF-8 encoding).": [
+         null,
+         "Laden Sie eine Komma-separierte CSV-Datei hoch (UTF-8 Kodierung)."
+      ],
+      "Room number": [
+         null,
+         "Raumnummer"
+      ],
+      "The assigned contract reservations have to be marked either as signed or as closed": [
+         null,
+         "Die zugewiesenen Vertragsreservationen müssen als unterschrieben oder abgeschlossen markiert sein"
       ]
    }
 }

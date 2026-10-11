@@ -32,7 +32,7 @@
       var packageText = null
       if(isParent) {
         packageText = (
-          <div className='grey-text'>Package</div>
+          <div className='grey-text'>{_jed('Package')}</div>
         )
 
       }
@@ -305,7 +305,7 @@
       var packageText = null
       if(is_package) {
         packageText = (
-          <div className='grey-text'>Package</div>
+          <div className='grey-text'>{_jed('Package')}</div>
         )
       }
 

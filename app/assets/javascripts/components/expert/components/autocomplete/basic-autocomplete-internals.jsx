@@ -175,7 +175,7 @@
         return (
           <li key={'has_more'} className={className} tabIndex='-1'>
             <div className='row text-ellipsis' style={{textAlign: 'center', fontStyle: 'italic', padding: '10px', color: '#aaa', cursor: 'default'}}>
-              {_jed('has ' + this.props.hasMore + ' more...')}
+              {_jed('has %s more...', [this.props.hasMore])}
             </div>
           </li>
         )

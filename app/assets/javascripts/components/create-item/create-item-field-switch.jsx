@@ -288,7 +288,7 @@
         return (
           <div className="col1of2" data-type="value">
             <div className="padding-vertical-xs font-size-m" data-value="invoice">
-              <span>Only visible if owner</span>
+              <span>{_jed('Only visible if owner')}</span>
             </div>
           </div>
         )

@@ -3790,3 +3790,27 @@ msgstr "%s verfügbar für Allgemein, davon zugewiesen"
 
 msgid "%s reserved for group %s, of which assigned"
 msgstr "%s reserviert für Gruppe %s, davon zugewiesen"
+
+msgid "Last checked before"
+msgstr "Inventur vor"
+
+msgid "Only visible if owner"
+msgstr "Nur für Besitzer sichtbar"
+
+msgid "min"
+msgstr "min"
+
+msgid "max"
+msgstr "max"
+
+msgid "Old version"
+msgstr "Alte Version"
+
+msgid "Upload a comma separated CSV file (UTF-8 encoding)."
+msgstr "Laden Sie eine Komma-separierte CSV-Datei hoch (UTF-8 Kodierung)."
+
+msgid "Room number"
+msgstr "Raumnummer"
+
+msgid "The assigned contract reservations have to be marked either as signed or as closed"
+msgstr "Die zugewiesenen Vertragsreservationen müssen als unterschrieben oder abgeschlossen markiert sein"

@@ -96,7 +96,7 @@
       if(fileModel.delete) {
         return (
           <button onClick={(event) => this._undoRemove(index)} className='button small inset' data-remove='' type='button'>
-            Undo
+            {_jed('undo')}
           </button>
         )
 

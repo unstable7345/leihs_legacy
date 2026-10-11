@@ -4631,6 +4631,42 @@ window.i18n.locale_data = {
       "%s reserved for group %s, of which assigned": [
          null,
          "%s réservés pour le groupe %s, dont attribués"
+      ],
+      "Last checked before": [
+         null,
+         "Dernier contrôle avant"
+      ],
+      "Only visible if owner": [
+         null,
+         "Visible uniquement par le propriétaire"
+      ],
+      "min": [
+         null,
+         "min"
+      ],
+      "max": [
+         null,
+         "max"
+      ],
+      "Old version": [
+         null,
+         "Ancienne version"
+      ],
+      "Upload a comma separated CSV file (UTF-8 encoding).": [
+         null,
+         "Téléversez un fichier CSV séparé par des virgules (encodage UTF-8)."
+      ],
+      "Room number": [
+         null,
+         "Numéro de salle"
+      ],
+      "has %s more...": [
+         null,
+         "%s de plus..."
+      ],
+      "The assigned contract reservations have to be marked either as signed or as closed": [
+         null,
+         "Les réservations attribuées au contrat doivent être marquées comme signées ou clôturées"
       ]
    }
 }

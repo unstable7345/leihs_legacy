@@ -14,7 +14,7 @@
               <ul>
                 <li>
                   <a className='active float-left margin-right-xxs navigation-tab-item padding-horizontal-m'>
-                    Rooms Diff
+                    {_jed('Rooms Diff')}
                   </a>
                 </li>
               </ul>
@@ -24,36 +24,34 @@
 
             <div className='margin-top-l padding-horizontal-m'>
               <div className='row'>
-                <h1 className='headline-xl'>CSV import</h1>
+                <h1 className='headline-xl'>{_jed('CSV import')}</h1>
               </div>
             </div>
 
 
             <div className='row margin-top-l padding-horizontal-l'>
               <div className='row'>
-                <h2>Laden Sie eine Komma-separierte CSV-Datei hoch (UTF-8 Kodierung).</h2>
+                <h2>{_jed('Upload a comma separated CSV file (UTF-8 encoding).')}</h2>
               </div>
               <div className='row margin-vertical-l'>
                 <div className='col2of3'>
                   <h3>
-                    Akzeptierte Spalten:
+                    {_jed('Accepted columns')}:
                   </h3>
                   <ul style={{listStyleType: 'disc', margin: '1.5em'}}>
                     <li>
                       <b>
-                      Liegenschaft
-                      (zwingend)
+                      {_jed('Building')} ({_jed('required')})
                       </b>
                     </li>
                     <li>
                       <b>
-                      Raumnummer
-                      (zwingend)
+                      {_jed('Room number')} ({_jed('required')})
                       </b>
                     </li>
                   </ul>
                   <h3>
-                    Alle weiteren Kolonnen werden ignoriert.
+                    {_jed('All other columns are ignored.')}
                   </h3>
                 </div>
                 <div className='col1of3'>
@@ -65,7 +63,7 @@
                     </div>
                     <div className='row padding-top-l'>
                       <button className='button green'>
-                        Import
+                        {_jed('Import')}
                         <i className='fa fa-share-alt'></i>
                       </button>
                     </div>
