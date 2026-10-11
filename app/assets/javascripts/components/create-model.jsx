@@ -1000,7 +1000,7 @@
               <h2 className='headline-s light'>{this.hint()}</h2>
             </div>
             <div className='col1of2 text-align-right'>
-              <a className='button grey' href='javascript:history.back()'>{_jed('Cancel')}</a>
+              <a className='button grey' href={this.props.return_url || this.props.inventory_path}>{_jed('Cancel')}</a>
               <button onClick={(e) => this.onClickSaveModel(e)} className='button green' id='save'>
                 {_jed('Save %s', (this.props.type == 'software' ? _jed('Software') : _jed('Model')))}
               </button>

@@ -53,6 +53,7 @@ class Manage::ModelsController < Manage::ApplicationController
       store_attachment_path: manage_model_store_attachment_react_path,
       store_image_path: manage_model_store_image_react_path,
       inventory_path: manage_inventory_path,
+      return_url: local_return_url,
       type: (params[:type] == 'software' ? 'software' : 'model')
     }
   end
@@ -149,6 +150,7 @@ class Manage::ModelsController < Manage::ApplicationController
       store_attachment_path: manage_model_store_attachment_react_path,
       store_image_path: manage_model_store_image_react_path,
       inventory_path: manage_inventory_path,
+      return_url: local_return_url,
       type: (model.type == 'Software' ? 'software' : 'model'),
       edit_data: {
         model: model,
@@ -389,5 +391,13 @@ class Manage::ModelsController < Manage::ApplicationController
 
       deal_with_destroy_nested_attributes!(model_attrs)
     end
+  end
+
+  private
+
+  # where cancel leads back to: a page of leihs given as return_url, else the inventory
+  def local_return_url
+    url = params[:return_url].to_s
+    url if url.start_with?('/') && !url.start_with?('//')
   end
 end
