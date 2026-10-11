@@ -72,16 +72,17 @@ window.i18n.locale_data = {
       "": {
          "Project-Id-Version": " version 0.0.1",
          "Report-Msgid-Bugs-To": " ",
-         "POT-Creation-Date": " 2013-01-14 13:11+0100",
-         "PO-Revision-Date": " 2018-03-16 11:29+0100",
-         "Last-Translator": " Ramón Cahenzli <ramon.cahenzli@zhdk.ch>",
+         "POT-Creation-Date": " 2018-03-16 15:51+0100",
+         "PO-Revision-Date": " 2026-10-11 05:00+0200",
+         "Last-Translator": " magatzem ENTI",
          "Language-Team": " Spanish <es@li.org>",
          "Language": " es",
          "MIME-Version": " 1.0",
          "Content-Type": " text/plain; charset=UTF-8",
          "Content-Transfer-Encoding": " 8bit",
-         "X-Launchpad-Export-Date": " 2010-01-27 15:44+0000",
-         "X-Generator": " Poedit 2.0.6"
+         "Plural-Forms": " nplurals=2; plural=(n != 1);",
+         "X-Generator": " Poedit 2.0.6",
+         "X-Launchpad-Export-Date": " 2010-01-27 15:44+0000"
       },
       " at the inventory pool ": [
          null,
@@ -95,13 +96,150 @@ window.i18n.locale_data = {
          null,
          " elemento(s) vencidos el "
       ],
+      "% used (category limit - total of selected requests)": [
+         null,
+         "% usado (límite de la categoría - total de las solicitudes seleccionadas)"
+      ],
+      "%d day in the future": [
+         "%d days in the future",
+         "%d día en el futuro",
+         "%d días en el futuro"
+      ],
+      "%d minutes passed. The items are not reserved for you any more!": [
+         null,
+         "Pasaron %d minutos. ¡Los artículos ya no están reservados para usted!"
+      ],
+      "%s (View in Order)": [
+         null,
+         "%s (ver en el pedido)"
+      ],
+      "%s Order": [
+         "%s Orders",
+         "%s pedido",
+         "%s pedidos"
+      ],
+      "%s Return": [
+         "%s Returns",
+         "%s devolución",
+         "%s devoluciones"
+      ],
+      "%s Search Results for \"%s\"": [
+         null,
+         "%s resultados de búsqueda para \"%s\""
+      ],
+      "%s assigned to %s": [
+         null,
+         "%s asignado a %s"
+      ],
+      "%s created": [
+         null,
+         "%s creado"
+      ],
+      "%s created successfully": [
+         null,
+         "%s creado correctamente"
+      ],
+      "%s future visit": [
+         "%s future visits",
+         "%s visita futura",
+         "%s visitas futuras"
+      ],
+      "%s is already assigned to a contract": [
+         null,
+         "%s ya está asignado a un contrato"
+      ],
+      "%s is already assigned to a different contract": [
+         null,
+         "%s ya está asignado a otro contrato"
+      ],
+      "%s is already assigned to this contract": [
+         null,
+         "%s ya está asignado a este contrato"
+      ],
+      "%s item": [
+         "%s items",
+         "%s artículo",
+         "%s artículos"
+      ],
+      "%s location": [
+         "%s locations",
+         "%s ubicación",
+         "%s ubicaciones"
+      ],
+      "%s not available": [
+         null,
+         "%s no disponible"
+      ],
+      "%s quantity increased to %s": [
+         null,
+         "Cantidad de %s aumentada a %s"
+      ],
+      "%s room": [
+         "%s rooms",
+         "%s sala",
+         "%s salas"
+      ],
+      "%s saved": [
+         null,
+         "%s guardado"
+      ],
+      "%s selected for take back": [
+         null,
+         "%s seleccionado para la devolución"
+      ],
+      "%s successfully deleted": [
+         null,
+         "%s eliminado correctamente"
+      ],
+      "%s successfully saved": [
+         null,
+         "%s guardado correctamente"
+      ],
       "%s until %s": [
          null,
          "%s hasta %s"
       ],
-      "** This is an automatically generated response **": [
+      "%s visit overdue": [
+         "%s visits overdue",
+         "%s visita atrasada",
+         "%s visitas atrasadas"
+      ],
+      "%s visit today": [
+         "%s visits today",
+         "%s visita hoy",
+         "%s visitas hoy"
+      ],
+      "%s was not found for this take back": [
          null,
-         "**este es un mensaje de respuesta auto-generado**"
+         "No se encontró %s en esta devolución"
+      ],
+      "%s was saved, but there were problems uploading files": [
+         null,
+         "%s se guardó, pero hubo problemas al subir los archivos"
+      ],
+      "%s was saved, but there were problems uploading some images. Only images smaller than 8MB and of type png, gif and jpg are allowed.": [
+         null,
+         "%s se guardó, pero hubo problemas al subir algunas imágenes. Solo se permiten imágenes de menos de 8 MB en formato png, gif o jpg."
+      ],
+      "%s will be removed from the template and not been added to your order.": [
+         null,
+         "%s se quitará de la plantilla y no se agregará a su pedido."
+      ],
+      "(unknown)": [
+         null,
+         "(desconocido)"
+      ],
+      "1 value per line, blank lines ignored": [
+         null,
+         "1 valor por línea; se ignoran las líneas vacías"
+      ],
+      "A Group contains several users. These users can gain a role by assigning the role to their Group.": [
+         null,
+         "Un grupo contiene varios usuarios. Estos usuarios pueden obtener un rol asignando el rol a su Grupo."
+      ],
+      "A change of the highlighted attributes requires a restart of the legacy service.": [
+         null,
+         "Para cambiar los atributos resaltados hay que reiniciar el servicio legacy."
       ],
       "A model for the Inventory Code / Serial Number '%s' was not found": [
          null,
@@ -109,15 +247,47 @@ window.i18n.locale_data = {
       ],
       "A model with the ID '%s' was not found": [
          null,
-         ""
+         "No se encontró ningún modelo con el ID '%s'"
+      ],
+      "A model with the same product name and empty version already exists.": [
+         null,
+         "Ya existe un modelo con el mismo nombre de producto y sin versión."
+      ],
+      "A model with the same product name and version already exists.": [
+         null,
+         "Ya existe un modelo con el mismo nombre de producto y la misma versión."
       ],
       "A package cannot be nested to another package": [
          null,
-         ""
+         "Un paquete no puede estar dentro de otro paquete"
+      ],
+      "A package item must belong to a package model": [
+         null,
+         "Un artículo de paquete debe pertenecer a un modelo de paquete"
       ],
       "A template with the ID '%s' was not found": [
          null,
-         ""
+         "No se encontró ninguna plantilla con el ID '%s'"
+      ],
+      "AV-Technik": [
+         null,
+         "Tecnología audiovisual"
+      ],
+      "Ablauf Garantie": [
+         null,
+         "Fin de la garantía"
+      ],
+      "Ablauf Vertrag": [
+         null,
+         "Fin del contrato"
+      ],
+      "Accepted columns": [
+         null,
+         "Columnas aceptadas"
+      ],
+      "Access": [
+         null,
+         "Acceso"
       ],
       "Access Level: %d": [
          null,
@@ -131,73 +301,775 @@ window.i18n.locale_data = {
          null,
          "Derechos de Acceso actualizados correctamente"
       ],
+      "Access as": [
+         null,
+         "Acceder como"
+      ],
+      "Access right reinstated": [
+         null,
+         "Derecho de acceso restablecido"
+      ],
+      "Access rights": [
+         null,
+         "Derechos de acceso"
+      ],
+      "AccessRight": [
+         null,
+         "Derecho de acceso"
+      ],
+      "Accessories": [
+         null,
+         "Accesorios"
+      ],
+      "Accounts": [
+         null,
+         "Cuentas"
+      ],
+      "Acknowledge": [
+         null,
+         "Revisar"
+      ],
+      "Action": [
+         null,
+         "Acción"
+      ],
+      "Activation Type": [
+         null,
+         "Tipo de activación"
+      ],
+      "Active": [
+         null,
+         "Activo"
+      ],
+      "Active Inventory": [
+         null,
+         "Inventario activo"
+      ],
+      "Add": [
+         null,
+         "Agregar"
+      ],
+      "Add %s": [
+         null,
+         "Agregar %s"
+      ],
+      "Add Model": [
+         null,
+         "Agregar modelo"
+      ],
+      "Add Option": [
+         null,
+         "Agregar opción"
+      ],
+      "Add Purpose": [
+         null,
+         "Agregar motivo"
+      ],
+      "Add article for specific entitlement-group": [
+         null,
+         "Agregar artículo para un grupo de asignación concreto"
+      ],
+      "Add inventory": [
+         null,
+         "Agregar inventario"
+      ],
+      "Add item": [
+         null,
+         "Agregar artículo"
+      ],
+      "Add new article to category": [
+         null,
+         "Agregar un artículo nuevo a la categoría"
+      ],
+      "Add new main category": [
+         null,
+         "Agregar una categoría principal nueva"
+      ],
+      "Add new requester": [
+         null,
+         "Agregar un solicitante nuevo"
+      ],
+      "Add new subcategory": [
+         null,
+         "Agregar una subcategoría nueva"
+      ],
+      "Add to order": [
+         null,
+         "Agregar al pedido"
+      ],
+      "Add/Assign": [
+         null,
+         "Agregar/Asignar"
+      ],
       "Added": [
          null,
          "Añadido"
+      ],
+      "Added %s": [
+         null,
+         "%s agregado"
+      ],
+      "Adding item": [
+         null,
+         "Agregando artículo"
+      ],
+      "Additional label in inventory codes": [
+         null,
+         "Etiqueta adicional en los códigos de inventario"
+      ],
+      "Additional notes": [
+         null,
+         "Notas adicionales"
+      ],
+      "Address": [
+         null,
+         "Dirección"
+      ],
+      "Admin": [
+         null,
+         "Administración"
+      ],
+      "Administrators": [
+         null,
+         "Administradores"
+      ],
+      "Advanced Search": [
+         null,
+         "Búsqueda avanzada"
+      ],
+      "All": [
+         null,
+         "Todos"
+      ],
+      "All %s": [
+         null,
+         "Todos los %s"
+      ],
+      "All inventory pools": [
+         null,
+         "Todos los grupos de inventario"
+      ],
+      "All other columns are ignored.": [
+         null,
+         "Las demás columnas se ignoran."
+      ],
+      "All selected": [
+         null,
+         "Todos seleccionados"
+      ],
+      "Allocations": [
+         null,
+         "Asignaciones"
+      ],
+      "Allocations in other entitlement-groups considered - still available quantity of borrowable and not retired items": [
+         null,
+         "Se tienen en cuenta las asignaciones de otros grupos de asignación: cantidad aún disponible de artículos prestables y no dados de baja"
+      ],
+      "An order can not have multiple delegated users.": [
+         null,
+         "Un pedido no puede tener múltiples usuarios delegados."
+      ],
+      "Ankunftsdatum": [
+         null,
+         "Fecha de llegada"
+      ],
+      "Ankunftsnotiz": [
+         null,
+         "Nota de llegada"
+      ],
+      "Ankunftszustand": [
+         null,
+         "Estado a la llegada"
+      ],
+      "Anschaffungskategorie": [
+         null,
+         "Categoría de adquisición"
+      ],
+      "Apply Fields on Item": [
+         null,
+         "Aplicar campos al artículo"
+      ],
+      "Approval Successful": [
+         null,
+         "Aprobación correcta"
+      ],
+      "Approval failed": [
+         null,
+         "Aprobación fallida"
+      ],
+      "Approve": [
+         null,
+         "Aprobar"
+      ],
+      "Approve anyway": [
+         null,
+         "Aprobar de todos modos"
+      ],
+      "Approve order": [
+         null,
+         "Aprobar pedido"
       ],
       "Approved": [
          null,
          "Aprobado"
       ],
-      "Are any of the above borrowed items?": [
+      "Approved Items": [
          null,
-         ""
+         "Artículos aprobados"
       ],
-      "Are any of the above items your personal computer?": [
+      "Approved on": [
          null,
-         ""
+         "Aprobado el"
+      ],
+      "Approved quantity": [
+         null,
+         "Cantidad aprobada"
+      ],
+      "Are you sure you want to delete '%s'?": [
+         null,
+         "¿Seguro que quiere eliminar '%s'?"
+      ],
+      "Article nr. or Producer nr.": [
+         null,
+         "N.º de artículo o del fabricante"
+      ],
+      "Article or Project": [
+         null,
+         "Artículo o proyecto"
+      ],
+      "Assign": [
+         null,
+         "Asignar"
+      ],
+      "Assigning the inventory code fails": [
+         null,
+         "No se pudo asignar el código de inventario"
+      ],
+      "Attachment": [
+         null,
+         "Adjunto"
       ],
       "Attachment was successfully created.": [
          null,
-         "El adjunto se creo correctamente."
+         "El adjunto se creó correctamente."
+      ],
+      "Attachments": [
+         null,
+         "Adjuntos"
       ],
       "Attempt to add node to own graph collection": [
          null,
-         ""
+         "Intento de agregar un nodo a su propia colección"
+      ],
+      "Attention": [
+         null,
+         "Atención"
+      ],
+      "Auswahl": [
+         null,
+         "Selección"
+      ],
+      "Authentication System": [
+         null,
+         "Sistema de autenticación"
+      ],
+      "Authentication Systems": [
+         null,
+         "Sistemas de autenticación"
+      ],
+      "Automatic suspension": [
+         null,
+         "Suspensión automática"
+      ],
+      "Automatic suspension reason": [
+         null,
+         "Motivo de la suspensión automática"
+      ],
+      "Availability": [
+         null,
+         "Disponibilidad"
+      ],
+      "Availability Timeline": [
+         null,
+         "Cronología de disponibilidad"
+      ],
+      "Availability for": [
+         null,
+         "Disponibilidad para"
+      ],
+      "Availability loaded": [
+         null,
+         "Disponibilidad cargada"
+      ],
+      "Available": [
+         null,
+         "Disponible"
+      ],
+      "Available for borrower": [
+         null,
+         "Disponible para el prestatario"
+      ],
+      "Available in entitlement-group '": [
+         null,
+         "Disponible en el grupo de asignación '"
+      ],
+      "Available in total": [
+         null,
+         "Disponible en total"
+      ],
+      "Available in total: ": [
+         null,
+         "Disponible en total: "
+      ],
+      "Back": [
+         null,
+         "Volver"
+      ],
+      "Back to this hand over": [
+         null,
+         "Volver a esta entrega"
+      ],
+      "Back to this take back": [
+         null,
+         "Volver a esta devolución"
+      ],
+      "Back to this user": [
+         null,
+         "Volver a este usuario"
+      ],
+      "Backend": [
+         null,
+         "Backend"
+      ],
+      "Badge ID was updated": [
+         null,
+         "Se actualizó el número de credencial"
+      ],
+      "Badge%s": [
+         null,
+         "Credencial%s"
+      ],
+      "Barcode": [
+         null,
+         "Código de barras"
+      ],
+      "Basic Information": [
+         null,
+         "Información básica"
       ],
       "Body": [
          null,
-         ""
+         "Cuerpo"
       ],
-      "By not returning these items, you are blocking other people's reservations. This is very unfair to the other clients and to the inventory manager, since you are causing a significant amount of trouble and annoyance.": [
+      "Book": [
          null,
-         "Si no devuelve estos artículos, estará bloqueando las reservas de otras personas. Esto es muy injusto para los demás clientes y administradores de stock ya que estaría provocando un gran número de problemas y molestias."
+         "Reservar"
       ],
-      "CHF": [
+      "Booking is no longer possible on this end date": [
          null,
-         ""
+         "Ya no se puede reservar con esta fecha de fin"
+      ],
+      "Booking is no longer possible on this start date": [
+         null,
+         "Ya no se puede reservar con esta fecha de inicio"
+      ],
+      "Borrow": [
+         null,
+         "Préstamos"
+      ],
+      "Borrow items": [
+         null,
+         "Pedir artículos prestados"
+      ],
+      "Borrow section": [
+         null,
+         "Sección de préstamos"
+      ],
+      "Borrow template": [
+         null,
+         "Plantilla de préstamo"
+      ],
+      "Borrowable": [
+         null,
+         "Prestable"
+      ],
+      "Borrowable Items": [
+         null,
+         "Artículos prestables"
+      ],
+      "Borrowable items": [
+         null,
+         "Artículos prestables"
+      ],
+      "Borrowed Items": [
+         null,
+         "Artículos prestados"
+      ],
+      "Borrowed until": [
+         null,
+         "Prestado hasta"
+      ],
+      "Borrower": [
+         null,
+         "Prestatario"
+      ],
+      "Broken": [
+         null,
+         "Averiado"
+      ],
+      "Budget limits": [
+         null,
+         "Límites de presupuesto"
+      ],
+      "Budget period": [
+         null,
+         "Período presupuestario"
+      ],
+      "Budget period end date": [
+         null,
+         "Fecha de fin del período presupuestario"
+      ],
+      "Budget periods": [
+         null,
+         "Períodos presupuestarios"
+      ],
+      "Building": [
+         "Buildings",
+         "Edificio",
+         "Edificios"
+      ],
+      "Building together with a general room successfully created": [
+         null,
+         "Edificio creado correctamente junto con una sala general"
+      ],
+      "CSV": [
+         null,
+         "CSV"
+      ],
+      "CSV export": [
+         null,
+         "Exportar CSV"
       ],
       "Cancel": [
          null,
          "Cancelar"
       ],
+      "Cancel Edit": [
+         null,
+         "Cancelar edición"
+      ],
+      "Categories": [
+         null,
+         "Categorías"
+      ],
+      "Category": [
+         null,
+         "Categoría"
+      ],
+      "Category can have only one image.": [
+         null,
+         "Una categoría solo puede tener una imagen."
+      ],
+      "Category name": [
+         null,
+         "Nombre de la categoría"
+      ],
+      "Category saved": [
+         null,
+         "Categoría guardada"
+      ],
+      "Change": [
+         null,
+         "Cambiar"
+      ],
+      "Change %s": [
+         null,
+         "Cambiar %s"
+      ],
+      "Change Borrower": [
+         null,
+         "Cambiar prestatario"
+      ],
+      "Change Borrower Successful": [
+         null,
+         "Prestatario cambiado correctamente"
+      ],
+      "Change entry": [
+         null,
+         "Cambiar entrada"
+      ],
+      "Change orderer": [
+         null,
+         "Cambiar solicitante"
+      ],
+      "Change orderer Successful": [
+         null,
+         "Solicitante cambiado correctamente"
+      ],
+      "Changed": [
+         null,
+         "Modificado"
+      ],
       "Changed %s from %s to %s": [
          null,
-         ""
+         "%s cambiado de %s a %s"
       ],
       "Changed dates for %{model} from %{from} to %{to}": [
          null,
-         "Cambiar fechas para %{model} de %{from} a %{to}"
+         "Fechas de %{model} cambiadas de %{from} a %{to}"
+      ],
+      "Changes": [
+         null,
+         "Cambios"
+      ],
+      "Check invalid fields": [
+         null,
+         "Revise los campos no válidos"
+      ],
+      "Choose a suggested article or a category": [
+         null,
+         "Elija un artículo sugerido o una categoría"
+      ],
+      "Choose an article or a category": [
+         null,
+         "Elija un artículo o una categoría"
+      ],
+      "Choose an article/project": [
+         null,
+         "Elija un artículo o proyecto"
+      ],
+      "City": [
+         null,
+         "Ciudad"
+      ],
+      "Close": [
+         null,
+         "Cerrar"
+      ],
+      "Close All": [
+         null,
+         "Cerrar todo"
       ],
       "Closed": [
          null,
          "Cerrado"
       ],
+      "Closed Day": [
+         null,
+         "Día cerrado"
+      ],
+      "Closed Days": [
+         null,
+         "Días cerrados"
+      ],
+      "Collection": [
+         "Collections",
+         "Colección",
+         "Colecciones"
+      ],
       "Compatible successfully removed": [
          null,
          "Compatibilidad quitada correctamente"
+      ],
+      "Compatibles": [
+         null,
+         "Compatibles"
+      ],
+      "Complete": [
+         null,
+         "Completo"
+      ],
+      "Complete Search": [
+         null,
+         "Búsqueda completa"
+      ],
+      "Complete order": [
+         null,
+         "Completar pedido"
+      ],
+      "Completeness": [
+         null,
+         "Completitud"
+      ],
+      "Concurrent": [
+         null,
+         "Concurrente"
+      ],
+      "Consider opening hours": [
+         null,
+         "Tener en cuenta el horario de apertura"
+      ],
+      "Contact": [
+         null,
+         "Contacto"
+      ],
+      "Contact person": [
+         null,
+         "Persona de contacto"
+      ],
+      "Content": [
+         null,
+         "Contenido"
+      ],
+      "Continue": [
+         null,
+         "Continuar"
+      ],
+      "Continue this order": [
+         null,
+         "Continuar este pedido"
+      ],
+      "Continue with available models only": [
+         null,
+         "Continuar solo con los modelos disponibles"
+      ],
+      "Contract": [
+         null,
+         "Contrato"
       ],
       "Contract %d has been signed by %s": [
          null,
          "El contrato %d fue firmado por %s"
       ],
+      "Contract No.": [
+         null,
+         "N.º de contrato"
+      ],
       "Contract Nr.": [
          null,
          "Contrato Nro."
       ],
+      "Contract expiration": [
+         null,
+         "Fin del contrato"
+      ],
+      "Contract signed": [
+         null,
+         "Contrato firmado"
+      ],
+      "Contracts": [
+         null,
+         "Contratos"
+      ],
+      "Copy Item": [
+         null,
+         "Copiar artículo"
+      ],
+      "Copy License": [
+         null,
+         "Copiar licencia"
+      ],
       "Couldn't update ": [
          null,
-         ""
+         "No se pudo actualizar "
+      ],
+      "Country": [
+         null,
+         "País"
+      ],
+      "Cover Image": [
+         null,
+         "Imagen de portada"
+      ],
+      "Create %s": [
+         null,
+         "Crear %s"
+      ],
+      "Create copied item": [
+         null,
+         "Crear artículo copiado"
+      ],
+      "Create new budget period": [
+         null,
+         "Crear un período presupuestario nuevo"
+      ],
+      "Create new category": [
+         null,
+         "Crear una categoría nueva"
+      ],
+      "Create new item": [
+         null,
+         "Crear un artículo nuevo"
+      ],
+      "Create new model": [
+         null,
+         "Crear un modelo nuevo"
+      ],
+      "Create new option": [
+         null,
+         "Crear una opción nueva"
+      ],
+      "Create new software": [
+         null,
+         "Crear un software nuevo"
+      ],
+      "Create new software license": [
+         null,
+         "Crear una licencia de software nueva"
+      ],
+      "Create request by choosing an article or project": [
+         null,
+         "Cree una solicitud eligiendo un artículo o proyecto"
+      ],
+      "Create request for another user": [
+         null,
+         "Crear una solicitud para otro usuario"
+      ],
+      "Create request for this category": [
+         null,
+         "Crear una solicitud para esta categoría"
+      ],
+      "Created at": [
+         null,
+         "Creado el"
+      ],
+      "Currency": [
+         null,
+         "Moneda"
+      ],
+      "Current Order": [
+         null,
+         "Pedido actual"
+      ],
+      "Current budget period not defined yet": [
+         null,
+         "Todavía no se definió el período presupuestario actual"
+      ],
+      "Current total of budget period": [
+         null,
+         "Total actual del período presupuestario"
+      ],
+      "Current total of category": [
+         null,
+         "Total actual de la categoría"
+      ],
+      "Current total of selected requests": [
+         null,
+         "Total actual de las solicitudes seleccionadas"
+      ],
+      "Currently Borrowed Items": [
+         null,
+         "Artículos prestados actualmente"
+      ],
+      "Currently has items to return": [
+         null,
+         "Tiene artículos por devolver"
+      ],
+      "Currently has open orders": [
+         null,
+         "Tiene pedidos abiertos"
+      ],
+      "Currently you have no items in your order.": [
+         null,
+         "Por ahora no tiene artículos en su pedido."
+      ],
+      "Customer": [
+         null,
+         "Cliente"
+      ],
+      "Daily View": [
+         null,
+         "Vista diaria"
       ],
       "Day": [
          null,
@@ -215,33 +1087,261 @@ window.i18n.locale_data = {
          null,
          "El plazo está por vencerse, se enviaron recordatorios por %{q} elementos en %{c} contratos"
       ],
+      "Dear client,": [
+         null,
+         "Estimado cliente:"
+      ],
       "Dear leihs client,": [
          null,
          "Estimado cliente de leihs,"
+      ],
+      "Dear leihs manager,": [
+         null,
+         "Estimado gestor de leihs:"
+      ],
+      "Default Contract Note": [
+         null,
+         "Nota predeterminada del contrato"
+      ],
+      "Defective": [
+         null,
+         "Defectuoso"
+      ],
+      "Delegated user is not member of the contract's delegation or is empty": [
+         null,
+         "El usuario delegado no es miembro de la delegación del contrato o está vacío"
+      ],
+      "Delegated user must be empty for contract's normal user": [
+         null,
+         "El usuario delegado debe quedar vacío si el contrato es de un usuario normal"
+      ],
+      "Delegation": [
+         null,
+         "Delegación"
+      ],
+      "Delegations": [
+         null,
+         "Delegaciones"
+      ],
+      "Delete": [
+         null,
+         "Eliminar"
+      ],
+      "Delete %s": [
+         null,
+         "Eliminar %s"
+      ],
+      "Delete Selection": [
+         null,
+         "Eliminar selección"
+      ],
+      "Delete category with all it's articles/projects": [
+         null,
+         "Eliminar la categoría con todos sus artículos/proyectos"
+      ],
+      "Delete line": [
+         null,
+         "Eliminar línea"
+      ],
+      "Delete main category": [
+         null,
+         "Eliminar categoría principal"
+      ],
+      "Delete subcategory": [
+         null,
+         "Eliminar subcategoría"
+      ],
+      "Delete this line": [
+         null,
+         "Eliminar esta línea"
+      ],
+      "Deleted": [
+         null,
+         "Eliminado"
+      ],
+      "Denied": [
+         null,
+         "Denegado"
+      ],
+      "Department": [
+         null,
+         "Departamento"
+      ],
+      "Description": [
+         null,
+         "Descripción"
+      ],
+      "Disable": [
+         null,
+         "Desactivar"
+      ],
+      "Do you realy want to delete the '%s' category?": [
+         null,
+         "¿Seguro que quiere eliminar la categoría '%s'?"
+      ],
+      "Document": [
+         null,
+         "Documento"
       ],
       "Documents": [
          null,
          "Documentos"
       ],
+      "Documents for hand over": [
+         null,
+         "Documentos para la entrega"
+      ],
+      "Documents for take back": [
+         null,
+         "Documentos para la devolución"
+      ],
+      "Does not have any reservable items": [
+         null,
+         "No tiene artículos reservables"
+      ],
+      "E-Mail": [
+         null,
+         "Correo electrónico"
+      ],
+      "ERROR": [
+         null,
+         "ERROR"
+      ],
+      "Edit": [
+         null,
+         "Editar"
+      ],
+      "Edit %s": [
+         null,
+         "Editar %s"
+      ],
+      "Edit Item": [
+         null,
+         "Editar artículo"
+      ],
+      "Edit License": [
+         null,
+         "Editar licencia"
+      ],
+      "Edit Model": [
+         null,
+         "Editar modelo"
+      ],
+      "Edit Option": [
+         null,
+         "Editar opción"
+      ],
+      "Edit Order": [
+         null,
+         "Editar pedido"
+      ],
+      "Edit Purpose": [
+         null,
+         "Editar motivo"
+      ],
+      "Edit Selection": [
+         null,
+         "Editar selección"
+      ],
+      "Edit Software": [
+         null,
+         "Editar software"
+      ],
+      "Edit User": [
+         null,
+         "Editar usuario"
+      ],
+      "Edit multiple selected reservations": [
+         null,
+         "Editar varias reservas seleccionadas"
+      ],
       "Edit purpose for order from": [
          null,
-         ""
+         "Editar el motivo del pedido de"
+      ],
+      "Edit reservation": [
+         null,
+         "Editar reserva"
+      ],
+      "Edit templates": [
+         null,
+         "Editar plantillas"
+      ],
+      "Edit this Order": [
+         null,
+         "Editar este pedido"
       ],
       "Editing mail templates for the inventory pool %s": [
          null,
-         ""
+         "Editando las plantillas de correo del grupo de inventario %s"
       ],
       "Editing system-wide mail templates": [
          null,
-         ""
+         "Editando las plantillas de correo de todo el sistema"
+      ],
+      "Email": [
+         null,
+         "Correo electrónico"
       ],
       "Empty Username and/or Password": [
          null,
          "Nombre de Usuario ó Contraseña Vacios"
       ],
+      "Enable": [
+         null,
+         "Activar"
+      ],
+      "End Date cannot be in the past": [
+         null,
+         "La fecha de fin no puede estar en el pasado"
+      ],
+      "End date": [
+         null,
+         "Fecha de fin"
+      ],
+      "Entitlement-Group": [
+         null,
+         "Grupo de asignación"
+      ],
+      "Entitlement-Group %s": [
+         null,
+         "Grupo de asignación %s"
+      ],
+      "Entitlement-Groups": [
+         null,
+         "Grupos de asignación"
+      ],
+      "Entitlement-Groups of this customer": [
+         null,
+         "Grupos de asignación de este cliente"
+      ],
+      "Entity": [
+         null,
+         "Entidad"
+      ],
+      "Entry": [
+         null,
+         "Entrada"
+      ],
+      "Equipment Booking and Inventory Management System": [
+         null,
+         "Sistema de reserva de equipos y gestión de inventario"
+      ],
       "Error": [
          null,
          "Error"
+      ],
+      "Error creating the accessory.": [
+         null,
+         "Error al crear el accesorio."
+      ],
+      "Error deleting the accessory.": [
+         null,
+         "Error al eliminar el accesorio."
+      ],
+      "Error destroying the item package": [
+         null,
+         "Error al eliminar el paquete de artículos"
       ],
       "Error destroying the package": [
          null,
@@ -251,141 +1351,1229 @@ window.i18n.locale_data = {
          null,
          "Error al guardar el paquete"
       ],
+      "Error updating inventory code": [
+         null,
+         "Error al actualizar el código de inventario"
+      ],
+      "Excel export": [
+         null,
+         "Exportar a Excel"
+      ],
+      "Expand All": [
+         null,
+         "Expandir Todo"
+      ],
       "Expected to be returned.": [
          null,
          "Se espera su devolución."
       ],
+      "Extend entry": [
+         null,
+         "Ampliar entrada"
+      ],
+      "Facility Management": [
+         null,
+         "Gestión de instalaciones"
+      ],
+      "Field": [
+         null,
+         "Campo"
+      ],
+      "Fields": [
+         null,
+         "Campos"
+      ],
+      "Fields have been updated successfully.": [
+         null,
+         "Los campos se actualizaron correctamente."
+      ],
+      "File has to be uploaded on save": [
+         null,
+         "El archivo se sube al guardar"
+      ],
+      "Finish this hand over": [
+         null,
+         "Terminar esta entrega"
+      ],
+      "Finish this take back": [
+         null,
+         "Terminar esta devolución"
+      ],
+      "First admin user": [
+         null,
+         "Primer usuario administrador"
+      ],
+      "First admin user has been created. Default database authentication system has been configured.": [
+         null,
+         "Se creó el primer usuario administrador y se configuró el sistema de autenticación predeterminado de la base de datos."
+      ],
+      "First name": [
+         null,
+         "Nombre"
+      ],
       "Format": [
          null,
-         ""
+         "Formato"
       ],
-      "has %s more...": [
+      "Found %d matches": [
          null,
-         ""
+         "Se encontraron %d coincidencias"
       ],
-      "In the interest of all our clients we ask you to observe the return dates.": [
+      "Found %s": [
          null,
-         "Por el interés de todos nuestros clientes, le pedimos respete las fechas de devolución."
+         "Se encontró %s"
+      ],
+      "Free": [
+         null,
+         "Libre"
+      ],
+      "Fri": [
+         null,
+         "Vie"
+      ],
+      "Friday": [
+         null,
+         "Viernes"
+      ],
+      "Frontend": [
+         null,
+         "Frontend"
+      ],
+      "Functional": [
+         null,
+         "Funcional"
+      ],
+      "General Information": [
+         null,
+         "Información general"
+      ],
+      "Go Back": [
+         null,
+         "Volver"
+      ],
+      "Group manager": [
+         null,
+         "Gestor de grupo"
+      ],
+      "Groups": [
+         null,
+         "Grupos"
+      ],
+      "Hand Over": [
+         null,
+         "Entregar"
+      ],
+      "Hand Over Selection": [
+         null,
+         "Entregar selección"
+      ],
+      "Hand Over to": [
+         null,
+         "Entrega a"
+      ],
+      "Hand Over to %s": [
+         null,
+         "Entrega a %s"
+      ],
+      "Hand Overs": [
+         null,
+         "Entregas"
+      ],
+      "Hand over completed": [
+         null,
+         "Entrega completada"
+      ],
+      "Hand over of %s item": [
+         "Hand over of %s items",
+         "Entrega de %s artículo",
+         "Entrega de %s artículos"
+      ],
+      "Help": [
+         null,
+         "Ayuda"
+      ],
+      "Helper": [
+         null,
+         "Asistente"
+      ],
+      "Hide notification": [
+         null,
+         "Ocultar notificación"
+      ],
+      "Hide this field from all item forms": [
+         null,
+         "Ocultar este campo en todos los formularios de artículos"
+      ],
+      "High": [
+         null,
+         "Alta"
+      ],
+      "Highlight available items.": [
+         null,
+         "Resaltar los artículos disponibles."
+      ],
+      "Hints": [
+         null,
+         "Sugerencias"
+      ],
+      "IC-Technik/Software": [
+         null,
+         "Informática/Software"
+      ],
+      "IMEI-Number": [
+         null,
+         "Número IMEI"
+      ],
+      "Image": [
+         null,
+         "Imagen"
+      ],
+      "Images": [
+         null,
+         "Imágenes"
+      ],
+      "Important notes for hand over": [
+         null,
+         "Notas importantes para la entrega"
+      ],
+      "In Stock": [
+         null,
+         "En stock"
+      ],
+      "In Total": [
+         null,
+         "En total"
+      ],
+      "In inspection": [
+         null,
+         "En revisión"
+      ],
+      "Inactive pools cannot have items, which are not retired.": [
+         null,
+         "Los grupos de inventario inactivos no pueden tener artículos que no estén dados de baja."
       ],
       "Incomplete": [
          null,
          "Incompleto"
       ],
+      "Inconsistent Inventory Pool": [
+         null,
+         "Grupo de inventario incoherente"
+      ],
+      "Initial Price": [
+         null,
+         "Precio inicial"
+      ],
+      "Inquiry to procurement request": [
+         null,
+         "Consulta sobre la solicitud de compra"
+      ],
+      "Insert 0 for the entries you dont need.": [
+         null,
+         "Ponga 0 en las entradas que no necesite."
+      ],
+      "Insert a default comment": [
+         null,
+         "Escriba un comentario predeterminado"
+      ],
+      "Insert all required information": [
+         null,
+         "Complete toda la información obligatoria"
+      ],
+      "Inspect": [
+         null,
+         "Revisar"
+      ],
+      "Inspect Item": [
+         null,
+         "Revisar artículo"
+      ],
+      "Inspection": [
+         null,
+         "Revisión"
+      ],
+      "Inspection comment": [
+         null,
+         "Comentario de la revisión"
+      ],
+      "Inspection start date": [
+         null,
+         "Fecha de inicio de la revisión"
+      ],
+      "Inspector's priority": [
+         null,
+         "Prioridad del revisor"
+      ],
+      "Inspectors": [
+         null,
+         "Revisores"
+      ],
+      "Installation": [
+         null,
+         "Instalación"
+      ],
+      "Insurance Number": [
+         null,
+         "Número de seguro"
+      ],
+      "Internal Description": [
+         null,
+         "Descripción interna"
+      ],
+      "Introduction": [
+         null,
+         "Introducción"
+      ],
+      "Invalid data": [
+         null,
+         "Datos no válidos"
+      ],
+      "Invalid date": [
+         null,
+         "fecha no válida"
+      ],
       "Invalid order_lines": [
          null,
-         ""
+         "Líneas de pedido no válidas"
       ],
       "Invalid technical user - contact your leihs admin": [
          null,
-         ""
+         "Usuario técnico no válido: contacte con el administrador de leihs"
       ],
       "Invalid username/password": [
          null,
          "Nombre de Usuario ó Contraseña Inválidos"
       ],
+      "Inventory": [
+         null,
+         "Inventario"
+      ],
+      "Inventory Advanced Search": [
+         null,
+         "Búsqueda avanzada de inventario"
+      ],
+      "Inventory Code": [
+         null,
+         "Código de inventario"
+      ],
+      "Inventory Code / Name": [
+         null,
+         "Código de inventario / Nombre"
+      ],
+      "Inventory Helper": [
+         null,
+         "Asistente de inventario"
+      ],
       "Inventory Pool": [
          null,
-         "Grupo de Inventario"
+         "Grupo de inventario"
       ],
       "Inventory Pool is missing": [
          null,
          "Falta el Grupo de Inventario"
       ],
+      "Inventory Pools": [
+         null,
+         "Grupos de inventario"
+      ],
+      "Inventory code": [
+         null,
+         "Código de inventario"
+      ],
+      "Inventory code updated": [
+         null,
+         "Código de inventario actualizado"
+      ],
+      "Inventory code, model name, search term": [
+         null,
+         "Código de inventario, nombre de modelo, término de búsqueda"
+      ],
+      "Inventory manager": [
+         null,
+         "Gestor de inventario"
+      ],
+      "Inventory pool": [
+         "Inventory pools",
+         "Grupo de inventario",
+         "Grupos de inventario"
+      ],
+      "Inventory pool can't be deactivated due to existing items which are not yet retired.": [
+         null,
+         "El grupo de inventario no se puede desactivar porque tiene artículos que todavía no están dados de baja."
+      ],
+      "Inventory pool can't be deactivated due to existing orders or signed contracts.": [
+         null,
+         "El grupo de inventario no se puede desactivar porque tiene pedidos o contratos firmados."
+      ],
+      "Inventory pool is closed on end date": [
+         null,
+         "El grupo de inventario está cerrado en la fecha de fin"
+      ],
+      "Inventory pool is closed on start date": [
+         null,
+         "El grupo de inventario está cerrado en la fecha de inicio"
+      ],
+      "Inventory pool successfully created": [
+         null,
+         "Grupo de inventario creado correctamente"
+      ],
+      "Inventory pool successfully updated": [
+         null,
+         "Grupo de inventario actualizado correctamente"
+      ],
+      "Inventory pool successfully updated.": [
+         null,
+         "Grupo de inventario actualizado correctamente."
+      ],
+      "Inventory pools": [
+         null,
+         "Grupos de inventario"
+      ],
+      "InventoryPool|Email": [
+         null,
+         "Correo electrónico"
+      ],
+      "InventoryPool|Shortname": [
+         null,
+         "Nombre corto"
+      ],
+      "Investment": [
+         null,
+         "Inversión"
+      ],
+      "Invoice Date": [
+         null,
+         "Fecha de factura"
+      ],
+      "Invoice Information": [
+         null,
+         "Datos de la factura"
+      ],
+      "Invoice Number": [
+         null,
+         "Número de factura"
+      ],
+      "Item": [
+         "Items",
+         "Artículo",
+         "Artículos"
+      ],
       "Item handed over as part of contract %d.": [
          null,
          "Artículo entregado como parte del contrato %d."
+      ],
+      "Item is defective": [
+         null,
+         "El artículo está defectuoso"
+      ],
+      "Item is incomplete": [
+         null,
+         "El artículo está incompleto"
+      ],
+      "Item is not available in that time range": [
+         null,
+         "El artículo no está disponible en ese período"
+      ],
+      "Item is overdue and therefore unavailable!": [
+         null,
+         "El artículo está atrasado y, por lo tanto, no disponible."
+      ],
+      "Item is part of package": [
+         null,
+         "El artículo forma parte de un paquete"
+      ],
+      "Item is reserved in the future, therefore it's not available!": [
+         null,
+         "El artículo está reservado en el futuro y, por lo tanto, no está disponible."
+      ],
+      "Item not borrowable": [
+         null,
+         "Artículo no prestable"
+      ],
+      "Item package successfully destroyed": [
+         null,
+         "Paquete de artículos eliminado correctamente"
+      ],
+      "Item price": [
+         null,
+         "Precio del artículo"
+      ],
+      "Item saved.": [
+         null,
+         "Artículo guardado."
       ],
       "Item taken back": [
          null,
          "Artículo devuelto"
       ],
+      "Item was not saved": [
+         null,
+         "El artículo no se guardó"
+      ],
+      "Item was saved.": [
+         null,
+         "El artículo se guardó."
+      ],
+      "Items": [
+         null,
+         "Artículos"
+      ],
+      "Item|Retired reason": [
+         null,
+         "Motivo de la baja"
+      ],
+      "Key": [
+         null,
+         "Clave"
+      ],
       "Kind regards,": [
          null,
          "Saludos cordiales,"
       ],
+      "Label": [
+         null,
+         "Etiqueta"
+      ],
       "Language": [
          null,
-         ""
+         "Idioma"
+      ],
+      "Languages": [
+         null,
+         "Idiomas"
+      ],
+      "Last Checked": [
+         null,
+         "Última revisión"
+      ],
+      "Last Visitors:": [
+         null,
+         "Últimos visitantes:"
+      ],
+      "Last name": [
+         null,
+         "Apellido"
       ],
       "Latest 10 emails": [
          null,
          "Últimos 10 correos electrónicos"
       ],
+      "Latest reminder": [
+         null,
+         "Último recordatorio"
+      ],
+      "Legend": [
+         null,
+         "Leyenda"
+      ],
+      "Lender": [
+         null,
+         "Prestador"
+      ],
+      "Lending": [
+         null,
+         "Préstamo"
+      ],
+      "Lending / Daily View": [
+         null,
+         "Préstamo / Vista diaria"
+      ],
+      "Lending Contract No.": [
+         null,
+         "Contrato de préstamo n.º"
+      ],
+      "Lending Contract No. %d": [
+         null,
+         "Contrato de préstamo n.º %d"
+      ],
+      "Lending Contract No. %s": [
+         null,
+         "Contrato de préstamo n.º %s"
+      ],
+      "Lending Contracts No. %s": [
+         null,
+         "Contratos de préstamo n.º %s"
+      ],
+      "Lending Terms": [
+         null,
+         "Condiciones de préstamo"
+      ],
+      "Lending manager": [
+         null,
+         "Gestor de préstamos"
+      ],
+      "License": [
+         "Licenses",
+         "Licencia",
+         "Licencias"
+      ],
+      "License Number": [
+         null,
+         "Número de licencia"
+      ],
+      "License Server": [
+         null,
+         "Servidor de licencias"
+      ],
+      "License Type": [
+         null,
+         "Tipo de licencia"
+      ],
+      "License Version": [
+         null,
+         "Versión de la licencia"
+      ],
+      "License expiration": [
+         null,
+         "Fin de la licencia"
+      ],
+      "License saved.": [
+         null,
+         "Licencia guardada."
+      ],
+      "List of %d Users": [
+         null,
+         "Lista de %d usuarios"
+      ],
+      "List of %s": [
+         null,
+         "Lista de %s"
+      ],
+      "List of Authentication Systems": [
+         null,
+         "Lista de sistemas de autenticación"
+      ],
+      "List of Buildings": [
+         null,
+         "Lista de edificios"
+      ],
+      "List of Categories": [
+         null,
+         "Lista de categorías"
+      ],
+      "List of Contracts": [
+         null,
+         "Lista de contratos"
+      ],
+      "List of Entitlement-Groups": [
+         null,
+         "Lista de grupos de asignación"
+      ],
+      "List of Inventory": [
+         null,
+         "Lista de inventario"
+      ],
+      "List of Inventory Pools": [
+         null,
+         "Lista de grupos de inventario"
+      ],
+      "List of Languages": [
+         null,
+         "Lista de idiomas"
+      ],
+      "List of Orders": [
+         null,
+         "Lista de pedidos"
+      ],
+      "List of Rooms": [
+         null,
+         "Lista de salas"
+      ],
+      "List of Users": [
+         null,
+         "Lista de usuarios"
+      ],
+      "List of Visits": [
+         null,
+         "Lista de visitas"
+      ],
       "List of available variables": [
          null,
-         ""
+         "Lista de variables disponibles"
+      ],
+      "List of templates": [
+         null,
+         "Lista de plantillas"
       ],
       "Loading": [
          null,
          "Cargando"
       ],
+      "Loading availability": [
+         null,
+         "Cargando disponibilidad"
+      ],
+      "Local": [
+         null,
+         "Local"
+      ],
+      "Location": [
+         null,
+         "Ubicación"
+      ],
+      "Location not defined": [
+         null,
+         "Ubicación sin definir"
+      ],
+      "Locations": [
+         null,
+         "Ubicaciones"
+      ],
       "Logged in successfully": [
          null,
          "Inicio de Sesión exitoso"
       ],
+      "Login": [
+         null,
+         "Iniciar sesión"
+      ],
+      "Logout": [
+         null,
+         "Cerrar sesión"
+      ],
+      "Low": [
+         null,
+         "Baja"
+      ],
+      "MAC-Address": [
+         null,
+         "Dirección MAC"
+      ],
       "Mail Templates": [
          null,
-         ""
+         "Plantillas de correo"
+      ],
+      "Main category": [
+         null,
+         "Categoría principal"
+      ],
+      "Maintenance": [
+         null,
+         "Mantenimiento"
+      ],
+      "Maintenance contract": [
+         null,
+         "Contrato de mantenimiento"
+      ],
+      "Maintenance expiration": [
+         null,
+         "Fin del mantenimiento"
+      ],
+      "Make changes and save": [
+         null,
+         "Haga los cambios y guarde"
+      ],
+      "Manage": [
+         null,
+         "Gestionar"
+      ],
+      "Manage %s": [
+         null,
+         "Gestionar %s"
+      ],
+      "Manage inventory, place reservations on items and pick them up": [
+         null,
+         "Gestione el inventario, reserve artículos y retírelos"
+      ],
+      "Manage section": [
+         null,
+         "Sección de gestión"
+      ],
+      "Manage user roles via Groups.": [
+         null,
+         "Gestione los roles de los usuarios mediante grupos."
+      ],
+      "Mandatory": [
+         null,
+         "Obligatorio"
+      ],
+      "Manufacturer": [
+         null,
+         "Fabricante"
+      ],
+      "Manufacturer (A-Z)": [
+         null,
+         "Fabricante (A-Z)"
+      ],
+      "Manufacturer (Z-A)": [
+         null,
+         "Fabricante (Z-A)"
+      ],
+      "Matching Templates": [
+         null,
+         "Plantillas coincidentes"
+      ],
+      "Max. visits": [
+         null,
+         "Máx. de visitas"
+      ],
+      "Maximum reservation time is restricted to": [
+         null,
+         "El tiempo máximo de reserva está limitado a"
+      ],
+      "Medium": [
+         null,
+         "Media"
+      ],
+      "Min. number of days between current date and hand over": [
+         null,
+         "Mín. de días entre la fecha actual y la entrega"
+      ],
+      "Mobile": [
+         null,
+         "Móvil"
       ],
       "Model": [
          null,
          "Modelo"
       ],
+      "Model (A-Z)": [
+         null,
+         "Modelo (A-Z)"
+      ],
+      "Model (Z-A)": [
+         null,
+         "Modelo (Z-A)"
+      ],
       "Model must be selected": [
          null,
          "Debe seleccionarse un modelo"
       ],
+      "Model name": [
+         null,
+         "Nombre del modelo"
+      ],
       "Model not present anymore": [
          null,
-         ""
+         "El modelo ya no existe"
+      ],
+      "Model saved": [
+         null,
+         "Modelo guardado"
       ],
       "Model successfully added as compatible": [
          null,
          "Modelo agregado correctamente como compatible"
       ],
+      "Model successfully removed": [
+         null,
+         "Modelo quitado correctamente"
+      ],
+      "Models": [
+         null,
+         "Modelos"
+      ],
+      "Model|Images|File content type": [
+         null,
+         "Tipo de archivo"
+      ],
+      "Model|Images|File file size": [
+         null,
+         "Tamaño del archivo"
+      ],
+      "Mon": [
+         null,
+         "Lun"
+      ],
+      "Monday": [
+         null,
+         "Lunes"
+      ],
+      "Motivation": [
+         null,
+         "Motivación"
+      ],
+      "Move to another budget period": [
+         null,
+         "Mover a otro período presupuestario"
+      ],
+      "Move to another entitlement-group": [
+         null,
+         "Mover a otro grupo de asignación"
+      ],
+      "Multiple Workplace": [
+         null,
+         "Puesto de trabajo múltiple"
+      ],
+      "Musikinstrumente": [
+         null,
+         "Instrumento musical"
+      ],
+      "My documents": [
+         null,
+         "Mis documentos"
+      ],
+      "My entitlement-groups": [
+         null,
+         "Mis grupos de asignación"
+      ],
+      "My requests": [
+         null,
+         "Mis solicitudes"
+      ],
+      "Name": [
+         null,
+         "Nombre"
+      ],
+      "Name / ID": [
+         null,
+         "Nombre / ID"
+      ],
+      "Name of receiver": [
+         null,
+         "Nombre del receptor"
+      ],
+      "Name of the entitlement-group": [
+         null,
+         "Nombre del grupo de asignación"
+      ],
+      "Name of the model": [
+         null,
+         "Nombre del modelo"
+      ],
+      "Name of the requester": [
+         null,
+         "Nombre del solicitante"
+      ],
+      "Name of the template": [
+         null,
+         "Nombre de la plantilla"
+      ],
+      "Name of the user": [
+         null,
+         "Nombre del usuario"
+      ],
+      "New": [
+         null,
+         "Nuevo"
+      ],
+      "New Borrower": [
+         null,
+         "Nuevo prestatario"
+      ],
+      "New Category": [
+         null,
+         "Nueva categoría"
+      ],
+      "New Delegation": [
+         null,
+         "Nueva delegación"
+      ],
+      "New Entitlement-Group": [
+         null,
+         "Nuevo grupo de asignación"
+      ],
+      "New Orderer": [
+         null,
+         "Nuevo solicitante"
+      ],
+      "New Package": [
+         null,
+         "Nuevo paquete"
+      ],
+      "New Template": [
+         null,
+         "Nueva plantilla"
+      ],
+      "New User": [
+         null,
+         "Nuevo usuario"
+      ],
       "New inventory badge": [
          null,
-         "New"
+         "Nuevo"
       ],
       "New item created.": [
          null,
          "Nuevo elemento creado"
       ],
+      "New line (Add Article or Project)": [
+         null,
+         "Línea nueva (agregar artículo o proyecto)"
+      ],
+      "New users will get customer access automatically.": [
+         null,
+         "Los usuarios nuevos reciben acceso de cliente automáticamente."
+      ],
+      "Next": [
+         null,
+         "Siguiente"
+      ],
+      "No": [
+         null,
+         "No"
+      ],
+      "No access": [
+         null,
+         "Sin acceso"
+      ],
+      "No admins defined yet": [
+         null,
+         "Todavía no hay administradores"
+      ],
+      "No categories defined yet": [
+         null,
+         "Todavía no hay categorías"
+      ],
+      "No description": [
+         null,
+         "Sin descripción"
+      ],
       "No description available for this model.": [
          null,
-         ""
+         "No hay descripción para este modelo."
       ],
       "No entries found": [
          null,
-         ""
+         "No se encontraron entradas"
+      ],
+      "No entry found": [
+         null,
+         "No se encontró ninguna entrada"
       ],
       "No hand overs found": [
          null,
-         ""
+         "No se encontraron entregas"
+      ],
+      "No orders are possible on this end date": [
+         null,
+         "No se pueden hacer pedidos con esta fecha de fin"
+      ],
+      "No orders are possible on this start date": [
+         null,
+         "No se pueden hacer pedidos con esta fecha de inicio"
+      ],
+      "No reminder yet": [
+         null,
+         "Todavía sin recordatorio"
+      ],
+      "No requesters defined yet": [
+         null,
+         "Todavía no hay solicitantes"
+      ],
+      "No results": [
+         null,
+         "Sin resultados"
+      ],
+      "No take backs found": [
+         null,
+         "No se encontraron devoluciones"
+      ],
+      "No verification required": [
+         null,
+         "No requiere verificación"
+      ],
+      "No.": [
+         null,
+         "N.º"
       ],
       "None": [
          null,
          "Ninguno"
       ],
+      "None selected": [
+         null,
+         "Ninguno seleccionado"
+      ],
+      "Normal": [
+         null,
+         "Normal"
+      ],
+      "Not Borrowable": [
+         null,
+         "No prestable"
+      ],
+      "Not a requester": [
+         null,
+         "No es solicitante"
+      ],
+      "Not available": [
+         null,
+         "No disponible"
+      ],
+      "Not categorized": [
+         null,
+         "Sin categoría"
+      ],
+      "Note": [
+         null,
+         "Nota"
+      ],
+      "Nothing selected": [
+         null,
+         "Nada seleccionado"
+      ],
+      "Notification": [
+         null,
+         "Notificación"
+      ],
       "Number of items": [
          null,
          "Número de artículos"
       ],
+      "OK": [
+         null,
+         "Aceptar"
+      ],
+      "One of the managers approves/denies or changes your reservation": [
+         null,
+         "Un gestor aprueba, rechaza o modifica su reserva"
+      ],
+      "Only categories with requests": [
+         null,
+         "Solo categorías con solicitudes"
+      ],
+      "Only enter whole numbers": [
+         null,
+         "Solo ingrese números enteros"
+      ],
+      "Only my own categories": [
+         null,
+         "Solo mis categorías"
+      ],
+      "Only my own requests": [
+         null,
+         "Solo mis solicitudes"
+      ],
+      "Open": [
+         null,
+         "Abierto"
+      ],
+      "Open %s": [
+         null,
+         "Abrir %s"
+      ],
+      "Open Datepicker": [
+         null,
+         "Abrir calendario"
+      ],
+      "Open Orders": [
+         null,
+         "Pedidos abiertos"
+      ],
+      "Open orders": [
+         null,
+         "Pedidos abiertos"
+      ],
+      "Opening Hours": [
+         null,
+         "Horario de apertura"
+      ],
+      "Operating System": [
+         null,
+         "Sistema operativo"
+      ],
+      "Option": [
+         null,
+         "Opción"
+      ],
+      "Option saved": [
+         null,
+         "Opción guardada"
+      ],
+      "Options": [
+         null,
+         "Opciones"
+      ],
+      "Order": [
+         null,
+         "Pedido"
+      ],
       "Order approved": [
          null,
-         "Orden aprobada"
+         "Pedido aprobado"
+      ],
+      "Order from": [
+         null,
+         "Pedido de"
+      ],
+      "Order from %s": [
+         null,
+         "Pedido de %s"
+      ],
+      "Order overview": [
+         null,
+         "Resumen del pedido"
+      ],
+      "Order quantity": [
+         null,
+         "Cantidad pedida"
+      ],
+      "Order received": [
+         null,
+         "Pedido recibido"
       ],
       "Order rejected": [
          null,
-         "Orden rechazada"
+         "Pedido rechazado"
       ],
       "Order submitted": [
          null,
-         "Orden presentada"
+         "Pedido enviado"
       ],
-      "Package error": [
+      "Orders": [
          null,
-         "Error de paquete"
+         "Pedidos"
+      ],
+      "Organisation": [
+         null,
+         "Organización"
+      ],
+      "Organisation unit": [
+         null,
+         "Unidad organizativa"
+      ],
+      "Organisations": [
+         null,
+         "Organizaciones"
+      ],
+      "Organisations of the requesters": [
+         null,
+         "Organizaciones de los solicitantes"
+      ],
+      "Other entitlement-groups": [
+         null,
+         "Otros grupos de asignación"
+      ],
+      "Overbooked Quantity": [
+         null,
+         "Cantidad con sobrerreserva"
+      ],
+      "Overbooking": [
+         null,
+         "Sobrerreserva"
+      ],
+      "Overdue": [
+         null,
+         "Atrasado"
+      ],
+      "Overdue Returns": [
+         null,
+         "Devoluciones atrasadas"
+      ],
+      "Overdue Visit": [
+         null,
+         "Visita atrasada"
+      ],
+      "Overview": [
+         null,
+         "Resumen"
+      ],
+      "Owned": [
+         null,
+         "Propios"
+      ],
+      "Owner": [
+         null,
+         "Propietario"
+      ],
+      "Package": [
+         null,
+         "Paquete"
+      ],
+      "Package Code": [
+         null,
+         "Código del paquete"
       ],
       "Package successfully destroyed": [
          null,
@@ -395,41 +2583,261 @@ window.i18n.locale_data = {
          null,
          "Paquete guardado correctamente"
       ],
+      "Packages": [
+         null,
+         "Paquetes"
+      ],
+      "Packages created": [
+         null,
+         "Paquetes creados"
+      ],
+      "Packages updated": [
+         null,
+         "Paquetes actualizados"
+      ],
+      "Parent categories": [
+         null,
+         "Categorías superiores"
+      ],
+      "Partially approved": [
+         null,
+         "Aprobado parcialmente"
+      ],
+      "Password": [
+         null,
+         "Contraseña"
+      ],
+      "Password Confirmation": [
+         null,
+         "Confirmación de la contraseña"
+      ],
       "Password changed": [
          null,
          "Contraseña modificada"
       ],
+      "Pending": [
+         null,
+         "Pendiente"
+      ],
+      "Period": [
+         null,
+         "Período"
+      ],
+      "Phone": [
+         null,
+         "Teléfono"
+      ],
+      "Phone%s": [
+         null,
+         "Teléfono%s"
+      ],
+      "Picking List": [
+         null,
+         "Lista de recogida"
+      ],
+      "Please adapt the specific quantities to fit your needs.": [
+         null,
+         "Ajuste las cantidades a lo que necesite."
+      ],
+      "Please contact the concerned inventory pool.": [
+         null,
+         "Contacte con el grupo de inventario correspondiente."
+      ],
       "Please note that these contracts, while they do belong to approved orders, may be changed by the lending manager at any time. They represent only a current snapshot of the order and might not contain the same items as the final contract once you pick up your items.": [
          null,
-         ""
+         "Tenga en cuenta que estos contratos, aunque pertenecen a pedidos aprobados, pueden ser modificados por el gestor de préstamos en cualquier momento. Solo muestran el estado actual del pedido y puede que no contengan los mismos artículos que el contrato final cuando retire sus artículos."
       ],
       "Please provide a purpose...": [
          null,
-         ""
+         "Indique un motivo..."
+      ],
+      "Please provide a search term": [
+         null,
+         "Indique un término de búsqueda"
       ],
       "Please provide all required fields": [
          null,
-         ""
+         "Complete todos los campos obligatorios"
+      ],
+      "Please provide an inventory code": [
+         null,
+         "Indique un código de inventario"
+      ],
+      "Please select a template.": [
+         null,
+         "Seleccione una plantilla."
+      ],
+      "Please select a time range and continue.": [
+         null,
+         "Seleccione un período y continúe."
+      ],
+      "Please select an inventory pool": [
+         null,
+         "Seleccione un grupo de inventario"
+      ],
+      "Please select an item.": [
+         null,
+         "Seleccione un artículo."
+      ],
+      "Please select some fields.": [
+         null,
+         "Seleccione algunos campos."
+      ],
+      "Please solve the conflicts for all highlighted reservations in order to continue.": [
+         null,
+         "Resuelva los conflictos de todas las reservas resaltadas para continuar."
+      ],
+      "Please specify the purpose of your order here...": [
+         null,
+         "Indique aquí el motivo de su pedido..."
+      ],
+      "Point of Delivery": [
+         null,
+         "Punto de entrega"
+      ],
+      "Prepackaged": [
+         null,
+         "Preembalado"
+      ],
+      "Previous": [
+         null,
+         "Anterior"
+      ],
+      "Price": [
+         null,
+         "Precio"
+      ],
+      "Print": [
+         null,
+         "Imprimir"
+      ],
+      "Print Contracts": [
+         null,
+         "Imprimir contratos"
+      ],
+      "Print Selection": [
+         null,
+         "Imprimir selección"
+      ],
+      "Print dialog will open aut.": [
+         null,
+         "El diálogo de impresión se abrirá automáticamente."
+      ],
+      "Priority": [
+         null,
+         "Prioridad"
       ],
       "Problems": [
          null,
-         ""
+         "Problemas"
+      ],
+      "Process multiple fields for multiple items in a row": [
+         null,
+         "Procesar varios campos de varios artículos seguidos"
+      ],
+      "Procured by": [
+         null,
+         "Adquirido por"
+      ],
+      "Procurement": [
+         null,
+         "Compras"
+      ],
+      "Product": [
+         null,
+         "Producto"
+      ],
+      "Produktionstechnik": [
+         null,
+         "Técnica de producción"
+      ],
+      "Project Number": [
+         null,
+         "Número de proyecto"
+      ],
+      "Properties": [
+         null,
+         "Propiedades"
+      ],
+      "Property": [
+         null,
+         "Propiedad"
+      ],
+      "Purpose": [
+         null,
+         "Motivo"
+      ],
+      "Purpose changed '%s' for '%s'": [
+         null,
+         "Motivo cambiado de '%s' a '%s'"
       ],
       "Purpose changed '%{from}' for '%{to}'": [
          null,
-         "Cambio sugerido '%{from}' a '%{to}'"
+         "Motivo cambiado de '%{from}' a '%{to}'"
+      ],
+      "Purpose of the order": [
+         null,
+         "Motivo del pedido"
       ],
       "Purpose these items are borrowed for": [
          null,
-         ""
+         "Motivo del préstamo de estos artículos"
+      ],
+      "Qty.": [
+         null,
+         "Cant."
+      ],
+      "Quantities": [
+         null,
+         "Cantidades"
       ],
       "Quantity": [
          null,
          "Cantidad"
       ],
+      "Quantity allocations": [
+         null,
+         "Asignación de cantidades"
+      ],
+      "Quantity: %d": [
+         null,
+         "Cantidad: %d"
+      ],
+      "Reason for Retirement": [
+         null,
+         "Motivo de la baja"
+      ],
+      "Recommended Accessories": [
+         null,
+         "Accesorios recomendados"
+      ],
+      "Reference": [
+         null,
+         "Referencia"
+      ],
+      "Reject": [
+         null,
+         "Rechazar"
+      ],
+      "Reject order": [
+         null,
+         "Rechazar pedido"
+      ],
       "Rejected": [
          null,
          "Rechazada"
+      ],
+      "Rejected on": [
+         null,
+         "Rechazado el"
+      ],
+      "Rejection Successful": [
+         null,
+         "Rechazo correcto"
+      ],
+      "Relevant for inventory": [
+         null,
+         "Relevante para el inventario"
       ],
       "Remind": [
          null,
@@ -445,67 +2853,557 @@ window.i18n.locale_data = {
       ],
       "Reminder emails": [
          null,
-         ""
+         "Correos de recordatorio"
+      ],
+      "Reminder sent": [
+         null,
+         "Recordatorio enviado"
+      ],
+      "Remove": [
+         null,
+         "Quitar"
       ],
       "Removed %{q} %{m}": [
          null,
-         "Remover %{q} %{m}"
+         "Quitado: %{q} %{m}"
+      ],
+      "Removed on save": [
+         null,
+         "Se quita al guardar"
+      ],
+      "Removing items": [
+         null,
+         "Quitando artículos"
+      ],
+      "Replacement": [
+         null,
+         "Reposición"
+      ],
+      "Request moved": [
+         null,
+         "Solicitud movida"
+      ],
+      "Requested Items": [
+         null,
+         "Artículos solicitados"
+      ],
+      "Requested quantity": [
+         null,
+         "Cantidad solicitada"
+      ],
+      "Requester": [
+         null,
+         "Solicitante"
+      ],
+      "Requesters": [
+         null,
+         "Solicitantes"
+      ],
+      "Requests": [
+         null,
+         "Solicitudes"
+      ],
+      "Reservation": [
+         null,
+         "Reserva"
+      ],
+      "Reset": [
+         null,
+         "Restablecer"
+      ],
+      "Reset all filter": [
+         null,
+         "Restablecer todos los filtros"
+      ],
+      "Reset timeout": [
+         null,
+         "Reiniciar el límite de tiempo"
+      ],
+      "Reset visibility of all fields on the item forms": [
+         null,
+         "Restablecer la visibilidad de todos los campos en los formularios de artículos"
+      ],
+      "Responsible": [
+         null,
+         "Responsable"
+      ],
+      "Responsible department": [
+         null,
+         "Departamento responsable"
+      ],
+      "Responsible inventory pool": [
+         null,
+         "Grupo de inventario responsable"
+      ],
+      "Responsible person": [
+         null,
+         "Persona responsable"
       ],
       "Retire": [
          null,
          "Retirar"
       ],
+      "Retire Item": [
+         null,
+         "Dar de baja el artículo"
+      ],
+      "Retired": [
+         null,
+         "Dado de baja"
+      ],
+      "Retirement": [
+         null,
+         "Baja"
+      ],
+      "Return": [
+         null,
+         "Devolución"
+      ],
+      "Return to this hand over": [
+         null,
+         "Volver a esta entrega"
+      ],
+      "Returned Items": [
+         null,
+         "Artículos devueltos"
+      ],
+      "Returns": [
+         null,
+         "Devoluciones"
+      ],
+      "Role": [
+         null,
+         "Rol"
+      ],
+      "Roles for users and groups can be managed in the new %s.": [
+         null,
+         "Los roles de usuarios y grupos se gestionan en la nueva %s."
+      ],
+      "Room": [
+         "Rooms",
+         "Sala",
+         "Salas"
+      ],
+      "Running Account": [
+         null,
+         "Cuenta corriente"
+      ],
+      "Same or similar serial number already exists.": [
+         null,
+         "Ya existe el mismo número de serie u otro parecido."
+      ],
+      "Saturday": [
+         null,
+         "Sábado"
+      ],
+      "Save": [
+         null,
+         "Guardar"
+      ],
+      "Save %s": [
+         null,
+         "Guardar %s"
+      ],
+      "Save Package": [
+         null,
+         "Guardar paquete"
+      ],
+      "Save and copy": [
+         null,
+         "Guardar y copiar"
+      ],
+      "Save and copy %s": [
+         null,
+         "Guardar y copiar %s"
+      ],
+      "Save anyway": [
+         null,
+         "Guardar de todos modos"
+      ],
+      "Save change": [
+         null,
+         "Guardar cambio"
+      ],
+      "Save changes": [
+         null,
+         "Guardar cambios"
+      ],
+      "Save package": [
+         null,
+         "Guardar paquete"
+      ],
+      "Saved": [
+         null,
+         "Guardado"
+      ],
+      "Search": [
+         null,
+         "Buscar"
+      ],
+      "Search %s": [
+         null,
+         "Buscar %s"
+      ],
+      "Search Results for \"%s\"": [
+         null,
+         "Resultados de búsqueda para \"%s\""
+      ],
+      "Search Results for %s": [
+         null,
+         "Resultados de búsqueda para %s"
+      ],
+      "Search for '%s'": [
+         null,
+         "Buscar '%s'"
+      ],
+      "Search results (%s) for \"%s\"": [
+         null,
+         "Resultados de búsqueda (%s) para \"%s\""
+      ],
+      "Search results (%s) for %s": [
+         null,
+         "Resultados de búsqueda (%s) para %s"
+      ],
+      "Search...": [
+         null,
+         "Buscar..."
+      ],
+      "Searching": [
+         null,
+         "Buscando"
+      ],
+      "Searching...": [
+         null,
+         "Buscando..."
+      ],
+      "Select": [
+         null,
+         "Seleccionar"
+      ],
+      "Select Field": [
+         null,
+         "Seleccionar campo"
+      ],
+      "Select File": [
+         null,
+         "Seleccionar archivo"
+      ],
+      "Select Image": [
+         null,
+         "Seleccionar imagen"
+      ],
+      "Select all": [
+         null,
+         "Seleccionar todo"
+      ],
+      "Selected Pools (%s)": [
+         null,
+         "Grupos seleccionados (%s)"
+      ],
+      "Selection": [
+         null,
+         "Selección"
+      ],
+      "Send reminder": [
+         null,
+         "Enviar recordatorio"
+      ],
+      "Serial Number": [
+         null,
+         "Número de serie"
+      ],
+      "Settings": [
+         null,
+         "Configuración"
+      ],
+      "Settings for %s": [
+         null,
+         "Configuración de %s"
+      ],
+      "Shelf": [
+         null,
+         "Estante"
+      ],
+      "Short Name": [
+         null,
+         "Nombre corto"
+      ],
+      "Show": [
+         null,
+         "Mostrar"
+      ],
+      "Show Availability": [
+         null,
+         "Mostrar disponibilidad"
+      ],
       "Show all %s...": [
          null,
-         ""
+         "Mostrar los %s..."
       ],
-      "Show user": [
+      "Show all ...": [
          null,
-         "Mostrar usario"
+         "Mostrar todo..."
+      ],
+      "Show all fields": [
+         null,
+         "Mostrar todos los campos"
+      ],
+      "Show all found %s": [
+         null,
+         "Mostrar los %s encontrados"
+      ],
+      "Show all properties": [
+         null,
+         "Mostrar todas las propiedades"
+      ],
+      "Show all search results": [
+         null,
+         "Mostrar todos los resultados"
       ],
       "Show delegation": [
          null,
          "Mostrar delegación"
       ],
+      "Show less properties": [
+         null,
+         "Mostrar menos propiedades"
+      ],
+      "Show user": [
+         null,
+         "Mostrar usuario"
+      ],
+      "Signature": [
+         null,
+         "Firma"
+      ],
       "Signed": [
          null,
          "Firmado"
       ],
-      "Since we did not receive any request for renewal, we consequently demand the return of the items without further delay.": [
+      "Signed contracts": [
          null,
-         "Como no recibimos ningún pedido de renovación, le pedimos que devuelva los elementos ahora."
+         "Contratos firmados"
+      ],
+      "Single Workplace": [
+         null,
+         "Puesto de trabajo único"
+      ],
+      "Site License": [
+         null,
+         "Licencia de sitio"
+      ],
+      "Software": [
+         null,
+         "Software"
+      ],
+      "Software Information": [
+         null,
+         "Información del software"
+      ],
+      "Software License": [
+         null,
+         "Licencia de software"
+      ],
+      "Something went wrong!": [
+         null,
+         "¡Algo salió mal!"
+      ],
+      "Source code": [
+         null,
+         "Código fuente"
+      ],
+      "Special filters": [
+         null,
+         "Filtros especiales"
+      ],
+      "Specification of the contact person is required": [
+         null,
+         "Hay que indicar la persona de contacto"
+      ],
+      "Specification of the purpose is required": [
+         null,
+         "Hay que indicar el motivo"
+      ],
+      "Start": [
+         null,
+         "Inicio"
       ],
       "Start Date must be before End Date": [
          null,
          "La fecha de inicio debe ser anterior a la Fecha de finalización"
       ],
+      "Start Screen": [
+         null,
+         "Pantalla de inicio"
+      ],
+      "Start and end date cannot be in the past": [
+         null,
+         "Fecha de inicio y fin no puede ser en el pasado"
+      ],
+      "Start date": [
+         null,
+         "Fecha de inicio"
+      ],
+      "Start search": [
+         null,
+         "Iniciar búsqueda"
+      ],
+      "State": [
+         null,
+         "Estado"
+      ],
+      "State of Request": [
+         null,
+         "Estado de la solicitud"
+      ],
+      "Statistics": [
+         null,
+         "Estadísticas"
+      ],
       "Status": [
          null,
          "Estado"
+      ],
+      "Status note": [
+         null,
+         "Nota de estado"
+      ],
+      "Subcategories": [
+         null,
+         "Subcategorías"
+      ],
+      "Subcategory": [
+         null,
+         "Subcategoría"
       ],
       "Submission failed": [
          null,
          "Falló el pedido"
       ],
+      "Submit": [
+         null,
+         "Enviar"
+      ],
+      "Submit Order": [
+         null,
+         "Enviar pedido"
+      ],
       "Submitted": [
          null,
-         "Presentada"
+         "Enviado"
+      ],
+      "Subordinate to %s": [
+         null,
+         "Subordinado a %s"
+      ],
+      "Successful Order": [
+         null,
+         "Pedido correcto"
+      ],
+      "Successfully set.": [
+         null,
+         "Establecido correctamente."
+      ],
+      "Sunday": [
+         null,
+         "Domingo"
+      ],
+      "Supplier": [
+         null,
+         "Proveedor"
+      ],
+      "Suppliers": [
+         null,
+         "Proveedores"
+      ],
+      "Suspended": [
+         null,
+         "Suspendido"
+      ],
+      "Suspended reason": [
+         null,
+         "Motivo de la suspensión"
+      ],
+      "Suspended until": [
+         null,
+         "Suspendido hasta"
+      ],
+      "Swap Model": [
+         null,
+         "Cambiar modelo"
       ],
       "Swapped %{from} for %{to}": [
          null,
          "Intercambio %{from} por %{to}"
       ],
+      "Swapped from %s ": [
+         null,
+         "Cambiado desde %s "
+      ],
+      "Take Back": [
+         null,
+         "Devolver"
+      ],
+      "Take Back Selection": [
+         null,
+         "Devolver selección"
+      ],
+      "Take Back from": [
+         null,
+         "Devolución de"
+      ],
+      "Take Back from %s": [
+         null,
+         "Devolución de %s"
+      ],
+      "Take Backs": [
+         null,
+         "Devoluciones"
+      ],
+      "Take back completed": [
+         null,
+         "Devolución completada"
+      ],
+      "Take back of %s item": [
+         "Take back of %s items",
+         "Devolución de %s artículo",
+         "Devolución de %s artículos"
+      ],
+      "Technical Details": [
+         null,
+         "Detalles técnicos"
+      ],
+      "Template": [
+         null,
+         "Plantilla"
+      ],
+      "Template Categories": [
+         null,
+         "Categorías de plantillas"
+      ],
+      "Template must have at least one model": [
+         null,
+         "La plantilla debe tener al menos un modelo"
+      ],
+      "Templates": [
+         null,
+         "Plantillas"
+      ],
       "Terms and conditions of the lender apply.": [
          null,
-         ""
+         "Se aplican las condiciones del prestador."
       ],
       "That means that the user probably did not get the approval mail and you need to contact him/her in a different way.": [
          null,
-         ""
+         "Esto significa que probablemente el usuario no recibió el correo de aprobación y tendrá que contactarle de otra forma."
       ],
       "The Category must be empty": [
          null,
          "Esta Categoría debe estar vacía"
+      ],
+      "The Inventory Code %s was not found for %s": [
+         null,
+         "No se encontró el código de inventario %s para %s"
       ],
       "The Inventory Code %s was not found.": [
          null,
@@ -517,7 +3415,11 @@ window.i18n.locale_data = {
       ],
       "The accessory was successfully created.": [
          null,
-         "El adjunto se creo correctamente."
+         "El accesorio se creó correctamente."
+      ],
+      "The accessory was successfully deleted.": [
+         null,
+         "El accesorio se eliminó correctamente."
       ],
       "The admin role cannot be scoped to an inventory pool": [
          null,
@@ -525,15 +3427,39 @@ window.i18n.locale_data = {
       ],
       "The assignment for %s was removed": [
          null,
-         ""
+         "Se quitó la asignación de %s"
+      ],
+      "The budget period is closed": [
+         null,
+         "El período presupuestario está cerrado"
+      ],
+      "The entitlement-group quantities were successfully saved.": [
+         null,
+         "Las cantidades del grupo de asignación se guardaron correctamente."
       ],
       "The following error happened while sending a notification email to %{email}:\\\\n": [
          null,
-         ""
+         "Se produjo el siguiente error al enviar un correo de notificación a %{email}:\\\\n"
+      ],
+      "The highlighted entries are not accomplishable for the intended quantity.": [
+         null,
+         "Las entradas resaltadas no se pueden cumplir con la cantidad prevista."
+      ],
+      "The inventory code %s is not valid for this model": [
+         null,
+         "El código de inventario %s no es válido para este modelo"
+      ],
+      "The item %s will be retired and no longer available for rentals.": [
+         null,
+         "El artículo %s se dará de baja y ya no estará disponible para préstamos."
       ],
       "The item belongs to a package": [
          null,
-         ""
+         "El artículo pertenece a un paquete"
+      ],
+      "The item cannot be retired because it's not returned yet or has already been assigned to a contract line.": [
+         null,
+         "El artículo no se puede dar de baja porque todavía no se devolvió o ya está asignado a una línea de contrato."
       ],
       "The item doesn't belong to the inventory pool related to this contract": [
          null,
@@ -543,121 +3469,374 @@ window.i18n.locale_data = {
          null,
          "El artículo no coincide con el modelo reservado"
       ],
+      "The item is already handed over or assigned to a different contract line": [
+         null,
+         "El artículo ya está entregado o asignado a otra línea de contrato"
+      ],
+      "The item is already retired": [
+         null,
+         "El artículo ya está dado de baja"
+      ],
+      "The item with the inventory code %s was not found": [
+         null,
+         "No se encontró el artículo con el código de inventario %s"
+      ],
+      "The items of the package can not be edited": [
+         null,
+         "Los artículos del paquete no se pueden editar"
+      ],
+      "The line was not found": [
+         null,
+         "No se encontró la línea"
+      ],
+      "The mail was sent": [
+         null,
+         "El correo se envió"
+      ],
       "The model cannot be changed because the item is used in contracts already.": [
          null,
-         ""
+         "El modelo no se puede cambiar porque el artículo ya se usa en contratos."
       ],
       "The model is already compatible": [
          null,
          "Este modelo ya es compatible"
       ],
+      "The model needs a product name.": [
+         null,
+         "El modelo necesita un nombre de producto."
+      ],
       "The new user details could not be saved.": [
          null,
-         ""
+         "No se pudieron guardar los datos del usuario nuevo."
       ],
       "The option could not be added": [
          null,
-         ""
+         "No se pudo agregar la opción"
       ],
       "The option doesn't belong to the inventory pool related to this contract": [
          null,
          "Esta opción no corresponde al grupo de inventario relacionado a este contrato"
       ],
-      "The order now looks like this:": [
+      "The order has already been dealt with.": [
          null,
-         "El nuevo pedido es así:"
+         "El pedido ya ha sido procesado."
+      ],
+      "The order will be discarded.": [
+         null,
+         "Se descartará el pedido."
+      ],
+      "The package is not in stock": [
+         null,
+         "El paquete no está en stock"
       ],
       "The parent item doesn't exist (parent_id: %d)": [
          null,
-         ""
+         "El artículo superior no existe (parent_id: %d)"
       ],
       "The properties have been updated.": [
          null,
          "Las propiedades fueron actualizadas."
       ],
+      "The responsible inventory pool cannot be changed because it's not returned yet or has already been assigned to a contract line.": [
+         null,
+         "El grupo de inventario responsable no se puede cambiar porque el artículo todavía no se devolvió o ya está asignado a una línea de contrato."
+      ],
+      "The selected inventory pool is closed on that day": [
+         null,
+         "El grupo de inventario seleccionado está cerrado ese día"
+      ],
       "The selected model is not a package": [
          null,
-         ""
+         "El modelo seleccionado no es un paquete"
+      ],
+      "The selected reservations have been moved": [
+         null,
+         "Las reservas seleccionadas se movieron"
+      ],
+      "The template \"%s\" will be deleted and no longer available for usage.": [
+         null,
+         "La plantilla \"%s\" se eliminará y ya no se podrá usar."
+      ],
+      "The template has been added to your order.": [
+         null,
+         "La plantilla se agregó a su pedido."
       ],
       "The user does not have an email address": [
          null,
-         ""
+         "El usuario no tiene dirección de correo electrónico"
       ],
-      "The user who placed this order has received a similar e-mail message informing them that the order first needs to be approved before it is valid.": [
+      "There are open reservations for delegated users: ": [
          null,
-         ""
+         "Hay reservas abiertas de usuarios delegados: "
       ],
-      "These are the comments of the inventory manager:": [
+      "These mail templates are copied for a new inventory pool when it is created.": [
          null,
-         "Estos son los comentarios del administrador de inventario:"
+         "Estas plantillas de correo se copian para cada grupo de inventario nuevo cuando se crea."
+      ],
+      "These orders have been successfully submitted, but are NOT YET APPROVED.": [
+         null,
+         "Estos pedidos se enviaron correctamente, pero TODAVÍA NO ESTÁN APROBADOS."
       ],
       "This contract is not signable because it doesn't have any contract reservations.": [
          null,
-         ""
+         "Este contrato no se puede firmar porque no tiene reservas."
       ],
       "This contract is not signable because none of the reservations have a purpose.": [
          null,
-         ""
+         "Este contrato no se puede firmar porque ninguna reserva tiene motivo."
       ],
       "This contract is not signable because some reservations are not assigned.": [
          null,
-         ""
+         "Este contrato no se puede firmar porque hay reservas sin asignar."
       ],
-      "Entitlement-Groups of this customer": [
+      "This contract is not signable because the delegated user is either missing or not part of this delegation.": [
          null,
-         ""
+         "Este contrato no se puede firmar porque falta el usuario delegado o no forma parte de esta delegación."
+      ],
+      "This entry will be removed from the order.": [
+         null,
+         "Esta entrada se quitará del pedido."
+      ],
+      "This inventory pool is closed on that day.": [
+         null,
+         "Este grupo de inventario está cerrado ese día."
+      ],
+      "This is a package containing the following items": [
+         null,
+         "Este es un paquete que contiene los siguientes artículos"
+      ],
+      "This is the list of items you requested. To complete this order, please %s.": [
+         null,
+         "Esta es la lista de artículos que solicitó. Para completar este pedido, %s."
+      ],
+      "This item was retired": [
+         null,
+         "Este artículo está dado de baja"
       ],
       "This item will be given to a different inventory pool and not show up in yours anymore!": [
          null,
-         ""
+         "Este artículo pasará a otro grupo de inventario y dejará de aparecer en el suyo."
+      ],
+      "This model is now in %d categories": [
+         null,
+         "Este modelo está ahora en %d categorías"
+      ],
+      "This note is added to any contract, but can be changed individually before actually printing and signing each contract.": [
+         null,
+         "Esta nota se agrega a todos los contratos, pero se puede cambiar en cada uno antes de imprimirlo y firmarlo."
+      ],
+      "This order has already been approved.": [
+         null,
+         "Este pedido ya fue aprobado."
       ],
       "This order is not approvable because doesn't have any models.": [
          null,
          "Esta orden no puede aprobarse aun"
       ],
+      "This order is not approvable because some reservations violate the minimal reservation advance period of the inventory pool. Please adjust the start date accordingly.": [
+         null,
+         "Este pedido no se puede aprobar porque algunas reservas no respetan la antelación mínima de reserva del grupo de inventario. Ajuste la fecha de inicio."
+      ],
       "This order is not approvable because some reserved models are not available.": [
          null,
-         ""
+         "Este pedido no se puede aprobar porque algunos modelos reservados no están disponibles."
       ],
       "This order is not approvable because the inventory pool is closed on either the start or enddate.": [
          null,
-         ""
+         "Este pedido no se puede aprobar porque el grupo de inventario está cerrado en la fecha de inicio o en la de fin."
       ],
-      "This order is still pending. Please log in to your leihs system and either approve or reject it.": [
+      "This user is suspended.": [
          null,
-         ""
+         "Este usuario está suspendido."
+      ],
+      "Thu": [
+         null,
+         "Jue"
+      ],
+      "Thursday": [
+         null,
+         "Jueves"
+      ],
+      "Time until your order times out. Click to reset.": [
+         null,
+         "Tiempo hasta que caduque su pedido. Haga clic para reiniciarlo."
       ],
       "Time window": [
          null,
          "Período de Tiempo"
       ],
+      "Timeline": [
+         null,
+         "Cronología"
+      ],
+      "To allocate models to users use the %s.": [
+         null,
+         "Para asignar modelos a los usuarios use los %s."
+      ],
+      "To be verified": [
+         null,
+         "Por verificar"
+      ],
+      "To pick up": [
+         null,
+         "Por retirar"
+      ],
       "Today": [
          null,
          "Hoy"
+      ],
+      "Toggle %s": [
+         null,
+         "Mostrar/ocultar %s"
+      ],
+      "Too many users found": [
+         null,
+         "Se encontraron demasiados usuarios"
+      ],
+      "Total": [
+         null,
+         "Total"
+      ],
+      "Total of all approved requests": [
+         null,
+         "Total de todas las solicitudes aprobadas"
+      ],
+      "Total of all requests in state \"New\"": [
+         null,
+         "Total de todas las solicitudes en estado \"Nuevo\""
       ],
       "Total price (indicative value)": [
          null,
          "Precio total (valor indicativo)"
       ],
-      "Too many users found": [
+      "Total quantity": [
          null,
-         ""
+         "Cantidad total"
       ],
-      "Unfortunately your order is still pending, but you will soon receive a confirmation of order by separate e-mail. You can view the status of your order through your leihs account.": [
+      "Total quantity of borrowable and not retired items": [
          null,
-         "Desafortunadamente su pedido aun esta pendiente, pero pronto recibirá una confirmación de su pedido. Puede ver el estado de su pedido a través de su cuenta de leihs."
+         "Cantidad total de artículos prestables y no dados de baja"
+      ],
+      "Tue": [
+         null,
+         "Mar"
+      ],
+      "Tuesday": [
+         null,
+         "Martes"
+      ],
+      "Type in a search term": [
+         null,
+         "Escriba un término de búsqueda"
+      ],
+      "Umzug": [
+         null,
+         "Mudanza"
+      ],
+      "Unborrowable": [
+         null,
+         "No prestable"
+      ],
+      "Unborrowable Items": [
+         null,
+         "Artículos no prestables"
+      ],
+      "Undo approval": [
+         null,
+         "Deshacer aprobación"
+      ],
+      "Unexpected error.": [
+         null,
+         "Error inesperado."
+      ],
+      "Unsigned": [
+         null,
+         "Sin firmar"
+      ],
+      "Unsigned Hand Over": [
+         null,
+         "Entrega sin firmar"
+      ],
+      "Unsigned contracts": [
+         null,
+         "Contratos sin firmar"
+      ],
+      "Unsubmitted": [
+         null,
+         "Sin enviar"
+      ],
+      "Unsuccessful reminder of %{q} items for contracts %{c}": [
+         null,
+         "No se pudo enviar el recordatorio de %{q} artículos de los contratos %{c}"
+      ],
+      "Unused Models": [
+         null,
+         "Modelos sin usar"
+      ],
+      "Update": [
+         null,
+         "Actualizar"
+      ],
+      "Updated at": [
+         null,
+         "Actualizado el"
+      ],
+      "Upload a comma separated CSV file (with UTF-8 encoding), each row describing an item.": [
+         null,
+         "Suba un archivo CSV separado por comas (con codificación UTF-8), con una fila por artículo."
       ],
       "Upload error.": [
          null,
          "Error de subida"
       ],
-      "User": [
+      "Upload problems": [
          null,
-         "Usuario"
+         "Problemas al subir"
+      ],
+      "Uploading files - please wait": [
+         null,
+         "Subiendo archivos, espere"
+      ],
+      "Used Models": [
+         null,
+         "Modelos usados"
+      ],
+      "Used for sending e-mails from leihs": [
+         null,
+         "Se usa para enviar correos electrónicos desde leihs"
+      ],
+      "Used on the start page in the borrow section": [
+         null,
+         "Se usa en la página de inicio de la sección de préstamos"
+      ],
+      "User": [
+         "Users",
+         "Usuario",
+         "Usuarios"
+      ],
+      "User and model to be verified": [
+         null,
+         "Usuario y modelo por verificar"
+      ],
+      "User created successfully": [
+         null,
+         "Usuario creado correctamente"
+      ],
+      "User data": [
+         null,
+         "Datos de usuario"
       ],
       "User details were updated successfully.": [
          null,
-         ""
+         "Los datos del usuario se actualizaron correctamente."
+      ],
+      "User does not have access to inventory pool: %s": [
+         null,
+         "El usuario no tiene acceso al grupo de inventarios: %s"
+      ],
+      "User is suspended for inventory pool: %s": [
+         null,
+         "El usuario está suspendido para el grupo de inventarios: %s"
       ],
       "User must be selected": [
          null,
@@ -665,75 +3844,328 @@ window.i18n.locale_data = {
       ],
       "User or Order not found": [
          null,
-         ""
+         "No se encontró el usuario o el pedido"
       ],
       "User swapped %{from} for %{to}": [
          null,
          "El Usuario intercambio %{from} por %{to}"
       ],
+      "User to be verified": [
+         null,
+         "Usuario por verificar"
+      ],
+      "User unknown": [
+         null,
+         "Usuario desconocido"
+      ],
+      "User/Typical usage": [
+         null,
+         "Usuario/Uso típico"
+      ],
+      "Username": [
+         null,
+         "Nombre de usuario"
+      ],
+      "Users": [
+         null,
+         "Usuarios"
+      ],
+      "Users who don't bring back the items on the required date are suspended from next day on.": [
+         null,
+         "Los usuarios que no devuelven los artículos en la fecha indicada quedan suspendidos a partir del día siguiente."
+      ],
+      "User|AccessRight|Suspended reason": [
+         null,
+         "Motivo de la suspensión"
+      ],
+      "User|Email": [
+         null,
+         "Correo electrónico"
+      ],
+      "User|Firstname": [
+         null,
+         "Nombre"
+      ],
+      "User|Lastname": [
+         null,
+         "Apellido"
+      ],
       "Value": [
          null,
          "Valor"
       ],
+      "Value List": [
+         null,
+         "Lista de valores"
+      ],
+      "Value List for Lending Contract No.": [
+         null,
+         "Lista de valores del contrato de préstamo n.º"
+      ],
       "Value List for Lending Contract No. %s": [
          null,
-         ""
+         "Lista de valores del contrato de préstamo n.º %s"
+      ],
+      "Verification required": [
+         null,
+         "Requiere verificación"
+      ],
+      "Verify": [
+         null,
+         "Verificar"
+      ],
+      "Verify + approve order": [
+         null,
+         "Verificar y aprobar pedido"
+      ],
+      "View %s": [
+         null,
+         "Ver %s"
+      ],
+      "View Item": [
+         null,
+         "Ver artículo"
+      ],
+      "View Model": [
+         null,
+         "Ver modelo"
+      ],
+      "View Option": [
+         null,
+         "Ver opción"
+      ],
+      "Visible for borrowers in frontend": [
+         null,
+         "Visible para los prestatarios en el frontend"
+      ],
+      "Visits": [
+         null,
+         "Visitas"
       ],
       "Warning": [
          null,
-         ""
+         "Aviso"
       ],
-      "We are just sending you this little reminder because someone else is already waiting for some of these items.": [
+      "Warranty expiration": [
          null,
-         "Solo le enviamos este pequeño recordatorio porque alguien mas encargó esos artículos."
+         "Fin de la garantía"
       ],
-      "We kindly ask you to contact us as soon as possible. Your computer might need an update.": [
+      "Wed": [
          null,
-         ""
+         "Mié"
+      ],
+      "Wednesday": [
+         null,
+         "Miércoles"
+      ],
+      "Welcome %s": [
+         null,
+         "Bienvenido/a, %s"
+      ],
+      "Werkstatt-Technik": [
+         null,
+         "Técnica de taller"
+      ],
+      "Which inventory pool has the most contracts?": [
+         null,
+         "¿Qué grupo de inventario tiene más contratos?"
+      ],
+      "Which inventory pool is busiest?": [
+         null,
+         "¿Qué grupo de inventario tiene más actividad?"
+      ],
+      "Which item is busiest?": [
+         null,
+         "¿Qué artículo tiene más actividad?"
+      ],
+      "Who borrowed the most things?": [
+         null,
+         "¿Quién pidió más cosas prestadas?"
+      ],
+      "Who bought the most items?": [
+         null,
+         "¿Quién compró más artículos?"
+      ],
+      "Workdays": [
+         null,
+         "Días laborables"
+      ],
+      "Working order": [
+         null,
+         "En funcionamiento"
+      ],
+      "Workload": [
+         null,
+         "Carga de trabajo"
       ],
       "Write a comment. The comment will be part of the rejection e-mail.": [
          null,
-         ""
+         "Escriba un comentario. El comentario se incluirá en el correo de rechazo."
       ],
-      "Write a comment... your comment will be part of the confirmation e-mail": [
+      "Write a comment... (your comment will be part of the confirmation e-mail)": [
          null,
-         ""
+         "Escriba un comentario... (se incluirá en el correo de confirmación)"
+      ],
+      "Write a note... (the note will be part of the contract)": [
+         null,
+         "Escriba una nota... (la nota se incluirá en el contrato)"
       ],
       "Write a note... the note will be part of the contract": [
          null,
-         ""
+         "Escriba una nota... la nota se incluirá en el contrato"
+      ],
+      "Yes": [
+         null,
+         "Sí"
+      ],
+      "You are not authorized for this action.": [
+         null,
+         "No tiene autorización para esta acción."
+      ],
+      "You are not logged in.": [
+         null,
+         "No ha iniciado sesión."
+      ],
+      "You are not the owner of this item": [
+         null,
+         "No es el propietario de este artículo"
+      ],
+      "You are suspended for this inventory pool": [
+         null,
+         "Está suspendido en este grupo de inventario"
+      ],
+      "You bring back your items": [
+         null,
+         "Usted devuelve sus artículos"
+      ],
+      "You can edit your personal data": [
+         null,
+         "Puede editar sus datos personales"
+      ],
+      "You can modify the time range for each separate model in the next step.": [
+         null,
+         "En el siguiente paso puede cambiar el período de cada modelo por separado."
+      ],
+      "You can not create a package without any item": [
+         null,
+         "No se puede crear un paquete sin artículos"
+      ],
+      "You can not take back more items then you handed over": [
+         null,
+         "No se pueden devolver más artículos de los que se entregaron"
+      ],
+      "You can not take back more options then you handed over": [
+         null,
+         "No se pueden devolver más opciones de las que se entregaron"
       ],
       "You can't add a package to a package.": [
          null,
-         ""
+         "No se puede agregar un paquete a otro paquete."
       ],
       "You cannot delete all reservations of an order. Perhaps you want to reject it instead?": [
          null,
-         ""
+         "No se pueden eliminar todas las reservas de un pedido. ¿Quizás quiere rechazarlo?"
+      ],
+      "You cannot delete this user": [
+         null,
+         "No se puede eliminar este usuario"
+      ],
+      "You do not have any items in your order. Please %s and choose items for your order.": [
+         null,
+         "No tiene artículos en su pedido. %s y elija artículos para su pedido."
+      ],
+      "You do not have the responsibility to lend this item. Responsible for this item is the pool \"%s\".": [
+         null,
+         "No es responsable de prestar este artículo. El responsable es el grupo de inventario \"%s\"."
+      ],
+      "You don't have access to this item.": [
+         null,
+         "No tiene acceso a este artículo."
       ],
       "You don't have any rights to access this application.": [
          null,
          "No tiene permisos para acceder a esta aplicación"
       ],
+      "You don't have permission to perform this action": [
+         null,
+         "No tiene permiso para realizar esta acción"
+      ],
+      "You have %{no_access} to any inventory pools!": [
+         null,
+         "¡No tiene acceso a ningún grupo de inventario! (%{no_access})"
+      ],
+      "You have access to the following inventory pools": [
+         null,
+         "Tiene acceso a los siguientes grupos de inventario"
+      ],
+      "You have access to the following inventory pools:": [
+         null,
+         "Tiene acceso a los siguientes grupos de inventario:"
+      ],
       "You have been logged out.": [
          null,
          "Su sesión ha sido cerrada."
       ],
+      "You have permission to access the following inventory pool": [
+         "You have permission to access the following inventory pools",
+         "Tiene permiso de acceso al siguiente grupo de inventario",
+         "Tiene permiso de acceso a los siguientes grupos de inventario"
+      ],
+      "You have to provide the quantity for the things you want to return": [
+         null,
+         "Indique la cantidad de lo que quiere devolver"
+      ],
+      "You have unsaved data. Would you like to delete the data?": [
+         null,
+         "Hay datos sin guardar. ¿Quiere eliminarlos?"
+      ],
+      "You pick up the reserved items at the inventory pool": [
+         null,
+         "Usted retira los artículos reservados en el grupo de inventario"
+      ],
+      "You place a reservation for some items in this system": [
+         null,
+         "Usted reserva algunos artículos en este sistema"
+      ],
+      "You should redo your action or reload the page!": [
+         null,
+         "Repita la acción o recargue la página."
+      ],
+      "You wait for confirmation from the inventory pools in question": [
+         null,
+         "Usted espera la confirmación de los grupos de inventario correspondientes"
+      ],
       "You were served by %s": [
          null,
-         ""
+         "Le atendió %s"
       ],
-      "Your order for the following items has been confirmed by the inventory manager": [
+      "Your order has been modified. All reservations are now available.": [
          null,
-         "Su pedido de los siguientes artículos fue confirmado por el administrador del inventario"
+         "Su pedido se modificó. Ahora todas las reservas están disponibles."
       ],
-      "Your order for the following items listed below was successfully submitted.": [
+      "Your order has been successfully submitted, but is NOT YET APPROVED.": [
          null,
-         "Su pedido se los siguientes elementos fue aceptada correctamente."
+         "Su pedido se envió correctamente, pero TODAVÍA NO ESTÁ APROBADO."
       ],
-      "Your order was rejected for the following reason:": [
+      "Your order ist empty.": [
          null,
-         "Su pedido fue cancelado por los siguientes motivos:"
+         "Su pedido está vacío."
+      ],
+      "Your order was successfully transmitted to those responsible and is %s.": [
+         null,
+         "Su pedido se envió correctamente a los responsables y está %s."
+      ],
+      "Your order will time out in %s.": [
+         null,
+         "Su pedido caducará en %s."
+      ],
+      "Zielraum": [
+         null,
+         "Zona de destino"
+      ],
+      "Zip": [
+         null,
+         "Código postal"
       ],
       "[Model %s] ": [
          null,
@@ -741,7 +4173,7 @@ window.i18n.locale_data = {
       ],
       "[leihs] Order received": [
          null,
-         "[leihs] Orden recibida"
+         "[leihs] Pedido recibido"
       ],
       "[leihs] Reminder": [
          null,
@@ -757,203 +4189,115 @@ window.i18n.locale_data = {
       ],
       "[leihs] Reservation Submitted": [
          null,
-         "[leihs] Reserva Presentada"
+         "[leihs] Reserva enviada"
+      ],
+      "[leihs] Reservation confirmed (with changes)": [
+         null,
+         "[leihs] Reserva confirmada (con cambios)"
       ],
       "[leihs] Some items should be returned tomorrow": [
          null,
          "[leihs] Algunos elementos deberían de ser devueltos mañana"
       ],
+      "accept_lending_terms_label": [
+         null,
+         "Acepto las condiciones de préstamo: "
+      ],
+      "accounting type": [
+         null,
+         "tipo de contabilidad"
+      ],
+      "active": [
+         null,
+         "activo"
+      ],
+      "admin section of this inventory-pool": [
+         null,
+         "sección de administración de este grupo de inventario"
+      ],
+      "admin_active": [
+         null,
+         "activo"
+      ],
+      "admin_all": [
+         null,
+         "todos"
+      ],
+      "admin_inactive": [
+         null,
+         "inactivo"
+      ],
+      "admin_search_term": [
+         null,
+         "Término de búsqueda..."
+      ],
+      "all models": [
+         null,
+         "todos los modelos"
+      ],
       "already in Category": [
          null,
          "ya se encuentra en la Categoría"
       ],
+      "and assign fields": [
+         null,
+         "y asignar campos"
+      ],
+      "aquisition": [
+         null,
+         "adquisición"
+      ],
+      "ascending": [
+         null,
+         "ascendente"
+      ],
+      "assign highest available": [
+         null,
+         "asignar el mayor disponible"
+      ],
+      "assigned to %s": [
+         null,
+         "asignado a %s"
+      ],
+      "available": [
+         null,
+         "disponible"
+      ],
+      "available quantity": [
+         null,
+         "cantidad disponible"
+      ],
+      "awaiting approval": [
+         null,
+         "pendiente de aprobación"
+      ],
+      "borrowable": [
+         null,
+         "prestable"
+      ],
+      "by browsing categories": [
+         null,
+         "por categorías"
+      ],
+      "click here to reload": [
+         null,
+         "haga clic aquí para recargar"
+      ],
+      "closed": [
+         null,
+         "cerrado"
+      ],
+      "contracts": [
+         null,
+         "contratos"
+      ],
+      "cost center": [
+         null,
+         "centro de coste"
+      ],
       "could not be assigned for take back": [
          null,
-         ""
-      ],
-      "doesn't match parent's attribute": [
-         null,
-         ""
-      ],
-      "for max.": [
-         null,
-         ""
-      ],
-      "inventory pool is closed on end_date. ": [
-         null,
-         "El grupo de inventario está cerrado en end_date. "
-      ],
-      "inventory pool is closed on start_date. ": [
-         null,
-         "El grupo de inventario está cerrado en start_date. "
-      ],
-      "item not assigned. ": [
-         null,
-         "artículo no asignado. "
-      ],
-      "jump to this date": [
-         null,
-         ""
-      ],
-      "lends": [
-         null,
-         ""
-      ],
-      "not available. ": [
-         null,
-         "no disponible. "
-      ],
-      "not valid. ": [
-         null,
-         "no válido. "
-      ],
-      "please wait": [
-         null,
-         ""
-      ],
-      "quantity increased by %s": [
-         null,
-         ""
-      ],
-      "quantity not available. ": [
-         null,
-         "cantidad no disponible. "
-      ],
-      "reset user": [
-         null,
-         ""
-      ],
-      "since": [
-         null,
-         ""
-      ],
-      "since max.": [
-         null,
-         ""
-      ],
-      "therefore you may not be able to change some of these fields": [
-         null,
-         ""
-      ],
-      "to substitute": [
-         null,
-         ""
-      ],
-      "today": [
-         null,
-         "Hoy"
-      ],
-      "unknown Model": [
-         null,
-         "modelo desconocido"
-      ],
-      "upcoming": [
-         null,
-         ""
-      ],
-      "was assigned for take back": [
-         null,
-         ""
-      ],
-      "while deleting a hand over line": [
-         null,
-         ""
-      ],
-      "while deleting hand over for": [
-         null,
-         ""
-      ],
-      "while deleting order line for": [
-         null,
-         ""
-      ],
-      "while try to send an e-mail reminder to:": [
-         null,
-         ""
-      ],
-      "you cannot hand out reservations wich are starting in the future": [
-         null,
-         ""
-      ],
-      "you cannot hand out reservations with unassigned inventory codes": [
-         null,
-         ""
-      ],
-      "Option": [
-         null,
-         ""
-      ],
-      "Options": [
-         null,
-         ""
-      ],
-      "Refresh Page": [
-         null,
-         "Actualizar página"
-      ],
-      "is not a valid URL": [
-         null,
-         "no es una URL valida"
-      ],
-      "is not a HTTP(S) URL": [
-         null,
-         "no es una URL HTTP(S)"
-      ],
-      "Only enter whole numbers": [
-         null,
-         "Solo ingrese números enteros"
-      ],
-      "User does not have access to inventory pool: %s": [
-         null,
-         "El usuario no tiene acceso al grupo de inventarios: %s"
-      ],
-      "User is suspended for inventory pool: %s": [
-         null,
-         "El usuario está suspendido para el grupo de inventarios: %s"
-      ],
-      "An order can not have multiple delegated users.": [
-         null,
-         "Un pedido no puede tener múltiples usuarios delegados."
-      ],
-      "Invalid date": [
-         null,
-         "fecha no válida"
-      ],
-      "Start and end date cannot be in the past": [
-         null,
-         "Fecha de inicio y fin no puede ser en el pasado"
-      ],
-      "Manage user roles via Groups.": [
-         null,
-         "Manejo los roles de los usuarios a través de Grupos."
-      ],
-      "A Group contains several users. These users can gain a role by assigning the role to their Group.": [
-         null,
-         "Un grupo contiene varios usuarios. Estos usuarios pueden obtener un rol asignando el rol a su Grupo."
-      ],
-      "To allocate models to users use the %s.": [
-         null,
-         "Para asignar modelos a los usuarios use los %s."
-      ],
-      "Expand All": [
-         null,
-         "Expandir Todo"
-      ],
-      "Close All": [
-         null,
-         "Cierra Todo"
-      ],
-      "legacy_manage_users_new_admin_section_notice": [
-         null,
-         "Los usuarios y sus derechos de acceso también se pueden manejar en la nueva sección Admin."
-      ],
-      "legacy_manage_entitlement_group_new_admin_section_notice": [
-         null,
-         "Los usuarios y grupos de esta entitlement-group se manejan en la nueva sección Admin."
-      ],
-      "legacy_manage_group_new_admin_section_notice": [
-         null,
-         "Los grupos se manejan en la nueva sección Admin."
+         "no se pudo asignar a la devolución"
       ],
       "create_multiple_items_inv_code_notice": [
          null,
@@ -963,65 +4307,498 @@ window.i18n.locale_data = {
          null,
          "Cantidad"
       ],
-      "create_multiple_items_label_date": [
+      "current page is set as start page": [
          null,
-         "Fecha"
+         "la página actual está definida como página de inicio"
       ],
-      "create_multiple_items_head_title": [
-         null,
-         "¡Artículos creados con éxito!"
+      "day": [
+         "days",
+         "día",
+         "días"
       ],
-      "create_multiple_items_head_summary": [
+      "delete": [
          null,
-         "Resumen"
+         "eliminar"
       ],
-      "create_multiple_items_head_list": [
+      "deployed %s ago": [
          null,
-         "Lista de elementos creados"
+         "desplegado hace %s"
       ],
-      "create_multiple_items_label_export": [
+      "descending": [
          null,
-         "Exportar"
+         "descendente"
       ],
-      "create_multiple_items_btn_csv_export": [
+      "disabled": [
          null,
-         "Guardar como CSV"
+         "desactivado"
       ],
-      "create_multiple_items_hint_csv_export": [
+      "doesn't match parent's attribute": [
          null,
-         "(por ejemplo, para su uso con una impresora de etiquetas)"
+         "no coincide con el atributo del superior"
       ],
-      "create_multiple_items_checkbox_show_barcode": [
+      "enabled": [
          null,
-         "Mostrar códigos de barras"
+         "activado"
       ],
-      "create_multiple_items_checkbox_show_full_urls": [
+      "entries%s": [
          null,
-         "Mostrar URLs completas"
+         "entradas%s"
       ],
-      "Lending Terms": [
+      "extend": [
          null,
-         "Condiciones de préstamo"
+         "ampliar"
       ],
-      "accept_lending_terms_label": [
+      "fill up gaps": [
          null,
-         "Acepto las condiciones de préstamo: "
+         "rellenar huecos"
       ],
-      "contract_contact_details_heading": [
+      "for": [
          null,
-         "Detalles de contacto"
+         "para"
       ],
-      "customer_order_contact_details_label": [
+      "for '%s'": [
          null,
-         "Detalles de contacto"
+         "para '%s'"
       ],
-      "customer_order_contact_details_placeholder": [
+      "for items": [
          null,
-         "Se recomienda indicar un número de teléfono"
+         "para artículos"
       ],
-      "The order has already been dealt with.": [
+      "for licenses": [
          null,
-         "El pedido ya ha sido procesado."
+         "para licencias"
+      ],
+      "for max.": [
+         null,
+         "para máx."
+      ],
+      "found %i": [
+         null,
+         "%i encontrados"
+      ],
+      "from": [
+         null,
+         "desde"
+      ],
+      "from %s": [
+         null,
+         "desde %s"
+      ],
+      "general": [
+         null,
+         "general"
+      ],
+      "general ledger account": [
+         null,
+         "cuenta del libro mayor"
+      ],
+      "go back": [
+         null,
+         "volver"
+      ],
+      "go to today": [
+         null,
+         "ir a hoy"
+      ],
+      "here": [
+         null,
+         "aquí"
+      ],
+      "in": [
+         null,
+         "en"
+      ],
+      "in stock": [
+         null,
+         "en stock"
+      ],
+      "in the future": [
+         null,
+         "en el futuro"
+      ],
+      "in the past": [
+         null,
+         "en el pasado"
+      ],
+      "inactive": [
+         null,
+         "inactivo"
+      ],
+      "incl. VAT": [
+         null,
+         "IVA incl."
+      ],
+      "inspection phase until %s": [
+         null,
+         "fase de revisión hasta %s"
+      ],
+      "internal order": [
+         null,
+         "pedido interno"
+      ],
+      "investment": [
+         null,
+         "inversión"
+      ],
+      "is %s ago": [
+         null,
+         "es hace %s"
+      ],
+      "is late": [
+         null,
+         "está atrasado"
+      ],
+      "is not a HTTP(S) URL": [
+         null,
+         "no es una URL HTTP(S)"
+      ],
+      "is not a valid URL": [
+         null,
+         "no es una URL valida"
+      ],
+      "is part of a package": [
+         null,
+         "forma parte de un paquete"
+      ],
+      "item not assigned. ": [
+         null,
+         "artículo no asignado. "
+      ],
+      "item_version": [
+         null,
+         "Versión"
+      ],
+      "items": [
+         null,
+         "artículos"
+      ],
+      "jump to this date": [
+         null,
+         "ir a esta fecha"
+      ],
+      "last change by '%s'": [
+         null,
+         "último cambio de '%s'"
+      ],
+      "last used +1": [
+         null,
+         "último usado +1"
+      ],
+      "legacy_manage_entitlement_group_new_admin_section_notice": [
+         null,
+         "Los usuarios y grupos de esta entitlement-group se manejan en la nueva sección Admin."
+      ],
+      "legacy_manage_group_new_admin_section_notice": [
+         null,
+         "Los grupos se manejan en la nueva sección Admin."
+      ],
+      "legacy_manage_inventory_pool_admin_section_notice": [
+         null,
+         "Salvo la gestión de los grupos de asignación, todas las funciones están en la sección de administración."
+      ],
+      "legacy_manage_users_new_admin_section_notice": [
+         null,
+         "Los usuarios y sus derechos de acceso también se pueden manejar en la nueva sección Admin."
+      ],
+      "lends": [
+         null,
+         "presta"
+      ],
+      "max 255 characters": [
+         null,
+         "máx. 255 caracteres"
+      ],
+      "models": [
+         null,
+         "modelos"
+      ],
+      "more": [
+         null,
+         "más"
+      ],
+      "more properties": [
+         null,
+         "más propiedades"
+      ],
+      "must be greater or equal to the inspection start date": [
+         null,
+         "debe ser igual o posterior a la fecha de inicio de la revisión"
+      ],
+      "no fields selected": [
+         null,
+         "no hay campos seleccionados"
+      ],
+      "no image": [
+         null,
+         "sin imagen"
+      ],
+      "no item assigned": [
+         null,
+         "ningún artículo asignado"
+      ],
+      "no item selected": [
+         null,
+         "ningún artículo seleccionado"
+      ],
+      "no purpose specified": [
+         null,
+         "sin motivo indicado"
+      ],
+      "not available": [
+         null,
+         "no disponible"
+      ],
+      "not available. ": [
+         null,
+         "no disponible. "
+      ],
+      "not borrowable": [
+         null,
+         "no prestable"
+      ],
+      "not in stock": [
+         null,
+         "sin stock"
+      ],
+      "not retired": [
+         null,
+         "no dado de baja"
+      ],
+      "not used": [
+         null,
+         "sin usar"
+      ],
+      "not valid. ": [
+         null,
+         "no válido. "
+      ],
+      "not yet saved": [
+         null,
+         "todavía sin guardar"
+      ],
+      "on time!": [
+         null,
+         "¡a tiempo!"
+      ],
+      "one day ago": [
+         null,
+         "hace un día"
+      ],
+      "only models with items": [
+         null,
+         "solo modelos con artículos"
+      ],
+      "only models without items": [
+         null,
+         "solo modelos sin artículos"
+      ],
+      "open datepicker": [
+         null,
+         "abrir calendario"
+      ],
+      "or": [
+         null,
+         "o"
+      ],
+      "or search for item": [
+         null,
+         "o buscar un artículo"
+      ],
+      "orders": [
+         null,
+         "pedidos"
+      ],
+      "overdue": [
+         null,
+         "atrasado"
+      ],
+      "please wait": [
+         null,
+         "espere"
+      ],
+      "please wait...": [
+         null,
+         "espere..."
+      ],
+      "quantity increased by %s": [
+         null,
+         "cantidad aumentada en %s"
+      ],
+      "quantity not available. ": [
+         null,
+         "cantidad no disponible. "
+      ],
+      "remaining": [
+         null,
+         "restante"
+      ],
+      "rentable": [
+         null,
+         "alquilable"
+      ],
+      "requested": [
+         null,
+         "solicitado"
+      ],
+      "requesting phase until %s": [
+         null,
+         "fase de solicitud hasta %s"
+      ],
+      "required": [
+         null,
+         "obligatorio"
+      ],
+      "reserved / item assigned in future": [
+         null,
+         "reservado / artículo asignado en el futuro"
+      ],
+      "reset user": [
+         null,
+         "restablecer usuario"
+      ],
+      "retired": [
+         null,
+         "dado de baja"
+      ],
+      "selected": [
+         null,
+         "seleccionado"
+      ],
+      "set current page as start page": [
+         null,
+         "definir la página actual como página de inicio"
+      ],
+      "show less": [
+         null,
+         "mostrar menos"
+      ],
+      "show less properties": [
+         null,
+         "mostrar menos propiedades"
+      ],
+      "show package parts": [
+         null,
+         "mostrar las partes del paquete"
+      ],
+      "since": [
+         null,
+         "desde"
+      ],
+      "since max.": [
+         null,
+         "desde máx."
+      ],
+      "submit it": [
+         null,
+         "envíelo"
+      ],
+      "therefore you may not be able to change some of these fields": [
+         null,
+         "por lo tanto, puede que no pueda cambiar algunos de estos campos"
+      ],
+      "this is a package": [
+         null,
+         "esto es un paquete"
+      ],
+      "this is the branch '%s'": [
+         null,
+         "esta es la rama '%s'"
+      ],
+      "to": [
+         null,
+         "hasta"
+      ],
+      "to %s": [
+         null,
+         "hasta %s"
+      ],
+      "to edit this item": [
+         null,
+         "para editar este artículo"
+      ],
+      "to substitute": [
+         null,
+         "para sustituir"
+      ],
+      "today": [
+         null,
+         "Hoy"
+      ],
+      "unavailable / can't be guaranteed": [
+         null,
+         "no disponible / no se puede garantizar"
+      ],
+      "unborrowable": [
+         null,
+         "no prestable"
+      ],
+      "undo": [
+         null,
+         "deshacer"
+      ],
+      "unknown Model": [
+         null,
+         "modelo desconocido"
+      ],
+      "until": [
+         null,
+         "hasta"
+      ],
+      "upcoming": [
+         null,
+         "próximas"
+      ],
+      "use barcode scanner to assign fields to item immediately": [
+         null,
+         "use el lector de códigos de barras para asignar campos al artículo al instante"
+      ],
+      "used": [
+         null,
+         "usado"
+      ],
+      "was assigned for take back": [
+         null,
+         "se asignó a la devolución"
+      ],
+      "while deleting a hand over line": [
+         null,
+         "al eliminar una línea de entrega"
+      ],
+      "while deleting hand over for": [
+         null,
+         "al eliminar la entrega para"
+      ],
+      "while deleting multiple order reservations": [
+         null,
+         "al eliminar varias reservas del pedido"
+      ],
+      "while deleting order line for": [
+         null,
+         "al eliminar la línea de pedido para"
+      ],
+      "while try to send an e-mail reminder to:": [
+         null,
+         "al intentar enviar un recordatorio por correo a:"
+      ],
+      "with comment": [
+         null,
+         "con comentario"
+      ],
+      "without conflict": [
+         null,
+         "sin conflictos"
+      ],
+      "you cannot hand out reservations which are ending in the past": [
+         null,
+         "no se pueden entregar reservas que terminan en el pasado"
+      ],
+      "you cannot hand out reservations which are starting in the future": [
+         null,
+         "no se pueden entregar reservas que empiezan en el futuro"
+      ],
+      "you cannot hand out reservations with unassigned inventory codes": [
+         null,
+         "no se pueden entregar reservas con códigos de inventario sin asignar"
       ]
    }
 }

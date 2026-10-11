@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-14 13:11+0100\n"
-"PO-Revision-Date: 2018-03-16 11:29+0100\n"
-"Last-Translator: Ramón Cahenzli <ramon.cahenzli@zhdk.ch>\n"
+"POT-Creation-Date: 2018-03-16 15:51+0100\n"
+"PO-Revision-Date: 2026-10-11 05:00+0200\n"
+"Last-Translator: magatzem ENTI\n"
 "Language-Team: Spanish <es@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-01-27 15:44+0000\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.6\n"
+"X-Launchpad-Export-Date: 2010-01-27 15:44+0000\n"
 
 msgid " at the inventory pool "
 msgstr " en el grupo de inventario "
@@ -27,23 +28,161 @@ msgstr " elemento(s)"
 msgid " item(s) due on "
 msgstr " elemento(s) vencidos el "
 
+msgid "% used (category limit - total of selected requests)"
+msgstr "% usado (límite de la categoría - total de las solicitudes seleccionadas)"
+
+msgid "%d day in the future"
+msgid_plural "%d days in the future"
+msgstr[0] "%d día en el futuro"
+msgstr[1] "%d días en el futuro"
+
+msgid "%d minutes passed. The items are not reserved for you any more!"
+msgstr "Pasaron %d minutos. ¡Los artículos ya no están reservados para usted!"
+
+msgid "%s (View in Order)"
+msgstr "%s (ver en el pedido)"
+
+msgid "%s Order"
+msgid_plural "%s Orders"
+msgstr[0] "%s pedido"
+msgstr[1] "%s pedidos"
+
+msgid "%s Return"
+msgid_plural "%s Returns"
+msgstr[0] "%s devolución"
+msgstr[1] "%s devoluciones"
+
+msgid "%s Search Results for \"%s\""
+msgstr "%s resultados de búsqueda para \"%s\""
+
+msgid "%s assigned to %s"
+msgstr "%s asignado a %s"
+
+msgid "%s created"
+msgstr "%s creado"
+
+msgid "%s created successfully"
+msgstr "%s creado correctamente"
+
+msgid "%s future visit"
+msgid_plural "%s future visits"
+msgstr[0] "%s visita futura"
+msgstr[1] "%s visitas futuras"
+
+msgid "%s is already assigned to a contract"
+msgstr "%s ya está asignado a un contrato"
+
+msgid "%s is already assigned to a different contract"
+msgstr "%s ya está asignado a otro contrato"
+
+msgid "%s is already assigned to this contract"
+msgstr "%s ya está asignado a este contrato"
+
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s artículo"
+msgstr[1] "%s artículos"
+
+msgid "%s location"
+msgid_plural "%s locations"
+msgstr[0] "%s ubicación"
+msgstr[1] "%s ubicaciones"
+
+msgid "%s not available"
+msgstr "%s no disponible"
+
+msgid "%s quantity increased to %s"
+msgstr "Cantidad de %s aumentada a %s"
+
+msgid "%s room"
+msgid_plural "%s rooms"
+msgstr[0] "%s sala"
+msgstr[1] "%s salas"
+
+msgid "%s saved"
+msgstr "%s guardado"
+
+msgid "%s selected for take back"
+msgstr "%s seleccionado para la devolución"
+
+msgid "%s successfully deleted"
+msgstr "%s eliminado correctamente"
+
+msgid "%s successfully saved"
+msgstr "%s guardado correctamente"
+
 msgid "%s until %s"
 msgstr "%s hasta %s"
 
-msgid "** This is an automatically generated response **"
-msgstr "**este es un mensaje de respuesta auto-generado**"
+msgid "%s visit overdue"
+msgid_plural "%s visits overdue"
+msgstr[0] "%s visita atrasada"
+msgstr[1] "%s visitas atrasadas"
+
+msgid "%s visit today"
+msgid_plural "%s visits today"
+msgstr[0] "%s visita hoy"
+msgstr[1] "%s visitas hoy"
+
+msgid "%s was not found for this take back"
+msgstr "No se encontró %s en esta devolución"
+
+msgid "%s was saved, but there were problems uploading files"
+msgstr "%s se guardó, pero hubo problemas al subir los archivos"
+
+msgid "%s was saved, but there were problems uploading some images. Only images smaller than 8MB and of type png, gif and jpg are allowed."
+msgstr "%s se guardó, pero hubo problemas al subir algunas imágenes. Solo se permiten imágenes de menos de 8 MB en formato png, gif o jpg."
+
+msgid "%s will be removed from the template and not been added to your order."
+msgstr "%s se quitará de la plantilla y no se agregará a su pedido."
+
+msgid "(unknown)"
+msgstr "(desconocido)"
+
+msgid "1 value per line, blank lines ignored"
+msgstr "1 valor por línea; se ignoran las líneas vacías"
+
+msgid "A Group contains several users. These users can gain a role by assigning the role to their Group."
+msgstr "Un grupo contiene varios usuarios. Estos usuarios pueden obtener un rol asignando el rol a su Grupo."
+
+msgid "A change of the highlighted attributes requires a restart of the legacy service."
+msgstr "Para cambiar los atributos resaltados hay que reiniciar el servicio legacy."
 
 msgid "A model for the Inventory Code / Serial Number '%s' was not found"
 msgstr "No se encontró el modelo por el código de inventario %s."
 
 msgid "A model with the ID '%s' was not found"
-msgstr ""
+msgstr "No se encontró ningún modelo con el ID '%s'"
+
+msgid "A model with the same product name and empty version already exists."
+msgstr "Ya existe un modelo con el mismo nombre de producto y sin versión."
+
+msgid "A model with the same product name and version already exists."
+msgstr "Ya existe un modelo con el mismo nombre de producto y la misma versión."
 
 msgid "A package cannot be nested to another package"
-msgstr ""
+msgstr "Un paquete no puede estar dentro de otro paquete"
+
+msgid "A package item must belong to a package model"
+msgstr "Un artículo de paquete debe pertenecer a un modelo de paquete"
 
 msgid "A template with the ID '%s' was not found"
-msgstr ""
+msgstr "No se encontró ninguna plantilla con el ID '%s'"
+
+msgid "AV-Technik"
+msgstr "Tecnología audiovisual"
+
+msgid "Ablauf Garantie"
+msgstr "Fin de la garantía"
+
+msgid "Ablauf Vertrag"
+msgstr "Fin del contrato"
+
+msgid "Accepted columns"
+msgstr "Columnas aceptadas"
+
+msgid "Access"
+msgstr "Acceso"
 
 msgid "Access Level: %d"
 msgstr "Derecho de Acceso: %d"
@@ -54,56 +193,585 @@ msgstr "Derechos de Acceso creados correctamente"
 msgid "Access Right successfully updated"
 msgstr "Derechos de Acceso actualizados correctamente"
 
+msgid "Access as"
+msgstr "Acceder como"
+
+msgid "Access right reinstated"
+msgstr "Derecho de acceso restablecido"
+
+msgid "Access rights"
+msgstr "Derechos de acceso"
+
+msgid "AccessRight"
+msgstr "Derecho de acceso"
+
+msgid "Accessories"
+msgstr "Accesorios"
+
+msgid "Accounts"
+msgstr "Cuentas"
+
+msgid "Acknowledge"
+msgstr "Revisar"
+
+msgid "Action"
+msgstr "Acción"
+
+msgid "Activation Type"
+msgstr "Tipo de activación"
+
+msgid "Active"
+msgstr "Activo"
+
+msgid "Active Inventory"
+msgstr "Inventario activo"
+
+msgid "Add"
+msgstr "Agregar"
+
+msgid "Add %s"
+msgstr "Agregar %s"
+
+msgid "Add Model"
+msgstr "Agregar modelo"
+
+msgid "Add Option"
+msgstr "Agregar opción"
+
+msgid "Add Purpose"
+msgstr "Agregar motivo"
+
+msgid "Add article for specific entitlement-group"
+msgstr "Agregar artículo para un grupo de asignación concreto"
+
+msgid "Add inventory"
+msgstr "Agregar inventario"
+
+msgid "Add item"
+msgstr "Agregar artículo"
+
+msgid "Add new article to category"
+msgstr "Agregar un artículo nuevo a la categoría"
+
+msgid "Add new main category"
+msgstr "Agregar una categoría principal nueva"
+
+msgid "Add new requester"
+msgstr "Agregar un solicitante nuevo"
+
+msgid "Add new subcategory"
+msgstr "Agregar una subcategoría nueva"
+
+msgid "Add to order"
+msgstr "Agregar al pedido"
+
+msgid "Add/Assign"
+msgstr "Agregar/Asignar"
+
 msgid "Added"
 msgstr "Añadido"
+
+msgid "Added %s"
+msgstr "%s agregado"
+
+msgid "Adding item"
+msgstr "Agregando artículo"
+
+msgid "Additional label in inventory codes"
+msgstr "Etiqueta adicional en los códigos de inventario"
+
+msgid "Additional notes"
+msgstr "Notas adicionales"
+
+msgid "Address"
+msgstr "Dirección"
+
+msgid "Admin"
+msgstr "Administración"
+
+msgid "Administrators"
+msgstr "Administradores"
+
+msgid "Advanced Search"
+msgstr "Búsqueda avanzada"
+
+msgid "All"
+msgstr "Todos"
+
+msgid "All %s"
+msgstr "Todos los %s"
+
+msgid "All inventory pools"
+msgstr "Todos los grupos de inventario"
+
+msgid "All other columns are ignored."
+msgstr "Las demás columnas se ignoran."
+
+msgid "All selected"
+msgstr "Todos seleccionados"
+
+msgid "Allocations"
+msgstr "Asignaciones"
+
+msgid "Allocations in other entitlement-groups considered - still available quantity of borrowable and not retired items"
+msgstr "Se tienen en cuenta las asignaciones de otros grupos de asignación: cantidad aún disponible de artículos prestables y no dados de baja"
+
+msgid "An order can not have multiple delegated users."
+msgstr "Un pedido no puede tener múltiples usuarios delegados."
+
+msgid "Ankunftsdatum"
+msgstr "Fecha de llegada"
+
+msgid "Ankunftsnotiz"
+msgstr "Nota de llegada"
+
+msgid "Ankunftszustand"
+msgstr "Estado a la llegada"
+
+msgid "Anschaffungskategorie"
+msgstr "Categoría de adquisición"
+
+msgid "Apply Fields on Item"
+msgstr "Aplicar campos al artículo"
+
+msgid "Approval Successful"
+msgstr "Aprobación correcta"
+
+msgid "Approval failed"
+msgstr "Aprobación fallida"
+
+msgid "Approve"
+msgstr "Aprobar"
+
+msgid "Approve anyway"
+msgstr "Aprobar de todos modos"
+
+msgid "Approve order"
+msgstr "Aprobar pedido"
 
 msgid "Approved"
 msgstr "Aprobado"
 
-msgid "Are any of the above borrowed items?"
-msgstr ""
+msgid "Approved Items"
+msgstr "Artículos aprobados"
 
-msgid "Are any of the above items your personal computer?"
-msgstr ""
+msgid "Approved on"
+msgstr "Aprobado el"
+
+msgid "Approved quantity"
+msgstr "Cantidad aprobada"
+
+msgid "Are you sure you want to delete '%s'?"
+msgstr "¿Seguro que quiere eliminar '%s'?"
+
+msgid "Article nr. or Producer nr."
+msgstr "N.º de artículo o del fabricante"
+
+msgid "Article or Project"
+msgstr "Artículo o proyecto"
+
+msgid "Assign"
+msgstr "Asignar"
+
+msgid "Assigning the inventory code fails"
+msgstr "No se pudo asignar el código de inventario"
+
+msgid "Attachment"
+msgstr "Adjunto"
 
 msgid "Attachment was successfully created."
-msgstr "El adjunto se creo correctamente."
+msgstr "El adjunto se creó correctamente."
+
+msgid "Attachments"
+msgstr "Adjuntos"
 
 msgid "Attempt to add node to own graph collection"
-msgstr ""
+msgstr "Intento de agregar un nodo a su propia colección"
+
+msgid "Attention"
+msgstr "Atención"
+
+msgid "Auswahl"
+msgstr "Selección"
+
+msgid "Authentication System"
+msgstr "Sistema de autenticación"
+
+msgid "Authentication Systems"
+msgstr "Sistemas de autenticación"
+
+msgid "Automatic suspension"
+msgstr "Suspensión automática"
+
+msgid "Automatic suspension reason"
+msgstr "Motivo de la suspensión automática"
+
+msgid "Availability"
+msgstr "Disponibilidad"
+
+msgid "Availability Timeline"
+msgstr "Cronología de disponibilidad"
+
+msgid "Availability for"
+msgstr "Disponibilidad para"
+
+msgid "Availability loaded"
+msgstr "Disponibilidad cargada"
+
+msgid "Available"
+msgstr "Disponible"
+
+msgid "Available for borrower"
+msgstr "Disponible para el prestatario"
+
+msgid "Available in entitlement-group '"
+msgstr "Disponible en el grupo de asignación '"
+
+msgid "Available in total"
+msgstr "Disponible en total"
+
+msgid "Available in total: "
+msgstr "Disponible en total: "
+
+msgid "Back"
+msgstr "Volver"
+
+msgid "Back to this hand over"
+msgstr "Volver a esta entrega"
+
+msgid "Back to this take back"
+msgstr "Volver a esta devolución"
+
+msgid "Back to this user"
+msgstr "Volver a este usuario"
+
+msgid "Backend"
+msgstr "Backend"
+
+msgid "Badge ID was updated"
+msgstr "Se actualizó el número de credencial"
+
+msgid "Badge%s"
+msgstr "Credencial%s"
+
+msgid "Barcode"
+msgstr "Código de barras"
+
+msgid "Basic Information"
+msgstr "Información básica"
 
 msgid "Body"
-msgstr ""
+msgstr "Cuerpo"
 
-msgid "By not returning these items, you are blocking other people's reservations. This is very unfair to the other clients and to the inventory manager, since you are causing a significant amount of trouble and annoyance."
-msgstr "Si no devuelve estos artículos, estará bloqueando las reservas de otras personas. Esto es muy injusto para los demás clientes y administradores de stock ya que estaría provocando un gran número de problemas y molestias."
+msgid "Book"
+msgstr "Reservar"
 
-msgid "CHF"
-msgstr ""
+msgid "Booking is no longer possible on this end date"
+msgstr "Ya no se puede reservar con esta fecha de fin"
+
+msgid "Booking is no longer possible on this start date"
+msgstr "Ya no se puede reservar con esta fecha de inicio"
+
+msgid "Borrow"
+msgstr "Préstamos"
+
+msgid "Borrow items"
+msgstr "Pedir artículos prestados"
+
+msgid "Borrow section"
+msgstr "Sección de préstamos"
+
+msgid "Borrow template"
+msgstr "Plantilla de préstamo"
+
+msgid "Borrowable"
+msgstr "Prestable"
+
+msgid "Borrowable Items"
+msgstr "Artículos prestables"
+
+msgid "Borrowable items"
+msgstr "Artículos prestables"
+
+msgid "Borrowed Items"
+msgstr "Artículos prestados"
+
+msgid "Borrowed until"
+msgstr "Prestado hasta"
+
+msgid "Borrower"
+msgstr "Prestatario"
+
+msgid "Broken"
+msgstr "Averiado"
+
+msgid "Budget limits"
+msgstr "Límites de presupuesto"
+
+msgid "Budget period"
+msgstr "Período presupuestario"
+
+msgid "Budget period end date"
+msgstr "Fecha de fin del período presupuestario"
+
+msgid "Budget periods"
+msgstr "Períodos presupuestarios"
+
+msgid "Building"
+msgid_plural "Buildings"
+msgstr[0] "Edificio"
+msgstr[1] "Edificios"
+
+msgid "Building together with a general room successfully created"
+msgstr "Edificio creado correctamente junto con una sala general"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "CSV export"
+msgstr "Exportar CSV"
 
 msgid "Cancel"
 msgstr "Cancelar"
 
+msgid "Cancel Edit"
+msgstr "Cancelar edición"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "Category"
+msgstr "Categoría"
+
+msgid "Category can have only one image."
+msgstr "Una categoría solo puede tener una imagen."
+
+msgid "Category name"
+msgstr "Nombre de la categoría"
+
+msgid "Category saved"
+msgstr "Categoría guardada"
+
+msgid "Change"
+msgstr "Cambiar"
+
+msgid "Change %s"
+msgstr "Cambiar %s"
+
+msgid "Change Borrower"
+msgstr "Cambiar prestatario"
+
+msgid "Change Borrower Successful"
+msgstr "Prestatario cambiado correctamente"
+
+msgid "Change entry"
+msgstr "Cambiar entrada"
+
+msgid "Change orderer"
+msgstr "Cambiar solicitante"
+
+msgid "Change orderer Successful"
+msgstr "Solicitante cambiado correctamente"
+
+msgid "Changed"
+msgstr "Modificado"
+
 msgid "Changed %s from %s to %s"
-msgstr ""
+msgstr "%s cambiado de %s a %s"
 
 msgid "Changed dates for %{model} from %{from} to %{to}"
-msgstr "Cambiar fechas para %{model} de %{from} a %{to}"
+msgstr "Fechas de %{model} cambiadas de %{from} a %{to}"
+
+msgid "Changes"
+msgstr "Cambios"
+
+msgid "Check invalid fields"
+msgstr "Revise los campos no válidos"
+
+msgid "Choose a suggested article or a category"
+msgstr "Elija un artículo sugerido o una categoría"
+
+msgid "Choose an article or a category"
+msgstr "Elija un artículo o una categoría"
+
+msgid "Choose an article/project"
+msgstr "Elija un artículo o proyecto"
+
+msgid "City"
+msgstr "Ciudad"
+
+msgid "Close"
+msgstr "Cerrar"
+
+msgid "Close All"
+msgstr "Cerrar todo"
 
 msgid "Closed"
 msgstr "Cerrado"
 
+msgid "Closed Day"
+msgstr "Día cerrado"
+
+msgid "Closed Days"
+msgstr "Días cerrados"
+
+msgid "Collection"
+msgid_plural "Collections"
+msgstr[0] "Colección"
+msgstr[1] "Colecciones"
+
 msgid "Compatible successfully removed"
 msgstr "Compatibilidad quitada correctamente"
+
+msgid "Compatibles"
+msgstr "Compatibles"
+
+msgid "Complete"
+msgstr "Completo"
+
+msgid "Complete Search"
+msgstr "Búsqueda completa"
+
+msgid "Complete order"
+msgstr "Completar pedido"
+
+msgid "Completeness"
+msgstr "Completitud"
+
+msgid "Concurrent"
+msgstr "Concurrente"
+
+msgid "Consider opening hours"
+msgstr "Tener en cuenta el horario de apertura"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "Contact person"
+msgstr "Persona de contacto"
+
+msgid "Content"
+msgstr "Contenido"
+
+msgid "Continue"
+msgstr "Continuar"
+
+msgid "Continue this order"
+msgstr "Continuar este pedido"
+
+msgid "Continue with available models only"
+msgstr "Continuar solo con los modelos disponibles"
+
+msgid "Contract"
+msgstr "Contrato"
 
 msgid "Contract %d has been signed by %s"
 msgstr "El contrato %d fue firmado por %s"
 
+msgid "Contract No."
+msgstr "N.º de contrato"
+
 msgid "Contract Nr."
 msgstr "Contrato Nro."
 
+msgid "Contract expiration"
+msgstr "Fin del contrato"
+
+msgid "Contract signed"
+msgstr "Contrato firmado"
+
+msgid "Contracts"
+msgstr "Contratos"
+
+msgid "Copy Item"
+msgstr "Copiar artículo"
+
+msgid "Copy License"
+msgstr "Copiar licencia"
+
 msgid "Couldn't update "
-msgstr ""
+msgstr "No se pudo actualizar "
+
+msgid "Country"
+msgstr "País"
+
+msgid "Cover Image"
+msgstr "Imagen de portada"
+
+msgid "Create %s"
+msgstr "Crear %s"
+
+msgid "Create copied item"
+msgstr "Crear artículo copiado"
+
+msgid "Create new budget period"
+msgstr "Crear un período presupuestario nuevo"
+
+msgid "Create new category"
+msgstr "Crear una categoría nueva"
+
+msgid "Create new item"
+msgstr "Crear un artículo nuevo"
+
+msgid "Create new model"
+msgstr "Crear un modelo nuevo"
+
+msgid "Create new option"
+msgstr "Crear una opción nueva"
+
+msgid "Create new software"
+msgstr "Crear un software nuevo"
+
+msgid "Create new software license"
+msgstr "Crear una licencia de software nueva"
+
+msgid "Create request by choosing an article or project"
+msgstr "Cree una solicitud eligiendo un artículo o proyecto"
+
+msgid "Create request for another user"
+msgstr "Crear una solicitud para otro usuario"
+
+msgid "Create request for this category"
+msgstr "Crear una solicitud para esta categoría"
+
+msgid "Created at"
+msgstr "Creado el"
+
+msgid "Currency"
+msgstr "Moneda"
+
+msgid "Current Order"
+msgstr "Pedido actual"
+
+msgid "Current budget period not defined yet"
+msgstr "Todavía no se definió el período presupuestario actual"
+
+msgid "Current total of budget period"
+msgstr "Total actual del período presupuestario"
+
+msgid "Current total of category"
+msgstr "Total actual de la categoría"
+
+msgid "Current total of selected requests"
+msgstr "Total actual de las solicitudes seleccionadas"
+
+msgid "Currently Borrowed Items"
+msgstr "Artículos prestados actualmente"
+
+msgid "Currently has items to return"
+msgstr "Tiene artículos por devolver"
+
+msgid "Currently has open orders"
+msgstr "Tiene pedidos abiertos"
+
+msgid "Currently you have no items in your order."
+msgstr "Por ahora no tiene artículos en su pedido."
+
+msgid "Customer"
+msgstr "Cliente"
+
+msgid "Daily View"
+msgstr "Vista diaria"
 
 msgid "Day"
 msgstr "Día"
@@ -117,26 +785,197 @@ msgstr "El plazo está por vencerse"
 msgid "Deadline soon reminder sent for %{q} items on contracts %{c}"
 msgstr "El plazo está por vencerse, se enviaron recordatorios por %{q} elementos en %{c} contratos"
 
+msgid "Dear client,"
+msgstr "Estimado cliente:"
+
 msgid "Dear leihs client,"
 msgstr "Estimado cliente de leihs,"
+
+msgid "Dear leihs manager,"
+msgstr "Estimado gestor de leihs:"
+
+msgid "Default Contract Note"
+msgstr "Nota predeterminada del contrato"
+
+msgid "Defective"
+msgstr "Defectuoso"
+
+msgid "Delegated user is not member of the contract's delegation or is empty"
+msgstr "El usuario delegado no es miembro de la delegación del contrato o está vacío"
+
+msgid "Delegated user must be empty for contract's normal user"
+msgstr "El usuario delegado debe quedar vacío si el contrato es de un usuario normal"
+
+msgid "Delegation"
+msgstr "Delegación"
+
+msgid "Delegations"
+msgstr "Delegaciones"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete %s"
+msgstr "Eliminar %s"
+
+msgid "Delete Selection"
+msgstr "Eliminar selección"
+
+msgid "Delete category with all it's articles/projects"
+msgstr "Eliminar la categoría con todos sus artículos/proyectos"
+
+msgid "Delete line"
+msgstr "Eliminar línea"
+
+msgid "Delete main category"
+msgstr "Eliminar categoría principal"
+
+msgid "Delete subcategory"
+msgstr "Eliminar subcategoría"
+
+msgid "Delete this line"
+msgstr "Eliminar esta línea"
+
+msgid "Deleted"
+msgstr "Eliminado"
+
+msgid "Denied"
+msgstr "Denegado"
+
+msgid "Department"
+msgstr "Departamento"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Disable"
+msgstr "Desactivar"
+
+msgid "Do you realy want to delete the '%s' category?"
+msgstr "¿Seguro que quiere eliminar la categoría '%s'?"
+
+msgid "Document"
+msgstr "Documento"
 
 msgid "Documents"
 msgstr "Documentos"
 
+msgid "Documents for hand over"
+msgstr "Documentos para la entrega"
+
+msgid "Documents for take back"
+msgstr "Documentos para la devolución"
+
+msgid "Does not have any reservable items"
+msgstr "No tiene artículos reservables"
+
+msgid "E-Mail"
+msgstr "Correo electrónico"
+
+msgid "ERROR"
+msgstr "ERROR"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit %s"
+msgstr "Editar %s"
+
+msgid "Edit Item"
+msgstr "Editar artículo"
+
+msgid "Edit License"
+msgstr "Editar licencia"
+
+msgid "Edit Model"
+msgstr "Editar modelo"
+
+msgid "Edit Option"
+msgstr "Editar opción"
+
+msgid "Edit Order"
+msgstr "Editar pedido"
+
+msgid "Edit Purpose"
+msgstr "Editar motivo"
+
+msgid "Edit Selection"
+msgstr "Editar selección"
+
+msgid "Edit Software"
+msgstr "Editar software"
+
+msgid "Edit User"
+msgstr "Editar usuario"
+
+msgid "Edit multiple selected reservations"
+msgstr "Editar varias reservas seleccionadas"
+
 msgid "Edit purpose for order from"
-msgstr ""
+msgstr "Editar el motivo del pedido de"
+
+msgid "Edit reservation"
+msgstr "Editar reserva"
+
+msgid "Edit templates"
+msgstr "Editar plantillas"
+
+msgid "Edit this Order"
+msgstr "Editar este pedido"
 
 msgid "Editing mail templates for the inventory pool %s"
-msgstr ""
+msgstr "Editando las plantillas de correo del grupo de inventario %s"
 
 msgid "Editing system-wide mail templates"
-msgstr ""
+msgstr "Editando las plantillas de correo de todo el sistema"
+
+msgid "Email"
+msgstr "Correo electrónico"
 
 msgid "Empty Username and/or Password"
 msgstr "Nombre de Usuario ó Contraseña Vacios"
 
+msgid "Enable"
+msgstr "Activar"
+
+msgid "End Date cannot be in the past"
+msgstr "La fecha de fin no puede estar en el pasado"
+
+msgid "End date"
+msgstr "Fecha de fin"
+
+msgid "Entitlement-Group"
+msgstr "Grupo de asignación"
+
+msgid "Entitlement-Group %s"
+msgstr "Grupo de asignación %s"
+
+msgid "Entitlement-Groups"
+msgstr "Grupos de asignación"
+
+msgid "Entitlement-Groups of this customer"
+msgstr "Grupos de asignación de este cliente"
+
+msgid "Entity"
+msgstr "Entidad"
+
+msgid "Entry"
+msgstr "Entrada"
+
+msgid "Equipment Booking and Inventory Management System"
+msgstr "Sistema de reserva de equipos y gestión de inventario"
+
 msgid "Error"
 msgstr "Error"
+
+msgid "Error creating the accessory."
+msgstr "Error al crear el accesorio."
+
+msgid "Error deleting the accessory."
+msgstr "Error al eliminar el accesorio."
+
+msgid "Error destroying the item package"
+msgstr "Error al eliminar el paquete de artículos"
 
 msgid "Error destroying the package"
 msgstr "Error al destruir el paquete"
@@ -144,107 +983,928 @@ msgstr "Error al destruir el paquete"
 msgid "Error saving the package"
 msgstr "Error al guardar el paquete"
 
+msgid "Error updating inventory code"
+msgstr "Error al actualizar el código de inventario"
+
+msgid "Excel export"
+msgstr "Exportar a Excel"
+
+msgid "Expand All"
+msgstr "Expandir Todo"
+
 msgid "Expected to be returned."
 msgstr "Se espera su devolución."
 
+msgid "Extend entry"
+msgstr "Ampliar entrada"
+
+msgid "Facility Management"
+msgstr "Gestión de instalaciones"
+
+msgid "Field"
+msgstr "Campo"
+
+msgid "Fields"
+msgstr "Campos"
+
+msgid "Fields have been updated successfully."
+msgstr "Los campos se actualizaron correctamente."
+
+msgid "File has to be uploaded on save"
+msgstr "El archivo se sube al guardar"
+
+msgid "Finish this hand over"
+msgstr "Terminar esta entrega"
+
+msgid "Finish this take back"
+msgstr "Terminar esta devolución"
+
+msgid "First admin user"
+msgstr "Primer usuario administrador"
+
+msgid "First admin user has been created. Default database authentication system has been configured."
+msgstr "Se creó el primer usuario administrador y se configuró el sistema de autenticación predeterminado de la base de datos."
+
+msgid "First name"
+msgstr "Nombre"
+
 msgid "Format"
-msgstr ""
+msgstr "Formato"
 
-msgid "has %s more..."
-msgstr ""
+msgid "Found %d matches"
+msgstr "Se encontraron %d coincidencias"
 
-msgid "In the interest of all our clients we ask you to observe the return dates."
-msgstr "Por el interés de todos nuestros clientes, le pedimos respete las fechas de devolución."
+msgid "Found %s"
+msgstr "Se encontró %s"
+
+msgid "Free"
+msgstr "Libre"
+
+msgid "Fri"
+msgstr "Vie"
+
+msgid "Friday"
+msgstr "Viernes"
+
+msgid "Frontend"
+msgstr "Frontend"
+
+msgid "Functional"
+msgstr "Funcional"
+
+msgid "General Information"
+msgstr "Información general"
+
+msgid "Go Back"
+msgstr "Volver"
+
+msgid "Group manager"
+msgstr "Gestor de grupo"
+
+msgid "Groups"
+msgstr "Grupos"
+
+msgid "Hand Over"
+msgstr "Entregar"
+
+msgid "Hand Over Selection"
+msgstr "Entregar selección"
+
+msgid "Hand Over to"
+msgstr "Entrega a"
+
+msgid "Hand Over to %s"
+msgstr "Entrega a %s"
+
+msgid "Hand Overs"
+msgstr "Entregas"
+
+msgid "Hand over completed"
+msgstr "Entrega completada"
+
+msgid "Hand over of %s item"
+msgid_plural "Hand over of %s items"
+msgstr[0] "Entrega de %s artículo"
+msgstr[1] "Entrega de %s artículos"
+
+msgid "Help"
+msgstr "Ayuda"
+
+msgid "Helper"
+msgstr "Asistente"
+
+msgid "Hide notification"
+msgstr "Ocultar notificación"
+
+msgid "Hide this field from all item forms"
+msgstr "Ocultar este campo en todos los formularios de artículos"
+
+msgid "High"
+msgstr "Alta"
+
+msgid "Highlight available items."
+msgstr "Resaltar los artículos disponibles."
+
+msgid "Hints"
+msgstr "Sugerencias"
+
+msgid "IC-Technik/Software"
+msgstr "Informática/Software"
+
+msgid "IMEI-Number"
+msgstr "Número IMEI"
+
+msgid "Image"
+msgstr "Imagen"
+
+msgid "Images"
+msgstr "Imágenes"
+
+msgid "Important notes for hand over"
+msgstr "Notas importantes para la entrega"
+
+msgid "In Stock"
+msgstr "En stock"
+
+msgid "In Total"
+msgstr "En total"
+
+msgid "In inspection"
+msgstr "En revisión"
+
+msgid "Inactive pools cannot have items, which are not retired."
+msgstr "Los grupos de inventario inactivos no pueden tener artículos que no estén dados de baja."
 
 msgid "Incomplete"
 msgstr "Incompleto"
 
+msgid "Inconsistent Inventory Pool"
+msgstr "Grupo de inventario incoherente"
+
+msgid "Initial Price"
+msgstr "Precio inicial"
+
+msgid "Inquiry to procurement request"
+msgstr "Consulta sobre la solicitud de compra"
+
+msgid "Insert 0 for the entries you dont need."
+msgstr "Ponga 0 en las entradas que no necesite."
+
+msgid "Insert a default comment"
+msgstr "Escriba un comentario predeterminado"
+
+msgid "Insert all required information"
+msgstr "Complete toda la información obligatoria"
+
+msgid "Inspect"
+msgstr "Revisar"
+
+msgid "Inspect Item"
+msgstr "Revisar artículo"
+
+msgid "Inspection"
+msgstr "Revisión"
+
+msgid "Inspection comment"
+msgstr "Comentario de la revisión"
+
+msgid "Inspection start date"
+msgstr "Fecha de inicio de la revisión"
+
+msgid "Inspector's priority"
+msgstr "Prioridad del revisor"
+
+msgid "Inspectors"
+msgstr "Revisores"
+
+msgid "Installation"
+msgstr "Instalación"
+
+msgid "Insurance Number"
+msgstr "Número de seguro"
+
+msgid "Internal Description"
+msgstr "Descripción interna"
+
+msgid "Introduction"
+msgstr "Introducción"
+
+msgid "Invalid data"
+msgstr "Datos no válidos"
+
+msgid "Invalid date"
+msgstr "fecha no válida"
+
 msgid "Invalid order_lines"
-msgstr ""
+msgstr "Líneas de pedido no válidas"
 
 msgid "Invalid technical user - contact your leihs admin"
-msgstr ""
+msgstr "Usuario técnico no válido: contacte con el administrador de leihs"
 
 msgid "Invalid username/password"
 msgstr "Nombre de Usuario ó Contraseña Inválidos"
 
+msgid "Inventory"
+msgstr "Inventario"
+
+msgid "Inventory Advanced Search"
+msgstr "Búsqueda avanzada de inventario"
+
+msgid "Inventory Code"
+msgstr "Código de inventario"
+
+msgid "Inventory Code / Name"
+msgstr "Código de inventario / Nombre"
+
+msgid "Inventory Helper"
+msgstr "Asistente de inventario"
+
 msgid "Inventory Pool"
-msgstr "Grupo de Inventario"
+msgstr "Grupo de inventario"
 
 msgid "Inventory Pool is missing"
 msgstr "Falta el Grupo de Inventario"
 
+msgid "Inventory Pools"
+msgstr "Grupos de inventario"
+
+msgid "Inventory code"
+msgstr "Código de inventario"
+
+msgid "Inventory code updated"
+msgstr "Código de inventario actualizado"
+
+msgid "Inventory code, model name, search term"
+msgstr "Código de inventario, nombre de modelo, término de búsqueda"
+
+msgid "Inventory manager"
+msgstr "Gestor de inventario"
+
+msgid "Inventory pool"
+msgid_plural "Inventory pools"
+msgstr[0] "Grupo de inventario"
+msgstr[1] "Grupos de inventario"
+
+msgid "Inventory pool can't be deactivated due to existing items which are not yet retired."
+msgstr "El grupo de inventario no se puede desactivar porque tiene artículos que todavía no están dados de baja."
+
+msgid "Inventory pool can't be deactivated due to existing orders or signed contracts."
+msgstr "El grupo de inventario no se puede desactivar porque tiene pedidos o contratos firmados."
+
+msgid "Inventory pool is closed on end date"
+msgstr "El grupo de inventario está cerrado en la fecha de fin"
+
+msgid "Inventory pool is closed on start date"
+msgstr "El grupo de inventario está cerrado en la fecha de inicio"
+
+msgid "Inventory pool successfully created"
+msgstr "Grupo de inventario creado correctamente"
+
+msgid "Inventory pool successfully updated"
+msgstr "Grupo de inventario actualizado correctamente"
+
+msgid "Inventory pool successfully updated."
+msgstr "Grupo de inventario actualizado correctamente."
+
+msgid "Inventory pools"
+msgstr "Grupos de inventario"
+
+msgid "InventoryPool|Email"
+msgstr "Correo electrónico"
+
+msgid "InventoryPool|Shortname"
+msgstr "Nombre corto"
+
+msgid "Investment"
+msgstr "Inversión"
+
+msgid "Invoice Date"
+msgstr "Fecha de factura"
+
+msgid "Invoice Information"
+msgstr "Datos de la factura"
+
+msgid "Invoice Number"
+msgstr "Número de factura"
+
+msgid "Item"
+msgid_plural "Items"
+msgstr[0] "Artículo"
+msgstr[1] "Artículos"
+
 msgid "Item handed over as part of contract %d."
 msgstr "Artículo entregado como parte del contrato %d."
+
+msgid "Item is defective"
+msgstr "El artículo está defectuoso"
+
+msgid "Item is incomplete"
+msgstr "El artículo está incompleto"
+
+msgid "Item is not available in that time range"
+msgstr "El artículo no está disponible en ese período"
+
+msgid "Item is overdue and therefore unavailable!"
+msgstr "El artículo está atrasado y, por lo tanto, no disponible."
+
+msgid "Item is part of package"
+msgstr "El artículo forma parte de un paquete"
+
+msgid "Item is reserved in the future, therefore it's not available!"
+msgstr "El artículo está reservado en el futuro y, por lo tanto, no está disponible."
+
+msgid "Item not borrowable"
+msgstr "Artículo no prestable"
+
+msgid "Item package successfully destroyed"
+msgstr "Paquete de artículos eliminado correctamente"
+
+msgid "Item price"
+msgstr "Precio del artículo"
+
+msgid "Item saved."
+msgstr "Artículo guardado."
 
 msgid "Item taken back"
 msgstr "Artículo devuelto"
 
+msgid "Item was not saved"
+msgstr "El artículo no se guardó"
+
+msgid "Item was saved."
+msgstr "El artículo se guardó."
+
+msgid "Items"
+msgstr "Artículos"
+
+msgid "Item|Retired reason"
+msgstr "Motivo de la baja"
+
+msgid "Key"
+msgstr "Clave"
+
 msgid "Kind regards,"
 msgstr "Saludos cordiales,"
 
+msgid "Label"
+msgstr "Etiqueta"
+
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
+
+msgid "Languages"
+msgstr "Idiomas"
+
+msgid "Last Checked"
+msgstr "Última revisión"
+
+msgid "Last Visitors:"
+msgstr "Últimos visitantes:"
+
+msgid "Last name"
+msgstr "Apellido"
 
 msgid "Latest 10 emails"
 msgstr "Últimos 10 correos electrónicos"
 
+msgid "Latest reminder"
+msgstr "Último recordatorio"
+
+msgid "Legend"
+msgstr "Leyenda"
+
+msgid "Lender"
+msgstr "Prestador"
+
+msgid "Lending"
+msgstr "Préstamo"
+
+msgid "Lending / Daily View"
+msgstr "Préstamo / Vista diaria"
+
+msgid "Lending Contract No."
+msgstr "Contrato de préstamo n.º"
+
+msgid "Lending Contract No. %d"
+msgstr "Contrato de préstamo n.º %d"
+
+msgid "Lending Contract No. %s"
+msgstr "Contrato de préstamo n.º %s"
+
+msgid "Lending Contracts No. %s"
+msgstr "Contratos de préstamo n.º %s"
+
+msgid "Lending Terms"
+msgstr "Condiciones de préstamo"
+
+msgid "Lending manager"
+msgstr "Gestor de préstamos"
+
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Licencia"
+msgstr[1] "Licencias"
+
+msgid "License Number"
+msgstr "Número de licencia"
+
+msgid "License Server"
+msgstr "Servidor de licencias"
+
+msgid "License Type"
+msgstr "Tipo de licencia"
+
+msgid "License Version"
+msgstr "Versión de la licencia"
+
+msgid "License expiration"
+msgstr "Fin de la licencia"
+
+msgid "License saved."
+msgstr "Licencia guardada."
+
+msgid "List of %d Users"
+msgstr "Lista de %d usuarios"
+
+msgid "List of %s"
+msgstr "Lista de %s"
+
+msgid "List of Authentication Systems"
+msgstr "Lista de sistemas de autenticación"
+
+msgid "List of Buildings"
+msgstr "Lista de edificios"
+
+msgid "List of Categories"
+msgstr "Lista de categorías"
+
+msgid "List of Contracts"
+msgstr "Lista de contratos"
+
+msgid "List of Entitlement-Groups"
+msgstr "Lista de grupos de asignación"
+
+msgid "List of Inventory"
+msgstr "Lista de inventario"
+
+msgid "List of Inventory Pools"
+msgstr "Lista de grupos de inventario"
+
+msgid "List of Languages"
+msgstr "Lista de idiomas"
+
+msgid "List of Orders"
+msgstr "Lista de pedidos"
+
+msgid "List of Rooms"
+msgstr "Lista de salas"
+
+msgid "List of Users"
+msgstr "Lista de usuarios"
+
+msgid "List of Visits"
+msgstr "Lista de visitas"
+
 msgid "List of available variables"
-msgstr ""
+msgstr "Lista de variables disponibles"
+
+msgid "List of templates"
+msgstr "Lista de plantillas"
 
 msgid "Loading"
 msgstr "Cargando"
 
+msgid "Loading availability"
+msgstr "Cargando disponibilidad"
+
+msgid "Local"
+msgstr "Local"
+
+msgid "Location"
+msgstr "Ubicación"
+
+msgid "Location not defined"
+msgstr "Ubicación sin definir"
+
+msgid "Locations"
+msgstr "Ubicaciones"
+
 msgid "Logged in successfully"
 msgstr "Inicio de Sesión exitoso"
 
+msgid "Login"
+msgstr "Iniciar sesión"
+
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+msgid "Low"
+msgstr "Baja"
+
+msgid "MAC-Address"
+msgstr "Dirección MAC"
+
 msgid "Mail Templates"
-msgstr ""
+msgstr "Plantillas de correo"
+
+msgid "Main category"
+msgstr "Categoría principal"
+
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+msgid "Maintenance contract"
+msgstr "Contrato de mantenimiento"
+
+msgid "Maintenance expiration"
+msgstr "Fin del mantenimiento"
+
+msgid "Make changes and save"
+msgstr "Haga los cambios y guarde"
+
+msgid "Manage"
+msgstr "Gestionar"
+
+msgid "Manage %s"
+msgstr "Gestionar %s"
+
+msgid "Manage inventory, place reservations on items and pick them up"
+msgstr "Gestione el inventario, reserve artículos y retírelos"
+
+msgid "Manage section"
+msgstr "Sección de gestión"
+
+msgid "Manage user roles via Groups."
+msgstr "Gestione los roles de los usuarios mediante grupos."
+
+msgid "Mandatory"
+msgstr "Obligatorio"
+
+msgid "Manufacturer"
+msgstr "Fabricante"
+
+msgid "Manufacturer (A-Z)"
+msgstr "Fabricante (A-Z)"
+
+msgid "Manufacturer (Z-A)"
+msgstr "Fabricante (Z-A)"
+
+msgid "Matching Templates"
+msgstr "Plantillas coincidentes"
+
+msgid "Max. visits"
+msgstr "Máx. de visitas"
+
+msgid "Maximum reservation time is restricted to"
+msgstr "El tiempo máximo de reserva está limitado a"
+
+msgid "Medium"
+msgstr "Media"
+
+msgid "Min. number of days between current date and hand over"
+msgstr "Mín. de días entre la fecha actual y la entrega"
+
+msgid "Mobile"
+msgstr "Móvil"
 
 msgid "Model"
 msgstr "Modelo"
 
+msgid "Model (A-Z)"
+msgstr "Modelo (A-Z)"
+
+msgid "Model (Z-A)"
+msgstr "Modelo (Z-A)"
+
 msgid "Model must be selected"
 msgstr "Debe seleccionarse un modelo"
 
+msgid "Model name"
+msgstr "Nombre del modelo"
+
 msgid "Model not present anymore"
-msgstr ""
+msgstr "El modelo ya no existe"
+
+msgid "Model saved"
+msgstr "Modelo guardado"
 
 msgid "Model successfully added as compatible"
 msgstr "Modelo agregado correctamente como compatible"
 
+msgid "Model successfully removed"
+msgstr "Modelo quitado correctamente"
+
+msgid "Models"
+msgstr "Modelos"
+
+msgid "Model|Images|File content type"
+msgstr "Tipo de archivo"
+
+msgid "Model|Images|File file size"
+msgstr "Tamaño del archivo"
+
+msgid "Mon"
+msgstr "Lun"
+
+msgid "Monday"
+msgstr "Lunes"
+
+msgid "Motivation"
+msgstr "Motivación"
+
+msgid "Move to another budget period"
+msgstr "Mover a otro período presupuestario"
+
+msgid "Move to another entitlement-group"
+msgstr "Mover a otro grupo de asignación"
+
+msgid "Multiple Workplace"
+msgstr "Puesto de trabajo múltiple"
+
+msgid "Musikinstrumente"
+msgstr "Instrumento musical"
+
+msgid "My documents"
+msgstr "Mis documentos"
+
+msgid "My entitlement-groups"
+msgstr "Mis grupos de asignación"
+
+msgid "My requests"
+msgstr "Mis solicitudes"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Name / ID"
+msgstr "Nombre / ID"
+
+msgid "Name of receiver"
+msgstr "Nombre del receptor"
+
+msgid "Name of the entitlement-group"
+msgstr "Nombre del grupo de asignación"
+
+msgid "Name of the model"
+msgstr "Nombre del modelo"
+
+msgid "Name of the requester"
+msgstr "Nombre del solicitante"
+
+msgid "Name of the template"
+msgstr "Nombre de la plantilla"
+
+msgid "Name of the user"
+msgstr "Nombre del usuario"
+
+msgid "New"
+msgstr "Nuevo"
+
+msgid "New Borrower"
+msgstr "Nuevo prestatario"
+
+msgid "New Category"
+msgstr "Nueva categoría"
+
+msgid "New Delegation"
+msgstr "Nueva delegación"
+
+msgid "New Entitlement-Group"
+msgstr "Nuevo grupo de asignación"
+
+msgid "New Orderer"
+msgstr "Nuevo solicitante"
+
+msgid "New Package"
+msgstr "Nuevo paquete"
+
+msgid "New Template"
+msgstr "Nueva plantilla"
+
+msgid "New User"
+msgstr "Nuevo usuario"
+
 msgid "New inventory badge"
-msgstr "New"
+msgstr "Nuevo"
 
 msgid "New item created."
 msgstr "Nuevo elemento creado"
 
+msgid "New line (Add Article or Project)"
+msgstr "Línea nueva (agregar artículo o proyecto)"
+
+msgid "New users will get customer access automatically."
+msgstr "Los usuarios nuevos reciben acceso de cliente automáticamente."
+
+msgid "Next"
+msgstr "Siguiente"
+
+msgid "No"
+msgstr "No"
+
+msgid "No access"
+msgstr "Sin acceso"
+
+msgid "No admins defined yet"
+msgstr "Todavía no hay administradores"
+
+msgid "No categories defined yet"
+msgstr "Todavía no hay categorías"
+
+msgid "No description"
+msgstr "Sin descripción"
+
 msgid "No description available for this model."
-msgstr ""
+msgstr "No hay descripción para este modelo."
 
 msgid "No entries found"
-msgstr ""
+msgstr "No se encontraron entradas"
+
+msgid "No entry found"
+msgstr "No se encontró ninguna entrada"
 
 msgid "No hand overs found"
-msgstr ""
+msgstr "No se encontraron entregas"
+
+msgid "No orders are possible on this end date"
+msgstr "No se pueden hacer pedidos con esta fecha de fin"
+
+msgid "No orders are possible on this start date"
+msgstr "No se pueden hacer pedidos con esta fecha de inicio"
+
+msgid "No reminder yet"
+msgstr "Todavía sin recordatorio"
+
+msgid "No requesters defined yet"
+msgstr "Todavía no hay solicitantes"
+
+msgid "No results"
+msgstr "Sin resultados"
+
+msgid "No take backs found"
+msgstr "No se encontraron devoluciones"
+
+msgid "No verification required"
+msgstr "No requiere verificación"
+
+msgid "No."
+msgstr "N.º"
 
 msgid "None"
 msgstr "Ninguno"
 
+msgid "None selected"
+msgstr "Ninguno seleccionado"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Not Borrowable"
+msgstr "No prestable"
+
+msgid "Not a requester"
+msgstr "No es solicitante"
+
+msgid "Not available"
+msgstr "No disponible"
+
+msgid "Not categorized"
+msgstr "Sin categoría"
+
+msgid "Note"
+msgstr "Nota"
+
+msgid "Nothing selected"
+msgstr "Nada seleccionado"
+
+msgid "Notification"
+msgstr "Notificación"
+
 msgid "Number of items"
 msgstr "Número de artículos"
 
+msgid "OK"
+msgstr "Aceptar"
+
+msgid "One of the managers approves/denies or changes your reservation"
+msgstr "Un gestor aprueba, rechaza o modifica su reserva"
+
+msgid "Only categories with requests"
+msgstr "Solo categorías con solicitudes"
+
+msgid "Only enter whole numbers"
+msgstr "Solo ingrese números enteros"
+
+msgid "Only my own categories"
+msgstr "Solo mis categorías"
+
+msgid "Only my own requests"
+msgstr "Solo mis solicitudes"
+
+msgid "Open"
+msgstr "Abierto"
+
+msgid "Open %s"
+msgstr "Abrir %s"
+
+msgid "Open Datepicker"
+msgstr "Abrir calendario"
+
+msgid "Open Orders"
+msgstr "Pedidos abiertos"
+
+msgid "Open orders"
+msgstr "Pedidos abiertos"
+
+msgid "Opening Hours"
+msgstr "Horario de apertura"
+
+msgid "Operating System"
+msgstr "Sistema operativo"
+
+msgid "Option"
+msgstr "Opción"
+
+msgid "Option saved"
+msgstr "Opción guardada"
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "Order"
+msgstr "Pedido"
+
 msgid "Order approved"
-msgstr "Orden aprobada"
+msgstr "Pedido aprobado"
+
+msgid "Order from"
+msgstr "Pedido de"
+
+msgid "Order from %s"
+msgstr "Pedido de %s"
+
+msgid "Order overview"
+msgstr "Resumen del pedido"
+
+msgid "Order quantity"
+msgstr "Cantidad pedida"
+
+msgid "Order received"
+msgstr "Pedido recibido"
 
 msgid "Order rejected"
-msgstr "Orden rechazada"
+msgstr "Pedido rechazado"
 
 msgid "Order submitted"
-msgstr "Orden presentada"
+msgstr "Pedido enviado"
 
-msgid "Package error"
-msgstr "Error de paquete"
+msgid "Orders"
+msgstr "Pedidos"
+
+msgid "Organisation"
+msgstr "Organización"
+
+msgid "Organisation unit"
+msgstr "Unidad organizativa"
+
+msgid "Organisations"
+msgstr "Organizaciones"
+
+msgid "Organisations of the requesters"
+msgstr "Organizaciones de los solicitantes"
+
+msgid "Other entitlement-groups"
+msgstr "Otros grupos de asignación"
+
+msgid "Overbooked Quantity"
+msgstr "Cantidad con sobrerreserva"
+
+msgid "Overbooking"
+msgstr "Sobrerreserva"
+
+msgid "Overdue"
+msgstr "Atrasado"
+
+msgid "Overdue Returns"
+msgstr "Devoluciones atrasadas"
+
+msgid "Overdue Visit"
+msgstr "Visita atrasada"
+
+msgid "Overview"
+msgstr "Resumen"
+
+msgid "Owned"
+msgstr "Propios"
+
+msgid "Owner"
+msgstr "Propietario"
+
+msgid "Package"
+msgstr "Paquete"
+
+msgid "Package Code"
+msgstr "Código del paquete"
 
 msgid "Package successfully destroyed"
 msgstr "Paquete destruido correctamente"
@@ -252,32 +1912,197 @@ msgstr "Paquete destruido correctamente"
 msgid "Package successfully saved"
 msgstr "Paquete guardado correctamente"
 
+msgid "Packages"
+msgstr "Paquetes"
+
+msgid "Packages created"
+msgstr "Paquetes creados"
+
+msgid "Packages updated"
+msgstr "Paquetes actualizados"
+
+msgid "Parent categories"
+msgstr "Categorías superiores"
+
+msgid "Partially approved"
+msgstr "Aprobado parcialmente"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Password Confirmation"
+msgstr "Confirmación de la contraseña"
+
 msgid "Password changed"
 msgstr "Contraseña modificada"
 
+msgid "Pending"
+msgstr "Pendiente"
+
+msgid "Period"
+msgstr "Período"
+
+msgid "Phone"
+msgstr "Teléfono"
+
+msgid "Phone%s"
+msgstr "Teléfono%s"
+
+msgid "Picking List"
+msgstr "Lista de recogida"
+
+msgid "Please adapt the specific quantities to fit your needs."
+msgstr "Ajuste las cantidades a lo que necesite."
+
+msgid "Please contact the concerned inventory pool."
+msgstr "Contacte con el grupo de inventario correspondiente."
+
 msgid "Please note that these contracts, while they do belong to approved orders, may be changed by the lending manager at any time. They represent only a current snapshot of the order and might not contain the same items as the final contract once you pick up your items."
-msgstr ""
+msgstr "Tenga en cuenta que estos contratos, aunque pertenecen a pedidos aprobados, pueden ser modificados por el gestor de préstamos en cualquier momento. Solo muestran el estado actual del pedido y puede que no contengan los mismos artículos que el contrato final cuando retire sus artículos."
 
 msgid "Please provide a purpose..."
-msgstr ""
+msgstr "Indique un motivo..."
+
+msgid "Please provide a search term"
+msgstr "Indique un término de búsqueda"
 
 msgid "Please provide all required fields"
-msgstr ""
+msgstr "Complete todos los campos obligatorios"
+
+msgid "Please provide an inventory code"
+msgstr "Indique un código de inventario"
+
+msgid "Please select a template."
+msgstr "Seleccione una plantilla."
+
+msgid "Please select a time range and continue."
+msgstr "Seleccione un período y continúe."
+
+msgid "Please select an inventory pool"
+msgstr "Seleccione un grupo de inventario"
+
+msgid "Please select an item."
+msgstr "Seleccione un artículo."
+
+msgid "Please select some fields."
+msgstr "Seleccione algunos campos."
+
+msgid "Please solve the conflicts for all highlighted reservations in order to continue."
+msgstr "Resuelva los conflictos de todas las reservas resaltadas para continuar."
+
+msgid "Please specify the purpose of your order here..."
+msgstr "Indique aquí el motivo de su pedido..."
+
+msgid "Point of Delivery"
+msgstr "Punto de entrega"
+
+msgid "Prepackaged"
+msgstr "Preembalado"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Price"
+msgstr "Precio"
+
+msgid "Print"
+msgstr "Imprimir"
+
+msgid "Print Contracts"
+msgstr "Imprimir contratos"
+
+msgid "Print Selection"
+msgstr "Imprimir selección"
+
+msgid "Print dialog will open aut."
+msgstr "El diálogo de impresión se abrirá automáticamente."
+
+msgid "Priority"
+msgstr "Prioridad"
 
 msgid "Problems"
-msgstr ""
+msgstr "Problemas"
+
+msgid "Process multiple fields for multiple items in a row"
+msgstr "Procesar varios campos de varios artículos seguidos"
+
+msgid "Procured by"
+msgstr "Adquirido por"
+
+msgid "Procurement"
+msgstr "Compras"
+
+msgid "Product"
+msgstr "Producto"
+
+msgid "Produktionstechnik"
+msgstr "Técnica de producción"
+
+msgid "Project Number"
+msgstr "Número de proyecto"
+
+msgid "Properties"
+msgstr "Propiedades"
+
+msgid "Property"
+msgstr "Propiedad"
+
+msgid "Purpose"
+msgstr "Motivo"
+
+msgid "Purpose changed '%s' for '%s'"
+msgstr "Motivo cambiado de '%s' a '%s'"
 
 msgid "Purpose changed '%{from}' for '%{to}'"
-msgstr "Cambio sugerido '%{from}' a '%{to}'"
+msgstr "Motivo cambiado de '%{from}' a '%{to}'"
+
+msgid "Purpose of the order"
+msgstr "Motivo del pedido"
 
 msgid "Purpose these items are borrowed for"
-msgstr ""
+msgstr "Motivo del préstamo de estos artículos"
+
+msgid "Qty."
+msgstr "Cant."
+
+msgid "Quantities"
+msgstr "Cantidades"
 
 msgid "Quantity"
 msgstr "Cantidad"
 
+msgid "Quantity allocations"
+msgstr "Asignación de cantidades"
+
+msgid "Quantity: %d"
+msgstr "Cantidad: %d"
+
+msgid "Reason for Retirement"
+msgstr "Motivo de la baja"
+
+msgid "Recommended Accessories"
+msgstr "Accesorios recomendados"
+
+msgid "Reference"
+msgstr "Referencia"
+
+msgid "Reject"
+msgstr "Rechazar"
+
+msgid "Reject order"
+msgstr "Rechazar pedido"
+
 msgid "Rejected"
 msgstr "Rechazada"
+
+msgid "Rejected on"
+msgstr "Rechazado el"
+
+msgid "Rejection Successful"
+msgstr "Rechazo correcto"
+
+msgid "Relevant for inventory"
+msgstr "Relevante para el inventario"
 
 msgid "Remind"
 msgstr "Recordar"
@@ -289,52 +2114,422 @@ msgid "Reminder"
 msgstr "Recordatorio"
 
 msgid "Reminder emails"
-msgstr ""
+msgstr "Correos de recordatorio"
+
+msgid "Reminder sent"
+msgstr "Recordatorio enviado"
+
+msgid "Remove"
+msgstr "Quitar"
 
 msgid "Removed %{q} %{m}"
-msgstr "Remover %{q} %{m}"
+msgstr "Quitado: %{q} %{m}"
+
+msgid "Removed on save"
+msgstr "Se quita al guardar"
+
+msgid "Removing items"
+msgstr "Quitando artículos"
+
+msgid "Replacement"
+msgstr "Reposición"
+
+msgid "Request moved"
+msgstr "Solicitud movida"
+
+msgid "Requested Items"
+msgstr "Artículos solicitados"
+
+msgid "Requested quantity"
+msgstr "Cantidad solicitada"
+
+msgid "Requester"
+msgstr "Solicitante"
+
+msgid "Requesters"
+msgstr "Solicitantes"
+
+msgid "Requests"
+msgstr "Solicitudes"
+
+msgid "Reservation"
+msgstr "Reserva"
+
+msgid "Reset"
+msgstr "Restablecer"
+
+msgid "Reset all filter"
+msgstr "Restablecer todos los filtros"
+
+msgid "Reset timeout"
+msgstr "Reiniciar el límite de tiempo"
+
+msgid "Reset visibility of all fields on the item forms"
+msgstr "Restablecer la visibilidad de todos los campos en los formularios de artículos"
+
+msgid "Responsible"
+msgstr "Responsable"
+
+msgid "Responsible department"
+msgstr "Departamento responsable"
+
+msgid "Responsible inventory pool"
+msgstr "Grupo de inventario responsable"
+
+msgid "Responsible person"
+msgstr "Persona responsable"
 
 msgid "Retire"
 msgstr "Retirar"
 
-msgid "Show all %s..."
-msgstr ""
+msgid "Retire Item"
+msgstr "Dar de baja el artículo"
 
-msgid "Show user"
-msgstr "Mostrar usario"
+msgid "Retired"
+msgstr "Dado de baja"
+
+msgid "Retirement"
+msgstr "Baja"
+
+msgid "Return"
+msgstr "Devolución"
+
+msgid "Return to this hand over"
+msgstr "Volver a esta entrega"
+
+msgid "Returned Items"
+msgstr "Artículos devueltos"
+
+msgid "Returns"
+msgstr "Devoluciones"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Roles for users and groups can be managed in the new %s."
+msgstr "Los roles de usuarios y grupos se gestionan en la nueva %s."
+
+msgid "Room"
+msgid_plural "Rooms"
+msgstr[0] "Sala"
+msgstr[1] "Salas"
+
+msgid "Running Account"
+msgstr "Cuenta corriente"
+
+msgid "Same or similar serial number already exists."
+msgstr "Ya existe el mismo número de serie u otro parecido."
+
+msgid "Saturday"
+msgstr "Sábado"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Save %s"
+msgstr "Guardar %s"
+
+msgid "Save Package"
+msgstr "Guardar paquete"
+
+msgid "Save and copy"
+msgstr "Guardar y copiar"
+
+msgid "Save and copy %s"
+msgstr "Guardar y copiar %s"
+
+msgid "Save anyway"
+msgstr "Guardar de todos modos"
+
+msgid "Save change"
+msgstr "Guardar cambio"
+
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+msgid "Save package"
+msgstr "Guardar paquete"
+
+msgid "Saved"
+msgstr "Guardado"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Search %s"
+msgstr "Buscar %s"
+
+msgid "Search Results for \"%s\""
+msgstr "Resultados de búsqueda para \"%s\""
+
+msgid "Search Results for %s"
+msgstr "Resultados de búsqueda para %s"
+
+msgid "Search for '%s'"
+msgstr "Buscar '%s'"
+
+msgid "Search results (%s) for \"%s\""
+msgstr "Resultados de búsqueda (%s) para \"%s\""
+
+msgid "Search results (%s) for %s"
+msgstr "Resultados de búsqueda (%s) para %s"
+
+msgid "Search..."
+msgstr "Buscar..."
+
+msgid "Searching"
+msgstr "Buscando"
+
+msgid "Searching..."
+msgstr "Buscando..."
+
+msgid "Select"
+msgstr "Seleccionar"
+
+msgid "Select Field"
+msgstr "Seleccionar campo"
+
+msgid "Select File"
+msgstr "Seleccionar archivo"
+
+msgid "Select Image"
+msgstr "Seleccionar imagen"
+
+msgid "Select all"
+msgstr "Seleccionar todo"
+
+msgid "Selected Pools (%s)"
+msgstr "Grupos seleccionados (%s)"
+
+msgid "Selection"
+msgstr "Selección"
+
+msgid "Send reminder"
+msgstr "Enviar recordatorio"
+
+msgid "Serial Number"
+msgstr "Número de serie"
+
+msgid "Settings"
+msgstr "Configuración"
+
+msgid "Settings for %s"
+msgstr "Configuración de %s"
+
+msgid "Shelf"
+msgstr "Estante"
+
+msgid "Short Name"
+msgstr "Nombre corto"
+
+msgid "Show"
+msgstr "Mostrar"
+
+msgid "Show Availability"
+msgstr "Mostrar disponibilidad"
+
+msgid "Show all %s..."
+msgstr "Mostrar los %s..."
+
+msgid "Show all ..."
+msgstr "Mostrar todo..."
+
+msgid "Show all fields"
+msgstr "Mostrar todos los campos"
+
+msgid "Show all found %s"
+msgstr "Mostrar los %s encontrados"
+
+msgid "Show all properties"
+msgstr "Mostrar todas las propiedades"
+
+msgid "Show all search results"
+msgstr "Mostrar todos los resultados"
 
 msgid "Show delegation"
 msgstr "Mostrar delegación"
 
+msgid "Show less properties"
+msgstr "Mostrar menos propiedades"
+
+msgid "Show user"
+msgstr "Mostrar usuario"
+
+msgid "Signature"
+msgstr "Firma"
+
 msgid "Signed"
 msgstr "Firmado"
 
-msgid "Since we did not receive any request for renewal, we consequently demand the return of the items without further delay."
-msgstr "Como no recibimos ningún pedido de renovación, le pedimos que devuelva los elementos ahora."
+msgid "Signed contracts"
+msgstr "Contratos firmados"
+
+msgid "Single Workplace"
+msgstr "Puesto de trabajo único"
+
+msgid "Site License"
+msgstr "Licencia de sitio"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Software Information"
+msgstr "Información del software"
+
+msgid "Software License"
+msgstr "Licencia de software"
+
+msgid "Something went wrong!"
+msgstr "¡Algo salió mal!"
+
+msgid "Source code"
+msgstr "Código fuente"
+
+msgid "Special filters"
+msgstr "Filtros especiales"
+
+msgid "Specification of the contact person is required"
+msgstr "Hay que indicar la persona de contacto"
+
+msgid "Specification of the purpose is required"
+msgstr "Hay que indicar el motivo"
+
+msgid "Start"
+msgstr "Inicio"
 
 msgid "Start Date must be before End Date"
 msgstr "La fecha de inicio debe ser anterior a la Fecha de finalización"
 
+msgid "Start Screen"
+msgstr "Pantalla de inicio"
+
+msgid "Start and end date cannot be in the past"
+msgstr "Fecha de inicio y fin no puede ser en el pasado"
+
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+msgid "Start search"
+msgstr "Iniciar búsqueda"
+
+msgid "State"
+msgstr "Estado"
+
+msgid "State of Request"
+msgstr "Estado de la solicitud"
+
+msgid "Statistics"
+msgstr "Estadísticas"
+
 msgid "Status"
 msgstr "Estado"
+
+msgid "Status note"
+msgstr "Nota de estado"
+
+msgid "Subcategories"
+msgstr "Subcategorías"
+
+msgid "Subcategory"
+msgstr "Subcategoría"
 
 msgid "Submission failed"
 msgstr "Falló el pedido"
 
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Submit Order"
+msgstr "Enviar pedido"
+
 msgid "Submitted"
-msgstr "Presentada"
+msgstr "Enviado"
+
+msgid "Subordinate to %s"
+msgstr "Subordinado a %s"
+
+msgid "Successful Order"
+msgstr "Pedido correcto"
+
+msgid "Successfully set."
+msgstr "Establecido correctamente."
+
+msgid "Sunday"
+msgstr "Domingo"
+
+msgid "Supplier"
+msgstr "Proveedor"
+
+msgid "Suppliers"
+msgstr "Proveedores"
+
+msgid "Suspended"
+msgstr "Suspendido"
+
+msgid "Suspended reason"
+msgstr "Motivo de la suspensión"
+
+msgid "Suspended until"
+msgstr "Suspendido hasta"
+
+msgid "Swap Model"
+msgstr "Cambiar modelo"
 
 msgid "Swapped %{from} for %{to}"
 msgstr "Intercambio %{from} por %{to}"
 
+msgid "Swapped from %s "
+msgstr "Cambiado desde %s "
+
+msgid "Take Back"
+msgstr "Devolver"
+
+msgid "Take Back Selection"
+msgstr "Devolver selección"
+
+msgid "Take Back from"
+msgstr "Devolución de"
+
+msgid "Take Back from %s"
+msgstr "Devolución de %s"
+
+msgid "Take Backs"
+msgstr "Devoluciones"
+
+msgid "Take back completed"
+msgstr "Devolución completada"
+
+msgid "Take back of %s item"
+msgid_plural "Take back of %s items"
+msgstr[0] "Devolución de %s artículo"
+msgstr[1] "Devolución de %s artículos"
+
+msgid "Technical Details"
+msgstr "Detalles técnicos"
+
+msgid "Template"
+msgstr "Plantilla"
+
+msgid "Template Categories"
+msgstr "Categorías de plantillas"
+
+msgid "Template must have at least one model"
+msgstr "La plantilla debe tener al menos un modelo"
+
+msgid "Templates"
+msgstr "Plantillas"
+
 msgid "Terms and conditions of the lender apply."
-msgstr ""
+msgstr "Se aplican las condiciones del prestador."
 
 msgid "That means that the user probably did not get the approval mail and you need to contact him/her in a different way."
-msgstr ""
+msgstr "Esto significa que probablemente el usuario no recibió el correo de aprobación y tendrá que contactarle de otra forma."
 
 msgid "The Category must be empty"
 msgstr "Esta Categoría debe estar vacía"
+
+msgid "The Inventory Code %s was not found for %s"
+msgstr "No se encontró el código de inventario %s para %s"
 
 msgid "The Inventory Code %s was not found."
 msgstr "No se encontró el código de inventario %s."
@@ -343,19 +2538,40 @@ msgid "The Inventory Pool must be empty"
 msgstr "El Inventario debe estar vacío"
 
 msgid "The accessory was successfully created."
-msgstr "El adjunto se creo correctamente."
+msgstr "El accesorio se creó correctamente."
+
+msgid "The accessory was successfully deleted."
+msgstr "El accesorio se eliminó correctamente."
 
 msgid "The admin role cannot be scoped to an inventory pool"
 msgstr "El rol de administrador no puede estar asignado a un grupo de inventario"
 
 msgid "The assignment for %s was removed"
-msgstr ""
+msgstr "Se quitó la asignación de %s"
+
+msgid "The budget period is closed"
+msgstr "El período presupuestario está cerrado"
+
+msgid "The entitlement-group quantities were successfully saved."
+msgstr "Las cantidades del grupo de asignación se guardaron correctamente."
 
 msgid "The following error happened while sending a notification email to %{email}:\\n"
-msgstr ""
+msgstr "Se produjo el siguiente error al enviar un correo de notificación a %{email}:\\n"
+
+msgid "The highlighted entries are not accomplishable for the intended quantity."
+msgstr "Las entradas resaltadas no se pueden cumplir con la cantidad prevista."
+
+msgid "The inventory code %s is not valid for this model"
+msgstr "El código de inventario %s no es válido para este modelo"
+
+msgid "The item %s will be retired and no longer available for rentals."
+msgstr "El artículo %s se dará de baja y ya no estará disponible para préstamos."
 
 msgid "The item belongs to a package"
-msgstr ""
+msgstr "El artículo pertenece a un paquete"
+
+msgid "The item cannot be retired because it's not returned yet or has already been assigned to a contract line."
+msgstr "El artículo no se puede dar de baja porque todavía no se devolvió o ya está asignado a una línea de contrato."
 
 msgid "The item doesn't belong to the inventory pool related to this contract"
 msgstr "El artículo no pertenece al grupo de inventario relacionado con este contrato"
@@ -363,155 +2579,537 @@ msgstr "El artículo no pertenece al grupo de inventario relacionado con este co
 msgid "The item doesn't match with the reserved model"
 msgstr "El artículo no coincide con el modelo reservado"
 
+msgid "The item is already handed over or assigned to a different contract line"
+msgstr "El artículo ya está entregado o asignado a otra línea de contrato"
+
+msgid "The item is already retired"
+msgstr "El artículo ya está dado de baja"
+
+msgid "The item with the inventory code %s was not found"
+msgstr "No se encontró el artículo con el código de inventario %s"
+
+msgid "The items of the package can not be edited"
+msgstr "Los artículos del paquete no se pueden editar"
+
+msgid "The line was not found"
+msgstr "No se encontró la línea"
+
+msgid "The mail was sent"
+msgstr "El correo se envió"
+
 msgid "The model cannot be changed because the item is used in contracts already."
-msgstr ""
+msgstr "El modelo no se puede cambiar porque el artículo ya se usa en contratos."
 
 msgid "The model is already compatible"
 msgstr "Este modelo ya es compatible"
 
+msgid "The model needs a product name."
+msgstr "El modelo necesita un nombre de producto."
+
 msgid "The new user details could not be saved."
-msgstr ""
+msgstr "No se pudieron guardar los datos del usuario nuevo."
 
 msgid "The option could not be added"
-msgstr ""
+msgstr "No se pudo agregar la opción"
 
 msgid "The option doesn't belong to the inventory pool related to this contract"
 msgstr "Esta opción no corresponde al grupo de inventario relacionado a este contrato"
 
-msgid "The order now looks like this:"
-msgstr "El nuevo pedido es así:"
+msgid "The order has already been dealt with."
+msgstr "El pedido ya ha sido procesado."
+
+msgid "The order will be discarded."
+msgstr "Se descartará el pedido."
+
+msgid "The package is not in stock"
+msgstr "El paquete no está en stock"
 
 msgid "The parent item doesn't exist (parent_id: %d)"
-msgstr ""
+msgstr "El artículo superior no existe (parent_id: %d)"
 
 msgid "The properties have been updated."
 msgstr "Las propiedades fueron actualizadas."
 
+msgid "The responsible inventory pool cannot be changed because it's not returned yet or has already been assigned to a contract line."
+msgstr "El grupo de inventario responsable no se puede cambiar porque el artículo todavía no se devolvió o ya está asignado a una línea de contrato."
+
+msgid "The selected inventory pool is closed on that day"
+msgstr "El grupo de inventario seleccionado está cerrado ese día"
+
 msgid "The selected model is not a package"
-msgstr ""
+msgstr "El modelo seleccionado no es un paquete"
+
+msgid "The selected reservations have been moved"
+msgstr "Las reservas seleccionadas se movieron"
+
+msgid "The template \"%s\" will be deleted and no longer available for usage."
+msgstr "La plantilla \"%s\" se eliminará y ya no se podrá usar."
+
+msgid "The template has been added to your order."
+msgstr "La plantilla se agregó a su pedido."
 
 msgid "The user does not have an email address"
-msgstr ""
+msgstr "El usuario no tiene dirección de correo electrónico"
 
-msgid "The user who placed this order has received a similar e-mail message informing them that the order first needs to be approved before it is valid."
-msgstr ""
+msgid "There are open reservations for delegated users: "
+msgstr "Hay reservas abiertas de usuarios delegados: "
 
-msgid "These are the comments of the inventory manager:"
-msgstr "Estos son los comentarios del administrador de inventario:"
+msgid "These mail templates are copied for a new inventory pool when it is created."
+msgstr "Estas plantillas de correo se copian para cada grupo de inventario nuevo cuando se crea."
+
+msgid "These orders have been successfully submitted, but are NOT YET APPROVED."
+msgstr "Estos pedidos se enviaron correctamente, pero TODAVÍA NO ESTÁN APROBADOS."
 
 msgid "This contract is not signable because it doesn't have any contract reservations."
-msgstr ""
+msgstr "Este contrato no se puede firmar porque no tiene reservas."
 
 msgid "This contract is not signable because none of the reservations have a purpose."
-msgstr ""
+msgstr "Este contrato no se puede firmar porque ninguna reserva tiene motivo."
 
 msgid "This contract is not signable because some reservations are not assigned."
-msgstr ""
+msgstr "Este contrato no se puede firmar porque hay reservas sin asignar."
 
-msgid "Entitlement-Groups of this customer"
-msgstr ""
+msgid "This contract is not signable because the delegated user is either missing or not part of this delegation."
+msgstr "Este contrato no se puede firmar porque falta el usuario delegado o no forma parte de esta delegación."
+
+msgid "This entry will be removed from the order."
+msgstr "Esta entrada se quitará del pedido."
+
+msgid "This inventory pool is closed on that day."
+msgstr "Este grupo de inventario está cerrado ese día."
+
+msgid "This is a package containing the following items"
+msgstr "Este es un paquete que contiene los siguientes artículos"
+
+msgid "This is the list of items you requested. To complete this order, please %s."
+msgstr "Esta es la lista de artículos que solicitó. Para completar este pedido, %s."
+
+msgid "This item was retired"
+msgstr "Este artículo está dado de baja"
 
 msgid "This item will be given to a different inventory pool and not show up in yours anymore!"
-msgstr ""
+msgstr "Este artículo pasará a otro grupo de inventario y dejará de aparecer en el suyo."
+
+msgid "This model is now in %d categories"
+msgstr "Este modelo está ahora en %d categorías"
+
+msgid "This note is added to any contract, but can be changed individually before actually printing and signing each contract."
+msgstr "Esta nota se agrega a todos los contratos, pero se puede cambiar en cada uno antes de imprimirlo y firmarlo."
+
+msgid "This order has already been approved."
+msgstr "Este pedido ya fue aprobado."
 
 msgid "This order is not approvable because doesn't have any models."
 msgstr "Esta orden no puede aprobarse aun"
 
+msgid "This order is not approvable because some reservations violate the minimal reservation advance period of the inventory pool. Please adjust the start date accordingly."
+msgstr "Este pedido no se puede aprobar porque algunas reservas no respetan la antelación mínima de reserva del grupo de inventario. Ajuste la fecha de inicio."
+
 msgid "This order is not approvable because some reserved models are not available."
-msgstr ""
+msgstr "Este pedido no se puede aprobar porque algunos modelos reservados no están disponibles."
 
 msgid "This order is not approvable because the inventory pool is closed on either the start or enddate."
-msgstr ""
+msgstr "Este pedido no se puede aprobar porque el grupo de inventario está cerrado en la fecha de inicio o en la de fin."
 
-msgid "This order is still pending. Please log in to your leihs system and either approve or reject it."
-msgstr ""
+msgid "This user is suspended."
+msgstr "Este usuario está suspendido."
+
+msgid "Thu"
+msgstr "Jue"
+
+msgid "Thursday"
+msgstr "Jueves"
+
+msgid "Time until your order times out. Click to reset."
+msgstr "Tiempo hasta que caduque su pedido. Haga clic para reiniciarlo."
 
 msgid "Time window"
 msgstr "Período de Tiempo"
 
+msgid "Timeline"
+msgstr "Cronología"
+
+msgid "To allocate models to users use the %s."
+msgstr "Para asignar modelos a los usuarios use los %s."
+
+msgid "To be verified"
+msgstr "Por verificar"
+
+msgid "To pick up"
+msgstr "Por retirar"
+
 msgid "Today"
 msgstr "Hoy"
+
+msgid "Toggle %s"
+msgstr "Mostrar/ocultar %s"
+
+msgid "Too many users found"
+msgstr "Se encontraron demasiados usuarios"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Total of all approved requests"
+msgstr "Total de todas las solicitudes aprobadas"
+
+msgid "Total of all requests in state \"New\""
+msgstr "Total de todas las solicitudes en estado \"Nuevo\""
 
 msgid "Total price (indicative value)"
 msgstr "Precio total (valor indicativo)"
 
-msgid "Too many users found"
-msgstr ""
+msgid "Total quantity"
+msgstr "Cantidad total"
 
-msgid "Unfortunately your order is still pending, but you will soon receive a confirmation of order by separate e-mail. You can view the status of your order through your leihs account."
-msgstr "Desafortunadamente su pedido aun esta pendiente, pero pronto recibirá una confirmación de su pedido. Puede ver el estado de su pedido a través de su cuenta de leihs."
+msgid "Total quantity of borrowable and not retired items"
+msgstr "Cantidad total de artículos prestables y no dados de baja"
+
+msgid "Tue"
+msgstr "Mar"
+
+msgid "Tuesday"
+msgstr "Martes"
+
+msgid "Type in a search term"
+msgstr "Escriba un término de búsqueda"
+
+msgid "Umzug"
+msgstr "Mudanza"
+
+msgid "Unborrowable"
+msgstr "No prestable"
+
+msgid "Unborrowable Items"
+msgstr "Artículos no prestables"
+
+msgid "Undo approval"
+msgstr "Deshacer aprobación"
+
+msgid "Unexpected error."
+msgstr "Error inesperado."
+
+msgid "Unsigned"
+msgstr "Sin firmar"
+
+msgid "Unsigned Hand Over"
+msgstr "Entrega sin firmar"
+
+msgid "Unsigned contracts"
+msgstr "Contratos sin firmar"
+
+msgid "Unsubmitted"
+msgstr "Sin enviar"
+
+msgid "Unsuccessful reminder of %{q} items for contracts %{c}"
+msgstr "No se pudo enviar el recordatorio de %{q} artículos de los contratos %{c}"
+
+msgid "Unused Models"
+msgstr "Modelos sin usar"
+
+msgid "Update"
+msgstr "Actualizar"
+
+msgid "Updated at"
+msgstr "Actualizado el"
+
+msgid "Upload a comma separated CSV file (with UTF-8 encoding), each row describing an item."
+msgstr "Suba un archivo CSV separado por comas (con codificación UTF-8), con una fila por artículo."
 
 msgid "Upload error."
 msgstr "Error de subida"
 
+msgid "Upload problems"
+msgstr "Problemas al subir"
+
+msgid "Uploading files - please wait"
+msgstr "Subiendo archivos, espere"
+
+msgid "Used Models"
+msgstr "Modelos usados"
+
+msgid "Used for sending e-mails from leihs"
+msgstr "Se usa para enviar correos electrónicos desde leihs"
+
+msgid "Used on the start page in the borrow section"
+msgstr "Se usa en la página de inicio de la sección de préstamos"
+
 msgid "User"
-msgstr "Usuario"
+msgid_plural "Users"
+msgstr[0] "Usuario"
+msgstr[1] "Usuarios"
+
+msgid "User and model to be verified"
+msgstr "Usuario y modelo por verificar"
+
+msgid "User created successfully"
+msgstr "Usuario creado correctamente"
+
+msgid "User data"
+msgstr "Datos de usuario"
 
 msgid "User details were updated successfully."
-msgstr ""
+msgstr "Los datos del usuario se actualizaron correctamente."
+
+msgid "User does not have access to inventory pool: %s"
+msgstr "El usuario no tiene acceso al grupo de inventarios: %s"
+
+msgid "User is suspended for inventory pool: %s"
+msgstr "El usuario está suspendido para el grupo de inventarios: %s"
 
 msgid "User must be selected"
 msgstr "Debe seleccionarse un usuario"
 
 msgid "User or Order not found"
-msgstr ""
+msgstr "No se encontró el usuario o el pedido"
 
 msgid "User swapped %{from} for %{to}"
 msgstr "El Usuario intercambio %{from} por %{to}"
 
+msgid "User to be verified"
+msgstr "Usuario por verificar"
+
+msgid "User unknown"
+msgstr "Usuario desconocido"
+
+msgid "User/Typical usage"
+msgstr "Usuario/Uso típico"
+
+msgid "Username"
+msgstr "Nombre de usuario"
+
+msgid "Users"
+msgstr "Usuarios"
+
+msgid "Users who don't bring back the items on the required date are suspended from next day on."
+msgstr "Los usuarios que no devuelven los artículos en la fecha indicada quedan suspendidos a partir del día siguiente."
+
+msgid "User|AccessRight|Suspended reason"
+msgstr "Motivo de la suspensión"
+
+msgid "User|Email"
+msgstr "Correo electrónico"
+
+msgid "User|Firstname"
+msgstr "Nombre"
+
+msgid "User|Lastname"
+msgstr "Apellido"
+
 msgid "Value"
 msgstr "Valor"
 
+msgid "Value List"
+msgstr "Lista de valores"
+
+msgid "Value List for Lending Contract No."
+msgstr "Lista de valores del contrato de préstamo n.º"
+
 msgid "Value List for Lending Contract No. %s"
-msgstr ""
+msgstr "Lista de valores del contrato de préstamo n.º %s"
+
+msgid "Verification required"
+msgstr "Requiere verificación"
+
+msgid "Verify"
+msgstr "Verificar"
+
+msgid "Verify + approve order"
+msgstr "Verificar y aprobar pedido"
+
+msgid "View %s"
+msgstr "Ver %s"
+
+msgid "View Item"
+msgstr "Ver artículo"
+
+msgid "View Model"
+msgstr "Ver modelo"
+
+msgid "View Option"
+msgstr "Ver opción"
+
+msgid "Visible for borrowers in frontend"
+msgstr "Visible para los prestatarios en el frontend"
+
+msgid "Visits"
+msgstr "Visitas"
 
 msgid "Warning"
-msgstr ""
+msgstr "Aviso"
 
-msgid "We are just sending you this little reminder because someone else is already waiting for some of these items."
-msgstr "Solo le enviamos este pequeño recordatorio porque alguien mas encargó esos artículos."
+msgid "Warranty expiration"
+msgstr "Fin de la garantía"
 
-msgid "We kindly ask you to contact us as soon as possible. Your computer might need an update."
-msgstr ""
+msgid "Wed"
+msgstr "Mié"
+
+msgid "Wednesday"
+msgstr "Miércoles"
+
+msgid "Welcome %s"
+msgstr "Bienvenido/a, %s"
+
+msgid "Werkstatt-Technik"
+msgstr "Técnica de taller"
+
+msgid "Which inventory pool has the most contracts?"
+msgstr "¿Qué grupo de inventario tiene más contratos?"
+
+msgid "Which inventory pool is busiest?"
+msgstr "¿Qué grupo de inventario tiene más actividad?"
+
+msgid "Which item is busiest?"
+msgstr "¿Qué artículo tiene más actividad?"
+
+msgid "Who borrowed the most things?"
+msgstr "¿Quién pidió más cosas prestadas?"
+
+msgid "Who bought the most items?"
+msgstr "¿Quién compró más artículos?"
+
+msgid "Workdays"
+msgstr "Días laborables"
+
+msgid "Working order"
+msgstr "En funcionamiento"
+
+msgid "Workload"
+msgstr "Carga de trabajo"
 
 msgid "Write a comment. The comment will be part of the rejection e-mail."
-msgstr ""
+msgstr "Escriba un comentario. El comentario se incluirá en el correo de rechazo."
 
-msgid "Write a comment... your comment will be part of the confirmation e-mail"
-msgstr ""
+msgid "Write a comment... (your comment will be part of the confirmation e-mail)"
+msgstr "Escriba un comentario... (se incluirá en el correo de confirmación)"
+
+msgid "Write a note... (the note will be part of the contract)"
+msgstr "Escriba una nota... (la nota se incluirá en el contrato)"
 
 msgid "Write a note... the note will be part of the contract"
-msgstr ""
+msgstr "Escriba una nota... la nota se incluirá en el contrato"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "You are not authorized for this action."
+msgstr "No tiene autorización para esta acción."
+
+msgid "You are not logged in."
+msgstr "No ha iniciado sesión."
+
+msgid "You are not the owner of this item"
+msgstr "No es el propietario de este artículo"
+
+msgid "You are suspended for this inventory pool"
+msgstr "Está suspendido en este grupo de inventario"
+
+msgid "You bring back your items"
+msgstr "Usted devuelve sus artículos"
+
+msgid "You can edit your personal data"
+msgstr "Puede editar sus datos personales"
+
+msgid "You can modify the time range for each separate model in the next step."
+msgstr "En el siguiente paso puede cambiar el período de cada modelo por separado."
+
+msgid "You can not create a package without any item"
+msgstr "No se puede crear un paquete sin artículos"
+
+msgid "You can not take back more items then you handed over"
+msgstr "No se pueden devolver más artículos de los que se entregaron"
+
+msgid "You can not take back more options then you handed over"
+msgstr "No se pueden devolver más opciones de las que se entregaron"
 
 msgid "You can't add a package to a package."
-msgstr ""
+msgstr "No se puede agregar un paquete a otro paquete."
 
 msgid "You cannot delete all reservations of an order. Perhaps you want to reject it instead?"
-msgstr ""
+msgstr "No se pueden eliminar todas las reservas de un pedido. ¿Quizás quiere rechazarlo?"
+
+msgid "You cannot delete this user"
+msgstr "No se puede eliminar este usuario"
+
+msgid "You do not have any items in your order. Please %s and choose items for your order."
+msgstr "No tiene artículos en su pedido. %s y elija artículos para su pedido."
+
+msgid "You do not have the responsibility to lend this item. Responsible for this item is the pool \"%s\"."
+msgstr "No es responsable de prestar este artículo. El responsable es el grupo de inventario \"%s\"."
+
+msgid "You don't have access to this item."
+msgstr "No tiene acceso a este artículo."
 
 msgid "You don't have any rights to access this application."
 msgstr "No tiene permisos para acceder a esta aplicación"
 
+msgid "You don't have permission to perform this action"
+msgstr "No tiene permiso para realizar esta acción"
+
+msgid "You have %{no_access} to any inventory pools!"
+msgstr "¡No tiene acceso a ningún grupo de inventario! (%{no_access})"
+
+msgid "You have access to the following inventory pools"
+msgstr "Tiene acceso a los siguientes grupos de inventario"
+
+msgid "You have access to the following inventory pools:"
+msgstr "Tiene acceso a los siguientes grupos de inventario:"
+
 msgid "You have been logged out."
 msgstr "Su sesión ha sido cerrada."
 
+msgid "You have permission to access the following inventory pool"
+msgid_plural "You have permission to access the following inventory pools"
+msgstr[0] "Tiene permiso de acceso al siguiente grupo de inventario"
+msgstr[1] "Tiene permiso de acceso a los siguientes grupos de inventario"
+
+msgid "You have to provide the quantity for the things you want to return"
+msgstr "Indique la cantidad de lo que quiere devolver"
+
+msgid "You have unsaved data. Would you like to delete the data?"
+msgstr "Hay datos sin guardar. ¿Quiere eliminarlos?"
+
+msgid "You pick up the reserved items at the inventory pool"
+msgstr "Usted retira los artículos reservados en el grupo de inventario"
+
+msgid "You place a reservation for some items in this system"
+msgstr "Usted reserva algunos artículos en este sistema"
+
+msgid "You should redo your action or reload the page!"
+msgstr "Repita la acción o recargue la página."
+
+msgid "You wait for confirmation from the inventory pools in question"
+msgstr "Usted espera la confirmación de los grupos de inventario correspondientes"
+
 msgid "You were served by %s"
-msgstr ""
+msgstr "Le atendió %s"
 
-msgid "Your order for the following items has been confirmed by the inventory manager"
-msgstr "Su pedido de los siguientes artículos fue confirmado por el administrador del inventario"
+msgid "Your order has been modified. All reservations are now available."
+msgstr "Su pedido se modificó. Ahora todas las reservas están disponibles."
 
-msgid "Your order for the following items listed below was successfully submitted."
-msgstr "Su pedido se los siguientes elementos fue aceptada correctamente."
+msgid "Your order has been successfully submitted, but is NOT YET APPROVED."
+msgstr "Su pedido se envió correctamente, pero TODAVÍA NO ESTÁ APROBADO."
 
-msgid "Your order was rejected for the following reason:"
-msgstr "Su pedido fue cancelado por los siguientes motivos:"
+msgid "Your order ist empty."
+msgstr "Su pedido está vacío."
+
+msgid "Your order was successfully transmitted to those responsible and is %s."
+msgstr "Su pedido se envió correctamente a los responsables y está %s."
+
+msgid "Your order will time out in %s."
+msgstr "Su pedido caducará en %s."
+
+msgid "Zielraum"
+msgstr "Zona de destino"
+
+msgid "Zip"
+msgstr "Código postal"
 
 msgid "[Model %s] "
 msgstr "[Modelo %s] "
 
 msgid "[leihs] Order received"
-msgstr "[leihs] Orden recibida"
+msgstr "[leihs] Pedido recibido"
 
 msgid "[leihs] Reminder"
 msgstr "[leihs] Recordatorio"
@@ -523,154 +3121,88 @@ msgid "[leihs] Reservation Rejected"
 msgstr "[leihs] Reserva Rechazada"
 
 msgid "[leihs] Reservation Submitted"
-msgstr "[leihs] Reserva Presentada"
+msgstr "[leihs] Reserva enviada"
+
+msgid "[leihs] Reservation confirmed (with changes)"
+msgstr "[leihs] Reserva confirmada (con cambios)"
 
 msgid "[leihs] Some items should be returned tomorrow"
 msgstr "[leihs] Algunos elementos deberían de ser devueltos mañana"
 
+msgid "accept_lending_terms_label"
+msgstr "Acepto las condiciones de préstamo: "
+
+msgid "accounting type"
+msgstr "tipo de contabilidad"
+
+msgid "active"
+msgstr "activo"
+
+msgid "admin section of this inventory-pool"
+msgstr "sección de administración de este grupo de inventario"
+
+msgid "admin_active"
+msgstr "activo"
+
+msgid "admin_all"
+msgstr "todos"
+
+msgid "admin_inactive"
+msgstr "inactivo"
+
+msgid "admin_search_term"
+msgstr "Término de búsqueda..."
+
+msgid "all models"
+msgstr "todos los modelos"
+
 msgid "already in Category"
 msgstr "ya se encuentra en la Categoría"
 
+msgid "and assign fields"
+msgstr "y asignar campos"
+
+msgid "aquisition"
+msgstr "adquisición"
+
+msgid "ascending"
+msgstr "ascendente"
+
+msgid "assign highest available"
+msgstr "asignar el mayor disponible"
+
+msgid "assigned to %s"
+msgstr "asignado a %s"
+
+msgid "available"
+msgstr "disponible"
+
+msgid "available quantity"
+msgstr "cantidad disponible"
+
+msgid "awaiting approval"
+msgstr "pendiente de aprobación"
+
+msgid "borrowable"
+msgstr "prestable"
+
+msgid "by browsing categories"
+msgstr "por categorías"
+
+msgid "click here to reload"
+msgstr "haga clic aquí para recargar"
+
+msgid "closed"
+msgstr "cerrado"
+
+msgid "contracts"
+msgstr "contratos"
+
+msgid "cost center"
+msgstr "centro de coste"
+
 msgid "could not be assigned for take back"
-msgstr ""
-
-msgid "doesn't match parent's attribute"
-msgstr ""
-
-msgid "for max."
-msgstr ""
-
-msgid "inventory pool is closed on end_date. "
-msgstr "El grupo de inventario está cerrado en end_date. "
-
-msgid "inventory pool is closed on start_date. "
-msgstr "El grupo de inventario está cerrado en start_date. "
-
-msgid "item not assigned. "
-msgstr "artículo no asignado. "
-
-msgid "jump to this date"
-msgstr ""
-
-msgid "lends"
-msgstr ""
-
-msgid "not available. "
-msgstr "no disponible. "
-
-msgid "not valid. "
-msgstr "no válido. "
-
-msgid "please wait"
-msgstr ""
-
-msgid "quantity increased by %s"
-msgstr ""
-
-msgid "quantity not available. "
-msgstr "cantidad no disponible. "
-
-msgid "reset user"
-msgstr ""
-
-msgid "since"
-msgstr ""
-
-msgid "since max."
-msgstr ""
-
-msgid "therefore you may not be able to change some of these fields"
-msgstr ""
-
-msgid "to substitute"
-msgstr ""
-
-msgid "today"
-msgstr "Hoy"
-
-msgid "unknown Model"
-msgstr "modelo desconocido"
-
-msgid "upcoming"
-msgstr ""
-
-msgid "was assigned for take back"
-msgstr ""
-
-msgid "while deleting a hand over line"
-msgstr ""
-
-msgid "while deleting hand over for"
-msgstr ""
-
-msgid "while deleting order line for"
-msgstr ""
-
-msgid "while try to send an e-mail reminder to:"
-msgstr ""
-
-msgid "you cannot hand out reservations wich are starting in the future"
-msgstr ""
-
-msgid "you cannot hand out reservations with unassigned inventory codes"
-msgstr ""
-
-msgid "Option"
-msgstr ""
-
-msgid "Options"
-msgstr ""
-
-msgid "Refresh Page"
-msgstr "Actualizar página"
-
-msgid "is not a valid URL"
-msgstr "no es una URL valida"
-
-msgid "is not a HTTP(S) URL"
-msgstr "no es una URL HTTP(S)"
-
-msgid "Only enter whole numbers"
-msgstr "Solo ingrese números enteros"
-
-msgid "User does not have access to inventory pool: %s"
-msgstr "El usuario no tiene acceso al grupo de inventarios: %s"
-
-msgid "User is suspended for inventory pool: %s"
-msgstr "El usuario está suspendido para el grupo de inventarios: %s"
-
-msgid "An order can not have multiple delegated users."
-msgstr "Un pedido no puede tener múltiples usuarios delegados."
-
-msgid "Invalid date"
-msgstr "fecha no válida"
-
-msgid "Start and end date cannot be in the past"
-msgstr "Fecha de inicio y fin no puede ser en el pasado"
-
-msgid "Manage user roles via Groups."
-msgstr "Manejo los roles de los usuarios a través de Grupos."
-
-msgid "A Group contains several users. These users can gain a role by assigning the role to their Group."
-msgstr "Un grupo contiene varios usuarios. Estos usuarios pueden obtener un rol asignando el rol a su Grupo."
-
-msgid "To allocate models to users use the %s."
-msgstr "Para asignar modelos a los usuarios use los %s."
-
-msgid "Expand All"
-msgstr "Expandir Todo"
-
-msgid "Close All"
-msgstr "Cierra Todo"
-
-msgid "legacy_manage_users_new_admin_section_notice"
-msgstr "Los usuarios y sus derechos de acceso también se pueden manejar en la nueva sección Admin."
-
-msgid "legacy_manage_entitlement_group_new_admin_section_notice"
-msgstr "Los usuarios y grupos de esta entitlement-group se manejan en la nueva sección Admin."
-
-msgid "legacy_manage_group_new_admin_section_notice"
-msgstr "Los grupos se manejan en la nueva sección Admin."
+msgstr "no se pudo asignar a la devolución"
 
 msgid "create_multiple_items_inv_code_notice"
 msgstr "Cuando se crean varios artículos a la vez, el código de inventario no se puede establecer individualmente. En su lugar, se genera automáticamente la menor lista continua posible de códigos de inventario."
@@ -678,47 +3210,373 @@ msgstr "Cuando se crean varios artículos a la vez, el código de inventario no 
 msgid "create_multiple_items_label_quantity"
 msgstr "Cantidad"
 
-msgid "create_multiple_items_label_date"
-msgstr "Fecha"
+msgid "current page is set as start page"
+msgstr "la página actual está definida como página de inicio"
 
-msgid "create_multiple_items_head_title"
-msgstr "¡Artículos creados con éxito!"
+msgid "day"
+msgid_plural "days"
+msgstr[0] "día"
+msgstr[1] "días"
 
-msgid "create_multiple_items_head_summary"
-msgstr "Resumen"
+msgid "delete"
+msgstr "eliminar"
 
-msgid "create_multiple_items_head_list"
-msgstr "Lista de elementos creados"
+msgid "deployed %s ago"
+msgstr "desplegado hace %s"
 
-msgid "create_multiple_items_label_export"
-msgstr "Exportar"
+msgid "descending"
+msgstr "descendente"
 
-msgid "create_multiple_items_btn_csv_export"
-msgstr "Guardar como CSV"
+msgid "disabled"
+msgstr "desactivado"
 
-msgid "create_multiple_items_hint_csv_export"
-msgstr "(por ejemplo, para su uso con una impresora de etiquetas)"
+msgid "doesn't match parent's attribute"
+msgstr "no coincide con el atributo del superior"
 
-msgid "create_multiple_items_checkbox_show_barcode"
-msgstr "Mostrar códigos de barras"
+msgid "enabled"
+msgstr "activado"
 
-msgid "create_multiple_items_checkbox_show_full_urls"
-msgstr "Mostrar URLs completas"
+msgid "entries%s"
+msgstr "entradas%s"
 
-msgid "Lending Terms"
-msgstr "Condiciones de préstamo"
+msgid "extend"
+msgstr "ampliar"
 
-msgid "accept_lending_terms_label"
-msgstr "Acepto las condiciones de préstamo: "
+msgid "fill up gaps"
+msgstr "rellenar huecos"
 
-msgid "contract_contact_details_heading"
-msgstr "Detalles de contacto"
+msgid "for"
+msgstr "para"
 
-msgid "customer_order_contact_details_label"
-msgstr "Detalles de contacto"
+msgid "for '%s'"
+msgstr "para '%s'"
 
-msgid "customer_order_contact_details_placeholder"
-msgstr "Se recomienda indicar un número de teléfono"
+msgid "for items"
+msgstr "para artículos"
 
-msgid "The order has already been dealt with."
-msgstr "El pedido ya ha sido procesado."
+msgid "for licenses"
+msgstr "para licencias"
+
+msgid "for max."
+msgstr "para máx."
+
+msgid "found %i"
+msgstr "%i encontrados"
+
+msgid "from"
+msgstr "desde"
+
+msgid "from %s"
+msgstr "desde %s"
+
+msgid "general"
+msgstr "general"
+
+msgid "general ledger account"
+msgstr "cuenta del libro mayor"
+
+msgid "go back"
+msgstr "volver"
+
+msgid "go to today"
+msgstr "ir a hoy"
+
+msgid "here"
+msgstr "aquí"
+
+msgid "in"
+msgstr "en"
+
+msgid "in stock"
+msgstr "en stock"
+
+msgid "in the future"
+msgstr "en el futuro"
+
+msgid "in the past"
+msgstr "en el pasado"
+
+msgid "inactive"
+msgstr "inactivo"
+
+msgid "incl. VAT"
+msgstr "IVA incl."
+
+msgid "inspection phase until %s"
+msgstr "fase de revisión hasta %s"
+
+msgid "internal order"
+msgstr "pedido interno"
+
+msgid "investment"
+msgstr "inversión"
+
+msgid "is %s ago"
+msgstr "es hace %s"
+
+msgid "is late"
+msgstr "está atrasado"
+
+msgid "is not a HTTP(S) URL"
+msgstr "no es una URL HTTP(S)"
+
+msgid "is not a valid URL"
+msgstr "no es una URL valida"
+
+msgid "is part of a package"
+msgstr "forma parte de un paquete"
+
+msgid "item not assigned. "
+msgstr "artículo no asignado. "
+
+msgid "item_version"
+msgstr "Versión"
+
+msgid "items"
+msgstr "artículos"
+
+msgid "jump to this date"
+msgstr "ir a esta fecha"
+
+msgid "last change by '%s'"
+msgstr "último cambio de '%s'"
+
+msgid "last used +1"
+msgstr "último usado +1"
+
+msgid "legacy_manage_entitlement_group_new_admin_section_notice"
+msgstr "Los usuarios y grupos de esta entitlement-group se manejan en la nueva sección Admin."
+
+msgid "legacy_manage_group_new_admin_section_notice"
+msgstr "Los grupos se manejan en la nueva sección Admin."
+
+msgid "legacy_manage_inventory_pool_admin_section_notice"
+msgstr "Salvo la gestión de los grupos de asignación, todas las funciones están en la sección de administración."
+
+msgid "legacy_manage_users_new_admin_section_notice"
+msgstr "Los usuarios y sus derechos de acceso también se pueden manejar en la nueva sección Admin."
+
+msgid "lends"
+msgstr "presta"
+
+msgid "max 255 characters"
+msgstr "máx. 255 caracteres"
+
+msgid "models"
+msgstr "modelos"
+
+msgid "more"
+msgstr "más"
+
+msgid "more properties"
+msgstr "más propiedades"
+
+msgid "must be greater or equal to the inspection start date"
+msgstr "debe ser igual o posterior a la fecha de inicio de la revisión"
+
+msgid "no fields selected"
+msgstr "no hay campos seleccionados"
+
+msgid "no image"
+msgstr "sin imagen"
+
+msgid "no item assigned"
+msgstr "ningún artículo asignado"
+
+msgid "no item selected"
+msgstr "ningún artículo seleccionado"
+
+msgid "no purpose specified"
+msgstr "sin motivo indicado"
+
+msgid "not available"
+msgstr "no disponible"
+
+msgid "not available. "
+msgstr "no disponible. "
+
+msgid "not borrowable"
+msgstr "no prestable"
+
+msgid "not in stock"
+msgstr "sin stock"
+
+msgid "not retired"
+msgstr "no dado de baja"
+
+msgid "not used"
+msgstr "sin usar"
+
+msgid "not valid. "
+msgstr "no válido. "
+
+msgid "not yet saved"
+msgstr "todavía sin guardar"
+
+msgid "on time!"
+msgstr "¡a tiempo!"
+
+msgid "one day ago"
+msgstr "hace un día"
+
+msgid "only models with items"
+msgstr "solo modelos con artículos"
+
+msgid "only models without items"
+msgstr "solo modelos sin artículos"
+
+msgid "open datepicker"
+msgstr "abrir calendario"
+
+msgid "or"
+msgstr "o"
+
+msgid "or search for item"
+msgstr "o buscar un artículo"
+
+msgid "orders"
+msgstr "pedidos"
+
+msgid "overdue"
+msgstr "atrasado"
+
+msgid "please wait"
+msgstr "espere"
+
+msgid "please wait..."
+msgstr "espere..."
+
+msgid "quantity increased by %s"
+msgstr "cantidad aumentada en %s"
+
+msgid "quantity not available. "
+msgstr "cantidad no disponible. "
+
+msgid "remaining"
+msgstr "restante"
+
+msgid "rentable"
+msgstr "alquilable"
+
+msgid "requested"
+msgstr "solicitado"
+
+msgid "requesting phase until %s"
+msgstr "fase de solicitud hasta %s"
+
+msgid "required"
+msgstr "obligatorio"
+
+msgid "reserved / item assigned in future"
+msgstr "reservado / artículo asignado en el futuro"
+
+msgid "reset user"
+msgstr "restablecer usuario"
+
+msgid "retired"
+msgstr "dado de baja"
+
+msgid "selected"
+msgstr "seleccionado"
+
+msgid "set current page as start page"
+msgstr "definir la página actual como página de inicio"
+
+msgid "show less"
+msgstr "mostrar menos"
+
+msgid "show less properties"
+msgstr "mostrar menos propiedades"
+
+msgid "show package parts"
+msgstr "mostrar las partes del paquete"
+
+msgid "since"
+msgstr "desde"
+
+msgid "since max."
+msgstr "desde máx."
+
+msgid "submit it"
+msgstr "envíelo"
+
+msgid "therefore you may not be able to change some of these fields"
+msgstr "por lo tanto, puede que no pueda cambiar algunos de estos campos"
+
+msgid "this is a package"
+msgstr "esto es un paquete"
+
+msgid "this is the branch '%s'"
+msgstr "esta es la rama '%s'"
+
+msgid "to"
+msgstr "hasta"
+
+msgid "to %s"
+msgstr "hasta %s"
+
+msgid "to edit this item"
+msgstr "para editar este artículo"
+
+msgid "to substitute"
+msgstr "para sustituir"
+
+msgid "today"
+msgstr "Hoy"
+
+msgid "unavailable / can't be guaranteed"
+msgstr "no disponible / no se puede garantizar"
+
+msgid "unborrowable"
+msgstr "no prestable"
+
+msgid "undo"
+msgstr "deshacer"
+
+msgid "unknown Model"
+msgstr "modelo desconocido"
+
+msgid "until"
+msgstr "hasta"
+
+msgid "upcoming"
+msgstr "próximas"
+
+msgid "use barcode scanner to assign fields to item immediately"
+msgstr "use el lector de códigos de barras para asignar campos al artículo al instante"
+
+msgid "used"
+msgstr "usado"
+
+msgid "was assigned for take back"
+msgstr "se asignó a la devolución"
+
+msgid "while deleting a hand over line"
+msgstr "al eliminar una línea de entrega"
+
+msgid "while deleting hand over for"
+msgstr "al eliminar la entrega para"
+
+msgid "while deleting multiple order reservations"
+msgstr "al eliminar varias reservas del pedido"
+
+msgid "while deleting order line for"
+msgstr "al eliminar la línea de pedido para"
+
+msgid "while try to send an e-mail reminder to:"
+msgstr "al intentar enviar un recordatorio por correo a:"
+
+msgid "with comment"
+msgstr "con comentario"
+
+msgid "without conflict"
+msgstr "sin conflictos"
+
+msgid "you cannot hand out reservations which are ending in the past"
+msgstr "no se pueden entregar reservas que terminan en el pasado"
+
+msgid "you cannot hand out reservations which are starting in the future"
+msgstr "no se pueden entregar reservas que empiezan en el futuro"
+
+msgid "you cannot hand out reservations with unassigned inventory codes"
+msgstr "no se pueden entregar reservas con códigos de inventario sin asignar"
