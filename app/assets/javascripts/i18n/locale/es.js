@@ -2825,7 +2825,7 @@ window.i18n.locale_data = {
       ],
       "Rejected": [
          null,
-         "Rechazada"
+         "Rechazado"
       ],
       "Rejected on": [
          null,
@@ -4831,6 +4831,206 @@ window.i18n.locale_data = {
       "Whole day": [
          null,
          "Día completo"
+      ],
+      "%s is already assigned to a different contract or hand over": [
+         null,
+         "%s ya está asignado a otro contrato o entrega"
+      ],
+      "Additional Data": [
+         null,
+         "Datos adicionales"
+      ],
+      "Allocations in other groups considered - still available quantity of borrowable and not retired items": [
+         null,
+         "Se tienen en cuenta las asignaciones de otros grupos: cantidad aún disponible de artículos prestables y no dados de baja"
+      ],
+      "Attachment can't belong to model and item": [
+         null,
+         "Un adjunto no puede pertenecer a la vez a un modelo y a un artículo"
+      ],
+      "Attachment must be belong to model or item": [
+         null,
+         "Un adjunto debe pertenecer a un modelo o a un artículo"
+      ],
+      "Back to %s": [
+         null,
+         "Volver a %s"
+      ],
+      "Badge": [
+         null,
+         "Credencial"
+      ],
+      "CSV import": [
+         null,
+         "Importar CSV"
+      ],
+      "CSV import failed with %d errors": [
+         null,
+         "La importación del CSV falló con %d errores"
+      ],
+      "CSV successfully imported, %d items created": [
+         null,
+         "CSV importado correctamente: %d artículos creados"
+      ],
+      "Contract can't have multiple delegated users.": [
+         null,
+         "Un contrato no puede tener varios usuarios delegados."
+      ],
+      "Contract can't have multiple handed over by users.": [
+         null,
+         "Un contrato no puede tener varios usuarios que lo entregaron."
+      ],
+      "End date of a take back line can not be in the past.": [
+         null,
+         "La fecha de fin de una línea de devolución no puede estar en el pasado."
+      ],
+      "Excel": [
+         null,
+         "Excel"
+      ],
+      "Export": [
+         null,
+         "Exportar"
+      ],
+      "Group": [
+         null,
+         "Grupo"
+      ],
+      "If you transfer an item to a different inventory pool it's not visible for you anymore.": [
+         null,
+         "Si transfiere un artículo a otro grupo de inventario, dejará de verlo."
+      ],
+      "Import": [
+         null,
+         "Importar"
+      ],
+      "Licenses": [
+         null,
+         "Licencias"
+      ],
+      "Model Name": [
+         null,
+         "Nombre del modelo"
+      ],
+      "Personal ID": [
+         null,
+         "ID personal"
+      ],
+      "Retired Reason": [
+         null,
+         "Motivo de la baja"
+      ],
+      "Rooms Diff": [
+         null,
+         "Diferencias de salas"
+      ],
+      "Search category": [
+         null,
+         "Buscar categoría"
+      ],
+      "Set current screen as your personal start screen": [
+         null,
+         "Definir esta pantalla como su pantalla de inicio"
+      ],
+      "Software Informationen": [
+         null,
+         "Información del software"
+      ],
+      "Start Date cannot be a past date": [
+         null,
+         "La fecha de inicio no puede estar en el pasado"
+      ],
+      "Technical Detail": [
+         null,
+         "Detalle técnico"
+      ],
+      "The delegated user %s is suspended.": [
+         null,
+         "El usuario delegado %s está suspendido."
+      ],
+      "The item with the inventory code '%s' was not found": [
+         null,
+         "No se encontró el artículo con el código de inventario '%s'"
+      ],
+      "The start_date is not unique": [
+         null,
+         "La fecha de inicio no es única"
+      ],
+      "Type": [
+         null,
+         "Tipo"
+      ],
+      "Unallowed content type": [
+         null,
+         "Tipo de archivo no permitido"
+      ],
+      "Uploaded file must be less than 100MB": [
+         null,
+         "El archivo subido debe ocupar menos de 100 MB"
+      ],
+      "Uploaded file must be less than 8MB": [
+         null,
+         "El archivo subido debe ocupar menos de 8 MB"
+      ],
+      "Version": [
+         null,
+         "Versión"
+      ],
+      "You don't have permission": [
+         null,
+         "No tiene permiso"
+      ],
+      "You dont have the permission to update any of the selected fields.": [
+         null,
+         "No tiene permiso para actualizar ninguno de los campos seleccionados."
+      ],
+      "close dialog": [
+         null,
+         "cerrar diálogo"
+      ],
+      "contract_contact_details_heading": [
+         null,
+         "Datos de contacto"
+      ],
+      "create_multiple_items_btn_csv_export": [
+         null,
+         "Guardar como CSV"
+      ],
+      "create_multiple_items_checkbox_show_barcode": [
+         null,
+         "Mostrar códigos de barras"
+      ],
+      "create_multiple_items_checkbox_show_full_urls": [
+         null,
+         "Mostrar las URL completas"
+      ],
+      "create_multiple_items_head_list": [
+         null,
+         "Lista de los artículos creados"
+      ],
+      "create_multiple_items_head_summary": [
+         null,
+         "Resumen"
+      ],
+      "create_multiple_items_head_title": [
+         null,
+         "¡Artículos creados correctamente!"
+      ],
+      "create_multiple_items_hint_csv_export": [
+         null,
+         "(por ejemplo, para impresoras de etiquetas)"
+      ],
+      "create_multiple_items_label_date": [
+         null,
+         "Fecha"
+      ],
+      "create_multiple_items_label_export": [
+         null,
+         "Exportar"
+      ],
+      "max. %s": [
+         null,
+         "máx. %s"
       ]
    }
 }

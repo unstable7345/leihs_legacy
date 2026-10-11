@@ -2093,7 +2093,7 @@ msgid "Reject order"
 msgstr "Rechazar pedido"
 
 msgid "Rejected"
-msgstr "Rechazada"
+msgstr "Rechazado"
 
 msgid "Rejected on"
 msgstr "Rechazado el"
@@ -3604,3 +3604,153 @@ msgstr "Franja horaria"
 
 msgid "Whole day"
 msgstr "Día completo"
+
+msgid "%s is already assigned to a different contract or hand over"
+msgstr "%s ya está asignado a otro contrato o entrega"
+
+msgid "Additional Data"
+msgstr "Datos adicionales"
+
+msgid "Allocations in other groups considered - still available quantity of borrowable and not retired items"
+msgstr "Se tienen en cuenta las asignaciones de otros grupos: cantidad aún disponible de artículos prestables y no dados de baja"
+
+msgid "Attachment can't belong to model and item"
+msgstr "Un adjunto no puede pertenecer a la vez a un modelo y a un artículo"
+
+msgid "Attachment must be belong to model or item"
+msgstr "Un adjunto debe pertenecer a un modelo o a un artículo"
+
+msgid "Back to %s"
+msgstr "Volver a %s"
+
+msgid "Badge"
+msgstr "Credencial"
+
+msgid "CSV import"
+msgstr "Importar CSV"
+
+msgid "CSV import failed with %d errors"
+msgstr "La importación del CSV falló con %d errores"
+
+msgid "CSV successfully imported, %d items created"
+msgstr "CSV importado correctamente: %d artículos creados"
+
+msgid "Contract can't have multiple delegated users."
+msgstr "Un contrato no puede tener varios usuarios delegados."
+
+msgid "Contract can't have multiple handed over by users."
+msgstr "Un contrato no puede tener varios usuarios que lo entregaron."
+
+msgid "End date of a take back line can not be in the past."
+msgstr "La fecha de fin de una línea de devolución no puede estar en el pasado."
+
+msgid "Excel"
+msgstr "Excel"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "Group"
+msgstr "Grupo"
+
+msgid "If you transfer an item to a different inventory pool it's not visible for you anymore."
+msgstr "Si transfiere un artículo a otro grupo de inventario, dejará de verlo."
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "Licenses"
+msgstr "Licencias"
+
+msgid "Model Name"
+msgstr "Nombre del modelo"
+
+msgid "Personal ID"
+msgstr "ID personal"
+
+msgid "Retired Reason"
+msgstr "Motivo de la baja"
+
+msgid "Rooms Diff"
+msgstr "Diferencias de salas"
+
+msgid "Search category"
+msgstr "Buscar categoría"
+
+msgid "Set current screen as your personal start screen"
+msgstr "Definir esta pantalla como su pantalla de inicio"
+
+msgid "Software Informationen"
+msgstr "Información del software"
+
+msgid "Start Date cannot be a past date"
+msgstr "La fecha de inicio no puede estar en el pasado"
+
+msgid "Technical Detail"
+msgstr "Detalle técnico"
+
+msgid "The delegated user %s is suspended."
+msgstr "El usuario delegado %s está suspendido."
+
+msgid "The item with the inventory code '%s' was not found"
+msgstr "No se encontró el artículo con el código de inventario '%s'"
+
+msgid "The start_date is not unique"
+msgstr "La fecha de inicio no es única"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Unallowed content type"
+msgstr "Tipo de archivo no permitido"
+
+msgid "Uploaded file must be less than 100MB"
+msgstr "El archivo subido debe ocupar menos de 100 MB"
+
+msgid "Uploaded file must be less than 8MB"
+msgstr "El archivo subido debe ocupar menos de 8 MB"
+
+msgid "Version"
+msgstr "Versión"
+
+msgid "You don't have permission"
+msgstr "No tiene permiso"
+
+msgid "You dont have the permission to update any of the selected fields."
+msgstr "No tiene permiso para actualizar ninguno de los campos seleccionados."
+
+msgid "close dialog"
+msgstr "cerrar diálogo"
+
+msgid "contract_contact_details_heading"
+msgstr "Datos de contacto"
+
+msgid "create_multiple_items_btn_csv_export"
+msgstr "Guardar como CSV"
+
+msgid "create_multiple_items_checkbox_show_barcode"
+msgstr "Mostrar códigos de barras"
+
+msgid "create_multiple_items_checkbox_show_full_urls"
+msgstr "Mostrar las URL completas"
+
+msgid "create_multiple_items_head_list"
+msgstr "Lista de los artículos creados"
+
+msgid "create_multiple_items_head_summary"
+msgstr "Resumen"
+
+msgid "create_multiple_items_head_title"
+msgstr "¡Artículos creados correctamente!"
+
+msgid "create_multiple_items_hint_csv_export"
+msgstr "(por ejemplo, para impresoras de etiquetas)"
+
+msgid "create_multiple_items_label_date"
+msgstr "Fecha"
+
+msgid "create_multiple_items_label_export"
+msgstr "Exportar"
+
+msgid "max. %s"
+msgstr "máx. %s"

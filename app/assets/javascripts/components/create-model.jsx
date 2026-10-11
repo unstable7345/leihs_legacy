@@ -1682,7 +1682,7 @@
                       <input onChange={(e) => onChangeValue(e)} value={property.value} disabled className='small width-full' name='model[properties_attributes][][value]' type='text' />
                     </div>
                     <div className='line-col col1of10 text-align-right'>
-                      <button onClick={(e) => undo(e)} className='button small inset' data-remove='' title='Entfernen'>{_jed('undo')}</button>
+                      <button onClick={(e) => undo(e)} className='button small inset' data-remove='' title={_jed('Remove')}>{_jed('undo')}</button>
                     </div>
                   </div>
                 )
@@ -1868,7 +1868,7 @@
                       <input type='radio' title={_jed('Cover Image')} name='is_cover' onChange={(e) => onSetCover(e)} data-image-id={image.id} checked={image.isCover} />
                     </div>
                     <div className='line-col col3of10 text-align-right'>
-                      <button onClick={(e) => onRemoveExisting(e)} className='button small inset' data-image-id={image.id} data-remove=''>Entfernen</button>
+                      <button onClick={(e) => onRemoveExisting(e)} className='button small inset' data-image-id={image.id} data-remove=''>{_jed('Remove')}</button>
                     </div>
                   </div>
                 )

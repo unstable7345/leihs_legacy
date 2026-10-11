@@ -103,7 +103,7 @@
       } else {
         return (
           <button onClick={(event) => this._removeNewFile(index)} className='button small inset' data-remove='' type='button'>
-            Entfernen
+            {_jed('Remove')}
           </button>
         )
       }
@@ -123,7 +123,7 @@
             </div>
             <div className='line-col col3of10 text-align-right'>
               <button onClick={(event) => this._removeNewFile(index)} className='button small inset' data-remove='' type='button'>
-                Entfernen
+                {_jed('Remove')}
               </button>
             </div>
           </div>

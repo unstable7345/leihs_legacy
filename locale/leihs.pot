@@ -3603,3 +3603,153 @@ msgstr ""
 
 msgid "Whole day"
 msgstr ""
+
+msgid "%s is already assigned to a different contract or hand over"
+msgstr ""
+
+msgid "Additional Data"
+msgstr ""
+
+msgid "Allocations in other groups considered - still available quantity of borrowable and not retired items"
+msgstr ""
+
+msgid "Attachment can't belong to model and item"
+msgstr ""
+
+msgid "Attachment must be belong to model or item"
+msgstr ""
+
+msgid "Back to %s"
+msgstr ""
+
+msgid "Badge"
+msgstr ""
+
+msgid "CSV import"
+msgstr ""
+
+msgid "CSV import failed with %d errors"
+msgstr ""
+
+msgid "CSV successfully imported, %d items created"
+msgstr ""
+
+msgid "Contract can't have multiple delegated users."
+msgstr ""
+
+msgid "Contract can't have multiple handed over by users."
+msgstr ""
+
+msgid "End date of a take back line can not be in the past."
+msgstr ""
+
+msgid "Excel"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+msgid "If you transfer an item to a different inventory pool it's not visible for you anymore."
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Licenses"
+msgstr ""
+
+msgid "Model Name"
+msgstr ""
+
+msgid "Personal ID"
+msgstr ""
+
+msgid "Retired Reason"
+msgstr ""
+
+msgid "Rooms Diff"
+msgstr ""
+
+msgid "Search category"
+msgstr ""
+
+msgid "Set current screen as your personal start screen"
+msgstr ""
+
+msgid "Software Informationen"
+msgstr ""
+
+msgid "Start Date cannot be a past date"
+msgstr ""
+
+msgid "Technical Detail"
+msgstr ""
+
+msgid "The delegated user %s is suspended."
+msgstr ""
+
+msgid "The item with the inventory code '%s' was not found"
+msgstr ""
+
+msgid "The start_date is not unique"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Unallowed content type"
+msgstr ""
+
+msgid "Uploaded file must be less than 100MB"
+msgstr ""
+
+msgid "Uploaded file must be less than 8MB"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "You don't have permission"
+msgstr ""
+
+msgid "You dont have the permission to update any of the selected fields."
+msgstr ""
+
+msgid "close dialog"
+msgstr ""
+
+msgid "contract_contact_details_heading"
+msgstr ""
+
+msgid "create_multiple_items_btn_csv_export"
+msgstr ""
+
+msgid "create_multiple_items_checkbox_show_barcode"
+msgstr ""
+
+msgid "create_multiple_items_checkbox_show_full_urls"
+msgstr ""
+
+msgid "create_multiple_items_head_list"
+msgstr ""
+
+msgid "create_multiple_items_head_summary"
+msgstr ""
+
+msgid "create_multiple_items_head_title"
+msgstr ""
+
+msgid "create_multiple_items_hint_csv_export"
+msgstr ""
+
+msgid "create_multiple_items_label_date"
+msgstr ""
+
+msgid "create_multiple_items_label_export"
+msgstr ""
+
+msgid "max. %s"
+msgstr ""
