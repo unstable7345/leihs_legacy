@@ -101,7 +101,7 @@ window.TimelineRender = {
     return (
       <div key={'month_' + monthFrom.format('YYYY-MM')} style={{position: 'absolute', top: '0px', left: (offset * 30) + 'px', width: (length * 30) + 'px', bottom: '0px', border: '0px'}}>
         <div style={{fontSize: '14px', paddingTop: '10px', textAlign: 'center', position :'absolute', top: '0px', left: '0px', bottom: '0px', right: '0px', border: border, borderWidth: '0px 1px 0px 0px'}}>
-          {monthFrom.format('MMMM')}
+          {window.i18n.months.full[monthFrom.month()]}
         </div>
       </div>
     )
