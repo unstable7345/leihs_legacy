@@ -6,7 +6,8 @@
     .padding-right-xs
       %label.row.margin-bottom-xxs{:for => id}= label
       .row
-        %select.width-full{:id => id, :name => name}
-          %option{:value => ""}= _("Whole day")
+        -# "—" (whole day) as the column is narrow
+        %select.width-full{:id => id, :name => name, :title => _("Whole day")}
+          %option{:value => "", :title => _("Whole day")} —
           - time_options.each do |time|
             %option{:value => time}= time.first(5)
