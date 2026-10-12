@@ -3,7 +3,8 @@ class window.App.ReservationsAddController extends Spine.Controller
   elements:
     "#add-start-date": "addStartDate"
     "#add-end-date": "addEndDate"
-    "#add-time-slot": "addTimeSlot"
+    "#add-start-time": "addStartTime"
+    "#add-end-time": "addEndTime"
 
   events:
     "click [type='submit']": "handleEvents"
@@ -55,16 +56,40 @@ class window.App.ReservationsAddController extends Spine.Controller
     @addStartDate.datepicker "option", "onSelect", (newStartDate)=>
       newStartDate = moment(newStartDate, i18n.date.L).startOf("day")
       endDate = moment(@addEndDate.val(), i18n.date.L).startOf("day")
-      if newStartDate.toDate() > endDate.toDate() or @getTimeWindow()?
+      if newStartDate.toDate() > endDate.toDate()
         @addEndDate.val newStartDate.format(i18n.date.L)
-    # a time slot is always booked for a single day
-    @addTimeSlot.on "change", => @addEndDate.val @addStartDate.val() if @getTimeWindow()?
-    @addEndDate.on "change", => @addTimeSlot.val "" unless @getStartDate().isSame(@getEndDate(), "day")
 
-  # [start_time, end_time] of the selected time slot, undefined for whole days
+  # The times chosen in the selects of a start and an end time: `window`
+  # [start_time, end_time] by the hour (start time on the start date, end
+  # time on the end date), undefined for whole days; `incomplete` if only one
+  # of them is chosen.
+  @timeWindowOf: (startTimeEl, endTimeEl) ->
+    startTime = startTimeEl?.val()
+    endTime = endTimeEl?.val()
+    if startTime and endTime
+      {window: [startTime, endTime]}
+    else
+      {incomplete: !!(startTime or endTime)}
+
+  # The window as asked for on each day of the availability (none for one over
+  # night, e.g. from 16:00 to 10:00 the next day, see App.Availability)
+  @dailyTimeWindow: (window) ->
+    window if window and window[0] < window[1]
+
+  # [start_time, end_time] of the chosen times, undefined for whole days
   getTimeWindow: =>
-    value = @addTimeSlot.val()
-    value.split("-") if value
+    App.ReservationsAddController.timeWindowOf(@addStartTime, @addEndTime).window
+
+  # Shows an error if the times can not be used for new reservations
+  validTimes: (startDate, endDate) =>
+    {window, incomplete} = App.ReservationsAddController.timeWindowOf(@addStartTime, @addEndTime)
+    message =
+      if incomplete
+        _jed("Choose both times, or none for whole days")
+      else if window and "#{moment(startDate).format("YYYY-MM-DD")} #{window[0]}" >= "#{moment(endDate).format("YYYY-MM-DD")} #{window[1]}"
+        _jed("The end has to be after the start")
+    App.Flash {type: "error", message: message} if message
+    not message
 
   getStartDate: => moment(@addStartDate.val(), i18n.date.L)
 
@@ -73,8 +98,8 @@ class window.App.ReservationsAddController extends Spine.Controller
   pushModelsTo: (data)=>
     for model in @models
       if model.availability()?
-        # the availability of the chosen time slot (of every booked one for whole days)
-        [startTime, endTime] = @getTimeWindow() or []
+        # the availability of the chosen times (of every booked one for whole days)
+        [startTime, endTime] = App.ReservationsAddController.dailyTimeWindow(@getTimeWindow()) or []
         avails = model.availability().forTimeWindow(startTime, endTime)
         maxAvailableForUser = _.min _.map avails, (a)=> a.maxAvailableForGroups(@getStartDate(), @getEndDate(), @user.groupIds)
         maxAvailableInTotal = _.min _.map avails, (a)=> a.maxAvailableInTotal(@getStartDate(), @getEndDate())
@@ -133,7 +158,7 @@ class window.App.ReservationsAddController extends Spine.Controller
 
   fetchAvailabilities: (callback)=>
     if @models? and @models.length
-      [startTime, endTime] = @getTimeWindow() or []
+      [startTime, endTime] = App.ReservationsAddController.dailyTimeWindow(@getTimeWindow()) or []
       App.Availability.ajaxFetch
         data: $.param
           model_ids: _.map @models, (m)-> m.id
@@ -191,11 +216,12 @@ class window.App.ReservationsAddController extends Spine.Controller
       # just continue in callback from ReservationAssignOrCreateController
       @onSubmitInventoryCode?(inventoryCode)
     else
+      return unless @validTimes(startDate, endDate)
       [startTime, endTime] = @getTimeWindow() or []
       App.Reservation.createOne
         inventory_pool_id: App.InventoryPool.current.id
         start_date: moment(startDate).format "YYYY-MM-DD"
-        end_date: moment(if startTime then startDate else endDate).format "YYYY-MM-DD"
+        end_date: moment(endDate).format "YYYY-MM-DD"
         start_time: startTime or ""
         end_time: endTime or ""
         order_id: @order?.id

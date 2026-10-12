@@ -279,23 +279,32 @@ class Contract < ApplicationRecord
 
   #########################################################################
 
-  # Raised when handing over a time slot reservation before its time slot
+  # Raised when handing over a reservation by the hour before its start
   # would leave other reservations without an item (see sign!).
   class EarlyHandOverConflict < StandardError; end
 
-  # A time slot reservation is handed over on the day of its time slot. Before
-  # the time slot starts, it starts at the time of the hand over (the item is
-  # not available for others from then on); if that conflicts with other
+  # "10:00–12:00", or over several days "16:00 – 14/10/2026 10:00"
+  def self.time_window_label(line)
+    if line.start_date == line.end_date
+      "#{line.start_time.first(5)}–#{line.end_time.first(5)}"
+    else
+      "#{line.start_time.first(5)} – #{I18n.l(line.end_date)} #{line.end_time.first(5)}"
+    end
+  end
+
+  # A reservation by the hour is handed over on its start date. Before its
+  # start time, it starts at the time of the hand over (the item is not
+  # available for others from then on); if that conflicts with other
   # reservations, it needs `confirm_early_hand_over`.
   def self.prepare_time_slot_hand_over!(line, confirm_early_hand_over)
     now = Time.zone.now
-    slot = "#{line.start_time.first(5)}–#{line.end_time.first(5)}"
+    slot = time_window_label(line)
 
     if line.start_date != Time.zone.today
       raise(_('%{model} is reserved for %{date}, %{slot}. ' \
               'To hand it over today, change the date of the reservation first.') % \
             { model: line.model.name, date: I18n.l(line.start_date), slot: slot })
-    elsif line.end_time <= now.strftime('%T')
+    elsif Availability::Main.date_time(line.end_date, line.end_time) <= now.strftime('%F %T')
       raise(_('The time slot %{slot} of %{model} is already over.') % \
             { model: line.model.name, slot: slot })
     elsif line.start_time > now.strftime('%T')

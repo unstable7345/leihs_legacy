@@ -4886,22 +4886,6 @@ window.i18n.locale_data = {
          null,
          "%{model} ist für %{slot} reserviert. Wird es jetzt ausgegeben, fehlt es für andere Reservationen vor %{start}. Trotzdem ausgeben?"
       ],
-      "The inventory pool does not offer this time slot.": [
-         null,
-         "Der Gerätepark bietet dieses Zeitfenster nicht an."
-      ],
-      "A time slot can only be reserved for a single day": [
-         null,
-         "Ein Zeitfenster kann nur für einen einzelnen Tag reserviert werden"
-      ],
-      "Keep the time slots": [
-         null,
-         "Zeitfenster beibehalten"
-      ],
-      "Time slot": [
-         null,
-         "Zeitfenster"
-      ],
       "Whole day": [
          null,
          "Ganzer Tag"
@@ -4949,6 +4933,42 @@ window.i18n.locale_data = {
       "The assigned contract reservations have to be marked either as signed or as closed": [
          null,
          "Die zugewiesenen Vertragsreservationen müssen als unterschrieben oder abgeschlossen markiert sein"
+      ],
+      "Start time": [
+         null,
+         "Startzeit"
+      ],
+      "End time": [
+         null,
+         "Endzeit"
+      ],
+      "Keep the times": [
+         null,
+         "Zeiten beibehalten"
+      ],
+      "Choose both times, or none for whole days": [
+         null,
+         "Beide Zeiten wählen oder keine für ganze Tage"
+      ],
+      "The end has to be after the start": [
+         null,
+         "Das Ende muss nach dem Beginn sein"
+      ],
+      "The inventory pool does not offer reservations by the hour.": [
+         null,
+         "Der Inventarpark bietet keine stundenweisen Reservationen an."
+      ],
+      "Choose both times within the hours of the inventory pool, or none for whole days.": [
+         null,
+         "Beide Zeiten innerhalb der Zeiten des Inventarparks wählen oder keine für ganze Tage."
+      ],
+      "Max. hours per reservation": [
+         null,
+         "Max. Stunden pro Reservation"
+      ],
+      "No limit": [
+         null,
+         "Keine Begrenzung"
       ]
    }
 }

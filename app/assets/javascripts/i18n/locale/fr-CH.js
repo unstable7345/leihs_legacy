@@ -4600,22 +4600,6 @@ window.i18n.locale_data = {
          null,
          "%{model} est réservé pour %{slot}. S'il est remis maintenant, il manquera pour d'autres réservations avant %{start}. Le remettre quand même ?"
       ],
-      "The inventory pool does not offer this time slot.": [
-         null,
-         "Le parc d'inventaire ne propose pas cette plage horaire."
-      ],
-      "A time slot can only be reserved for a single day": [
-         null,
-         "Une plage horaire ne peut être réservée que pour un seul jour"
-      ],
-      "Keep the time slots": [
-         null,
-         "Conserver les plages horaires"
-      ],
-      "Time slot": [
-         null,
-         "Plage horaire"
-      ],
       "Whole day": [
          null,
          "Journée entière"
@@ -4667,6 +4651,42 @@ window.i18n.locale_data = {
       "The assigned contract reservations have to be marked either as signed or as closed": [
          null,
          "Les réservations attribuées au contrat doivent être marquées comme signées ou clôturées"
+      ],
+      "Start time": [
+         null,
+         "Heure de début"
+      ],
+      "End time": [
+         null,
+         "Heure de fin"
+      ],
+      "Keep the times": [
+         null,
+         "Conserver les heures"
+      ],
+      "Choose both times, or none for whole days": [
+         null,
+         "Choisir les deux heures, ou aucune pour des journées entières"
+      ],
+      "The end has to be after the start": [
+         null,
+         "La fin doit être postérieure au début"
+      ],
+      "The inventory pool does not offer reservations by the hour.": [
+         null,
+         "Le pool d'inventaire ne propose pas de réservations à l'heure."
+      ],
+      "Choose both times within the hours of the inventory pool, or none for whole days.": [
+         null,
+         "Choisir les deux heures dans les horaires du pool d'inventaire, ou aucune pour des journées entières."
+      ],
+      "Max. hours per reservation": [
+         null,
+         "Heures max. par réservation"
+      ],
+      "No limit": [
+         null,
+         "Aucune limite"
       ]
    }
 }

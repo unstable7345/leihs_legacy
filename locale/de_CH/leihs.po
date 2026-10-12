@@ -3767,17 +3767,9 @@ msgstr "Das Zeitfenster %{slot} von %{model} ist bereits vorbei."
 msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
 msgstr "%{model} ist für %{slot} reserviert. Wird es jetzt ausgegeben, fehlt es für andere Reservationen vor %{start}. Trotzdem ausgeben?"
 
-msgid "The inventory pool does not offer this time slot."
-msgstr "Der Gerätepark bietet dieses Zeitfenster nicht an."
 
-msgid "A time slot can only be reserved for a single day"
-msgstr "Ein Zeitfenster kann nur für einen einzelnen Tag reserviert werden"
 
-msgid "Keep the time slots"
-msgstr "Zeitfenster beibehalten"
 
-msgid "Time slot"
-msgstr "Zeitfenster"
 
 msgid "Whole day"
 msgstr "Ganzer Tag"
@@ -3814,3 +3806,30 @@ msgstr "Raumnummer"
 
 msgid "The assigned contract reservations have to be marked either as signed or as closed"
 msgstr "Die zugewiesenen Vertragsreservationen müssen als unterschrieben oder abgeschlossen markiert sein"
+
+msgid "Start time"
+msgstr "Startzeit"
+
+msgid "End time"
+msgstr "Endzeit"
+
+msgid "Keep the times"
+msgstr "Zeiten beibehalten"
+
+msgid "Choose both times, or none for whole days"
+msgstr "Beide Zeiten wählen oder keine für ganze Tage"
+
+msgid "The end has to be after the start"
+msgstr "Das Ende muss nach dem Beginn sein"
+
+msgid "The inventory pool does not offer reservations by the hour."
+msgstr "Der Inventarpark bietet keine stundenweisen Reservationen an."
+
+msgid "Choose both times within the hours of the inventory pool, or none for whole days."
+msgstr "Beide Zeiten innerhalb der Zeiten des Inventarparks wählen oder keine für ganze Tage."
+
+msgid "Max. hours per reservation"
+msgstr "Max. Stunden pro Reservation"
+
+msgid "No limit"
+msgstr "Keine Begrenzung"

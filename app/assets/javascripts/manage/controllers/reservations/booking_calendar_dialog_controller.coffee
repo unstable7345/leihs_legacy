@@ -2,39 +2,58 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
     
   # overwrite
   setupModal: =>
-    do @setupTimeSlots
+    do @setupTimes
     @dialog = $ App.Render "manage/views/booking_calendar/calendar_dialog", {user: @user},
       startDateDisabled: @startDateDisabled
       quantityDisabled: @quantityDisabled
-      timeSlots: @timeSlots
-      mixedTimeSlots: @initialTimeSlot == "keep"
+      timeOptions: @timeOptions
+      mixedTimes: @initialTimeSlot == "keep"
     @listOfLines = @dialog.find("#booking-calendar-lines .list-of-lines")
     @partitionsEl = @dialog.find("#booking-calendar-partitions")
-    @timeSlotEl = @dialog.find("#booking-calendar-time-slot")
+    @startTimeEl = @dialog.find("#booking-calendar-start-time")
+    @endTimeEl = @dialog.find("#booking-calendar-end-time")
     super
-    @timeSlotEl.val @initialTimeSlot
-    @timeSlotEl.on "change", =>
-      # a time slot is always booked for a single day
-      @endDateEl.val @startDateEl.val() if @getTimeWindow()?[0]
-      # the calendar shows the availability of the chosen time slot
-      @fetchAvailability().done => @bookingCalendar?.render()
+    [startTime, endTime] =
+      if @initialTimeSlot in ["", "keep"] then [@initialTimeSlot, @initialTimeSlot] else @initialTimeSlot.split("-")
+    @startTimeEl.val startTime
+    @endTimeEl.val endTime
+    for el in [@startTimeEl, @endTimeEl]
+      el.on "change", =>
+        # the calendar shows the availability of the chosen times
+        @fetchAvailability().done => @bookingCalendar?.render()
 
-  # The pool's time slots as options; the one of the reservations is selected
-  # ("" = whole day, "keep" = they have different ones)
-  setupTimeSlots: =>
-    @timeSlots = App.InventoryPool.current.timeSlotOptions()
+  # The times of the pool as options; the ones of the reservations are
+  # selected ("" = whole day, "keep" = they have different ones)
+  setupTimes: =>
+    @timeOptions = App.InventoryPool.current.timeOptions()
     values = _.uniq _.map(@reservations, (l)-> if l.start_time then "#{l.start_time}-#{l.end_time}" else "")
     @initialTimeSlot = if values.length == 1 then values[0] else "keep"
-    if @initialTimeSlot not in ["", "keep"] and not _.find(@timeSlots, (o)=> o.value == @initialTimeSlot)
-      # a time slot the pool doesn't offer anymore
-      [start, end] = @initialTimeSlot.split("-")
-      @timeSlots.push {value: @initialTimeSlot, label: "#{start[0..4]}–#{end[0..4]}"}
+    if @initialTimeSlot not in ["", "keep"]
+      for time in @initialTimeSlot.split("-") when not _.find(@timeOptions, (o)-> o.value == time)
+        # a time outside of the current hours of the pool
+        @timeOptions.push {value: time, label: time[0..4]}
+      @timeOptions = _.sortBy @timeOptions, "value"
 
-  # [start_time, end_time] of the selected time slot, [null, null] for whole
-  # days, undefined to keep the time slots of the reservations
+  # The chosen times as "start_time-end_time", "" for whole days, "keep" to
+  # keep the ones of the reservations, "incomplete" if only one is chosen
+  timeSlotValue: =>
+    startTime = @startTimeEl?.val()
+    endTime = @endTimeEl?.val()
+    if not startTime? or (startTime == "keep" and endTime == "keep")
+      "keep"
+    else if startTime == "" and endTime == ""
+      ""
+    else if startTime in ["", "keep"] or endTime in ["", "keep"]
+      "incomplete"
+    else
+      "#{startTime}-#{endTime}"
+
+  # [start_time, end_time] of the chosen times (start time on the start date,
+  # end time on the end date), [null, null] for whole days, undefined to keep
+  # the times of the reservations
   getTimeWindow: =>
-    value = @timeSlotEl?.val()
-    return undefined if not value? or value == "keep"
+    value = @timeSlotValue()
+    return undefined if value in ["keep", "incomplete"]
     if value == "" then [null, null] else value.split("-")
 
   # overwrite
@@ -54,7 +73,7 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
 
   # including the availability of the chosen time slot (see changes_by_window)
   fetchAvailability: =>
-    [startTime, endTime] = @getTimeWindow() or []
+    [startTime, endTime] = App.ReservationsAddController.dailyTimeWindow(@getTimeWindow()) or []
     App.Availability.ajaxFetch
       data: $.param
         model_ids: _.map @models, (m)-> m.id
@@ -144,8 +163,12 @@ class window.App.ManageBookingCalendarDialogController extends App.BookingCalend
       @errorsContainer.html ""
 
   valid: =>
-    if @getTimeWindow()?[0] and not @getStartDate().isSame(@getEndDate(), "day")
-      @showError _jed("A time slot can only be reserved for a single day")
+    window = @getTimeWindow()
+    if @timeSlotValue() == "incomplete"
+      @showError _jed("Choose both times, or none for whole days")
+      false
+    else if window?[0] and "#{@getStartDate().format("YYYY-MM-DD")} #{window[0]}" >= "#{@getEndDate().format("YYYY-MM-DD")} #{window[1]}"
+      @showError _jed("The end has to be after the start")
       false
     else
       true

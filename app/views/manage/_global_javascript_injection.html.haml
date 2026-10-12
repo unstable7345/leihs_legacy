@@ -3,7 +3,7 @@
     App.InventoryPool.addRecord new App.InventoryPool #{current_inventory_pool.to_json}
     App.InventoryPool.current = App.InventoryPool.find(#{current_inventory_pool.id.to_json})
     App.InventoryPool.current.suspended_user_ids = #{current_inventory_pool.suspended_users.pluck(:id).to_json}
-    App.InventoryPool.current.time_slots = #{current_inventory_pool.time_slots.to_json}
+    App.InventoryPool.current.hourly_time_options = #{current_inventory_pool.hourly_time_options.to_json}
 - if current_user
   :coffeescript
     App.User.addRecord new App.User(#{current_user.to_json(except: :extended_info)})

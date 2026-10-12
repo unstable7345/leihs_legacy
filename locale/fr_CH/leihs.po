@@ -3462,17 +3462,9 @@ msgstr "La plage horaire %{slot} de %{model} est déjà terminée."
 msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
 msgstr "%{model} est réservé pour %{slot}. S'il est remis maintenant, il manquera pour d'autres réservations avant %{start}. Le remettre quand même ?"
 
-msgid "The inventory pool does not offer this time slot."
-msgstr "Le parc d'inventaire ne propose pas cette plage horaire."
 
-msgid "A time slot can only be reserved for a single day"
-msgstr "Une plage horaire ne peut être réservée que pour un seul jour"
 
-msgid "Keep the time slots"
-msgstr "Conserver les plages horaires"
 
-msgid "Time slot"
-msgstr "Plage horaire"
 
 msgid "Whole day"
 msgstr "Journée entière"
@@ -3512,3 +3504,30 @@ msgstr "%s de plus..."
 
 msgid "The assigned contract reservations have to be marked either as signed or as closed"
 msgstr "Les réservations attribuées au contrat doivent être marquées comme signées ou clôturées"
+
+msgid "Start time"
+msgstr "Heure de début"
+
+msgid "End time"
+msgstr "Heure de fin"
+
+msgid "Keep the times"
+msgstr "Conserver les heures"
+
+msgid "Choose both times, or none for whole days"
+msgstr "Choisir les deux heures, ou aucune pour des journées entières"
+
+msgid "The end has to be after the start"
+msgstr "La fin doit être postérieure au début"
+
+msgid "The inventory pool does not offer reservations by the hour."
+msgstr "Le pool d'inventaire ne propose pas de réservations à l'heure."
+
+msgid "Choose both times within the hours of the inventory pool, or none for whole days."
+msgstr "Choisir les deux heures dans les horaires du pool d'inventaire, ou aucune pour des journées entières."
+
+msgid "Max. hours per reservation"
+msgstr "Heures max. par réservation"
+
+msgid "No limit"
+msgstr "Aucune limite"

@@ -4812,22 +4812,6 @@ window.i18n.locale_data = {
          null,
          "%{model} está reservado para %{slot}. Si se entrega ahora, faltará para otras reservas antes de las %{start}. ¿Entregarlo de todos modos?"
       ],
-      "The inventory pool does not offer this time slot.": [
-         null,
-         "El grupo de inventario no ofrece esta franja horaria."
-      ],
-      "A time slot can only be reserved for a single day": [
-         null,
-         "Una franja horaria solo se puede reservar para un único día"
-      ],
-      "Keep the time slots": [
-         null,
-         "Mantener las franjas horarias"
-      ],
-      "Time slot": [
-         null,
-         "Franja horaria"
-      ],
       "Whole day": [
          null,
          "Día completo"
@@ -5115,6 +5099,42 @@ window.i18n.locale_data = {
       "iOS": [
          null,
          "iOS"
+      ],
+      "Start time": [
+         null,
+         "Hora de inicio"
+      ],
+      "End time": [
+         null,
+         "Hora de fin"
+      ],
+      "Keep the times": [
+         null,
+         "Mantener los horarios"
+      ],
+      "Choose both times, or none for whole days": [
+         null,
+         "Elige las dos horas, o ninguna para días completos"
+      ],
+      "The end has to be after the start": [
+         null,
+         "El fin tiene que ser posterior al inicio"
+      ],
+      "The inventory pool does not offer reservations by the hour.": [
+         null,
+         "El grupo de inventario no ofrece reservas por horas."
+      ],
+      "Choose both times within the hours of the inventory pool, or none for whole days.": [
+         null,
+         "Elige las dos horas dentro del horario del grupo de inventario, o ninguna para días completos."
+      ],
+      "Max. hours per reservation": [
+         null,
+         "Máx. horas por reserva"
+      ],
+      "No limit": [
+         null,
+         "Sin límite"
       ]
    }
 }

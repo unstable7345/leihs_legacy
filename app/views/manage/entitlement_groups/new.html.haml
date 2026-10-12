@@ -35,6 +35,13 @@
               .col1of2.text-align-right
                 = select_tag "group[is_verification_required]", options_for_select([[_("No"), "false"], [_("Yes"), "true"]])
 
+            - if current_inventory_pool.hourly_reservations
+              .row.padding-inset-s.emboss.margin-bottom-xxs
+                .col1of2
+                  %strong.font-size-m= _("Max. hours per reservation")
+                .col1of2.text-align-right
+                  %input{type: "number", min: 1, step: 1, placeholder: _("No limit"), name: "group[max_reservation_hours]", value: nil}
+
 
             #models-allocations.row.emboss.margin-bottom-xxs
               .row.padding-inset-s

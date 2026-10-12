@@ -16,10 +16,10 @@
         %label.addon{:for => "add-end-date"}
           %i.fa.fa-calendar
 
-  - if (time_slots = current_inventory_pool.time_slots.to_a).any?
-    = render 'manage/reservations/time_slot_select', time_slots: time_slots
+  - if (time_options = current_inventory_pool.hourly_time_options).any?
+    = render 'manage/reservations/time_select', time_options: time_options
 
-  %div{class: (time_slots.any? ? 'col2of8' : 'col4of8')}
+  %div{class: (time_options.any? ? 'col2of8' : 'col4of8')}
     %label.row.margin-bottom-xxs{:for => "assign-or-add-input"}= _("Add/Assign")
     .row
       #assign-or-add-input

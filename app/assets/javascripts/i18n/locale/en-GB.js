@@ -3803,22 +3803,6 @@ window.i18n.locale_data = {
          null,
          ""
       ],
-      "The inventory pool does not offer this time slot.": [
-         null,
-         ""
-      ],
-      "A time slot can only be reserved for a single day": [
-         null,
-         ""
-      ],
-      "Keep the time slots": [
-         null,
-         ""
-      ],
-      "Time slot": [
-         null,
-         ""
-      ],
       "Whole day": [
          null,
          ""
@@ -3900,6 +3884,42 @@ window.i18n.locale_data = {
          ""
       ],
       "iOS": [
+         null,
+         ""
+      ],
+      "Start time": [
+         null,
+         ""
+      ],
+      "End time": [
+         null,
+         ""
+      ],
+      "Keep the times": [
+         null,
+         ""
+      ],
+      "Choose both times, or none for whole days": [
+         null,
+         ""
+      ],
+      "The end has to be after the start": [
+         null,
+         ""
+      ],
+      "The inventory pool does not offer reservations by the hour.": [
+         null,
+         ""
+      ],
+      "Choose both times within the hours of the inventory pool, or none for whole days.": [
+         null,
+         ""
+      ],
+      "Max. hours per reservation": [
+         null,
+         ""
+      ],
+      "No limit": [
          null,
          ""
       ]

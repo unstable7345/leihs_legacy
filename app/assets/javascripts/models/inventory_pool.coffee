@@ -8,12 +8,12 @@ class window.App.InventoryPool extends Spine.Model
 
   @configure "InventoryPool", "id", "name", "default_contract_note", "borrow_reservation_advance_days"
 
-  # The time slots for same-day reservations, as options of a select: value
-  # "HH:MM:SS-HH:MM:SS", label "Morning (08:00–13:00)" (see time_slots)
-  timeSlotOptions: ->
-    _.map (@time_slots or []), (slot) ->
-      value: "#{slot.start_time}-#{slot.end_time}"
-      label: "#{slot.name} (#{slot.start_time[0..4]}–#{slot.end_time[0..4]})"
+  # The times of reservations by the hour as options of a select: value
+  # "HH:MM:SS", label "HH:MM", from the start to the end of the hours of the
+  # pool in steps of 30 minutes; empty if it only offers whole days (see
+  # hourly_time_options)
+  timeOptions: ->
+    _.map (@hourly_time_options or []), (time) -> {value: time, label: time[0..4]}
 
   @hasMany "availabilities", "App.Availability", "inventory_pool_id"
   @hasMany "models", "App.Model", "inventory_pool_id"

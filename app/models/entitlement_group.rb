@@ -16,6 +16,9 @@ class EntitlementGroup < ApplicationRecord
 
   validates_presence_of :inventory_pool_id # tmp#2
   validates_presence_of :name
+  # longest reservation by the hour of its members (nil: no limit)
+  validates_numericality_of :max_reservation_hours,
+                            only_integer: true, greater_than: 0, allow_nil: true
 
   # tmp#2 scope :general, -> {where(:name => 'General', :inventory_pool_id => nil)}
 

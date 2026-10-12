@@ -61,14 +61,22 @@
               </div>
             </div>
           </div>
-          {{if ~timeSlots.length && !~startDateDisabled}}
+          {{if ~timeOptions.length && !~startDateDisabled}}
           <div class='row padding-top-xs'>
-            <div class='col1of2 padding-right-xs text-align-left'>
-              <div class='row grey padding-bottom-xxs'>{{jed "Time slot"/}}</div>
-              <select class='width-full' id='booking-calendar-time-slot'>
-                {{if ~mixedTimeSlots}}<option value='keep'>{{jed "Keep the time slots"/}}</option>{{/if}}
+            <div class='col1of4 padding-right-xs text-align-left'>
+              <div class='row grey padding-bottom-xxs'>{{jed "Start time"/}}</div>
+              <select class='width-full' id='booking-calendar-start-time'>
+                {{if ~mixedTimes}}<option value='keep'>{{jed "Keep the times"/}}</option>{{/if}}
                 <option value=''>{{jed "Whole day"/}}</option>
-                {{for ~timeSlots}}<option value='{{>value}}'>{{>label}}</option>{{/for}}
+                {{for ~timeOptions}}<option value='{{>value}}'>{{>label}}</option>{{/for}}
+              </select>
+            </div>
+            <div class='col1of4 padding-right-xs text-align-left'>
+              <div class='row grey padding-bottom-xxs'>{{jed "End time"/}}</div>
+              <select class='width-full' id='booking-calendar-end-time'>
+                {{if ~mixedTimes}}<option value='keep'>{{jed "Keep the times"/}}</option>{{/if}}
+                <option value=''>{{jed "Whole day"/}}</option>
+                {{for ~timeOptions}}<option value='{{>value}}'>{{>label}}</option>{{/for}}
               </select>
             </div>
           </div>

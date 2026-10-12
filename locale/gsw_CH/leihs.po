@@ -3043,17 +3043,9 @@ msgstr ""
 msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
 msgstr ""
 
-msgid "The inventory pool does not offer this time slot."
-msgstr ""
 
-msgid "A time slot can only be reserved for a single day"
-msgstr ""
 
-msgid "Keep the time slots"
-msgstr ""
 
-msgid "Time slot"
-msgstr ""
 
 msgid "Whole day"
 msgstr ""
@@ -3119,4 +3111,31 @@ msgid "Windows"
 msgstr ""
 
 msgid "iOS"
+msgstr ""
+
+msgid "Start time"
+msgstr ""
+
+msgid "End time"
+msgstr ""
+
+msgid "Keep the times"
+msgstr ""
+
+msgid "Choose both times, or none for whole days"
+msgstr ""
+
+msgid "The end has to be after the start"
+msgstr ""
+
+msgid "The inventory pool does not offer reservations by the hour."
+msgstr ""
+
+msgid "Choose both times within the hours of the inventory pool, or none for whole days."
+msgstr ""
+
+msgid "Max. hours per reservation"
+msgstr ""
+
+msgid "No limit"
 msgstr ""

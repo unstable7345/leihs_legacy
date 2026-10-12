@@ -25,7 +25,7 @@ window.TimelineUtil = {
       !r.returned_date && TimelineUtil.isBefore(moment(r.end_date), moment())
   },
 
-  // "HH:MM" of a time slot reservation, null for whole days
+  // "HH:MM" of a reservation by the hour, null for whole days
   timeSlotTime(t) {
     return t ? String(t).substr(0, 5) : null
   },
@@ -37,13 +37,31 @@ window.TimelineUtil = {
     return TimelineUtil.timeSlotTime(r.start_time) + '\u2013' + TimelineUtil.timeSlotTime(r.end_time)
   },
 
+  // The times a reservation by the hour takes on a day (["HH:MM:SS",
+  // "HH:MM:SS"]): from its start time on its first day, until its end time on
+  // its last day, the whole of the days between. Without a day, its times.
+  dailyWindow(r, day) {
+    if(!day) {
+      return [r.start_time, r.end_time]
+    }
+    var d = moment(day).format('YYYY-MM-DD')
+    return [
+      d == moment(r.start_date).format('YYYY-MM-DD') ? r.start_time : '00:00:00',
+      d == moment(r.end_date).format('YYYY-MM-DD') ? r.end_time : '24:00:00'
+    ]
+  },
+
   // The reservations of a day which need items at the same time: the whole-day
-  // (and late) ones plus the time slot ones of the most booked time window.
-  concurrentReservations(reservations) {
+  // (and late) ones plus the ones by the hour of the most booked time window.
+  concurrentReservations(reservations, day) {
     var isSlot = (r) => r.start_time && !TimelineUtil.late(r)
     var wholeDay = _.reject(reservations, isSlot)
     var slots = _.filter(reservations, isSlot)
-    var overlap = (a, b) => a.start_time < b.end_time && b.start_time < a.end_time
+    var overlap = (a, b) => {
+      var wa = TimelineUtil.dailyWindow(a, day)
+      var wb = TimelineUtil.dailyWindow(b, day)
+      return wa[0] < wb[1] && wb[0] < wa[1]
+    }
     var busiest = _.max(
       slots.map((w) => _.filter(slots, (r) => overlap(r, w))),
       (rs) => rs.length

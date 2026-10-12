@@ -52,15 +52,21 @@ module Availability
                 :changes,
                 :inventory_pool_and_model_group_ids)
 
-    # Whole-day reservations and late ones compete with every time window. So
-    # do handed over time slot reservations not returned after their end time.
-    # NOTE: the window is compared with the times of day of the reservations,
-    # as asked for on each day (see Manage::AvailabilityController).
+    # The reservations competing with a request for a time window on some
+    # day (see Manage::AvailabilityController, which asks for it on each day):
+    # whole-day and late ones, ones by the hour overlapping it on one of their
+    # days (the first from the start time on, the last until the end time, the
+    # ones between entirely) and handed over ones not returned after their end.
     def self.conflicting_with_time_window(reservations, time_window)
       start_time, end_time = time_window
-      reservations.where(<<-SQL, end_time, start_time, Time.zone.today, Time.zone.now.strftime('%F %T'))
+      reservations.where(<<-SQL, end_time, start_time, end_time, start_time, Time.zone.today, Time.zone.now.strftime('%F %T'))
         reservations.start_time IS NULL
-        OR (reservations.start_time < ? AND reservations.end_time > ?)
+        OR (reservations.start_date = reservations.end_date
+            AND reservations.start_time < ? AND reservations.end_time > ?)
+        OR (reservations.start_date < reservations.end_date
+            AND (reservations.start_time < ?
+                 OR reservations.end_time > ?
+                 OR reservations.end_date - reservations.start_date > 1))
         OR reservations.end_date < ?
         OR (reservations.status = 'signed'
             AND reservations.returned_date IS NULL
@@ -68,15 +74,17 @@ module Availability
       SQL
     end
 
-    # The time windows to compute the availability for. A request for a window
-    # needs only that one. A whole-day request (nil) has to be fulfilled in
-    # every window booked by the reservations; without any, all of them are
-    # whole-day reservations.
+    # The time windows (on each day) to compute the availability for. A
+    # request for a window needs only that one. A whole-day request (nil) has
+    # to be fulfilled in every window booked by the reservations; one over
+    # night (e.g. from 16:00 to 10:00 the next day) is none, it competes with
+    # the windows overlapping it.
     def self.time_windows_to_check(running_reservations, time_window)
       return [time_window] if time_window
 
       windows = running_reservations
                 .where.not(start_time: nil)
+                .where('reservations.start_time < reservations.end_time')
                 .reorder(nil)
                 .distinct
                 .pluck(:start_time, :end_time)

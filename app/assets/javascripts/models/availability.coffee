@@ -19,11 +19,12 @@ class window.App.Availability extends Spine.Model
   constructor: (data)->
     super
 
-  # The availabilities to check for a line: the one of its time slot, or for a
-  # whole-day line the one of every time slot booked (see changes_by_window)
+  # The availabilities to check for a line: the one of its times on each day,
+  # or for a whole-day line (and one over night, e.g. from 16:00 to 10:00 the
+  # next day) the one of every window booked (see changes_by_window)
   forTimeWindow: (startTime, endTime) ->
     byWindow = @changes_by_window or {}
-    keys = if startTime? then ["#{startTime}-#{endTime}"] else _.keys(byWindow)
+    keys = if startTime? and startTime < endTime then ["#{startTime}-#{endTime}"] else _.keys(byWindow)
     windowed = _.compact _.map keys, (key) =>
       if byWindow[key]?
         clone = $.extend true, {}, @

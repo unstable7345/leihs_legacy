@@ -240,8 +240,19 @@ class Reservation < ApplicationRecord
     errors.empty?
   end
 
-  # time_window: [start_time, end_time] of a time slot (the reservation
-  # becomes single-day), [nil, nil] for whole days, :keep to leave it as is.
+  # time_window: [start_time, end_time] by the hour (start time on the start
+  # date, end time on the end date), [nil, nil] for whole days, :keep to leave
+  # it as is.
+  # Raises unless a reservation by the hour ends after it starts.
+  def self.assert_valid_period!(start_date, end_date, start_time, end_time)
+    return unless start_time
+
+    if Availability::Main.date_time(start_date, start_time) >=
+        Availability::Main.date_time(end_date, end_time)
+      raise _('The end has to be after the start.')
+    end
+  end
+
   def update_time_line(start_date, end_date, user, time_window = :keep)
     Reservation.transaction(requires_new: true) do
       start_date ||= self.start_date
@@ -249,7 +260,8 @@ class Reservation < ApplicationRecord
       attrs = { start_date: start_date, end_date: [start_date, end_date].max }
       unless time_window == :keep
         attrs[:start_time], attrs[:end_time] = time_window
-        attrs[:end_date] = start_date if attrs[:start_time]
+        Reservation.assert_valid_period!(attrs[:start_date], attrs[:end_date],
+                                         attrs[:start_time], attrs[:end_time])
       end
       unless update(attrs)
         raise errors.full_messages.uniq.join(', ')

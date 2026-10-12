@@ -342,18 +342,25 @@ class Manage::ReservationsController < Manage::ApplicationController
     Integer(params[:quantity].presence || 1)
   end
 
-  # The time slot of the params: [start_time, end_time] of a time slot the
-  # pool offers, [nil, nil] for "whole day" (blank start_time), :keep when
-  # the params have none.
+  # The times of the params: [start_time, end_time] ("HH:MM:SS", start time
+  # on the start date, end time on the end date) within the hours of the
+  # pool, [nil, nil] for whole days (blank times), :keep when the params have
+  # none.
   def time_window_param
     return :keep unless params.key?(:start_time)
-    return [nil, nil] if params[:start_time].blank?
+    return [nil, nil] if params[:start_time].blank? and params[:end_time].blank?
 
-    slot = current_inventory_pool
-             .time_slots
-             .find_by(start_time: params[:start_time], end_time: params[:end_time])
-    raise _('The inventory pool does not offer this time slot.') unless slot
-    [slot.start_time, slot.end_time]
+    options = current_inventory_pool.hourly_time_options
+    if options.empty?
+      raise _('The inventory pool does not offer reservations by the hour.')
+    end
+    window = [params[:start_time], params[:end_time]].map do |t|
+      t.to_s.match?(/\A\d{2}:\d{2}\z/) ? "#{t}:00" : t.to_s
+    end
+    unless window.all? { |t| options.include?(t) }
+      raise _('Choose both times within the hours of the inventory pool, or none for whole days.')
+    end
+    window
   end
 
   def start_date_param
@@ -413,7 +420,8 @@ class Manage::ReservationsController < Manage::ApplicationController
     reservation.end_date = end_date.try { |x| Date.parse(x) } || Date.tomorrow
     if record.is_a?(Model) and time_window.is_a?(Array) and time_window.first
       reservation.start_time, reservation.end_time = time_window
-      reservation.end_date = reservation.start_date
+      Reservation.assert_valid_period!(reservation.start_date, reservation.end_date,
+                                       *time_window)
     end
 
     # NOTE we need to store because the availability reads the persisted
@@ -475,13 +483,15 @@ class Manage::ReservationsController < Manage::ApplicationController
           line ||= begin
             start_time, end_time = time_window_param
             start_time = nil if start_time == :keep
+            Reservation.assert_valid_period!(start_date_param, end_date_param,
+                                             start_time, end_time)
             ItemLine.create(
               status: :approved,
               user: user,
               model: model,
               inventory_pool: current_inventory_pool,
               start_date: start_date_param,
-              end_date: (start_time ? start_date_param : end_date_param),
+              end_date: end_date_param,
               start_time: start_time,
               end_time: end_time
             )

@@ -16,8 +16,24 @@ class InventoryPool < ApplicationRecord
   end
 
   has_one :workday, dependent: :delete
-  has_many :time_slots
   accepts_nested_attributes_for :workday, update_only: true
+
+  # Hours of the reservations by the hour as plain "HH:MM:SS" strings (times
+  # of day, like Reservation#start_time).
+  attribute :hourly_reservations_start_time, :string
+  attribute :hourly_reservations_end_time, :string
+
+  # The times of the reservations by the hour ("HH:MM:SS"), from the start to
+  # the end of the hours in steps of 30 minutes; empty if the pool only
+  # offers whole days.
+  def hourly_time_options
+    return [] unless hourly_reservations
+
+    to_minutes = ->(t) { t.first(2).to_i * 60 + t[3, 2].to_i }
+    from = (to_minutes.(hourly_reservations_start_time) / 30.0).ceil * 30
+    to = to_minutes.(hourly_reservations_end_time)
+    from.step(to, 30).map { |m| format('%02d:%02d:00', m / 60, m % 60) }
+  end
 
   has_many :holidays, -> { order(:start_date, :end_date) }, dependent: :delete_all do
     def render_for_email_template

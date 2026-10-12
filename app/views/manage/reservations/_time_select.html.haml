@@ -1,0 +1,12 @@
+-# The times of reservations by the hour added in lending: start time on the
+-# start date, end time on the end date, none for whole days (see
+-# ReservationsAddController)
+- [["add-start-time", "start-time", _("Start time")], ["add-end-time", "end-time", _("End time")]].each do |id, name, label|
+  .col1of8
+    .padding-right-xs
+      %label.row.margin-bottom-xxs{:for => id}= label
+      .row
+        %select.width-full{:id => id, :name => name}
+          %option{:value => ""}= _("Whole day")
+          - time_options.each do |time|
+            %option{:value => time}= time.first(5)

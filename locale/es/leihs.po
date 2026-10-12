@@ -3590,17 +3590,9 @@ msgstr "La franja %{slot} de %{model} ya terminó."
 msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
 msgstr "%{model} está reservado para %{slot}. Si se entrega ahora, faltará para otras reservas antes de las %{start}. ¿Entregarlo de todos modos?"
 
-msgid "The inventory pool does not offer this time slot."
-msgstr "El grupo de inventario no ofrece esta franja horaria."
 
-msgid "A time slot can only be reserved for a single day"
-msgstr "Una franja horaria solo se puede reservar para un único día"
 
-msgid "Keep the time slots"
-msgstr "Mantener las franjas horarias"
 
-msgid "Time slot"
-msgstr "Franja horaria"
 
 msgid "Whole day"
 msgstr "Día completo"
@@ -3817,3 +3809,30 @@ msgstr "Windows"
 
 msgid "iOS"
 msgstr "iOS"
+
+msgid "Start time"
+msgstr "Hora de inicio"
+
+msgid "End time"
+msgstr "Hora de fin"
+
+msgid "Keep the times"
+msgstr "Mantener los horarios"
+
+msgid "Choose both times, or none for whole days"
+msgstr "Elige las dos horas, o ninguna para días completos"
+
+msgid "The end has to be after the start"
+msgstr "El fin tiene que ser posterior al inicio"
+
+msgid "The inventory pool does not offer reservations by the hour."
+msgstr "El grupo de inventario no ofrece reservas por horas."
+
+msgid "Choose both times within the hours of the inventory pool, or none for whole days."
+msgstr "Elige las dos horas dentro del horario del grupo de inventario, o ninguna para días completos."
+
+msgid "Max. hours per reservation"
+msgstr "Máx. horas por reserva"
+
+msgid "No limit"
+msgstr "Sin límite"
