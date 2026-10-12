@@ -54,6 +54,8 @@ module Availability
 
     # Whole-day reservations and late ones compete with every time window. So
     # do handed over time slot reservations not returned after their end time.
+    # NOTE: the window is compared with the times of day of the reservations,
+    # as asked for on each day (see Manage::AvailabilityController).
     def self.conflicting_with_time_window(reservations, time_window)
       start_time, end_time = time_window
       reservations.where(<<-SQL, end_time, start_time, Time.zone.today, Time.zone.now.strftime('%F %T'))
@@ -81,12 +83,79 @@ module Availability
       windows.presence || [nil]
     end
 
+    ########################## PERIODS ######################################
+    # A period is [from, to) as "YYYY-MM-DD HH:MM:SS" strings (sortable). A
+    # reservation by the hour runs from start_time of start_date to end_time
+    # of end_date, a whole-day one over its whole days.
+
+    def self.date_time(date, time)
+      "#{date.iso8601} #{time.to_s.first(8).ljust(8, ':00')}"
+    end
+
+    def self.period(start_date, end_date, time_window = nil)
+      start_time, end_time = time_window
+      if start_time and end_time
+        [date_time(start_date, start_time), date_time(end_date, end_time)]
+      else
+        [date_time(start_date, '00:00:00'),
+         date_time(end_date + 1.day, '00:00:00')]
+      end
+    end
+
+    # With an item already assigned, the reservation keeps it from today on.
+    def self.reservation_period(reservation)
+      from, to = period(reservation.start_date,
+                        reservation.end_date,
+                        [reservation.start_time, reservation.end_time])
+      today = date_time(Time.zone.today, '00:00:00')
+      [(reservation.item_id and from > today) ? today : from, to]
+    end
+
+    # Late reservations and handed over ones by the hour not returned after
+    # their end compete with every period.
+    def self.conflicts_with_period?(period, reservation, now)
+      return true if reservation.end_date < Time.zone.today
+      return true if reservation.start_time and
+                     reservation.status == :signed and
+                     reservation.returned_date.nil? and
+                     date_time(reservation.end_date, reservation.end_time) <= now
+
+      from, to = reservation_period(reservation)
+      from < period.last and period.first < to
+    end
+
+    # The period split at the starts and ends of the reservations within it.
+    # In each part the same reservations compete for the items all the time,
+    # so a quantity is available for the period when it is in every part.
+    def self.intervals(period, reservations)
+      from, to = period
+      inner = reservations
+              .flat_map { |r| reservation_period(r) }
+              .select { |t| t > from and t < to }
+      bounds = ([from, to] + inner).uniq.sort
+      bounds.each_cons(2).to_a
+    end
+
+    # The reservations competing in each part of the period (see intervals).
+    def self.reservations_per_interval(running_reservations, period)
+      reservations = running_reservations.to_a
+      today = date_time(Time.zone.today, '00:00:00')
+      from, to = period
+      # the past does not matter (the changes start today)
+      from = today if from < today and today < to
+      now = Time.zone.now.strftime('%F %T')
+      intervals([from, to], reservations).map do |interval|
+        reservations.select { |r| conflicts_with_period?(interval, r, now) }
+      end
+    end
+
     # exclude_reservations are used in borrow for dealing with the self-blocking
     # aspect of the reservations (context: change quantity for a model
     # in current order)
-    # time_window: [start_time, end_time] of a time slot; only the reservations
-    # conflicting with it are considered. nil considers all of them.
-    def initialize(model:, inventory_pool:, exclude_reservations:, sanitize_invalid_entitled_quantity: false, time_window: nil)
+    # time_window: [start_time, end_time] asked for on each day; only the
+    # reservations conflicting with it are considered. nil considers all of
+    # them. reservations: the running reservations to consider instead.
+    def initialize(model:, inventory_pool:, exclude_reservations:, sanitize_invalid_entitled_quantity: false, time_window: nil, reservations: nil)
       exclude_reservations = (exclude_reservations.presence || [])
 
       @model          = model
@@ -98,7 +167,9 @@ module Availability
         .running_reservations
         .where(model_id: @model.id)
         .where.not(id: exclude_reservations)
-      if time_window
+      if reservations
+        @running_reservations = reservations
+      elsif time_window
         @running_reservations = \
           self.class.conflicting_with_time_window(@running_reservations, time_window)
       end

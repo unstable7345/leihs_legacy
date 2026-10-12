@@ -86,10 +86,13 @@ class Reservation < ApplicationRecord
   attribute :start_time, :string
   attribute :end_time, :string
 
-  # A time slot only exists for a single day. If the dates are changed to a
-  # range (e.g. hand over earlier), the reservation becomes a whole-day one.
+  # A reservation by the hour runs from start_time of start_date to end_time
+  # of end_date. If the dates are changed so that it would end before it
+  # starts (e.g. hand over earlier on another day), it becomes a whole-day one.
   before_validation do
-    if start_time and start_date != end_date
+    if start_time and end_time and start_date and end_date and
+        Availability::Main.date_time(start_date, start_time) >=
+          Availability::Main.date_time(end_date, end_time)
       self.start_time = nil
       self.end_time = nil
     end

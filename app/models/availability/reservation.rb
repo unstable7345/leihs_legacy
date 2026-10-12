@@ -5,7 +5,8 @@ module Availability
 
     #################################
 
-    # [start_time, end_time] for a time slot reservation, nil for whole days
+    # [start_time, end_time] of a reservation by the hour (start_time of
+    # start_date, end_time of end_date), nil for whole days
     def time_window
       [start_time, end_time] if start_time and end_time
     end
@@ -43,7 +44,10 @@ module Availability
           # if an item is already assigned, but the start_date is in the future,
           # we only consider the real start-end range dates
           model
-            .availabilities_in(inventory_pool, time_window: time_window)
+            .availabilities_in(inventory_pool,
+                             start_date: start_date,
+                             end_date: end_date,
+                             time_window: time_window)
             .all? do |a|
               # NOTE doesn't work self.allocated_group_id because
               # is not a running_reservation
@@ -75,7 +79,10 @@ module Availability
 
     def maximum_available_quantity
       model
-        .availabilities_in(inventory_pool, time_window: time_window)
+        .availabilities_in(inventory_pool,
+                             start_date: start_date,
+                             end_date: end_date,
+                             time_window: time_window)
         .map do |a|
           a.maximum_available_in_period_for_groups(start_date,
                                                    end_date,
