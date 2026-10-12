@@ -7,7 +7,7 @@ window.App.Modules.LineProblems =
     avail = @model().availability()
     return [] unless avail?
     line = if @subreservations? then @subreservations[0] else @
-    avail.forTimeWindow(line.start_time, line.end_time)
+    avail.forTimeWindow(line.start_time, line.end_time, line.start_date, line.end_date)
 
   _isSoftOverbooked: (avail, reservationsToExclude) ->
     _.any avail.changes, (change) =>

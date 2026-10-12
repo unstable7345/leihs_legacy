@@ -51,6 +51,9 @@ class window.App.ReservationAssignOrCreateController extends Spine.Controller
 
   submit: (inventoryCode)=>
     return false unless inventoryCode?.length
+    unless App.ReservationsAddController.validTimesOf(@addStartTime, @addEndTime, @getStartDate(), @getEndDate())
+      @autocompleteController.getInstance().resetInput()
+      return false
     [startTime, endTime] =
       App.ReservationsAddController.timeWindowOf(@addStartTime, @addEndTime).window or []
     App.Reservation.assignOrCreate

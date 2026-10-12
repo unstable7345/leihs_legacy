@@ -9,7 +9,7 @@
 
 class window.App.Availability extends Spine.Model
 
-  @configure "Availability", "inventory_pool_id", "model_id", "changes", "changes_by_window", "total_borrowable", "total_rentable", "in_stock"
+  @configure "Availability", "inventory_pool_id", "model_id", "changes", "changes_by_window", "changes_by_period", "total_borrowable", "total_rentable", "in_stock"
   
   @belongsTo "inventory_pool", "App.InventoryPool", "inventory_pool_id"
   @belongsTo "model", "App.Model", "model_id"
@@ -22,7 +22,15 @@ class window.App.Availability extends Spine.Model
   # The availabilities to check for a line: the one of its times on each day,
   # or for a whole-day line (and one over night, e.g. from 16:00 to 10:00 the
   # next day) the one of every window booked (see changes_by_window)
-  forTimeWindow: (startTime, endTime) ->
+  forTimeWindow: (startTime, endTime, startDate, endDate) ->
+    # a reservation by the hour over several days: exactly for its period
+    if startTime? and startDate? and endDate? and startDate != endDate
+      periodKey = "#{startDate} #{startTime}/#{endDate} #{endTime}"
+      if @changes_by_period?[periodKey]?
+        return _.map @changes_by_period[periodKey], (changes) =>
+          clone = $.extend true, {}, @
+          clone.changes = changes
+          clone
     byWindow = @changes_by_window or {}
     keys = if startTime? and startTime < endTime then ["#{startTime}-#{endTime}"] else _.keys(byWindow)
     windowed = _.compact _.map keys, (key) =>

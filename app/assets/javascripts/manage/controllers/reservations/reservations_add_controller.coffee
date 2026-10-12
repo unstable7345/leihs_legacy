@@ -82,7 +82,10 @@ class window.App.ReservationsAddController extends Spine.Controller
 
   # Shows an error if the times can not be used for new reservations
   validTimes: (startDate, endDate) =>
-    {window, incomplete} = App.ReservationsAddController.timeWindowOf(@addStartTime, @addEndTime)
+    App.ReservationsAddController.validTimesOf(@addStartTime, @addEndTime, startDate, endDate)
+
+  @validTimesOf: (startTimeEl, endTimeEl, startDate, endDate) ->
+    {window, incomplete} = App.ReservationsAddController.timeWindowOf(startTimeEl, endTimeEl)
     message =
       if incomplete
         _jed("Choose both times, or none for whole days")

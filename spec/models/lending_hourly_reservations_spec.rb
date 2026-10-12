@@ -135,6 +135,22 @@ describe "reservations by the hour in lending" do
       expect(available_on(by_window["11:00:00-15:00:00"], @day)).to eq 1
     end
 
+    it "is exact for the period of a reservation over night" do
+      # the next morning from 08:00 on, the item is lent to somebody else
+      reserve(start_date: @day + 1.day, end_date: @day + 1.day, start_time: "08:00:00", end_time: "12:00:00")
+      over_night = reserve(start_date: @day, end_date: @day + 1.day, start_time: "19:30:00", end_time: "08:00:00")
+      controller = availability_controller({})
+      by_period = controller.send(:changes_by_period, @model)
+      key = "#{@day.iso8601} 19:30:00/#{(@day + 1.day).iso8601} 08:00:00"
+      expect(by_period.keys).to eq [key]
+      # the reservation over night itself is the only one in its period
+      by_period[key].each do |changes|
+        expect(available_on(changes, @day)).to eq 0
+        expect(available_on(changes, @day + 1.day)).to eq 0
+      end
+      expect(over_night.reload).to be_available
+    end
+
     it "counts whole-day reservations" do
       reserve(start_date: @day, end_date: @day)
       controller = availability_controller(start_time: "13:00:00", end_time: "18:00:00")
