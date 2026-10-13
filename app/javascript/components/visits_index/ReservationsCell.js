@@ -50,26 +50,34 @@ class ReservationsCell extends React.Component {
   }
 
   renderDateRanges() {
-    const tmp = _.groupBy(this.props.reservations, (r) => [r.start_date, r.end_date])
+    const tmp = _.groupBy(this.props.reservations, (r) => [r.start_date, r.end_date, r.start_time, r.end_time])
     return _.map(tmp, (reservations, dates) => {
       const startDate = reservations[0].start_date
       const endDate = reservations[0].end_date
+      const startTime = reservations[0].start_time
+      const endTime = reservations[0].end_time
       const diffDates = this.diffDatesInDays(startDate, endDate)
+      // by the hour: the times next to their dates and the duration in hours
+      const hhmm = (t) => (t ? ` ${t.substr(0, 5)}` : '')
+      const duration =
+        startTime && endTime
+          ? window.App.Duration.hoursText(window.App.Duration.minutes(startDate, endDate, startTime, endTime), true)
+          : `${diffDates} ${_jed(diffDates, 'day', 'days')}`
 
       return (
         <div
-          key={`${startDate}-${endDate}`}
+          key={`${startDate}-${endDate}-${startTime}-${endTime}`}
           className="exclude-last-child padding-bottom-m margin-bottom-m no-last-child-margin">
           <div className="row margin-bottom-s">
             <div className="col1of2">
               <span>
-                {moment(startDate).format(i18n.date.L)} - {moment(endDate).format(i18n.date.L)}
+                {moment(startDate).format(i18n.date.L)}
+                {hhmm(startTime)} - {moment(endDate).format(i18n.date.L)}
+                {hhmm(endTime)}
               </span>
             </div>
             <div className="col1of2 text-align-right">
-              <strong>
-                {diffDates} {_jed(diffDates, 'day', 'days')}
-              </strong>
+              <strong>{duration}</strong>
             </div>
           </div>
           {this.renderGroupedReservations(reservations)}

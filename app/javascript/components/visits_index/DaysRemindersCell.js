@@ -23,20 +23,28 @@ class DaysRemindersCell extends React.Component {
     return 1 + max_ranges.reduce((a, b) => Math.max(a, b))
   }
 
+  // The longest duration: in hours if all reservations are by the hour
+  // (window.App.Duration, see views/tags/dates.coffee), else in days
+  maxDurationText() {
+    const reservations = this.props.v.reservations
+    if (reservations.length && reservations.every((r) => r.start_time && r.end_time)) {
+      const minutes = Math.max(
+        ...reservations.map((r) => window.App.Duration.minutes(r.start_date, r.end_date, r.start_time, r.end_time))
+      )
+      return window.App.Duration.hoursText(minutes, true)
+    }
+    const maxDays = this.getMaxRange()
+    return `${maxDays} ${_jed(maxDays, 'day', 'days')}`
+  }
+
   renderPopup() {
     const nofEmails = this.props.v.emails ? this.props.v.emails.length : 0
     return this.props.v.type === 'take_back' && this.props.isOverdue && nofEmails > 0
   }
 
   renderDaysCell() {
-    const maxDays = this.getMaxRange()
-
     if (this.props.v.type !== 'take_back') {
-      return (
-        <div className="text-align-center">
-          {maxDays} {_jed(maxDays, 'day', 'days')}
-        </div>
-      )
+      return <div className="text-align-center">{this.maxDurationText()}</div>
     }
 
     if (this.props.reminderSent) {
