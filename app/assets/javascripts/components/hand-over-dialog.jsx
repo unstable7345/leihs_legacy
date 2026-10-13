@@ -175,18 +175,20 @@
             <div className='col1of2'>
               <p>
                 {this._date(groupedLine.start_date)}
+                {groupedLine.start_time ? <strong> {groupedLine.start_time.substr(0, 5)}</strong> : null}
                 {' - '}
                 {this._date(groupedLine.end_date)}
-                {groupedLine.start_time ? (
-                  <strong>
-                    {' '}
-                    {groupedLine.start_time.substr(0, 5)}–{groupedLine.end_time.substr(0, 5)}
-                  </strong>
-                ) : null}
+                {groupedLine.end_time ? <strong> {groupedLine.end_time.substr(0, 5)}</strong> : null}
               </p>
             </div>
             <div className='col1of2 text-align-right'>
-              <strong>{this._diffDatesInDays(groupedLine.start_date, groupedLine.end_date)}</strong>
+              <strong>
+                {groupedLine.start_time && groupedLine.end_time
+                  ? App.Duration.hoursText(
+                      App.Duration.minutes(groupedLine.start_date, groupedLine.end_date, groupedLine.start_time, groupedLine.end_time)
+                    )
+                  : this._diffDatesInDays(groupedLine.start_date, groupedLine.end_date)}
+              </strong>
             </div>
           </div>
           {this._renderReservations(groupedLine)}

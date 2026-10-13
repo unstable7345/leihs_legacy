@@ -2932,3 +2932,13 @@ msgstr ""
 
 msgid "No limit"
 msgstr ""
+
+msgid "Hour"
+msgid_plural "Hours"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] ""
+msgstr[1] ""

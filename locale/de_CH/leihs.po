@@ -3833,3 +3833,13 @@ msgstr "Max. Stunden pro Reservation"
 
 msgid "No limit"
 msgstr "Keine Begrenzung"
+
+msgid "Hour"
+msgid_plural "Hours"
+msgstr[0] "Stunde"
+msgstr[1] "Stunden"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "Stunde"
+msgstr[1] "Stunden"

@@ -6,6 +6,18 @@ App.Modules.HasLines =
     max_date = max_dates.reduce (a,b) -> Math.max(a, b)
     new Date(max_date)
 
+  # The longest duration of the reservations: in hours if all of them are by
+  # the hour, else in days
+  getMaxDuration: ->
+    reservations = @reservations().all()
+    if reservations.length and _.all(reservations, (r)-> r.start_time? and r.end_time?)
+      minutes = _.max _.map reservations, (r)->
+        App.Duration.minutes(r.start_date, r.end_date, r.start_time, r.end_time)
+      App.Duration.hoursText(minutes, true)
+    else
+      days = @getMaxRange()
+      "#{days} #{_jed(days, "day", "days")}"
+
   getMaxRange: -> 
     return 0 if @reservations().all().length is 0
     max_ranges = []

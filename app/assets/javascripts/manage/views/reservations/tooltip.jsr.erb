@@ -4,16 +4,13 @@
     <div class='row margin-bottom-s'>
       <div class='col1of2'>
         <span>
-          {{date start_date/}}
+          {{date start_date/}}{{if start_time}} <strong>{{>start_time.substr(0, 5)}}</strong>{{/if}}
           -
-          {{date end_date/}}
-          {{if start_time}}
-          <strong style='white-space: nowrap'>{{>start_time.substr(0, 5)}}–{{>end_time.substr(0, 5)}}</strong>
-          {{/if}}
+          {{date end_date/}}{{if end_time}} <strong>{{>end_time.substr(0, 5)}}</strong>{{/if}}
         </span>
       </div>
       <div class='col1of2 text-align-right'>
-        <strong>{{diffDatesInDays start_date end_date/}}</strong>
+        <strong>{{diffDatesInDays start_date end_date start_time end_time/}}</strong>
       </div>
     </div>
     {{for reservations}}

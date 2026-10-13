@@ -5135,6 +5135,16 @@ window.i18n.locale_data = {
       "No limit": [
          null,
          "Sense límit"
+      ],
+      "Hour": [
+         "Hours",
+         "Hora",
+         "Hores"
+      ],
+      "hour": [
+         "hours",
+         "hora",
+         "hores"
       ]
    }
 }

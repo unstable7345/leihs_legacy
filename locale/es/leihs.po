@@ -3836,3 +3836,13 @@ msgstr "Máx. horas por reserva"
 
 msgid "No limit"
 msgstr "Sin límite"
+
+msgid "Hour"
+msgid_plural "Hours"
+msgstr[0] "Hora"
+msgstr[1] "Horas"
+
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "hora"
+msgstr[1] "horas"

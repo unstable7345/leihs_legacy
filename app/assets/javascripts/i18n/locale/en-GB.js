@@ -3922,6 +3922,16 @@ window.i18n.locale_data = {
       "No limit": [
          null,
          ""
+      ],
+      "Hour": [
+         "Hours",
+         "",
+         ""
+      ],
+      "hour": [
+         "hours",
+         "",
+         ""
       ]
    }
 }

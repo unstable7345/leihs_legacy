@@ -1,3 +1,18 @@
+window.App ?= {}
+
+# Durations of reservations by the hour
+App.Duration =
+  minutes: (firstDate, secondDate, startTime, endTime) ->
+    at = (date, time) -> moment("#{moment(date).format("YYYY-MM-DD")} #{time}", "YYYY-MM-DD HH:mm:ss")
+    at(secondDate, endTime).diff(at(firstDate, startTime), "minutes")
+
+  # e.g. "4 Hours", "1.5 Hours" (lowercase like "1 day" in the lists)
+  hoursText: (minutes, lowercase = false) ->
+    hours = Math.round(minutes / 30) / 2
+    n = if hours == 1 then 1 else 2
+    unit = if lowercase then _jed(n, 'hour', 'hours') else _jed(n, 'Hour', 'Hours')
+    "#{hours} #{unit}"
+
 $.views.tags
 
   diffDates: (firstDate, secondDate) ->
@@ -6,9 +21,14 @@ $.views.tags
     else
       moment(firstDate).startOf("day").from(moment(secondDate).startOf("day"))
 
-  diffDatesInDays: (firstDate, secondDate) ->
-    days = moment(secondDate).endOf("day").diff(moment(firstDate).startOf("day"), "days") + 1
-    "#{days} #{_jed(days, 'Day', _jed('Days'))}"
+  # The duration of a reservation: in hours for one by the hour (from the
+  # start time of the first day to the end time of the last), else in days
+  diffDatesInDays: (firstDate, secondDate, startTime, endTime) ->
+    if startTime and endTime
+      App.Duration.hoursText(App.Duration.minutes(firstDate, secondDate, startTime, endTime))
+    else
+      days = moment(secondDate).endOf("day").diff(moment(firstDate).startOf("day"), "days") + 1
+      "#{days} #{_jed(days, 'Day', _jed('Days'))}"
 
 
   diffToday: (date) ->
