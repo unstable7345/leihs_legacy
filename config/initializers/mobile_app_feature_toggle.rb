@@ -30,3 +30,8 @@ LEIHS_MOBILE_APP_SHOW_NOTICE_TEXTS["es"] = <<~TXT.strip
   <span class="mobile-app-notice-desktop">Cambiar a la <b style="text-decoration: underline;">nueva interfaz</b> con nuevas funciones</span>
   <span class="mobile-app-notice-mobile">Cambiar a <b style="text-decoration: underline;">Leihs Mobile</b></span>
 TXT
+
+LEIHS_MOBILE_APP_SHOW_NOTICE_TEXTS["ca"] = <<~TXT.strip
+  <span class="mobile-app-notice-desktop">Canvia a la <b style="text-decoration: underline;">nova interfície</b> amb noves funcions</span>
+  <span class="mobile-app-notice-mobile">Canvia a <b style="text-decoration: underline;">Leihs Mobile</b></span>
+TXT

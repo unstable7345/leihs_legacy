@@ -1,0 +1,3998 @@
+# Catalan translation for leihs
+# This file is distributed under the same license as the leihs package.
+msgid ""
+msgstr ""
+"Project-Id-Version: version 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-16 15:51+0100\n"
+"PO-Revision-Date: 2026-10-13 12:00+0200\n"
+"Last-Translator: magatzem ENTI\n"
+"Language-Team: Catalan\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Launchpad-Export-Date: 2010-01-27 15:44+0000\n"
+
+msgid " at the inventory pool "
+msgstr " al grup d'inventari "
+
+msgid " item(s)"
+msgstr " article(s)"
+
+msgid " item(s) due on "
+msgstr " article(s) amb retorn el "
+
+msgid "% used (category limit - total of selected requests)"
+msgstr ""
+"% utilitzat (límit de la categoria - total de les sol·licituds "
+"seleccionades)"
+
+msgid "%d day in the future"
+msgid_plural "%d days in the future"
+msgstr[0] "%d dia en el futur"
+msgstr[1] "%d dies en el futur"
+
+msgid "%d minutes passed. The items are not reserved for you any more!"
+msgstr "Han passat %d minuts. Els articles ja no estan reservats per a vostè!"
+
+msgid "%s (View in Order)"
+msgstr "%s (veure a la comanda)"
+
+msgid "%s Order"
+msgid_plural "%s Orders"
+msgstr[0] "%s comanda"
+msgstr[1] "%s comandes"
+
+msgid "%s Return"
+msgid_plural "%s Returns"
+msgstr[0] "%s devolució"
+msgstr[1] "%s devolucions"
+
+msgid "%s Search Results for \"%s\""
+msgstr "%s resultats de cerca per a \"%s\""
+
+msgid "%s assigned to %s"
+msgstr "%s assignat a %s"
+
+msgid "%s created"
+msgstr "%s creat"
+
+msgid "%s created successfully"
+msgstr "%s creat correctament"
+
+msgid "%s future visit"
+msgid_plural "%s future visits"
+msgstr[0] "%s visita futura"
+msgstr[1] "%s visites futures"
+
+msgid "%s is already assigned to a contract"
+msgstr "%s ja està assignat a un contracte"
+
+msgid "%s is already assigned to a different contract"
+msgstr "%s ja està assignat a un altre contracte"
+
+msgid "%s is already assigned to this contract"
+msgstr "%s ja està assignat a aquest contracte"
+
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s article"
+msgstr[1] "%s articles"
+
+msgid "%s location"
+msgid_plural "%s locations"
+msgstr[0] "%s ubicació"
+msgstr[1] "%s ubicacions"
+
+msgid "%s not available"
+msgstr "%s no disponible"
+
+msgid "%s quantity increased to %s"
+msgstr "Quantitat de %s augmentada a %s"
+
+msgid "%s room"
+msgid_plural "%s rooms"
+msgstr[0] "%s sala"
+msgstr[1] "%s sales"
+
+msgid "%s saved"
+msgstr "%s desat"
+
+msgid "%s selected for take back"
+msgstr "%s seleccionat per a la devolució"
+
+msgid "%s successfully deleted"
+msgstr "%s eliminat correctament"
+
+msgid "%s successfully saved"
+msgstr "%s desat correctament"
+
+msgid "%s until %s"
+msgstr "%s fins a %s"
+
+msgid "%s visit overdue"
+msgid_plural "%s visits overdue"
+msgstr[0] "%s visita endarrerida"
+msgstr[1] "%s visites endarrerides"
+
+msgid "%s visit today"
+msgid_plural "%s visits today"
+msgstr[0] "%s visita avui"
+msgstr[1] "%s visites avui"
+
+msgid "%s was not found for this take back"
+msgstr "No s'ha trobat %s en aquesta devolució"
+
+msgid "%s was saved, but there were problems uploading files"
+msgstr "%s s'ha desat, però hi ha hagut problemes en pujar els fitxers"
+
+msgid ""
+"%s was saved, but there were problems uploading some images. Only images "
+"smaller than 8MB and of type png, gif and jpg are allowed."
+msgstr ""
+"%s s'ha desat, però hi ha hagut problemes en pujar algunes imatges. Només es"
+" permeten imatges de menys de 8 MB en format png, gif o jpg."
+
+msgid "%s will be removed from the template and not been added to your order."
+msgstr "%s es traurà de la plantilla i no s'afegirà a la seva comanda."
+
+msgid "(unknown)"
+msgstr "(desconegut)"
+
+msgid "1 value per line, blank lines ignored"
+msgstr "1 valor per línia; les línies buides s'ignoren"
+
+msgid ""
+"A Group contains several users. These users can gain a role by assigning the"
+" role to their Group."
+msgstr ""
+"Un grup conté diversos usuaris. Aquests usuaris poden obtenir un rol "
+"assignant el rol al seu grup."
+
+msgid ""
+"A change of the highlighted attributes requires a restart of the legacy "
+"service."
+msgstr "Per canviar els atributs ressaltats cal reiniciar el servei legacy."
+
+msgid "A model for the Inventory Code / Serial Number '%s' was not found"
+msgstr "No s'ha trobat el model pel codi d'inventari %s."
+
+msgid "A model with the ID '%s' was not found"
+msgstr "No s'ha trobat cap model amb l'ID '%s'"
+
+msgid "A model with the same product name and empty version already exists."
+msgstr "Ja existeix un model amb el mateix nom de producte i sense versió."
+
+msgid "A model with the same product name and version already exists."
+msgstr ""
+"Ja existeix un model amb el mateix nom de producte i la mateixa versió."
+
+msgid "A package cannot be nested to another package"
+msgstr "Un paquet no pot estar dins d'un altre paquet"
+
+msgid "A package item must belong to a package model"
+msgstr "Un article de paquet ha de pertànyer a un model de paquet"
+
+msgid "A template with the ID '%s' was not found"
+msgstr "No s'ha trobat cap plantilla amb l'ID '%s'"
+
+msgid "AV-Technik"
+msgstr "Tecnologia audiovisual"
+
+msgid "Ablauf Garantie"
+msgstr "Fi de la garantia"
+
+msgid "Ablauf Vertrag"
+msgstr "Fi del contracte"
+
+msgid "Accepted columns"
+msgstr "Columnes acceptades"
+
+msgid "Access"
+msgstr "Accés"
+
+msgid "Access Level: %d"
+msgstr "Dret d'accés: %d"
+
+msgid "Access Right successfully created"
+msgstr "Drets d'accés creats correctament"
+
+msgid "Access Right successfully updated"
+msgstr "Drets d'accés actualitzats correctament"
+
+msgid "Access as"
+msgstr "Accedir com a"
+
+msgid "Access right reinstated"
+msgstr "Dret d'accés restablert"
+
+msgid "Access rights"
+msgstr "Drets d'accés"
+
+msgid "AccessRight"
+msgstr "Dret d'accés"
+
+msgid "Accessories"
+msgstr "Accessoris"
+
+msgid "Accounts"
+msgstr "Comptes"
+
+msgid "Acknowledge"
+msgstr "Revisar"
+
+msgid "Action"
+msgstr "Acció"
+
+msgid "Activation Type"
+msgstr "Tipus d'activació"
+
+msgid "Active"
+msgstr "Actiu"
+
+msgid "Active Inventory"
+msgstr "Inventari actiu"
+
+msgid "Add"
+msgstr "Afegir"
+
+msgid "Add %s"
+msgstr "Afegir %s"
+
+msgid "Add Model"
+msgstr "Afegir model"
+
+msgid "Add Option"
+msgstr "Afegir opció"
+
+msgid "Add Purpose"
+msgstr "Afegir motiu"
+
+msgid "Add article for specific entitlement-group"
+msgstr "Afegir article per a un grup d'assignació concret"
+
+msgid "Add inventory"
+msgstr "Afegir inventari"
+
+msgid "Add item"
+msgstr "Afegir article"
+
+msgid "Add new article to category"
+msgstr "Afegir un article nou a la categoria"
+
+msgid "Add new main category"
+msgstr "Afegir una categoria principal nova"
+
+msgid "Add new requester"
+msgstr "Afegir un sol·licitant nou"
+
+msgid "Add new subcategory"
+msgstr "Afegir una subcategoria nova"
+
+msgid "Add to order"
+msgstr "Afegir a la comanda"
+
+msgid "Add/Assign"
+msgstr "Afegir/Assignar"
+
+msgid "Added"
+msgstr "Afegit"
+
+msgid "Added %s"
+msgstr "%s afegit"
+
+msgid "Adding item"
+msgstr "Afegint article"
+
+msgid "Additional label in inventory codes"
+msgstr "Etiqueta addicional als codis d'inventari"
+
+msgid "Additional notes"
+msgstr "Notes addicionals"
+
+msgid "Address"
+msgstr "Adreça"
+
+msgid "Admin"
+msgstr "Administració"
+
+msgid "Administrators"
+msgstr "Administradors"
+
+msgid "Advanced Search"
+msgstr "Cerca avançada"
+
+msgid "All"
+msgstr "Tots"
+
+msgid "All %s"
+msgstr "Tots els %s"
+
+msgid "All inventory pools"
+msgstr "Tots els grups d'inventari"
+
+msgid "All other columns are ignored."
+msgstr "La resta de columnes s'ignoren."
+
+msgid "All selected"
+msgstr "Tots seleccionats"
+
+msgid "Allocations"
+msgstr "Assignacions"
+
+msgid ""
+"Allocations in other entitlement-groups considered - still available "
+"quantity of borrowable and not retired items"
+msgstr ""
+"Es tenen en compte les assignacions d'altres grups d'assignació: quantitat "
+"encara disponible d'articles prestables i no donats de baixa"
+
+msgid "An order can not have multiple delegated users."
+msgstr "Una comanda no pot tenir diversos usuaris delegats."
+
+msgid "Ankunftsdatum"
+msgstr "Data d'arribada"
+
+msgid "Ankunftsnotiz"
+msgstr "Nota d'arribada"
+
+msgid "Ankunftszustand"
+msgstr "Estat a l'arribada"
+
+msgid "Anschaffungskategorie"
+msgstr "Categoria d'adquisició"
+
+msgid "Apply Fields on Item"
+msgstr "Aplicar camps a l'article"
+
+msgid "Approval Successful"
+msgstr "Aprovació correcta"
+
+msgid "Approval failed"
+msgstr "Aprovació fallida"
+
+msgid "Approve"
+msgstr "Aprovar"
+
+msgid "Approve anyway"
+msgstr "Aprovar igualment"
+
+msgid "Approve order"
+msgstr "Aprovar comanda"
+
+msgid "Approved"
+msgstr "Aprovat"
+
+msgid "Approved Items"
+msgstr "Articles aprovats"
+
+msgid "Approved on"
+msgstr "Aprovat el"
+
+msgid "Approved quantity"
+msgstr "Quantitat aprovada"
+
+msgid "Are you sure you want to delete '%s'?"
+msgstr "Segur que vol eliminar '%s'?"
+
+msgid "Article nr. or Producer nr."
+msgstr "Núm. d'article o del fabricant"
+
+msgid "Article or Project"
+msgstr "Article o projecte"
+
+msgid "Assign"
+msgstr "Assignar"
+
+msgid "Assigning the inventory code fails"
+msgstr "No s'ha pogut assignar el codi d'inventari"
+
+msgid "Attachment"
+msgstr "Adjunt"
+
+msgid "Attachment was successfully created."
+msgstr "L'adjunt s'ha creat correctament."
+
+msgid "Attachments"
+msgstr "Adjunts"
+
+msgid "Attempt to add node to own graph collection"
+msgstr "Intent d'afegir un node a la seva pròpia col·lecció"
+
+msgid "Attention"
+msgstr "Atenció"
+
+msgid "Auswahl"
+msgstr "Selecció"
+
+msgid "Authentication System"
+msgstr "Sistema d'autenticació"
+
+msgid "Authentication Systems"
+msgstr "Sistemes d'autenticació"
+
+msgid "Automatic suspension"
+msgstr "Suspensió automàtica"
+
+msgid "Automatic suspension reason"
+msgstr "Motiu de la suspensió automàtica"
+
+msgid "Availability"
+msgstr "Disponibilitat"
+
+msgid "Availability Timeline"
+msgstr "Cronologia de disponibilitat"
+
+msgid "Availability for"
+msgstr "Disponibilitat per a"
+
+msgid "Availability loaded"
+msgstr "Disponibilitat carregada"
+
+msgid "Available"
+msgstr "Disponible"
+
+msgid "Available for borrower"
+msgstr "Disponible per al prestatari"
+
+msgid "Available in entitlement-group '"
+msgstr "Disponible al grup d'assignació '"
+
+msgid "Available in total"
+msgstr "Disponible en total"
+
+msgid "Available in total: "
+msgstr "Disponible en total: "
+
+msgid "Back"
+msgstr "Tornar"
+
+msgid "Back to this hand over"
+msgstr "Tornar a aquest lliurament"
+
+msgid "Back to this take back"
+msgstr "Tornar a aquesta devolució"
+
+msgid "Back to this user"
+msgstr "Tornar a aquest usuari"
+
+msgid "Backend"
+msgstr "Backend"
+
+msgid "Badge ID was updated"
+msgstr "S'ha actualitzat el número de credencial"
+
+msgid "Badge%s"
+msgstr "Credencial%s"
+
+msgid "Barcode"
+msgstr "Codi de barres"
+
+msgid "Basic Information"
+msgstr "Informació bàsica"
+
+msgid "Body"
+msgstr "Cos"
+
+msgid "Book"
+msgstr "Reservar"
+
+msgid "Booking is no longer possible on this end date"
+msgstr "Ja no es pot reservar amb aquesta data de fi"
+
+msgid "Booking is no longer possible on this start date"
+msgstr "Ja no es pot reservar amb aquesta data d'inici"
+
+msgid "Borrow"
+msgstr "Préstecs"
+
+msgid "Borrow items"
+msgstr "Demanar articles en préstec"
+
+msgid "Borrow section"
+msgstr "Secció de préstecs"
+
+msgid "Borrow template"
+msgstr "Plantilla de préstec"
+
+msgid "Borrowable"
+msgstr "Prestable"
+
+msgid "Borrowable Items"
+msgstr "Articles prestables"
+
+msgid "Borrowable items"
+msgstr "Articles prestables"
+
+msgid "Borrowed Items"
+msgstr "Articles prestats"
+
+msgid "Borrowed until"
+msgstr "Prestat fins a"
+
+msgid "Borrower"
+msgstr "Prestatari"
+
+msgid "Broken"
+msgstr "Avariat"
+
+msgid "Budget limits"
+msgstr "Límits de pressupost"
+
+msgid "Budget period"
+msgstr "Període pressupostari"
+
+msgid "Budget period end date"
+msgstr "Data de fi del període pressupostari"
+
+msgid "Budget periods"
+msgstr "Períodes pressupostaris"
+
+msgid "Building"
+msgid_plural "Buildings"
+msgstr[0] "Edifici"
+msgstr[1] "Edificis"
+
+msgid "Building together with a general room successfully created"
+msgstr "Edifici creat correctament juntament amb una sala general"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "CSV export"
+msgstr "Exportar CSV"
+
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+msgid "Cancel Edit"
+msgstr "Cancel·lar edició"
+
+msgid "Categories"
+msgstr "Categories"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Category can have only one image."
+msgstr "Una categoria només pot tenir una imatge."
+
+msgid "Category name"
+msgstr "Nom de la categoria"
+
+msgid "Category saved"
+msgstr "Categoria desada"
+
+msgid "Change"
+msgstr "Canviar"
+
+msgid "Change %s"
+msgstr "Canviar %s"
+
+msgid "Change Borrower"
+msgstr "Canviar prestatari"
+
+msgid "Change Borrower Successful"
+msgstr "Prestatari canviat correctament"
+
+msgid "Change entry"
+msgstr "Canviar entrada"
+
+msgid "Change orderer"
+msgstr "Canviar sol·licitant"
+
+msgid "Change orderer Successful"
+msgstr "Sol·licitant canviat correctament"
+
+msgid "Changed"
+msgstr "Modificat"
+
+msgid "Changed %s from %s to %s"
+msgstr "%s canviat de %s a %s"
+
+msgid "Changed dates for %{model} from %{from} to %{to}"
+msgstr "Dates de %{model} canviades de %{from} a %{to}"
+
+msgid "Changes"
+msgstr "Canvis"
+
+msgid "Check invalid fields"
+msgstr "Revisi els camps no vàlids"
+
+msgid "Choose a suggested article or a category"
+msgstr "Triï un article suggerit o una categoria"
+
+msgid "Choose an article or a category"
+msgstr "Triï un article o una categoria"
+
+msgid "Choose an article/project"
+msgstr "Triï un article o projecte"
+
+msgid "City"
+msgstr "Ciutat"
+
+msgid "Close"
+msgstr "Tancar"
+
+msgid "Close All"
+msgstr "Tancar-ho tot"
+
+msgid "Closed"
+msgstr "Tancat"
+
+msgid "Closed Day"
+msgstr "Dia tancat"
+
+msgid "Closed Days"
+msgstr "Dies tancats"
+
+msgid "Collection"
+msgid_plural "Collections"
+msgstr[0] "Col·lecció"
+msgstr[1] "Col·leccions"
+
+msgid "Compatible successfully removed"
+msgstr "Compatibilitat treta correctament"
+
+msgid "Compatibles"
+msgstr "Compatibles"
+
+msgid "Complete"
+msgstr "Complet"
+
+msgid "Complete Search"
+msgstr "Cerca completa"
+
+msgid "Complete order"
+msgstr "Completar comanda"
+
+msgid "Completeness"
+msgstr "Completesa"
+
+msgid "Concurrent"
+msgstr "Concurrent"
+
+msgid "Consider opening hours"
+msgstr "Tenir en compte l'horari d'obertura"
+
+msgid "Contact"
+msgstr "Contacte"
+
+msgid "Contact person"
+msgstr "Persona de contacte"
+
+msgid "Content"
+msgstr "Contingut"
+
+msgid "Continue"
+msgstr "Continuar"
+
+msgid "Continue this order"
+msgstr "Continuar aquesta comanda"
+
+msgid "Continue with available models only"
+msgstr "Continuar només amb els models disponibles"
+
+msgid "Contract"
+msgstr "Contracte"
+
+msgid "Contract %d has been signed by %s"
+msgstr "%s ha signat el contracte %d"
+
+msgid "Contract No."
+msgstr "Núm. de contracte"
+
+msgid "Contract Nr."
+msgstr "Núm. de contracte"
+
+msgid "Contract expiration"
+msgstr "Fi del contracte"
+
+msgid "Contract signed"
+msgstr "Contracte signat"
+
+msgid "Contracts"
+msgstr "Contractes"
+
+msgid "Copy Item"
+msgstr "Copiar article"
+
+msgid "Copy License"
+msgstr "Copiar llicència"
+
+msgid "Couldn't update "
+msgstr "No s'ha pogut actualitzar "
+
+msgid "Country"
+msgstr "País"
+
+msgid "Cover Image"
+msgstr "Imatge de portada"
+
+msgid "Create %s"
+msgstr "Crear %s"
+
+msgid "Create copied item"
+msgstr "Crear article copiat"
+
+msgid "Create new budget period"
+msgstr "Crear un període pressupostari nou"
+
+msgid "Create new category"
+msgstr "Crear una categoria nova"
+
+msgid "Create new item"
+msgstr "Crear un article nou"
+
+msgid "Create new model"
+msgstr "Crear un model nou"
+
+msgid "Create new option"
+msgstr "Crear una opció nova"
+
+msgid "Create new software"
+msgstr "Crear un programari nou"
+
+msgid "Create new software license"
+msgstr "Crear una llicència de programari nova"
+
+msgid "Create request by choosing an article or project"
+msgstr "Creï una sol·licitud triant un article o projecte"
+
+msgid "Create request for another user"
+msgstr "Crear una sol·licitud per a un altre usuari"
+
+msgid "Create request for this category"
+msgstr "Crear una sol·licitud per a aquesta categoria"
+
+msgid "Created at"
+msgstr "Creat el"
+
+msgid "Currency"
+msgstr "Moneda"
+
+msgid "Current Order"
+msgstr "Comanda actual"
+
+msgid "Current budget period not defined yet"
+msgstr "Encara no s'ha definit el període pressupostari actual"
+
+msgid "Current total of budget period"
+msgstr "Total actual del període pressupostari"
+
+msgid "Current total of category"
+msgstr "Total actual de la categoria"
+
+msgid "Current total of selected requests"
+msgstr "Total actual de les sol·licituds seleccionades"
+
+msgid "Currently Borrowed Items"
+msgstr "Articles prestats actualment"
+
+msgid "Currently has items to return"
+msgstr "Té articles per retornar"
+
+msgid "Currently has open orders"
+msgstr "Té comandes obertes"
+
+msgid "Currently you have no items in your order."
+msgstr "Ara mateix no té articles a la comanda."
+
+msgid "Customer"
+msgstr "Client"
+
+msgid "Daily View"
+msgstr "Vista diària"
+
+msgid "Day"
+msgstr "Dia"
+
+msgid "Days"
+msgstr "Dies"
+
+msgid "Deadline soon"
+msgstr "El termini està a punt de vèncer"
+
+msgid "Deadline soon reminder sent for %{q} items on contracts %{c}"
+msgstr ""
+"El termini està a punt de vèncer: s'han enviat recordatoris per %{q} "
+"articles en %{c} contractes"
+
+msgid "Dear client,"
+msgstr "Benvolgut client:"
+
+msgid "Dear leihs client,"
+msgstr "Benvolgut client de leihs:"
+
+msgid "Dear leihs manager,"
+msgstr "Benvolgut gestor de leihs:"
+
+msgid "Default Contract Note"
+msgstr "Nota predeterminada del contracte"
+
+msgid "Defective"
+msgstr "Defectuós"
+
+msgid "Delegated user is not member of the contract's delegation or is empty"
+msgstr ""
+"L'usuari delegat no és membre de la delegació del contracte o està buit"
+
+msgid "Delegated user must be empty for contract's normal user"
+msgstr ""
+"L'usuari delegat ha de quedar buit si el contracte és d'un usuari normal"
+
+msgid "Delegation"
+msgstr "Delegació"
+
+msgid "Delegations"
+msgstr "Delegacions"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete %s"
+msgstr "Eliminar %s"
+
+msgid "Delete Selection"
+msgstr "Eliminar selecció"
+
+msgid "Delete category with all it's articles/projects"
+msgstr "Eliminar la categoria amb tots els seus articles/projectes"
+
+msgid "Delete line"
+msgstr "Eliminar línia"
+
+msgid "Delete main category"
+msgstr "Eliminar categoria principal"
+
+msgid "Delete subcategory"
+msgstr "Eliminar subcategoria"
+
+msgid "Delete this line"
+msgstr "Eliminar aquesta línia"
+
+msgid "Deleted"
+msgstr "Eliminat"
+
+msgid "Denied"
+msgstr "Denegat"
+
+msgid "Department"
+msgstr "Departament"
+
+msgid "Description"
+msgstr "Descripció"
+
+msgid "Disable"
+msgstr "Desactivar"
+
+msgid "Do you realy want to delete the '%s' category?"
+msgstr "Segur que vol eliminar la categoria '%s'?"
+
+msgid "Document"
+msgstr "Document"
+
+msgid "Documents"
+msgstr "Documents"
+
+msgid "Documents for hand over"
+msgstr "Documents per al lliurament"
+
+msgid "Documents for take back"
+msgstr "Documents per a la devolució"
+
+msgid "Does not have any reservable items"
+msgstr "No té articles reservables"
+
+msgid "E-Mail"
+msgstr "Correu electrònic"
+
+msgid "ERROR"
+msgstr "ERROR"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit %s"
+msgstr "Editar %s"
+
+msgid "Edit Item"
+msgstr "Editar article"
+
+msgid "Edit License"
+msgstr "Editar llicència"
+
+msgid "Edit Model"
+msgstr "Editar model"
+
+msgid "Edit Option"
+msgstr "Editar opció"
+
+msgid "Edit Order"
+msgstr "Editar comanda"
+
+msgid "Edit Purpose"
+msgstr "Editar motiu"
+
+msgid "Edit Selection"
+msgstr "Editar selecció"
+
+msgid "Edit Software"
+msgstr "Editar programari"
+
+msgid "Edit User"
+msgstr "Editar usuari"
+
+msgid "Edit multiple selected reservations"
+msgstr "Editar diverses reserves seleccionades"
+
+msgid "Edit purpose for order from"
+msgstr "Editar el motiu de la comanda de"
+
+msgid "Edit reservation"
+msgstr "Editar reserva"
+
+msgid "Edit templates"
+msgstr "Editar plantilles"
+
+msgid "Edit this Order"
+msgstr "Editar aquesta comanda"
+
+msgid "Editing mail templates for the inventory pool %s"
+msgstr "Editant les plantilles de correu del grup d'inventari %s"
+
+msgid "Editing system-wide mail templates"
+msgstr "Editant les plantilles de correu de tot el sistema"
+
+msgid "Email"
+msgstr "Correu electrònic"
+
+msgid "Empty Username and/or Password"
+msgstr "Nom d'usuari o contrasenya buits"
+
+msgid "Enable"
+msgstr "Activar"
+
+msgid "End Date cannot be in the past"
+msgstr "La data de fi no pot ser en el passat"
+
+msgid "End date"
+msgstr "Data de fi"
+
+msgid "Entitlement-Group"
+msgstr "Grup d'assignació"
+
+msgid "Entitlement-Group %s"
+msgstr "Grup d'assignació %s"
+
+msgid "Entitlement-Groups"
+msgstr "Grups d'assignació"
+
+msgid "Entitlement-Groups of this customer"
+msgstr "Grups d'assignació d'aquest client"
+
+msgid "Entity"
+msgstr "Entitat"
+
+msgid "Entry"
+msgstr "Entrada"
+
+msgid "Equipment Booking and Inventory Management System"
+msgstr "Sistema de reserva d'equips i gestió d'inventari"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Error creating the accessory."
+msgstr "Error en crear l'accessori."
+
+msgid "Error deleting the accessory."
+msgstr "Error en eliminar l'accessori."
+
+msgid "Error destroying the item package"
+msgstr "Error en eliminar el paquet d'articles"
+
+msgid "Error destroying the package"
+msgstr "Error en eliminar el paquet"
+
+msgid "Error saving the package"
+msgstr "Error en desar el paquet"
+
+msgid "Error updating inventory code"
+msgstr "Error en actualitzar el codi d'inventari"
+
+msgid "Excel export"
+msgstr "Exportar a Excel"
+
+msgid "Expand All"
+msgstr "Desplegar-ho tot"
+
+msgid "Expected to be returned."
+msgstr "S'espera que es retorni."
+
+msgid "Extend entry"
+msgstr "Ampliar entrada"
+
+msgid "Facility Management"
+msgstr "Gestió d'instal·lacions"
+
+msgid "Field"
+msgstr "Camp"
+
+msgid "Fields"
+msgstr "Camps"
+
+msgid "Fields have been updated successfully."
+msgstr "Els camps s'han actualitzat correctament."
+
+msgid "File has to be uploaded on save"
+msgstr "El fitxer es puja en desar"
+
+msgid "Finish this hand over"
+msgstr "Acabar aquest lliurament"
+
+msgid "Finish this take back"
+msgstr "Acabar aquesta devolució"
+
+msgid "First admin user"
+msgstr "Primer usuari administrador"
+
+msgid ""
+"First admin user has been created. Default database authentication system "
+"has been configured."
+msgstr ""
+"S'ha creat el primer usuari administrador i s'ha configurat el sistema "
+"d'autenticació predeterminat de la base de dades."
+
+msgid "First name"
+msgstr "Nom"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Found %d matches"
+msgstr "S'han trobat %d coincidències"
+
+msgid "Found %s"
+msgstr "S'ha trobat %s"
+
+msgid "Free"
+msgstr "Lliure"
+
+msgid "Fri"
+msgstr "Dv."
+
+msgid "Friday"
+msgstr "Divendres"
+
+msgid "Frontend"
+msgstr "Frontend"
+
+msgid "Functional"
+msgstr "Funcional"
+
+msgid "General Information"
+msgstr "Informació general"
+
+msgid "Go Back"
+msgstr "Tornar"
+
+msgid "Group manager"
+msgstr "Gestor de grup"
+
+msgid "Groups"
+msgstr "Grups"
+
+msgid "Hand Over"
+msgstr "Lliurar"
+
+msgid "Hand Over Selection"
+msgstr "Lliurar selecció"
+
+msgid "Hand Over to"
+msgstr "Lliurament a"
+
+msgid "Hand Over to %s"
+msgstr "Lliurament a %s"
+
+msgid "Hand Overs"
+msgstr "Lliuraments"
+
+msgid "Hand over completed"
+msgstr "Lliurament completat"
+
+msgid "Hand over of %s item"
+msgid_plural "Hand over of %s items"
+msgstr[0] "Lliurament de %s article"
+msgstr[1] "Lliurament de %s articles"
+
+msgid "Help"
+msgstr "Ajuda"
+
+msgid "Helper"
+msgstr "Assistent"
+
+msgid "Hide notification"
+msgstr "Amagar notificació"
+
+msgid "Hide this field from all item forms"
+msgstr "Amagar aquest camp a tots els formularis d'articles"
+
+msgid "High"
+msgstr "Alta"
+
+msgid "Highlight available items."
+msgstr "Ressaltar els articles disponibles."
+
+msgid "Hints"
+msgstr "Suggeriments"
+
+msgid "IC-Technik/Software"
+msgstr "Informàtica/Programari"
+
+msgid "IMEI-Number"
+msgstr "Número IMEI"
+
+msgid "Image"
+msgstr "Imatge"
+
+msgid "Images"
+msgstr "Imatges"
+
+msgid "Important notes for hand over"
+msgstr "Notes importants per al lliurament"
+
+msgid "In Stock"
+msgstr "En estoc"
+
+msgid "In Total"
+msgstr "En total"
+
+msgid "In inspection"
+msgstr "En revisió"
+
+msgid "Inactive pools cannot have items, which are not retired."
+msgstr ""
+"Els grups d'inventari inactius no poden tenir articles que no estiguin "
+"donats de baixa."
+
+msgid "Incomplete"
+msgstr "Incomplet"
+
+msgid "Inconsistent Inventory Pool"
+msgstr "Grup d'inventari incoherent"
+
+msgid "Initial Price"
+msgstr "Preu inicial"
+
+msgid "Inquiry to procurement request"
+msgstr "Consulta sobre la sol·licitud de compra"
+
+msgid "Insert 0 for the entries you dont need."
+msgstr "Posi 0 a les entrades que no necessiti."
+
+msgid "Insert a default comment"
+msgstr "Escrigui un comentari predeterminat"
+
+msgid "Insert all required information"
+msgstr "Completi tota la informació obligatòria"
+
+msgid "Inspect"
+msgstr "Revisar"
+
+msgid "Inspect Item"
+msgstr "Revisar article"
+
+msgid "Inspection"
+msgstr "Revisió"
+
+msgid "Inspection comment"
+msgstr "Comentari de la revisió"
+
+msgid "Inspection start date"
+msgstr "Data d'inici de la revisió"
+
+msgid "Inspector's priority"
+msgstr "Prioritat del revisor"
+
+msgid "Inspectors"
+msgstr "Revisors"
+
+msgid "Installation"
+msgstr "Instal·lació"
+
+msgid "Insurance Number"
+msgstr "Número d'assegurança"
+
+msgid "Internal Description"
+msgstr "Descripció interna"
+
+msgid "Introduction"
+msgstr "Introducció"
+
+msgid "Invalid data"
+msgstr "Dades no vàlides"
+
+msgid "Invalid date"
+msgstr "Data no vàlida"
+
+msgid "Invalid order_lines"
+msgstr "Línies de comanda no vàlides"
+
+msgid "Invalid technical user - contact your leihs admin"
+msgstr "Usuari tècnic no vàlid: contacti amb l'administrador de leihs"
+
+msgid "Invalid username/password"
+msgstr "Nom d'usuari o contrasenya no vàlids"
+
+msgid "Inventory"
+msgstr "Inventari"
+
+msgid "Inventory Advanced Search"
+msgstr "Cerca avançada d'inventari"
+
+msgid "Inventory Code"
+msgstr "Codi d'inventari"
+
+msgid "Inventory Code / Name"
+msgstr "Codi d'inventari / Nom"
+
+msgid "Inventory Helper"
+msgstr "Assistent d'inventari"
+
+msgid "Inventory Pool"
+msgstr "Grup d'inventari"
+
+msgid "Inventory Pool is missing"
+msgstr "Falta el grup d'inventari"
+
+msgid "Inventory Pools"
+msgstr "Grups d'inventari"
+
+msgid "Inventory code"
+msgstr "Codi d'inventari"
+
+msgid "Inventory code updated"
+msgstr "Codi d'inventari actualitzat"
+
+msgid "Inventory code, model name, search term"
+msgstr "Codi d'inventari, nom de model, terme de cerca"
+
+msgid "Inventory manager"
+msgstr "Gestor d'inventari"
+
+msgid "Inventory pool"
+msgid_plural "Inventory pools"
+msgstr[0] "Grup d'inventari"
+msgstr[1] "Grups d'inventari"
+
+msgid ""
+"Inventory pool can't be deactivated due to existing items which are not yet "
+"retired."
+msgstr ""
+"El grup d'inventari no es pot desactivar perquè té articles que encara no "
+"estan donats de baixa."
+
+msgid ""
+"Inventory pool can't be deactivated due to existing orders or signed "
+"contracts."
+msgstr ""
+"El grup d'inventari no es pot desactivar perquè té comandes o contractes "
+"signats."
+
+msgid "Inventory pool is closed on end date"
+msgstr "El grup d'inventari està tancat la data de fi"
+
+msgid "Inventory pool is closed on start date"
+msgstr "El grup d'inventari està tancat la data d'inici"
+
+msgid "Inventory pool successfully created"
+msgstr "Grup d'inventari creat correctament"
+
+msgid "Inventory pool successfully updated"
+msgstr "Grup d'inventari actualitzat correctament"
+
+msgid "Inventory pool successfully updated."
+msgstr "Grup d'inventari actualitzat correctament."
+
+msgid "Inventory pools"
+msgstr "Grups d'inventari"
+
+msgid "InventoryPool|Email"
+msgstr "Correu electrònic"
+
+msgid "InventoryPool|Shortname"
+msgstr "Nom curt"
+
+msgid "Investment"
+msgstr "Inversió"
+
+msgid "Invoice Date"
+msgstr "Data de la factura"
+
+msgid "Invoice Information"
+msgstr "Dades de la factura"
+
+msgid "Invoice Number"
+msgstr "Número de factura"
+
+msgid "Item"
+msgid_plural "Items"
+msgstr[0] "Article"
+msgstr[1] "Articles"
+
+msgid "Item handed over as part of contract %d."
+msgstr "Article lliurat com a part del contracte %d."
+
+msgid "Item is defective"
+msgstr "L'article està defectuós"
+
+msgid "Item is incomplete"
+msgstr "L'article està incomplet"
+
+msgid "Item is not available in that time range"
+msgstr "L'article no està disponible en aquest període"
+
+msgid "Item is overdue and therefore unavailable!"
+msgstr "L'article està endarrerit i, per tant, no està disponible."
+
+msgid "Item is part of package"
+msgstr "L'article forma part d'un paquet"
+
+msgid "Item is reserved in the future, therefore it's not available!"
+msgstr "L'article està reservat en el futur i, per tant, no està disponible."
+
+msgid "Item not borrowable"
+msgstr "Article no prestable"
+
+msgid "Item package successfully destroyed"
+msgstr "Paquet d'articles eliminat correctament"
+
+msgid "Item price"
+msgstr "Preu de l'article"
+
+msgid "Item saved."
+msgstr "Article desat."
+
+msgid "Item taken back"
+msgstr "Article retornat"
+
+msgid "Item was not saved"
+msgstr "L'article no s'ha desat"
+
+msgid "Item was saved."
+msgstr "L'article s'ha desat."
+
+msgid "Items"
+msgstr "Articles"
+
+msgid "Item|Retired reason"
+msgstr "Motiu de la baixa"
+
+msgid "Key"
+msgstr "Clau"
+
+msgid "Kind regards,"
+msgstr "Salutacions cordials,"
+
+msgid "Label"
+msgstr "Etiqueta"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Languages"
+msgstr "Idiomes"
+
+msgid "Last Checked"
+msgstr "Darrera revisió"
+
+msgid "Last Visitors:"
+msgstr "Darrers visitants:"
+
+msgid "Last name"
+msgstr "Cognom"
+
+msgid "Latest 10 emails"
+msgstr "Darrers 10 correus electrònics"
+
+msgid "Latest reminder"
+msgstr "Darrer recordatori"
+
+msgid "Legend"
+msgstr "Llegenda"
+
+msgid "Lender"
+msgstr "Prestador"
+
+msgid "Lending"
+msgstr "Préstec"
+
+msgid "Lending / Daily View"
+msgstr "Préstec / Vista diària"
+
+msgid "Lending Contract No."
+msgstr "Contracte de préstec núm."
+
+msgid "Lending Contract No. %d"
+msgstr "Contracte de préstec núm. %d"
+
+msgid "Lending Contract No. %s"
+msgstr "Contracte de préstec núm. %s"
+
+msgid "Lending Contracts No. %s"
+msgstr "Contractes de préstec núm. %s"
+
+msgid "Lending Terms"
+msgstr "Condicions de préstec"
+
+msgid "Lending manager"
+msgstr "Gestor de préstecs"
+
+msgid "License"
+msgid_plural "Licenses"
+msgstr[0] "Llicència"
+msgstr[1] "Llicències"
+
+msgid "License Number"
+msgstr "Número de llicència"
+
+msgid "License Server"
+msgstr "Servidor de llicències"
+
+msgid "License Type"
+msgstr "Tipus de llicència"
+
+msgid "License Version"
+msgstr "Versió de la llicència"
+
+msgid "License expiration"
+msgstr "Fi de la llicència"
+
+msgid "License saved."
+msgstr "Llicència desada."
+
+msgid "List of %d Users"
+msgstr "Llista de %d usuaris"
+
+msgid "List of %s"
+msgstr "Llista de %s"
+
+msgid "List of Authentication Systems"
+msgstr "Llista de sistemes d'autenticació"
+
+msgid "List of Buildings"
+msgstr "Llista d'edificis"
+
+msgid "List of Categories"
+msgstr "Llista de categories"
+
+msgid "List of Contracts"
+msgstr "Llista de contractes"
+
+msgid "List of Entitlement-Groups"
+msgstr "Llista de grups d'assignació"
+
+msgid "List of Inventory"
+msgstr "Llista d'inventari"
+
+msgid "List of Inventory Pools"
+msgstr "Llista de grups d'inventari"
+
+msgid "List of Languages"
+msgstr "Llista d'idiomes"
+
+msgid "List of Orders"
+msgstr "Llista de comandes"
+
+msgid "List of Rooms"
+msgstr "Llista de sales"
+
+msgid "List of Users"
+msgstr "Llista d'usuaris"
+
+msgid "List of Visits"
+msgstr "Llista de visites"
+
+msgid "List of available variables"
+msgstr "Llista de variables disponibles"
+
+msgid "List of templates"
+msgstr "Llista de plantilles"
+
+msgid "Loading"
+msgstr "Carregant"
+
+msgid "Loading availability"
+msgstr "Carregant disponibilitat"
+
+msgid "Local"
+msgstr "Local"
+
+msgid "Location"
+msgstr "Ubicació"
+
+msgid "Location not defined"
+msgstr "Ubicació sense definir"
+
+msgid "Locations"
+msgstr "Ubicacions"
+
+msgid "Logged in successfully"
+msgstr "Sessió iniciada correctament"
+
+msgid "Login"
+msgstr "Iniciar sessió"
+
+msgid "Logout"
+msgstr "Tancar sessió"
+
+msgid "Low"
+msgstr "Baixa"
+
+msgid "MAC-Address"
+msgstr "Adreça MAC"
+
+msgid "Mail Templates"
+msgstr "Plantilles de correu"
+
+msgid "Main category"
+msgstr "Categoria principal"
+
+msgid "Maintenance"
+msgstr "Manteniment"
+
+msgid "Maintenance contract"
+msgstr "Contracte de manteniment"
+
+msgid "Maintenance expiration"
+msgstr "Fi del manteniment"
+
+msgid "Make changes and save"
+msgstr "Faci els canvis i desi"
+
+msgid "Manage"
+msgstr "Gestionar"
+
+msgid "Manage %s"
+msgstr "Gestionar %s"
+
+msgid "Manage inventory, place reservations on items and pick them up"
+msgstr "Gestioni l'inventari, reservi articles i reculli'ls"
+
+msgid "Manage section"
+msgstr "Secció de gestió"
+
+msgid "Manage user roles via Groups."
+msgstr "Gestioni els rols dels usuaris mitjançant grups."
+
+msgid "Mandatory"
+msgstr "Obligatori"
+
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgid "Manufacturer (A-Z)"
+msgstr "Fabricant (A-Z)"
+
+msgid "Manufacturer (Z-A)"
+msgstr "Fabricant (Z-A)"
+
+msgid "Matching Templates"
+msgstr "Plantilles coincidents"
+
+msgid "Max. visits"
+msgstr "Màx. de visites"
+
+msgid "Maximum reservation time is restricted to"
+msgstr "El temps màxim de reserva està limitat a"
+
+msgid "Medium"
+msgstr "Mitjana"
+
+msgid "Min. number of days between current date and hand over"
+msgstr "Mín. de dies entre la data actual i el lliurament"
+
+msgid "Mobile"
+msgstr "Mòbil"
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Model (A-Z)"
+msgstr "Model (A-Z)"
+
+msgid "Model (Z-A)"
+msgstr "Model (Z-A)"
+
+msgid "Model must be selected"
+msgstr "Cal seleccionar un model"
+
+msgid "Model name"
+msgstr "Nom del model"
+
+msgid "Model not present anymore"
+msgstr "El model ja no existeix"
+
+msgid "Model saved"
+msgstr "Model desat"
+
+msgid "Model successfully added as compatible"
+msgstr "Model afegit correctament com a compatible"
+
+msgid "Model successfully removed"
+msgstr "Model tret correctament"
+
+msgid "Models"
+msgstr "Models"
+
+msgid "Model|Images|File content type"
+msgstr "Tipus de fitxer"
+
+msgid "Model|Images|File file size"
+msgstr "Mida del fitxer"
+
+msgid "Mon"
+msgstr "Dl."
+
+msgid "Monday"
+msgstr "Dilluns"
+
+msgid "Motivation"
+msgstr "Motivació"
+
+msgid "Move to another budget period"
+msgstr "Moure a un altre període pressupostari"
+
+msgid "Move to another entitlement-group"
+msgstr "Moure a un altre grup d'assignació"
+
+msgid "Multiple Workplace"
+msgstr "Lloc de treball múltiple"
+
+msgid "Musikinstrumente"
+msgstr "Instrument musical"
+
+msgid "My documents"
+msgstr "Els meus documents"
+
+msgid "My entitlement-groups"
+msgstr "Els meus grups d'assignació"
+
+msgid "My requests"
+msgstr "Les meves sol·licituds"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Name / ID"
+msgstr "Nom / ID"
+
+msgid "Name of receiver"
+msgstr "Nom del receptor"
+
+msgid "Name of the entitlement-group"
+msgstr "Nom del grup d'assignació"
+
+msgid "Name of the model"
+msgstr "Nom del model"
+
+msgid "Name of the requester"
+msgstr "Nom del sol·licitant"
+
+msgid "Name of the template"
+msgstr "Nom de la plantilla"
+
+msgid "Name of the user"
+msgstr "Nom de l'usuari"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "New Borrower"
+msgstr "Nou prestatari"
+
+msgid "New Category"
+msgstr "Nova categoria"
+
+msgid "New Delegation"
+msgstr "Nova delegació"
+
+msgid "New Entitlement-Group"
+msgstr "Nou grup d'assignació"
+
+msgid "New Orderer"
+msgstr "Nou sol·licitant"
+
+msgid "New Package"
+msgstr "Nou paquet"
+
+msgid "New Template"
+msgstr "Nova plantilla"
+
+msgid "New User"
+msgstr "Nou usuari"
+
+msgid "New inventory badge"
+msgstr "Nou"
+
+msgid "New item created."
+msgstr "Article nou creat."
+
+msgid "New line (Add Article or Project)"
+msgstr "Línia nova (afegir article o projecte)"
+
+msgid "New users will get customer access automatically."
+msgstr "Els usuaris nous reben accés de client automàticament."
+
+msgid "Next"
+msgstr "Següent"
+
+msgid "No"
+msgstr "No"
+
+msgid "No access"
+msgstr "Sense accés"
+
+msgid "No admins defined yet"
+msgstr "Encara no hi ha administradors"
+
+msgid "No categories defined yet"
+msgstr "Encara no hi ha categories"
+
+msgid "No description"
+msgstr "Sense descripció"
+
+msgid "No description available for this model."
+msgstr "No hi ha descripció per a aquest model."
+
+msgid "No entries found"
+msgstr "No s'han trobat entrades"
+
+msgid "No entry found"
+msgstr "No s'ha trobat cap entrada"
+
+msgid "No hand overs found"
+msgstr "No s'han trobat lliuraments"
+
+msgid "No orders are possible on this end date"
+msgstr "No es poden fer comandes amb aquesta data de fi"
+
+msgid "No orders are possible on this start date"
+msgstr "No es poden fer comandes amb aquesta data d'inici"
+
+msgid "No reminder yet"
+msgstr "Encara sense recordatori"
+
+msgid "No requesters defined yet"
+msgstr "Encara no hi ha sol·licitants"
+
+msgid "No results"
+msgstr "Sense resultats"
+
+msgid "No take backs found"
+msgstr "No s'han trobat devolucions"
+
+msgid "No verification required"
+msgstr "No requereix verificació"
+
+msgid "No."
+msgstr "Núm."
+
+msgid "None"
+msgstr "Cap"
+
+msgid "None selected"
+msgstr "Cap seleccionat"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Not Borrowable"
+msgstr "No prestable"
+
+msgid "Not a requester"
+msgstr "No és sol·licitant"
+
+msgid "Not available"
+msgstr "No disponible"
+
+msgid "Not categorized"
+msgstr "Sense categoria"
+
+msgid "Note"
+msgstr "Nota"
+
+msgid "Nothing selected"
+msgstr "No hi ha res seleccionat"
+
+msgid "Notification"
+msgstr "Notificació"
+
+msgid "Number of items"
+msgstr "Nombre d'articles"
+
+msgid "OK"
+msgstr "D'acord"
+
+msgid "One of the managers approves/denies or changes your reservation"
+msgstr "Un gestor aprova, rebutja o modifica la seva reserva"
+
+msgid "Only categories with requests"
+msgstr "Només categories amb sol·licituds"
+
+msgid "Only enter whole numbers"
+msgstr "Introdueixi només nombres enters"
+
+msgid "Only my own categories"
+msgstr "Només les meves categories"
+
+msgid "Only my own requests"
+msgstr "Només les meves sol·licituds"
+
+msgid "Open"
+msgstr "Obert"
+
+msgid "Open %s"
+msgstr "Obrir %s"
+
+msgid "Open Datepicker"
+msgstr "Obrir calendari"
+
+msgid "Open Orders"
+msgstr "Comandes obertes"
+
+msgid "Open orders"
+msgstr "Comandes obertes"
+
+msgid "Opening Hours"
+msgstr "Horari d'obertura"
+
+msgid "Operating System"
+msgstr "Sistema operatiu"
+
+msgid "Option"
+msgstr "Opció"
+
+msgid "Option saved"
+msgstr "Opció desada"
+
+msgid "Options"
+msgstr "Opcions"
+
+msgid "Order"
+msgstr "Comanda"
+
+msgid "Order approved"
+msgstr "Comanda aprovada"
+
+msgid "Order from"
+msgstr "Comanda de"
+
+msgid "Order from %s"
+msgstr "Comanda de %s"
+
+msgid "Order overview"
+msgstr "Resum de la comanda"
+
+msgid "Order quantity"
+msgstr "Quantitat demanada"
+
+msgid "Order received"
+msgstr "Comanda rebuda"
+
+msgid "Order rejected"
+msgstr "Comanda rebutjada"
+
+msgid "Order submitted"
+msgstr "Comanda enviada"
+
+msgid "Orders"
+msgstr "Comandes"
+
+msgid "Organisation"
+msgstr "Organització"
+
+msgid "Organisation unit"
+msgstr "Unitat organitzativa"
+
+msgid "Organisations"
+msgstr "Organitzacions"
+
+msgid "Organisations of the requesters"
+msgstr "Organitzacions dels sol·licitants"
+
+msgid "Other entitlement-groups"
+msgstr "Altres grups d'assignació"
+
+msgid "Overbooked Quantity"
+msgstr "Quantitat amb sobrereserva"
+
+msgid "Overbooking"
+msgstr "Sobrereserva"
+
+msgid "Overdue"
+msgstr "Endarrerit"
+
+msgid "Overdue Returns"
+msgstr "Devolucions endarrerides"
+
+msgid "Overdue Visit"
+msgstr "Visita endarrerida"
+
+msgid "Overview"
+msgstr "Resum"
+
+msgid "Owned"
+msgstr "Propis"
+
+msgid "Owner"
+msgstr "Propietari"
+
+msgid "Package"
+msgstr "Paquet"
+
+msgid "Package Code"
+msgstr "Codi del paquet"
+
+msgid "Package successfully destroyed"
+msgstr "Paquet eliminat correctament"
+
+msgid "Package successfully saved"
+msgstr "Paquet desat correctament"
+
+msgid "Packages"
+msgstr "Paquets"
+
+msgid "Packages created"
+msgstr "Paquets creats"
+
+msgid "Packages updated"
+msgstr "Paquets actualitzats"
+
+msgid "Parent categories"
+msgstr "Categories superiors"
+
+msgid "Partially approved"
+msgstr "Aprovat parcialment"
+
+msgid "Password"
+msgstr "Contrasenya"
+
+msgid "Password Confirmation"
+msgstr "Confirmació de la contrasenya"
+
+msgid "Password changed"
+msgstr "Contrasenya modificada"
+
+msgid "Pending"
+msgstr "Pendent"
+
+msgid "Period"
+msgstr "Període"
+
+msgid "Phone"
+msgstr "Telèfon"
+
+msgid "Phone%s"
+msgstr "Telèfon%s"
+
+msgid "Picking List"
+msgstr "Llista de recollida"
+
+msgid "Please adapt the specific quantities to fit your needs."
+msgstr "Ajusti les quantitats al que necessiti."
+
+msgid "Please contact the concerned inventory pool."
+msgstr "Contacti amb el grup d'inventari corresponent."
+
+msgid ""
+"Please note that these contracts, while they do belong to approved orders, "
+"may be changed by the lending manager at any time. They represent only a "
+"current snapshot of the order and might not contain the same items as the "
+"final contract once you pick up your items."
+msgstr ""
+"Tingui en compte que aquests contractes, encara que pertanyen a comandes "
+"aprovades, el gestor de préstecs els pot modificar en qualsevol moment. "
+"Només mostren l'estat actual de la comanda i potser no contenen els mateixos"
+" articles que el contracte final quan reculli els articles."
+
+msgid "Please provide a purpose..."
+msgstr "Indiqui un motiu..."
+
+msgid "Please provide a search term"
+msgstr "Indiqui un terme de cerca"
+
+msgid "Please provide all required fields"
+msgstr "Completi tots els camps obligatoris"
+
+msgid "Please provide an inventory code"
+msgstr "Indiqui un codi d'inventari"
+
+msgid "Please select a template."
+msgstr "Seleccioni una plantilla."
+
+msgid "Please select a time range and continue."
+msgstr "Seleccioni un període i continuï."
+
+msgid "Please select an inventory pool"
+msgstr "Seleccioni un grup d'inventari"
+
+msgid "Please select an item."
+msgstr "Seleccioni un article."
+
+msgid "Please select some fields."
+msgstr "Seleccioni alguns camps."
+
+msgid ""
+"Please solve the conflicts for all highlighted reservations in order to "
+"continue."
+msgstr ""
+"Resolgui els conflictes de totes les reserves ressaltades per continuar."
+
+msgid "Please specify the purpose of your order here..."
+msgstr "Indiqui aquí el motiu de la seva comanda..."
+
+msgid "Point of Delivery"
+msgstr "Punt de lliurament"
+
+msgid "Prepackaged"
+msgstr "Preembalat"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Price"
+msgstr "Preu"
+
+msgid "Print"
+msgstr "Imprimir"
+
+msgid "Print Contracts"
+msgstr "Imprimir contractes"
+
+msgid "Print Selection"
+msgstr "Imprimir selecció"
+
+msgid "Print dialog will open aut."
+msgstr "El diàleg d'impressió s'obrirà automàticament."
+
+msgid "Priority"
+msgstr "Prioritat"
+
+msgid "Problems"
+msgstr "Problemes"
+
+msgid "Process multiple fields for multiple items in a row"
+msgstr "Processar diversos camps de diversos articles seguits"
+
+msgid "Procured by"
+msgstr "Adquirit per"
+
+msgid "Procurement"
+msgstr "Compres"
+
+msgid "Product"
+msgstr "Producte"
+
+msgid "Produktionstechnik"
+msgstr "Tècnica de producció"
+
+msgid "Project Number"
+msgstr "Número de projecte"
+
+msgid "Properties"
+msgstr "Propietats"
+
+msgid "Property"
+msgstr "Propietat"
+
+msgid "Purpose"
+msgstr "Motiu"
+
+msgid "Purpose changed '%s' for '%s'"
+msgstr "Motiu canviat de '%s' a '%s'"
+
+msgid "Purpose changed '%{from}' for '%{to}'"
+msgstr "Motiu canviat de '%{from}' a '%{to}'"
+
+msgid "Purpose of the order"
+msgstr "Motiu de la comanda"
+
+msgid "Purpose these items are borrowed for"
+msgstr "Motiu del préstec d'aquests articles"
+
+msgid "Qty."
+msgstr "Quant."
+
+msgid "Quantities"
+msgstr "Quantitats"
+
+msgid "Quantity"
+msgstr "Quantitat"
+
+msgid "Quantity allocations"
+msgstr "Assignació de quantitats"
+
+msgid "Quantity: %d"
+msgstr "Quantitat: %d"
+
+msgid "Reason for Retirement"
+msgstr "Motiu de la baixa"
+
+msgid "Recommended Accessories"
+msgstr "Accessoris recomanats"
+
+msgid "Reference"
+msgstr "Referència"
+
+msgid "Reject"
+msgstr "Rebutjar"
+
+msgid "Reject order"
+msgstr "Rebutjar comanda"
+
+msgid "Rejected"
+msgstr "Rebutjat"
+
+msgid "Rejected on"
+msgstr "Rebutjat el"
+
+msgid "Rejection Successful"
+msgstr "Rebuig correcte"
+
+msgid "Relevant for inventory"
+msgstr "Rellevant per a l'inventari"
+
+msgid "Remind"
+msgstr "Recordar"
+
+msgid "Reminded %{q} items for contracts %{c}"
+msgstr "S'ha enviat recordatori de %{q} articles dels contractes %{c}"
+
+msgid "Reminder"
+msgstr "Recordatori"
+
+msgid "Reminder emails"
+msgstr "Correus de recordatori"
+
+msgid "Reminder sent"
+msgstr "Recordatori enviat"
+
+msgid "Remove"
+msgstr "Treure"
+
+msgid "Removed %{q} %{m}"
+msgstr "Tret: %{q} %{m}"
+
+msgid "Removed on save"
+msgstr "Es treu en desar"
+
+msgid "Removing items"
+msgstr "Traient articles"
+
+msgid "Replacement"
+msgstr "Reposició"
+
+msgid "Request moved"
+msgstr "Sol·licitud moguda"
+
+msgid "Requested Items"
+msgstr "Articles sol·licitats"
+
+msgid "Requested quantity"
+msgstr "Quantitat sol·licitada"
+
+msgid "Requester"
+msgstr "Sol·licitant"
+
+msgid "Requesters"
+msgstr "Sol·licitants"
+
+msgid "Requests"
+msgstr "Sol·licituds"
+
+msgid "Reservation"
+msgstr "Reserva"
+
+msgid "Reset"
+msgstr "Restablir"
+
+msgid "Reset all filter"
+msgstr "Restablir tots els filtres"
+
+msgid "Reset timeout"
+msgstr "Reiniciar el límit de temps"
+
+msgid "Reset visibility of all fields on the item forms"
+msgstr "Restablir la visibilitat de tots els camps als formularis d'articles"
+
+msgid "Responsible"
+msgstr "Responsable"
+
+msgid "Responsible department"
+msgstr "Departament responsable"
+
+msgid "Responsible inventory pool"
+msgstr "Grup d'inventari responsable"
+
+msgid "Responsible person"
+msgstr "Persona responsable"
+
+msgid "Retire"
+msgstr "Donar de baixa"
+
+msgid "Retire Item"
+msgstr "Donar de baixa l'article"
+
+msgid "Retired"
+msgstr "Donat de baixa"
+
+msgid "Retirement"
+msgstr "Baixa"
+
+msgid "Return"
+msgstr "Devolució"
+
+msgid "Return to this hand over"
+msgstr "Tornar a aquest lliurament"
+
+msgid "Returned Items"
+msgstr "Articles retornats"
+
+msgid "Returns"
+msgstr "Devolucions"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Roles for users and groups can be managed in the new %s."
+msgstr "Els rols d'usuaris i grups es gestionen a la nova %s."
+
+msgid "Room"
+msgid_plural "Rooms"
+msgstr[0] "Sala"
+msgstr[1] "Sales"
+
+msgid "Running Account"
+msgstr "Compte corrent"
+
+msgid "Same or similar serial number already exists."
+msgstr "Ja existeix el mateix número de sèrie o un de semblant."
+
+msgid "Saturday"
+msgstr "Dissabte"
+
+msgid "Save"
+msgstr "Desar"
+
+msgid "Save %s"
+msgstr "Desar %s"
+
+msgid "Save Package"
+msgstr "Desar paquet"
+
+msgid "Save and copy"
+msgstr "Desar i copiar"
+
+msgid "Save and copy %s"
+msgstr "Desar i copiar %s"
+
+msgid "Save anyway"
+msgstr "Desar igualment"
+
+msgid "Save change"
+msgstr "Desar canvi"
+
+msgid "Save changes"
+msgstr "Desar canvis"
+
+msgid "Save package"
+msgstr "Desar paquet"
+
+msgid "Saved"
+msgstr "Desat"
+
+msgid "Search"
+msgstr "Cercar"
+
+msgid "Search %s"
+msgstr "Cercar %s"
+
+msgid "Search Results for \"%s\""
+msgstr "Resultats de cerca per a \"%s\""
+
+msgid "Search Results for %s"
+msgstr "Resultats de cerca per a %s"
+
+msgid "Search for '%s'"
+msgstr "Cercar '%s'"
+
+msgid "Search results (%s) for \"%s\""
+msgstr "Resultats de cerca (%s) per a \"%s\""
+
+msgid "Search results (%s) for %s"
+msgstr "Resultats de cerca (%s) per a %s"
+
+msgid "Search..."
+msgstr "Cercar..."
+
+msgid "Searching"
+msgstr "Cercant"
+
+msgid "Searching..."
+msgstr "Cercant..."
+
+msgid "Select"
+msgstr "Seleccionar"
+
+msgid "Select Field"
+msgstr "Seleccionar camp"
+
+msgid "Select File"
+msgstr "Seleccionar fitxer"
+
+msgid "Select Image"
+msgstr "Seleccionar imatge"
+
+msgid "Select all"
+msgstr "Seleccionar-ho tot"
+
+msgid "Selected Pools (%s)"
+msgstr "Grups seleccionats (%s)"
+
+msgid "Selection"
+msgstr "Selecció"
+
+msgid "Send reminder"
+msgstr "Enviar recordatori"
+
+msgid "Serial Number"
+msgstr "Número de sèrie"
+
+msgid "Settings"
+msgstr "Configuració"
+
+msgid "Settings for %s"
+msgstr "Configuració de %s"
+
+msgid "Shelf"
+msgstr "Prestatge"
+
+msgid "Short Name"
+msgstr "Nom curt"
+
+msgid "Show"
+msgstr "Mostrar"
+
+msgid "Show Availability"
+msgstr "Mostrar disponibilitat"
+
+msgid "Show all %s..."
+msgstr "Mostrar els %s..."
+
+msgid "Show all ..."
+msgstr "Mostrar-ho tot..."
+
+msgid "Show all fields"
+msgstr "Mostrar tots els camps"
+
+msgid "Show all found %s"
+msgstr "Mostrar els %s trobats"
+
+msgid "Show all properties"
+msgstr "Mostrar totes les propietats"
+
+msgid "Show all search results"
+msgstr "Mostrar tots els resultats"
+
+msgid "Show delegation"
+msgstr "Mostrar delegació"
+
+msgid "Show less properties"
+msgstr "Mostrar menys propietats"
+
+msgid "Show user"
+msgstr "Mostrar usuari"
+
+msgid "Signature"
+msgstr "Signatura"
+
+msgid "Signed"
+msgstr "Signat"
+
+msgid "Signed contracts"
+msgstr "Contractes signats"
+
+msgid "Single Workplace"
+msgstr "Lloc de treball únic"
+
+msgid "Site License"
+msgstr "Llicència de lloc"
+
+msgid "Software"
+msgstr "Programari"
+
+msgid "Software Information"
+msgstr "Informació del programari"
+
+msgid "Software License"
+msgstr "Llicència de programari"
+
+msgid "Something went wrong!"
+msgstr "Alguna cosa ha anat malament!"
+
+msgid "Source code"
+msgstr "Codi font"
+
+msgid "Special filters"
+msgstr "Filtres especials"
+
+msgid "Specification of the contact person is required"
+msgstr "Cal indicar la persona de contacte"
+
+msgid "Specification of the purpose is required"
+msgstr "Cal indicar el motiu"
+
+msgid "Start"
+msgstr "Inici"
+
+msgid "Start Date must be before End Date"
+msgstr "La data d'inici ha de ser anterior a la data de fi"
+
+msgid "Start Screen"
+msgstr "Pantalla d'inici"
+
+msgid "Start and end date cannot be in the past"
+msgstr "La data d'inici i la de fi no poden ser en el passat"
+
+msgid "Start date"
+msgstr "Data d'inici"
+
+msgid "Start search"
+msgstr "Iniciar cerca"
+
+msgid "State"
+msgstr "Estat"
+
+msgid "State of Request"
+msgstr "Estat de la sol·licitud"
+
+msgid "Statistics"
+msgstr "Estadístiques"
+
+msgid "Status"
+msgstr "Estat"
+
+msgid "Status note"
+msgstr "Nota d'estat"
+
+msgid "Subcategories"
+msgstr "Subcategories"
+
+msgid "Subcategory"
+msgstr "Subcategoria"
+
+msgid "Submission failed"
+msgstr "No s'ha pogut enviar la comanda"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Submit Order"
+msgstr "Enviar comanda"
+
+msgid "Submitted"
+msgstr "Enviat"
+
+msgid "Subordinate to %s"
+msgstr "Subordinat a %s"
+
+msgid "Successful Order"
+msgstr "Comanda correcta"
+
+msgid "Successfully set."
+msgstr "Establert correctament."
+
+msgid "Sunday"
+msgstr "Diumenge"
+
+msgid "Supplier"
+msgstr "Proveïdor"
+
+msgid "Suppliers"
+msgstr "Proveïdors"
+
+msgid "Suspended"
+msgstr "Suspès"
+
+msgid "Suspended reason"
+msgstr "Motiu de la suspensió"
+
+msgid "Suspended until"
+msgstr "Suspès fins a"
+
+msgid "Swap Model"
+msgstr "Canviar model"
+
+msgid "Swapped %{from} for %{to}"
+msgstr "Intercanviat %{from} per %{to}"
+
+msgid "Swapped from %s "
+msgstr "Canviat des de %s "
+
+msgid "Take Back"
+msgstr "Retornar"
+
+msgid "Take Back Selection"
+msgstr "Retornar selecció"
+
+msgid "Take Back from"
+msgstr "Devolució de"
+
+msgid "Take Back from %s"
+msgstr "Devolució de %s"
+
+msgid "Take Backs"
+msgstr "Devolucions"
+
+msgid "Take back completed"
+msgstr "Devolució completada"
+
+msgid "Take back of %s item"
+msgid_plural "Take back of %s items"
+msgstr[0] "Devolució de %s article"
+msgstr[1] "Devolució de %s articles"
+
+msgid "Technical Details"
+msgstr "Detalls tècnics"
+
+msgid "Template"
+msgstr "Plantilla"
+
+msgid "Template Categories"
+msgstr "Categories de plantilles"
+
+msgid "Template must have at least one model"
+msgstr "La plantilla ha de tenir com a mínim un model"
+
+msgid "Templates"
+msgstr "Plantilles"
+
+msgid "Terms and conditions of the lender apply."
+msgstr "S'apliquen les condicions del prestador."
+
+msgid ""
+"That means that the user probably did not get the approval mail and you need"
+" to contact him/her in a different way."
+msgstr ""
+"Això vol dir que probablement l'usuari no ha rebut el correu d'aprovació i "
+"caldrà contactar-hi d'una altra manera."
+
+msgid "The Category must be empty"
+msgstr "La categoria ha d'estar buida"
+
+msgid "The Inventory Code %s was not found for %s"
+msgstr "No s'ha trobat el codi d'inventari %s per a %s"
+
+msgid "The Inventory Code %s was not found."
+msgstr "No s'ha trobat el codi d'inventari %s."
+
+msgid "The Inventory Pool must be empty"
+msgstr "El grup d'inventari ha d'estar buit"
+
+msgid "The accessory was successfully created."
+msgstr "L'accessori s'ha creat correctament."
+
+msgid "The accessory was successfully deleted."
+msgstr "L'accessori s'ha eliminat correctament."
+
+msgid "The admin role cannot be scoped to an inventory pool"
+msgstr "El rol d'administrador no es pot assignar a un grup d'inventari"
+
+msgid "The assignment for %s was removed"
+msgstr "S'ha tret l'assignació de %s"
+
+msgid "The budget period is closed"
+msgstr "El període pressupostari està tancat"
+
+msgid "The entitlement-group quantities were successfully saved."
+msgstr "Les quantitats del grup d'assignació s'han desat correctament."
+
+msgid ""
+"The following error happened while sending a notification email to "
+"%{email}:\\n"
+msgstr ""
+"S'ha produït l'error següent en enviar un correu de notificació a "
+"%{email}:\\n"
+
+msgid ""
+"The highlighted entries are not accomplishable for the intended quantity."
+msgstr ""
+"Les entrades ressaltades no es poden complir amb la quantitat prevista."
+
+msgid "The inventory code %s is not valid for this model"
+msgstr "El codi d'inventari %s no és vàlid per a aquest model"
+
+msgid "The item %s will be retired and no longer available for rentals."
+msgstr ""
+"L'article %s es donarà de baixa i ja no estarà disponible per a préstecs."
+
+msgid "The item belongs to a package"
+msgstr "L'article pertany a un paquet"
+
+msgid ""
+"The item cannot be retired because it's not returned yet or has already been"
+" assigned to a contract line."
+msgstr ""
+"L'article no es pot donar de baixa perquè encara no s'ha retornat o ja està "
+"assignat a una línia de contracte."
+
+msgid "The item doesn't belong to the inventory pool related to this contract"
+msgstr ""
+"L'article no pertany al grup d'inventari relacionat amb aquest contracte"
+
+msgid "The item doesn't match with the reserved model"
+msgstr "L'article no coincideix amb el model reservat"
+
+msgid ""
+"The item is already handed over or assigned to a different contract line"
+msgstr "L'article ja està lliurat o assignat a una altra línia de contracte"
+
+msgid "The item is already retired"
+msgstr "L'article ja està donat de baixa"
+
+msgid "The item with the inventory code %s was not found"
+msgstr "No s'ha trobat l'article amb el codi d'inventari %s"
+
+msgid "The items of the package can not be edited"
+msgstr "Els articles del paquet no es poden editar"
+
+msgid "The line was not found"
+msgstr "No s'ha trobat la línia"
+
+msgid "The mail was sent"
+msgstr "El correu s'ha enviat"
+
+msgid ""
+"The model cannot be changed because the item is used in contracts already."
+msgstr ""
+"El model no es pot canviar perquè l'article ja s'utilitza en contractes."
+
+msgid "The model is already compatible"
+msgstr "Aquest model ja és compatible"
+
+msgid "The model needs a product name."
+msgstr "El model necessita un nom de producte."
+
+msgid "The new user details could not be saved."
+msgstr "No s'han pogut desar les dades de l'usuari nou."
+
+msgid "The option could not be added"
+msgstr "No s'ha pogut afegir l'opció"
+
+msgid ""
+"The option doesn't belong to the inventory pool related to this contract"
+msgstr ""
+"L'opció no pertany al grup d'inventari relacionat amb aquest contracte"
+
+msgid "The order has already been dealt with."
+msgstr "La comanda ja s'ha processat."
+
+msgid "The order will be discarded."
+msgstr "Es descartarà la comanda."
+
+msgid "The package is not in stock"
+msgstr "El paquet no és en estoc"
+
+msgid "The parent item doesn't exist (parent_id: %d)"
+msgstr "L'article superior no existeix (parent_id: %d)"
+
+msgid "The properties have been updated."
+msgstr "Les propietats s'han actualitzat."
+
+msgid ""
+"The responsible inventory pool cannot be changed because it's not returned "
+"yet or has already been assigned to a contract line."
+msgstr ""
+"El grup d'inventari responsable no es pot canviar perquè l'article encara no"
+" s'ha retornat o ja està assignat a una línia de contracte."
+
+msgid "The selected inventory pool is closed on that day"
+msgstr "El grup d'inventari seleccionat està tancat aquest dia"
+
+msgid "The selected model is not a package"
+msgstr "El model seleccionat no és un paquet"
+
+msgid "The selected reservations have been moved"
+msgstr "Les reserves seleccionades s'han mogut"
+
+msgid "The template \"%s\" will be deleted and no longer available for usage."
+msgstr "La plantilla \"%s\" s'eliminarà i ja no es podrà utilitzar."
+
+msgid "The template has been added to your order."
+msgstr "La plantilla s'ha afegit a la seva comanda."
+
+msgid "The user does not have an email address"
+msgstr "L'usuari no té adreça de correu electrònic"
+
+msgid "There are open reservations for delegated users: "
+msgstr "Hi ha reserves obertes d'usuaris delegats: "
+
+msgid ""
+"These mail templates are copied for a new inventory pool when it is created."
+msgstr ""
+"Aquestes plantilles de correu es copien per a cada grup d'inventari nou quan"
+" es crea."
+
+msgid ""
+"These orders have been successfully submitted, but are NOT YET APPROVED."
+msgstr ""
+"Aquestes comandes s'han enviat correctament, però ENCARA NO ESTAN APROVADES."
+
+msgid ""
+"This contract is not signable because it doesn't have any contract "
+"reservations."
+msgstr "Aquest contracte no es pot signar perquè no té reserves."
+
+msgid ""
+"This contract is not signable because none of the reservations have a "
+"purpose."
+msgstr "Aquest contracte no es pot signar perquè cap reserva no té motiu."
+
+msgid ""
+"This contract is not signable because some reservations are not assigned."
+msgstr ""
+"Aquest contracte no es pot signar perquè hi ha reserves sense assignar."
+
+msgid ""
+"This contract is not signable because the delegated user is either missing "
+"or not part of this delegation."
+msgstr ""
+"Aquest contracte no es pot signar perquè falta l'usuari delegat o no forma "
+"part d'aquesta delegació."
+
+msgid "This entry will be removed from the order."
+msgstr "Aquesta entrada es traurà de la comanda."
+
+msgid "This inventory pool is closed on that day."
+msgstr "Aquest grup d'inventari està tancat aquest dia."
+
+msgid "This is a package containing the following items"
+msgstr "Aquest és un paquet que conté els articles següents"
+
+msgid ""
+"This is the list of items you requested. To complete this order, please %s."
+msgstr ""
+"Aquesta és la llista d'articles que ha sol·licitat. Per completar aquesta "
+"comanda, %s."
+
+msgid "This item was retired"
+msgstr "Aquest article està donat de baixa"
+
+msgid ""
+"This item will be given to a different inventory pool and not show up in "
+"yours anymore!"
+msgstr ""
+"Aquest article passarà a un altre grup d'inventari i deixarà d'aparèixer al "
+"seu."
+
+msgid "This model is now in %d categories"
+msgstr "Aquest model és ara a %d categories"
+
+msgid ""
+"This note is added to any contract, but can be changed individually before "
+"actually printing and signing each contract."
+msgstr ""
+"Aquesta nota s'afegeix a tots els contractes, però es pot canviar en "
+"cadascun abans d'imprimir-lo i signar-lo."
+
+msgid "This order has already been approved."
+msgstr "Aquesta comanda ja s'ha aprovat."
+
+msgid "This order is not approvable because doesn't have any models."
+msgstr "Aquesta comanda no es pot aprovar perquè no té cap model."
+
+msgid ""
+"This order is not approvable because some reservations violate the minimal "
+"reservation advance period of the inventory pool. Please adjust the start "
+"date accordingly."
+msgstr ""
+"Aquesta comanda no es pot aprovar perquè algunes reserves no respecten "
+"l'antelació mínima de reserva del grup d'inventari. Ajusti la data d'inici."
+
+msgid ""
+"This order is not approvable because some reserved models are not available."
+msgstr ""
+"Aquesta comanda no es pot aprovar perquè alguns models reservats no estan "
+"disponibles."
+
+msgid ""
+"This order is not approvable because the inventory pool is closed on either "
+"the start or enddate."
+msgstr ""
+"Aquesta comanda no es pot aprovar perquè el grup d'inventari està tancat la "
+"data d'inici o la de fi."
+
+msgid "This user is suspended."
+msgstr "Aquest usuari està suspès."
+
+msgid "Thu"
+msgstr "Dj."
+
+msgid "Thursday"
+msgstr "Dijous"
+
+msgid "Time until your order times out. Click to reset."
+msgstr "Temps fins que caduqui la seva comanda. Faci clic per reiniciar-lo."
+
+msgid "Time window"
+msgstr "Període de temps"
+
+msgid "Timeline"
+msgstr "Cronologia"
+
+msgid "To allocate models to users use the %s."
+msgstr "Per assignar models als usuaris utilitzi els %s."
+
+msgid "To be verified"
+msgstr "Per verificar"
+
+msgid "To pick up"
+msgstr "Per recollir"
+
+msgid "Today"
+msgstr "Avui"
+
+msgid "Toggle %s"
+msgstr "Mostrar/amagar %s"
+
+msgid "Too many users found"
+msgstr "S'han trobat massa usuaris"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Total of all approved requests"
+msgstr "Total de totes les sol·licituds aprovades"
+
+msgid "Total of all requests in state \"New\""
+msgstr "Total de totes les sol·licituds en estat \"Nou\""
+
+msgid "Total price (indicative value)"
+msgstr "Preu total (valor indicatiu)"
+
+msgid "Total quantity"
+msgstr "Quantitat total"
+
+msgid "Total quantity of borrowable and not retired items"
+msgstr "Quantitat total d'articles prestables i no donats de baixa"
+
+msgid "Tue"
+msgstr "Dt."
+
+msgid "Tuesday"
+msgstr "Dimarts"
+
+msgid "Type in a search term"
+msgstr "Escrigui un terme de cerca"
+
+msgid "Umzug"
+msgstr "Trasllat"
+
+msgid "Unborrowable"
+msgstr "No prestable"
+
+msgid "Unborrowable Items"
+msgstr "Articles no prestables"
+
+msgid "Undo approval"
+msgstr "Desfer l'aprovació"
+
+msgid "Unexpected error."
+msgstr "Error inesperat."
+
+msgid "Unsigned"
+msgstr "Sense signar"
+
+msgid "Unsigned Hand Over"
+msgstr "Lliurament sense signar"
+
+msgid "Unsigned contracts"
+msgstr "Contractes sense signar"
+
+msgid "Unsubmitted"
+msgstr "Sense enviar"
+
+msgid "Unsuccessful reminder of %{q} items for contracts %{c}"
+msgstr ""
+"No s'ha pogut enviar el recordatori de %{q} articles dels contractes %{c}"
+
+msgid "Unused Models"
+msgstr "Models sense utilitzar"
+
+msgid "Update"
+msgstr "Actualitzar"
+
+msgid "Updated at"
+msgstr "Actualitzat el"
+
+msgid ""
+"Upload a comma separated CSV file (with UTF-8 encoding), each row describing"
+" an item."
+msgstr ""
+"Pugi un fitxer CSV separat per comes (amb codificació UTF-8), amb una fila "
+"per article."
+
+msgid "Upload error."
+msgstr "Error de pujada."
+
+msgid "Upload problems"
+msgstr "Problemes en pujar"
+
+msgid "Uploading files - please wait"
+msgstr "Pujant fitxers, esperi"
+
+msgid "Used Models"
+msgstr "Models utilitzats"
+
+msgid "Used for sending e-mails from leihs"
+msgstr "S'utilitza per enviar correus electrònics des de leihs"
+
+msgid "Used on the start page in the borrow section"
+msgstr "S'utilitza a la pàgina d'inici de la secció de préstecs"
+
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Usuari"
+msgstr[1] "Usuaris"
+
+msgid "User and model to be verified"
+msgstr "Usuari i model per verificar"
+
+msgid "User created successfully"
+msgstr "Usuari creat correctament"
+
+msgid "User data"
+msgstr "Dades d'usuari"
+
+msgid "User details were updated successfully."
+msgstr "Les dades de l'usuari s'han actualitzat correctament."
+
+msgid "User does not have access to inventory pool: %s"
+msgstr "L'usuari no té accés al grup d'inventari: %s"
+
+msgid "User is suspended for inventory pool: %s"
+msgstr "L'usuari està suspès al grup d'inventari: %s"
+
+msgid "User must be selected"
+msgstr "Cal seleccionar un usuari"
+
+msgid "User or Order not found"
+msgstr "No s'ha trobat l'usuari o la comanda"
+
+msgid "User swapped %{from} for %{to}"
+msgstr "L'usuari ha intercanviat %{from} per %{to}"
+
+msgid "User to be verified"
+msgstr "Usuari per verificar"
+
+msgid "User unknown"
+msgstr "Usuari desconegut"
+
+msgid "User/Typical usage"
+msgstr "Usuari/Ús típic"
+
+msgid "Username"
+msgstr "Nom d'usuari"
+
+msgid "Users"
+msgstr "Usuaris"
+
+msgid ""
+"Users who don't bring back the items on the required date are suspended from"
+" next day on."
+msgstr ""
+"Els usuaris que no retornen els articles en la data indicada queden suspesos"
+" a partir de l'endemà."
+
+msgid "User|AccessRight|Suspended reason"
+msgstr "Motiu de la suspensió"
+
+msgid "User|Email"
+msgstr "Correu electrònic"
+
+msgid "User|Firstname"
+msgstr "Nom"
+
+msgid "User|Lastname"
+msgstr "Cognom"
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "Value List"
+msgstr "Llista de valors"
+
+msgid "Value List for Lending Contract No."
+msgstr "Llista de valors del contracte de préstec núm."
+
+msgid "Value List for Lending Contract No. %s"
+msgstr "Llista de valors del contracte de préstec núm. %s"
+
+msgid "Verification required"
+msgstr "Requereix verificació"
+
+msgid "Verify"
+msgstr "Verificar"
+
+msgid "Verify + approve order"
+msgstr "Verificar i aprovar comanda"
+
+msgid "View %s"
+msgstr "Veure %s"
+
+msgid "View Item"
+msgstr "Veure article"
+
+msgid "View Model"
+msgstr "Veure model"
+
+msgid "View Option"
+msgstr "Veure opció"
+
+msgid "Visible for borrowers in frontend"
+msgstr "Visible per als prestataris al frontend"
+
+msgid "Visits"
+msgstr "Visites"
+
+msgid "Warning"
+msgstr "Avís"
+
+msgid "Warranty expiration"
+msgstr "Fi de la garantia"
+
+msgid "Wed"
+msgstr "Dc."
+
+msgid "Wednesday"
+msgstr "Dimecres"
+
+msgid "Welcome %s"
+msgstr "Benvingut/da, %s"
+
+msgid "Werkstatt-Technik"
+msgstr "Tècnica de taller"
+
+msgid "Which inventory pool has the most contracts?"
+msgstr "Quin grup d'inventari té més contractes?"
+
+msgid "Which inventory pool is busiest?"
+msgstr "Quin grup d'inventari té més activitat?"
+
+msgid "Which item is busiest?"
+msgstr "Quin article té més activitat?"
+
+msgid "Who borrowed the most things?"
+msgstr "Qui ha demanat més coses en préstec?"
+
+msgid "Who bought the most items?"
+msgstr "Qui ha comprat més articles?"
+
+msgid "Workdays"
+msgstr "Dies laborables"
+
+msgid "Working order"
+msgstr "En funcionament"
+
+msgid "Workload"
+msgstr "Càrrega de treball"
+
+msgid "Write a comment. The comment will be part of the rejection e-mail."
+msgstr "Escrigui un comentari. El comentari s'inclourà al correu de rebuig."
+
+msgid ""
+"Write a comment... (your comment will be part of the confirmation e-mail)"
+msgstr "Escrigui un comentari... (s'inclourà al correu de confirmació)"
+
+msgid "Write a note... (the note will be part of the contract)"
+msgstr "Escrigui una nota... (la nota s'inclourà al contracte)"
+
+msgid "Write a note... the note will be part of the contract"
+msgstr "Escrigui una nota... la nota s'inclourà al contracte"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "You are not authorized for this action."
+msgstr "No té autorització per a aquesta acció."
+
+msgid "You are not logged in."
+msgstr "No ha iniciat la sessió."
+
+msgid "You are not the owner of this item"
+msgstr "No és el propietari d'aquest article"
+
+msgid "You are suspended for this inventory pool"
+msgstr "Està suspès en aquest grup d'inventari"
+
+msgid "You bring back your items"
+msgstr "Vostè retorna els articles"
+
+msgid "You can edit your personal data"
+msgstr "Pot editar les seves dades personals"
+
+msgid ""
+"You can modify the time range for each separate model in the next step."
+msgstr "Al pas següent pot canviar el període de cada model per separat."
+
+msgid "You can not create a package without any item"
+msgstr "No es pot crear un paquet sense articles"
+
+msgid "You can not take back more items then you handed over"
+msgstr "No es poden retornar més articles dels que s'han lliurat"
+
+msgid "You can not take back more options then you handed over"
+msgstr "No es poden retornar més opcions de les que s'han lliurat"
+
+msgid "You can't add a package to a package."
+msgstr "No es pot afegir un paquet a un altre paquet."
+
+msgid ""
+"You cannot delete all reservations of an order. Perhaps you want to reject "
+"it instead?"
+msgstr ""
+"No es poden eliminar totes les reserves d'una comanda. Potser la vol "
+"rebutjar?"
+
+msgid "You cannot delete this user"
+msgstr "No es pot eliminar aquest usuari"
+
+msgid ""
+"You do not have any items in your order. Please %s and choose items for your"
+" order."
+msgstr "No té articles a la comanda. %s i triï articles per a la comanda."
+
+msgid ""
+"You do not have the responsibility to lend this item. Responsible for this "
+"item is the pool \"%s\"."
+msgstr ""
+"No és responsable de prestar aquest article. El responsable és el grup "
+"d'inventari \"%s\"."
+
+msgid "You don't have access to this item."
+msgstr "No té accés a aquest article."
+
+msgid "You don't have any rights to access this application."
+msgstr "No té permisos per accedir a aquesta aplicació."
+
+msgid "You don't have permission to perform this action"
+msgstr "No té permís per fer aquesta acció"
+
+msgid "You have %{no_access} to any inventory pools!"
+msgstr "No té accés a cap grup d'inventari! (%{no_access})"
+
+msgid "You have access to the following inventory pools"
+msgstr "Té accés als grups d'inventari següents"
+
+msgid "You have access to the following inventory pools:"
+msgstr "Té accés als grups d'inventari següents:"
+
+msgid "You have been logged out."
+msgstr "S'ha tancat la seva sessió."
+
+msgid "You have permission to access the following inventory pool"
+msgid_plural "You have permission to access the following inventory pools"
+msgstr[0] "Té permís d'accés al grup d'inventari següent"
+msgstr[1] "Té permís d'accés als grups d'inventari següents"
+
+msgid "You have to provide the quantity for the things you want to return"
+msgstr "Indiqui la quantitat del que vol retornar"
+
+msgid "You have unsaved data. Would you like to delete the data?"
+msgstr "Hi ha dades sense desar. Les vol eliminar?"
+
+msgid "You pick up the reserved items at the inventory pool"
+msgstr "Vostè recull els articles reservats al grup d'inventari"
+
+msgid "You place a reservation for some items in this system"
+msgstr "Vostè reserva alguns articles en aquest sistema"
+
+msgid "You should redo your action or reload the page!"
+msgstr "Repeteixi l'acció o torni a carregar la pàgina."
+
+msgid "You wait for confirmation from the inventory pools in question"
+msgstr "Vostè espera la confirmació dels grups d'inventari corresponents"
+
+msgid "You were served by %s"
+msgstr "L'ha atès %s"
+
+msgid "Your order has been modified. All reservations are now available."
+msgstr ""
+"La seva comanda s'ha modificat. Ara totes les reserves estan disponibles."
+
+msgid "Your order has been successfully submitted, but is NOT YET APPROVED."
+msgstr ""
+"La seva comanda s'ha enviat correctament, però ENCARA NO ESTÀ APROVADA."
+
+msgid "Your order ist empty."
+msgstr "La seva comanda està buida."
+
+msgid ""
+"Your order was successfully transmitted to those responsible and is %s."
+msgstr "La seva comanda s'ha enviat correctament als responsables i està %s."
+
+msgid "Your order will time out in %s."
+msgstr "La seva comanda caducarà d'aquí a %s."
+
+msgid "Zielraum"
+msgstr "Zona de destinació"
+
+msgid "Zip"
+msgstr "Codi postal"
+
+msgid "[Model %s] "
+msgstr "[Model %s] "
+
+msgid "[leihs] Order received"
+msgstr "[leihs] Comanda rebuda"
+
+msgid "[leihs] Reminder"
+msgstr "[leihs] Recordatori"
+
+msgid "[leihs] Reservation Confirmation"
+msgstr "[leihs] Reserva confirmada"
+
+msgid "[leihs] Reservation Rejected"
+msgstr "[leihs] Reserva rebutjada"
+
+msgid "[leihs] Reservation Submitted"
+msgstr "[leihs] Reserva enviada"
+
+msgid "[leihs] Reservation confirmed (with changes)"
+msgstr "[leihs] Reserva confirmada (amb canvis)"
+
+msgid "[leihs] Some items should be returned tomorrow"
+msgstr "[leihs] Alguns articles s'han de retornar demà"
+
+msgid "accept_lending_terms_label"
+msgstr "Accepto les condicions de préstec: "
+
+msgid "accounting type"
+msgstr "tipus de comptabilitat"
+
+msgid "active"
+msgstr "actiu"
+
+msgid "admin section of this inventory-pool"
+msgstr "secció d'administració d'aquest grup d'inventari"
+
+msgid "admin_active"
+msgstr "actiu"
+
+msgid "admin_all"
+msgstr "tots"
+
+msgid "admin_inactive"
+msgstr "inactiu"
+
+msgid "admin_search_term"
+msgstr "Terme de cerca..."
+
+msgid "all models"
+msgstr "tots els models"
+
+msgid "already in Category"
+msgstr "ja és a la categoria"
+
+msgid "and assign fields"
+msgstr "i assignar camps"
+
+msgid "aquisition"
+msgstr "adquisició"
+
+msgid "ascending"
+msgstr "ascendent"
+
+msgid "assign highest available"
+msgstr "assignar el més alt disponible"
+
+msgid "assigned to %s"
+msgstr "assignat a %s"
+
+msgid "available"
+msgstr "disponible"
+
+msgid "available quantity"
+msgstr "quantitat disponible"
+
+msgid "awaiting approval"
+msgstr "pendent d'aprovació"
+
+msgid "borrowable"
+msgstr "prestable"
+
+msgid "by browsing categories"
+msgstr "per categories"
+
+msgid "click here to reload"
+msgstr "faci clic aquí per tornar a carregar"
+
+msgid "closed"
+msgstr "tancat"
+
+msgid "contracts"
+msgstr "contractes"
+
+msgid "cost center"
+msgstr "centre de cost"
+
+msgid "could not be assigned for take back"
+msgstr "no s'ha pogut assignar a la devolució"
+
+msgid "create_multiple_items_inv_code_notice"
+msgstr ""
+"Quan es creen diversos articles alhora, el codi d'inventari no es pot "
+"establir individualment. En canvi, es genera automàticament la llista "
+"contínua de codis d'inventari més curta possible."
+
+msgid "create_multiple_items_label_quantity"
+msgstr "Quantitat"
+
+msgid "current page is set as start page"
+msgstr "la pàgina actual està definida com a pàgina d'inici"
+
+msgid "day"
+msgid_plural "days"
+msgstr[0] "dia"
+msgstr[1] "dies"
+
+msgid "delete"
+msgstr "eliminar"
+
+msgid "deployed %s ago"
+msgstr "desplegat fa %s"
+
+msgid "descending"
+msgstr "descendent"
+
+msgid "disabled"
+msgstr "desactivat"
+
+msgid "doesn't match parent's attribute"
+msgstr "no coincideix amb l'atribut del superior"
+
+msgid "enabled"
+msgstr "activat"
+
+msgid "entries%s"
+msgstr "entrades%s"
+
+msgid "extend"
+msgstr "ampliar"
+
+msgid "fill up gaps"
+msgstr "omplir buits"
+
+msgid "for"
+msgstr "per a"
+
+msgid "for '%s'"
+msgstr "per a '%s'"
+
+msgid "for items"
+msgstr "per a articles"
+
+msgid "for licenses"
+msgstr "per a llicències"
+
+msgid "for max."
+msgstr "per a màx."
+
+msgid "found %i"
+msgstr "%i trobats"
+
+msgid "from"
+msgstr "des de"
+
+msgid "from %s"
+msgstr "des de %s"
+
+msgid "general"
+msgstr "general"
+
+msgid "general ledger account"
+msgstr "compte del llibre major"
+
+msgid "go back"
+msgstr "tornar"
+
+msgid "go to today"
+msgstr "anar a avui"
+
+msgid "here"
+msgstr "aquí"
+
+msgid "in"
+msgstr "a"
+
+msgid "in stock"
+msgstr "en estoc"
+
+msgid "in the future"
+msgstr "en el futur"
+
+msgid "in the past"
+msgstr "en el passat"
+
+msgid "inactive"
+msgstr "inactiu"
+
+msgid "incl. VAT"
+msgstr "IVA incl."
+
+msgid "inspection phase until %s"
+msgstr "fase de revisió fins a %s"
+
+msgid "internal order"
+msgstr "comanda interna"
+
+msgid "investment"
+msgstr "inversió"
+
+msgid "is %s ago"
+msgstr "és fa %s"
+
+msgid "is late"
+msgstr "està endarrerit"
+
+msgid "is not a HTTP(S) URL"
+msgstr "no és una URL HTTP(S)"
+
+msgid "is not a valid URL"
+msgstr "no és una URL vàlida"
+
+msgid "is part of a package"
+msgstr "forma part d'un paquet"
+
+msgid "item not assigned. "
+msgstr "article no assignat. "
+
+msgid "item_version"
+msgstr "Versió"
+
+msgid "items"
+msgstr "articles"
+
+msgid "jump to this date"
+msgstr "anar a aquesta data"
+
+msgid "last change by '%s'"
+msgstr "darrer canvi de '%s'"
+
+msgid "last used +1"
+msgstr "darrer utilitzat +1"
+
+msgid "legacy_manage_entitlement_group_new_admin_section_notice"
+msgstr ""
+"Els usuaris i grups d'aquest grup d'assignació es gestionen a la nova secció"
+" d'administració."
+
+msgid "legacy_manage_group_new_admin_section_notice"
+msgstr "Els grups es gestionen a la nova secció d'administració."
+
+msgid "legacy_manage_inventory_pool_admin_section_notice"
+msgstr ""
+"Llevat de la gestió dels grups d'assignació, totes les funcions són a la "
+"secció d'administració."
+
+msgid "legacy_manage_users_new_admin_section_notice"
+msgstr ""
+"Els usuaris i els seus drets d'accés també es poden gestionar a la nova "
+"secció d'administració."
+
+msgid "lends"
+msgstr "presta"
+
+msgid "max 255 characters"
+msgstr "màx. 255 caràcters"
+
+msgid "models"
+msgstr "models"
+
+msgid "more"
+msgstr "més"
+
+msgid "more properties"
+msgstr "més propietats"
+
+msgid "must be greater or equal to the inspection start date"
+msgstr "ha de ser igual o posterior a la data d'inici de la revisió"
+
+msgid "no fields selected"
+msgstr "no hi ha camps seleccionats"
+
+msgid "no image"
+msgstr "sense imatge"
+
+msgid "no item assigned"
+msgstr "cap article assignat"
+
+msgid "no item selected"
+msgstr "cap article seleccionat"
+
+msgid "no purpose specified"
+msgstr "sense motiu indicat"
+
+msgid "not available"
+msgstr "no disponible"
+
+msgid "not available. "
+msgstr "no disponible. "
+
+msgid "not borrowable"
+msgstr "no prestable"
+
+msgid "not in stock"
+msgstr "sense estoc"
+
+msgid "not retired"
+msgstr "no donat de baixa"
+
+msgid "not used"
+msgstr "sense utilitzar"
+
+msgid "not valid. "
+msgstr "no vàlid. "
+
+msgid "not yet saved"
+msgstr "encara sense desar"
+
+msgid "on time!"
+msgstr "a temps!"
+
+msgid "one day ago"
+msgstr "fa un dia"
+
+msgid "only models with items"
+msgstr "només models amb articles"
+
+msgid "only models without items"
+msgstr "només models sense articles"
+
+msgid "open datepicker"
+msgstr "obrir calendari"
+
+msgid "or"
+msgstr "o"
+
+msgid "or search for item"
+msgstr "o cercar un article"
+
+msgid "orders"
+msgstr "comandes"
+
+msgid "overdue"
+msgstr "endarrerit"
+
+msgid "please wait"
+msgstr "esperi"
+
+msgid "please wait..."
+msgstr "esperi..."
+
+msgid "quantity increased by %s"
+msgstr "quantitat augmentada en %s"
+
+msgid "quantity not available. "
+msgstr "quantitat no disponible. "
+
+msgid "remaining"
+msgstr "restant"
+
+msgid "rentable"
+msgstr "llogable"
+
+msgid "requested"
+msgstr "sol·licitat"
+
+msgid "requesting phase until %s"
+msgstr "fase de sol·licitud fins a %s"
+
+msgid "required"
+msgstr "obligatori"
+
+msgid "reserved / item assigned in future"
+msgstr "reservat / article assignat en el futur"
+
+msgid "reset user"
+msgstr "restablir usuari"
+
+msgid "retired"
+msgstr "donat de baixa"
+
+msgid "selected"
+msgstr "seleccionat"
+
+msgid "set current page as start page"
+msgstr "definir la pàgina actual com a pàgina d'inici"
+
+msgid "show less"
+msgstr "mostrar menys"
+
+msgid "show less properties"
+msgstr "mostrar menys propietats"
+
+msgid "show package parts"
+msgstr "mostrar les parts del paquet"
+
+msgid "since"
+msgstr "des de"
+
+msgid "since max."
+msgstr "des de màx."
+
+msgid "submit it"
+msgstr "enviï-la"
+
+msgid "therefore you may not be able to change some of these fields"
+msgstr "per tant, és possible que no pugui canviar alguns d'aquests camps"
+
+msgid "this is a package"
+msgstr "això és un paquet"
+
+msgid "this is the branch '%s'"
+msgstr "aquesta és la branca '%s'"
+
+msgid "to"
+msgstr "fins a"
+
+msgid "to %s"
+msgstr "fins a %s"
+
+msgid "to edit this item"
+msgstr "per editar aquest article"
+
+msgid "to substitute"
+msgstr "per substituir"
+
+msgid "today"
+msgstr "Avui"
+
+msgid "unavailable / can't be guaranteed"
+msgstr "no disponible / no es pot garantir"
+
+msgid "unborrowable"
+msgstr "no prestable"
+
+msgid "undo"
+msgstr "desfer"
+
+msgid "unknown Model"
+msgstr "model desconegut"
+
+msgid "until"
+msgstr "fins a"
+
+msgid "upcoming"
+msgstr "properes"
+
+msgid "use barcode scanner to assign fields to item immediately"
+msgstr ""
+"utilitzi el lector de codis de barres per assignar camps a l'article a "
+"l'instant"
+
+msgid "used"
+msgstr "utilitzat"
+
+msgid "was assigned for take back"
+msgstr "s'ha assignat a la devolució"
+
+msgid "while deleting a hand over line"
+msgstr "en eliminar una línia de lliurament"
+
+msgid "while deleting hand over for"
+msgstr "en eliminar el lliurament per a"
+
+msgid "while deleting multiple order reservations"
+msgstr "en eliminar diverses reserves de la comanda"
+
+msgid "while deleting order line for"
+msgstr "en eliminar la línia de comanda per a"
+
+msgid "while try to send an e-mail reminder to:"
+msgstr "en intentar enviar un recordatori per correu a:"
+
+msgid "with comment"
+msgstr "amb comentari"
+
+msgid "without conflict"
+msgstr "sense conflictes"
+
+msgid "you cannot hand out reservations which are ending in the past"
+msgstr "no es poden lliurar reserves que acaben en el passat"
+
+msgid "you cannot hand out reservations which are starting in the future"
+msgstr "no es poden lliurar reserves que comencen en el futur"
+
+msgid "you cannot hand out reservations with unassigned inventory codes"
+msgstr "no es poden lliurar reserves amb codis d'inventari sense assignar"
+
+msgid ""
+"%{model} is reserved for %{date}, %{slot}. To hand it over today, change the"
+" date of the reservation first."
+msgstr ""
+"%{model} està reservat per al %{date}, %{slot}. Per lliurar-lo avui, canviï "
+"primer la data de la reserva."
+
+msgid "The time slot %{slot} of %{model} is already over."
+msgstr "L'horari %{slot} de %{model} ja ha acabat."
+
+msgid ""
+"%{model} is reserved for %{slot}. Handed over now, it is missing for other "
+"reservations before %{start}. Hand over anyway?"
+msgstr ""
+"%{model} està reservat per a %{slot}. Si es lliura ara, faltarà per a altres"
+" reserves abans de les %{start}. Lliurar-lo igualment?"
+
+msgid "Whole day"
+msgstr "Dia complet"
+
+msgid "%s is already assigned to a different contract or hand over"
+msgstr "%s ja està assignat a un altre contracte o lliurament"
+
+msgid "Additional Data"
+msgstr "Dades addicionals"
+
+msgid ""
+"Allocations in other groups considered - still available quantity of "
+"borrowable and not retired items"
+msgstr ""
+"Es tenen en compte les assignacions d'altres grups: quantitat encara "
+"disponible d'articles prestables i no donats de baixa"
+
+msgid "Attachment can't belong to model and item"
+msgstr "Un adjunt no pot pertànyer alhora a un model i a un article"
+
+msgid "Attachment must be belong to model or item"
+msgstr "Un adjunt ha de pertànyer a un model o a un article"
+
+msgid "Back to %s"
+msgstr "Tornar a %s"
+
+msgid "Badge"
+msgstr "Credencial"
+
+msgid "CSV import"
+msgstr "Importar CSV"
+
+msgid "CSV import failed with %d errors"
+msgstr "La importació del CSV ha fallat amb %d errors"
+
+msgid "CSV successfully imported, %d items created"
+msgstr "CSV importat correctament: %d articles creats"
+
+msgid "Contract can't have multiple delegated users."
+msgstr "Un contracte no pot tenir diversos usuaris delegats."
+
+msgid "Contract can't have multiple handed over by users."
+msgstr "Un contracte no pot tenir diversos usuaris que l'hagin lliurat."
+
+msgid "End date of a take back line can not be in the past."
+msgstr "La data de fi d'una línia de devolució no pot ser en el passat."
+
+msgid "Excel"
+msgstr "Excel"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "Group"
+msgstr "Grup"
+
+msgid ""
+"If you transfer an item to a different inventory pool it's not visible for "
+"you anymore."
+msgstr ""
+"Si transfereix un article a un altre grup d'inventari, deixarà de veure'l."
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "Licenses"
+msgstr "Llicències"
+
+msgid "Model Name"
+msgstr "Nom del model"
+
+msgid "Personal ID"
+msgstr "ID personal"
+
+msgid "Retired Reason"
+msgstr "Motiu de la baixa"
+
+msgid "Rooms Diff"
+msgstr "Diferències de sales"
+
+msgid "Search category"
+msgstr "Cercar categoria"
+
+msgid "Set current screen as your personal start screen"
+msgstr "Definir aquesta pantalla com la seva pantalla d'inici"
+
+msgid "Software Informationen"
+msgstr "Informació del programari"
+
+msgid "Start Date cannot be a past date"
+msgstr "La data d'inici no pot ser en el passat"
+
+msgid "Technical Detail"
+msgstr "Detall tècnic"
+
+msgid "The delegated user %s is suspended."
+msgstr "L'usuari delegat %s està suspès."
+
+msgid "The item with the inventory code '%s' was not found"
+msgstr "No s'ha trobat l'article amb el codi d'inventari '%s'"
+
+msgid "The start_date is not unique"
+msgstr "La data d'inici no és única"
+
+msgid "Type"
+msgstr "Tipus"
+
+msgid "Unallowed content type"
+msgstr "Tipus de fitxer no permès"
+
+msgid "Uploaded file must be less than 100MB"
+msgstr "El fitxer pujat ha d'ocupar menys de 100 MB"
+
+msgid "Uploaded file must be less than 8MB"
+msgstr "El fitxer pujat ha d'ocupar menys de 8 MB"
+
+msgid "Version"
+msgstr "Versió"
+
+msgid "You don't have permission"
+msgstr "No té permís"
+
+msgid "You dont have the permission to update any of the selected fields."
+msgstr "No té permís per actualitzar cap dels camps seleccionats."
+
+msgid "close dialog"
+msgstr "tancar diàleg"
+
+msgid "contract_contact_details_heading"
+msgstr "Dades de contacte"
+
+msgid "create_multiple_items_btn_csv_export"
+msgstr "Desar com a CSV"
+
+msgid "create_multiple_items_checkbox_show_barcode"
+msgstr "Mostrar codis de barres"
+
+msgid "create_multiple_items_checkbox_show_full_urls"
+msgstr "Mostrar els URL complets"
+
+msgid "create_multiple_items_head_list"
+msgstr "Llista dels articles creats"
+
+msgid "create_multiple_items_head_summary"
+msgstr "Resum"
+
+msgid "create_multiple_items_head_title"
+msgstr "Articles creats correctament!"
+
+msgid "create_multiple_items_hint_csv_export"
+msgstr "(per exemple, per a impressores d'etiquetes)"
+
+msgid "create_multiple_items_label_date"
+msgstr "Data"
+
+msgid "create_multiple_items_label_export"
+msgstr "Exportar"
+
+msgid "max. %s"
+msgstr "màx. %s"
+
+msgid "must be taken from other groups"
+msgstr "cal agafar-los d'altres grups"
+
+msgid "%s available for general use, of which assigned"
+msgstr "%s disponibles per a ús general; d'aquests, assignats"
+
+msgid "%s reserved for group %s, of which assigned"
+msgstr "%s reservats per al grup %s; d'aquests, assignats"
+
+msgid "Last checked before"
+msgstr "Darrera revisió abans de"
+
+msgid "Only visible if owner"
+msgstr "Només visible per al propietari"
+
+msgid "min"
+msgstr "mín."
+
+msgid "max"
+msgstr "màx."
+
+msgid "Old version"
+msgstr "Versió anterior"
+
+msgid "Upload a comma separated CSV file (UTF-8 encoding)."
+msgstr "Pugi un fitxer CSV separat per comes (codificació UTF-8)."
+
+msgid "Room number"
+msgstr "Número de sala"
+
+msgid "has %s more..."
+msgstr "%s més..."
+
+msgid ""
+"The assigned contract reservations have to be marked either as signed or as "
+"closed"
+msgstr ""
+"Les reserves assignades al contracte s'han de marcar com a signades o "
+"tancades"
+
+msgid "Challenge Response/System ID"
+msgstr "Challenge Response/ID del sistema"
+
+msgid "Citrix"
+msgstr "Citrix"
+
+msgid "Dongle"
+msgstr "Dongle"
+
+msgid "Dongle ID"
+msgstr "ID del dongle"
+
+msgid "Linux"
+msgstr "Linux"
+
+msgid "Mac OS X"
+msgstr "Mac OS X"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Windows"
+msgstr "Windows"
+
+msgid "iOS"
+msgstr "iOS"
+
+msgid "Start time"
+msgstr "Hora d'inici"
+
+msgid "End time"
+msgstr "Hora de fi"
+
+msgid "Keep the times"
+msgstr "Mantenir els horaris"
+
+msgid "Choose both times, or none for whole days"
+msgstr "Triï les dues hores, o cap per a dies complets"
+
+msgid "The end has to be after the start"
+msgstr "La fi ha de ser posterior a l'inici"
+
+msgid "The inventory pool does not offer reservations by the hour."
+msgstr "El grup d'inventari no ofereix reserves per hores."
+
+msgid ""
+"Choose both times within the hours of the inventory pool, or none for whole "
+"days."
+msgstr ""
+"Triï les dues hores dins de l'horari del grup d'inventari, o cap per a dies "
+"complets."
+
+msgid "Max. hours per reservation"
+msgstr "Màx. hores per reserva"
+
+msgid "No limit"
+msgstr "Sense límit"

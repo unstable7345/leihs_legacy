@@ -3585,7 +3585,7 @@ msgid "%{model} is reserved for %{date}, %{slot}. To hand it over today, change 
 msgstr "%{model} está reservado para el %{date}, %{slot}. Para entregarlo hoy, cambie primero la fecha de la reserva."
 
 msgid "The time slot %{slot} of %{model} is already over."
-msgstr "La franja %{slot} de %{model} ya terminó."
+msgstr "El horario %{slot} de %{model} ya terminó."
 
 msgid "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?"
 msgstr "%{model} está reservado para %{slot}. Si se entrega ahora, faltará para otras reservas antes de las %{start}. ¿Entregarlo de todos modos?"

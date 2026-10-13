@@ -1,0 +1,220 @@
+ca:
+  date:
+    abbr_day_names:
+    - dg.
+    - dl.
+    - dt.
+    - dc.
+    - dj.
+    - dv.
+    - ds.
+    abbr_month_names:
+    -
+    - gen.
+    - febr.
+    - març
+    - abr.
+    - maig
+    - juny
+    - jul.
+    - ag.
+    - set.
+    - oct.
+    - nov.
+    - des.
+    day_names:
+    - diumenge
+    - dilluns
+    - dimarts
+    - dimecres
+    - dijous
+    - divendres
+    - dissabte
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%d %B de %Y'
+      short: ! '%d %b'
+      without_year: ! '%d/%m'
+    month_names:
+    -
+    - de gener
+    - de febrer
+    - de març
+    - d'abril
+    - de maig
+    - de juny
+    - de juliol
+    - d'agost
+    - de setembre
+    - d'octubre
+    - de novembre
+    - de desembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadament 1 hora
+        other: aproximadament %{count} hores
+      about_x_months:
+        one: aproximadament 1 mes
+        other: aproximadament %{count} mesos
+      about_x_years:
+        one: aproximadament 1 any
+        other: aproximadament %{count} anys
+      almost_x_years:
+        one: gairebé 1 any
+        other: gairebé %{count} anys
+      half_a_minute: mig minut
+      less_than_x_minutes:
+        one: menys d'1 minut
+        other: menys de %{count} minuts
+      less_than_x_seconds:
+        one: menys d'1 segon
+        other: menys de %{count} segons
+      over_x_years:
+        one: més d'1 any
+        other: més de %{count} anys
+      x_days:
+        one: 1 dia
+        other: ! '%{count} dies'
+      x_minutes:
+        one: 1 minut
+        other: ! '%{count} minuts'
+      x_months:
+        one: 1 mes
+        other: ! '%{count} mesos'
+      x_seconds:
+        one: 1 segon
+        other: ! '%{count} segons'
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuts
+      month: Mes
+      second: Segons
+      year: Any
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: s'ha d'acceptar
+      blank: no pot estar en blanc
+      confirmation: no coincideix amb la confirmació
+      empty: no pot estar buit
+      equal_to: ha de ser igual a %{count}
+      even: ha de ser parell
+      exclusion: està reservat
+      greater_than: ha de ser més gran que %{count}
+      greater_than_or_equal_to: ha de ser més gran o igual que %{count}
+      inclusion: no està inclòs a la llista
+      invalid: no és vàlid
+      less_than: ha de ser més petit que %{count}
+      less_than_or_equal_to: ha de ser més petit o igual que %{count}
+      not_a_number: no és un nombre
+      not_an_integer: ha de ser un enter
+      odd: ha de ser senar
+      other_than: ha de ser diferent de %{count}
+      present: ha d'estar en blanc
+      required: és obligatori
+      restrict_dependent_destroy:
+        one: No es pot eliminar el registre perquè existeix un %{record} dependent
+        many: No es pot eliminar el registre perquè existeixen %{record} dependents
+      record_invalid: ! 'La validació ha fallat: %{errors}'
+      taken: ja està en ús
+      too_long: és massa llarg (%{count} caràcters com a màxim)
+      too_short: és massa curt (%{count} caràcters com a mínim)
+      wrong_length: no té la longitud correcta (%{count} caràcters exactes)
+    template:
+      body: ! 'Hi ha hagut problemes amb els camps següents:'
+      header:
+        one: No s'ha pogut desar aquest %{model} perquè hi ha 1 error
+        other: No s'ha pogut desar aquest %{model} perquè hi ha %{count} errors
+  helpers:
+    select:
+      prompt: Seleccioni
+    submit:
+      create: Crear %{model}
+      submit: Desar %{model}
+      update: Actualitzar %{model}
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%n %u'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: mil milions
+          million: milió
+          quadrillion: mil bilions
+          thousand: mil
+          trillion: bilió
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: ! '%n %'
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' i '
+      two_words_connector: ! ' i '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%A, %d %B de %Y %H:%M:%S %z'
+      long: ! '%d %B de %Y %H:%M'
+      short: ! '%d %b %H:%M'
+    pm: pm
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors
+      models:
+        user_session:
+          attributes:
+            delegation:
+              required: és obligatori.
+        item_line:
+          attributes:
+            delegated_user:
+              required: és obligatori.
+        model:
+          attributes:
+            base:
+              restrict_with_exception_dependent_delete: El model l'utilitza un altre grup d'inventari i per això no es pot eliminar.

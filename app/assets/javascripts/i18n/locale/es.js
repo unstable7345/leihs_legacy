@@ -4806,7 +4806,7 @@ window.i18n.locale_data = {
       ],
       "The time slot %{slot} of %{model} is already over.": [
          null,
-         "La franja %{slot} de %{model} ya terminó."
+         "El horario %{slot} de %{model} ya terminó."
       ],
       "%{model} is reserved for %{slot}. Handed over now, it is missing for other reservations before %{start}. Hand over anyway?": [
          null,
