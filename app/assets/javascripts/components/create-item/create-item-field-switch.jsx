@@ -159,9 +159,15 @@
             return { text: itemValue }
           }
         case 'autocomplete-search':
-          var base = this._itemValue(field.item_value_label, item)
-          var ext = this._itemValue(field.item_value_label_ext, item)
-          text = base + (ext ? ' ' + ext : '')
+          // NOTE: a model (e.g. item.model) shows its name, which includes the manufacturer
+          var target = this._itemValue(_.initial(field.item_value_label), item)
+          if (target && target.name) {
+            text = target.name
+          } else {
+            var base = this._itemValue(field.item_value_label, item)
+            var ext = this._itemValue(field.item_value_label_ext, item)
+            text = base + (ext ? ' ' + ext : '')
+          }
           return {
             text: text,
             id: itemValue

@@ -34,9 +34,13 @@
 
       return result.map((entry) => {
 
-        var label = entry.product
-        if(entry.version) {
-          label += ' ' + entry.version
+        // NOTE: models come with their name, which includes the manufacturer
+        var label = entry.name
+        if(!label) {
+          label = entry.product
+          if(entry.version) {
+            label += ' ' + entry.version
+          }
         }
 
         return {

@@ -27,8 +27,8 @@
 
     _renderModelLabel(parent) {
       return (
-        parent.model.product +
-        (parent.model.version ? ' ' + parent.model.version : '') +
+        (parent.model.name ||
+          parent.model.product + (parent.model.version ? ' ' + parent.model.version : '')) +
         ' ' +
         parent.inventory_code
       )
