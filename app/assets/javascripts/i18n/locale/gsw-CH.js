@@ -3956,6 +3956,26 @@ window.i18n.locale_data = {
          null,
          "Die Gruppene werde im noie Admin-Bereich verwaltet."
       ],
+      "create_multiple_items_code_digits": [
+         null,
+         "Stellen des Zählers"
+      ],
+      "create_multiple_items_code_parts": [
+         null,
+         "Felder des Codes"
+      ],
+      "create_multiple_items_code_pattern_notice": [
+         null,
+         "Die Codes bestehen aus den Feldern, verbunden durch das Trennzeichen, und einem Zähler. Der Zähler setzt nach dem höchsten bestehenden Code mit denselben Feldern fort."
+      ],
+      "create_multiple_items_code_preview": [
+         null,
+         "Codes"
+      ],
+      "create_multiple_items_code_separator": [
+         null,
+         "Trennzeichen"
+      ],
       "create_multiple_items_inv_code_notice": [
          null,
          "Wenn mehreri Sache ufs mal erschtellt werdet, cha de Inventarcode nöd individuell feschtgleit werde. Drum wird automatisch de chlinschtmöglich und dänn e uufschtiigendi Lischte vo Inventarcodes erzügt."

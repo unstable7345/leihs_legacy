@@ -4299,6 +4299,26 @@ window.i18n.locale_data = {
          null,
          "no s'ha pogut assignar a la devolució"
       ],
+      "create_multiple_items_code_digits": [
+         null,
+         "Dígits del comptador"
+      ],
+      "create_multiple_items_code_parts": [
+         null,
+         "Camps del codi"
+      ],
+      "create_multiple_items_code_pattern_notice": [
+         null,
+         "Els codis es formen amb els camps units pel separador i un comptador. El comptador continua després del codi més alt que ja existeixi amb els mateixos camps."
+      ],
+      "create_multiple_items_code_preview": [
+         null,
+         "Codis"
+      ],
+      "create_multiple_items_code_separator": [
+         null,
+         "Separador"
+      ],
       "create_multiple_items_inv_code_notice": [
          null,
          "Quan es creen diversos articles alhora, el codi d'inventari no es pot establir individualment. En canvi, es genera automàticament la llista contínua de codis d'inventari més curta possible."

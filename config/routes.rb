@@ -174,6 +174,7 @@ Rails.application.routes.draw do
       post   'items',                          to: "items#create",                  as: "create_item"
       post   'items/create_multiple',          to: "items#create_multiple",         as: "create_multiple_items"
       get    'items/create_multiple/result',   to: "items#create_multiple_result",  as: "create_multiple_items_result"
+      get    'items/code_pattern_preview',     to: "items#code_pattern_preview",    as: "code_pattern_preview_items"
       post   'items/create_package',           to: "items#create_package",          as: "create_package"
       get    'items/new',                      to: "items#new",                     as: "new_item"
       post   'items/store_attachment_react',   to: "items#store_attachment_react",  as: "item_store_attachment_react"

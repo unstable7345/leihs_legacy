@@ -42,7 +42,10 @@
     childContextTypes: {
       hackyForPackage: PropTypes.bool,
       isBatchCreate: PropTypes.bool,
-      batchCreateInventoryCodePrefix: PropTypes.string
+      batchCreateInventoryCodePrefix: PropTypes.string,
+      codePattern: PropTypes.object,
+      codePatternPreview: PropTypes.object,
+      onCodePatternChange: PropTypes.func
     },
     // NOTE: We need this hack to pass the forPackage value to the mdoel_id input since
     // the current field config does not let us pass this information if we
@@ -51,13 +54,19 @@
       return {
         hackyForPackage: this.props.for_package,
         isBatchCreate: this._isBatchCreate(),
-        batchCreateInventoryCodePrefix: this.props.code_prefix
+        batchCreateInventoryCodePrefix: this.props.code_prefix,
+        codePattern: this.state.codePattern,
+        codePatternPreview: this.state.codePatternPreview,
+        onCodePatternChange: this.onCodePatternChange
       }
     },
 
     getInitialState() {
       return {
         quantity: 1,
+        // NOTE: inventory codes when creating multiple items, e.g. MIC-TLM-01, MIC-TLM-02, ...
+        codePattern: { parts: ['', '', ''], separator: '-', digits: 2 },
+        codePatternPreview: null,
         loadingFields: 'initial',
         fields: null,
         showInvalids: false,
@@ -110,6 +119,53 @@
 
     componentDidMount() {
       this._fetchFields()
+    },
+
+    componentDidUpdate(prevProps, prevState) {
+      if (
+        this._isBatchCreate() &&
+        (prevState.quantity !== this.state.quantity ||
+          prevState.codePattern !== this.state.codePattern)
+      ) {
+        clearTimeout(this._codePatternPreviewTimeout)
+        this._codePatternPreviewTimeout = setTimeout(this._fetchCodePatternPreview, 300)
+      }
+    },
+
+    componentWillUnmount() {
+      clearTimeout(this._codePatternPreviewTimeout)
+    },
+
+    onCodePatternChange(codePattern) {
+      this.setState({ codePattern: codePattern })
+    },
+
+    _codePatternForSubmit() {
+      const { parts, separator, digits } = this.state.codePattern
+      return { parts: f.compact(parts), separator: separator, digits: digits }
+    },
+
+    _fetchCodePatternPreview() {
+      const quantity = this.state.quantity
+      const codePattern = this.state.codePattern
+      $.ajax({
+        url: this.props.code_pattern_preview_path,
+        data: { quantity: quantity, code_pattern: this._codePatternForSubmit() },
+        dataType: 'json',
+        method: 'GET'
+      })
+        .done((data) => {
+          // ignore answers to outdated requests
+          if (quantity === this.state.quantity && codePattern === this.state.codePattern) {
+            this.setState({ codePatternPreview: data })
+          }
+        })
+        .error((res) => {
+          if (quantity === this.state.quantity && codePattern === this.state.codePattern) {
+            const message = f.get(res, 'responseJSON.message')
+            this.setState({ codePatternPreview: message ? { error: message } : null })
+          }
+        })
     },
 
     _fieldSwitch() {
@@ -509,6 +565,7 @@
       if (isBatch) {
         this.setState({ isSaving: true })
         data.quantity = this.state.quantity
+        data.code_pattern = this._codePatternForSubmit()
       }
 
       if (this.props.for_package) {

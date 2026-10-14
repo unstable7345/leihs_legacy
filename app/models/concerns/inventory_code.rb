@@ -153,5 +153,26 @@ module InventoryCode
     def free_consecutive_inventory_codes(pool, quantity = 1)
       free_consecutive_code_numbers(quantity).map { |n| prefix_number(pool, n) }
     end
+
+    # codes made of the parts joined by the separator plus a zero-padded
+    # counter, e.g. MIC-TLM-01, MIC-TLM-02, ...
+    # the counter continues after the highest existing code with the same
+    # prefix in *all* pools, because inventory codes are unique system-wide
+    def patterned_inventory_codes(parts, separator, digits, quantity = 1)
+      prefix = (parts + ['']).join(separator)
+      last_n =
+        Item
+        .where('lower(inventory_code) LIKE ?',
+               "#{sanitize_sql_like(prefix.downcase)}%")
+        .pluck(:inventory_code)
+        .map { |code| code[prefix.length..] }
+        .select { |rest| rest =~ /\A\d+\z/ }
+        .map(&:to_i)
+        .max || 0
+
+      (last_n + 1..last_n + quantity).map do |n|
+        "#{prefix}#{n.to_s.rjust(digits, '0')}"
+      end
+    end
   end
 end

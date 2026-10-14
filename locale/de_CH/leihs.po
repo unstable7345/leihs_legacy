@@ -3686,6 +3686,21 @@ msgstr "Die Gruppen werden im neuen Admin-Bereich verwaltet."
 msgid "legacy_manage_inventory_pool_admin_section_notice"
 msgstr "Bis auf die Verwaltung der Anspruchsgruppen sind alle Funktionen im Admin-Bereich verfügbar."
 
+msgid "create_multiple_items_code_digits"
+msgstr "Stellen des Zählers"
+
+msgid "create_multiple_items_code_parts"
+msgstr "Felder des Codes"
+
+msgid "create_multiple_items_code_pattern_notice"
+msgstr "Die Codes bestehen aus den Feldern, verbunden durch das Trennzeichen, und einem Zähler. Der Zähler setzt nach dem höchsten bestehenden Code mit denselben Feldern fort."
+
+msgid "create_multiple_items_code_preview"
+msgstr "Codes"
+
+msgid "create_multiple_items_code_separator"
+msgstr "Trennzeichen"
+
 msgid "create_multiple_items_inv_code_notice"
 msgstr "Wenn mehrere Gegenstände auf einmal erstellt werden, kann der Inventarcode nicht individuell festgelegt werden. Stattdessen wird automatisch die kleinstmögliche, kontinuierliche Liste von Inventarcodes erzeugt."
 

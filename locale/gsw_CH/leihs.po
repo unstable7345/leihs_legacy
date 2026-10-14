@@ -2983,6 +2983,21 @@ msgstr "Die Benutzer und Gruppene vo de Gruppe-Verteilig werde im noie Admin-Ber
 msgid "legacy_manage_group_new_admin_section_notice"
 msgstr "Die Gruppene werde im noie Admin-Bereich verwaltet."
 
+msgid "create_multiple_items_code_digits"
+msgstr "Stellen des Zählers"
+
+msgid "create_multiple_items_code_parts"
+msgstr "Felder des Codes"
+
+msgid "create_multiple_items_code_pattern_notice"
+msgstr "Die Codes bestehen aus den Feldern, verbunden durch das Trennzeichen, und einem Zähler. Der Zähler setzt nach dem höchsten bestehenden Code mit denselben Feldern fort."
+
+msgid "create_multiple_items_code_preview"
+msgstr "Codes"
+
+msgid "create_multiple_items_code_separator"
+msgstr "Trennzeichen"
+
 msgid "create_multiple_items_inv_code_notice"
 msgstr "Wenn mehreri Sache ufs mal erschtellt werdet, cha de Inventarcode nöd individuell feschtgleit werde. Drum wird automatisch de chlinschtmöglich und dänn e uufschtiigendi Lischte vo Inventarcodes erzügt."
 

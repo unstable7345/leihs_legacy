@@ -7,6 +7,8 @@ class Manage::ItemsController < Manage::ApplicationController
   include BarcodeHelper
 
   BATCH_CREATE_MAX_QUANTITY = 100
+  CODE_PATTERN_MAX_PARTS = 3
+  CODE_PATTERN_MAX_DIGITS = 6
   
   JSON_SPEC = {
     methods: [:current_location,
@@ -74,8 +76,7 @@ class Manage::ItemsController < Manage::ApplicationController
   def create_multiple
     ApplicationRecord.transaction(requires_new: true) do
       items = 
-        Item
-        .free_consecutive_inventory_codes(current_inventory_pool, quantity_param)
+        batch_inventory_codes(quantity_param)
         .map do |inv_code|
           initialize_and_save_item(inv_code, :with_copy_defaults) 
         end
@@ -100,6 +101,15 @@ class Manage::ItemsController < Manage::ApplicationController
         end
       end
     end
+  rescue ArgumentError => e
+    render(status: :bad_request, json: { message: e.message })
+  end
+
+  def code_pattern_preview
+    codes = batch_inventory_codes(quantity_param)
+    render(status: :ok, json: { first: codes.first, last: codes.last })
+  rescue ArgumentError => e
+    render(status: :bad_request, json: { message: e.message })
   end
 
   def create_multiple_result
@@ -251,6 +261,7 @@ class Manage::ItemsController < Manage::ApplicationController
       is_inventory_relevant: (super_user? ? true : false),
       save_path: manage_create_item_path,
       save_multiple_path: manage_create_multiple_items_path,
+      code_pattern_preview_path: manage_code_pattern_preview_items_path,
       store_attachment_path: manage_item_store_attachment_react_path,
       inventory_path: manage_inventory_path,
 
@@ -302,6 +313,7 @@ class Manage::ItemsController < Manage::ApplicationController
       is_inventory_relevant: (super_user? ? true : false),
       save_path: manage_create_item_path,
       save_multiple_path: manage_create_multiple_items_path,
+      code_pattern_preview_path: manage_code_pattern_preview_items_path,
       store_attachment_path: manage_item_store_attachment_react_path,
       inventory_path: manage_inventory_path,
       item_type: (params[:type] == 'license' ? 'license' : 'item'),
@@ -465,15 +477,54 @@ class Manage::ItemsController < Manage::ApplicationController
   end
 
   def send_created_items_csv(items_data, filename)
-    code_prefix = current_inventory_pool.shortname
+    shortname = current_inventory_pool.shortname
     header = ['inventory code', 'code prefix', 'code numeric', 'item UUID', 'creation date', 'model name', 'model UUID']
     rows = items_data.map do|itm|
       inv_code = itm['inventory_code']
       name = "#{itm['model']['product']} #{itm['model']['version']}".strip
-      [inv_code, code_prefix, inv_code.split(code_prefix).last, itm['id'], itm['created_at'], name, itm['model']['id']]
+      # codes from a pattern (e.g. MIC-TLM-01) don't start with the shortname
+      code_prefix, code_numeric =
+        if inv_code.start_with?(shortname)
+          [shortname, inv_code.split(shortname).last]
+        else
+          inv_code.match(/\A(.*?)(\d*)\z/).captures
+        end
+      [inv_code, code_prefix, code_numeric, itm['id'], itm['created_at'], name, itm['model']['id']]
     end
     data = [header].concat(rows).map {|row| row.to_csv}.join
     send_data(data, type: 'text/csv', disposition: "attachment; filename=#{filename}")
+  end
+
+  def batch_inventory_codes(quantity)
+    if (cp = code_pattern_param)
+      Item.patterned_inventory_codes(cp[:parts], cp[:separator], cp[:digits], quantity)
+    else
+      Item.free_consecutive_inventory_codes(current_inventory_pool, quantity)
+    end
+  end
+
+  # e.g. { parts: ['MIC', 'TLM'], separator: '-', digits: 2 }, or nil when no
+  # part is given (then the codes are the pool's shortname plus a number)
+  def code_pattern_param
+    cp = params[:code_pattern]
+    return if cp.blank?
+
+    parts = Array(cp[:parts]).map { |part| part.to_s.strip }.reject(&:blank?)
+    return if parts.empty?
+
+    separator = cp.fetch(:separator, '-').to_s
+    digits = Integer(cp.fetch(:digits, 2))
+    if parts.size > CODE_PATTERN_MAX_PARTS
+      raise ArgumentError, "At most #{CODE_PATTERN_MAX_PARTS} code parts are allowed."
+    elsif (parts + [separator]).any? { |s| s =~ /\s/ }
+      raise ArgumentError, 'Code parts and separator can not contain spaces.'
+    elsif separator.length > 3
+      raise ArgumentError, 'The separator can have at most 3 characters.'
+    elsif not digits.between?(1, CODE_PATTERN_MAX_DIGITS)
+      raise ArgumentError, "The counter must have between 1 and #{CODE_PATTERN_MAX_DIGITS} digits."
+    end
+
+    { parts: parts, separator: separator, digits: digits }
   end
 
   def quantity_param

@@ -3957,6 +3957,26 @@ window.i18n.locale_data = {
          null,
          "The groups are managed in the new Admin section."
       ],
+      "create_multiple_items_code_digits": [
+         null,
+         "Counter digits"
+      ],
+      "create_multiple_items_code_parts": [
+         null,
+         "Code fields"
+      ],
+      "create_multiple_items_code_pattern_notice": [
+         null,
+         "The codes are made of the fields joined by the separator, plus a counter. The counter continues after the highest existing code with the same fields."
+      ],
+      "create_multiple_items_code_preview": [
+         null,
+         "Codes"
+      ],
+      "create_multiple_items_code_separator": [
+         null,
+         "Separator"
+      ],
       "create_multiple_items_inv_code_notice": [
          null,
          "When multiple items are created at once, the inventory code cannot be set individually. Instead, the smallest possible continuous list of inventory codes is automatically generated."

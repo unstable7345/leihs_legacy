@@ -3334,6 +3334,21 @@ msgstr "centre de cost"
 msgid "could not be assigned for take back"
 msgstr "no s'ha pogut assignar a la devolució"
 
+msgid "create_multiple_items_code_digits"
+msgstr "Dígits del comptador"
+
+msgid "create_multiple_items_code_parts"
+msgstr "Camps del codi"
+
+msgid "create_multiple_items_code_pattern_notice"
+msgstr "Els codis es formen amb els camps units pel separador i un comptador. El comptador continua després del codi més alt que ja existeixi amb els mateixos camps."
+
+msgid "create_multiple_items_code_preview"
+msgstr "Codis"
+
+msgid "create_multiple_items_code_separator"
+msgstr "Separador"
+
 msgid "create_multiple_items_inv_code_notice"
 msgstr ""
 "Quan es creen diversos articles alhora, el codi d'inventari no es pot "

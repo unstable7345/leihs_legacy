@@ -3544,6 +3544,21 @@ msgstr ""
 msgid "legacy_manage_inventory_pool_admin_section_notice"
 msgstr ""
 
+msgid "create_multiple_items_code_digits"
+msgstr ""
+
+msgid "create_multiple_items_code_parts"
+msgstr ""
+
+msgid "create_multiple_items_code_pattern_notice"
+msgstr ""
+
+msgid "create_multiple_items_code_preview"
+msgstr ""
+
+msgid "create_multiple_items_code_separator"
+msgstr ""
+
 msgid "create_multiple_items_inv_code_notice"
 msgstr ""
 

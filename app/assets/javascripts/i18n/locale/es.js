@@ -4299,6 +4299,26 @@ window.i18n.locale_data = {
          null,
          "no se pudo asignar a la devolución"
       ],
+      "create_multiple_items_code_digits": [
+         null,
+         "Dígitos del contador"
+      ],
+      "create_multiple_items_code_parts": [
+         null,
+         "Campos del código"
+      ],
+      "create_multiple_items_code_pattern_notice": [
+         null,
+         "Los códigos se forman con los campos unidos por el separador y un contador. El contador sigue después del código más alto que ya exista con los mismos campos."
+      ],
+      "create_multiple_items_code_preview": [
+         null,
+         "Códigos"
+      ],
+      "create_multiple_items_code_separator": [
+         null,
+         "Separador"
+      ],
       "create_multiple_items_inv_code_notice": [
          null,
          "Cuando se crean varios artículos a la vez, el código de inventario no se puede establecer individualmente. En su lugar, se genera automáticamente la menor lista continua posible de códigos de inventario."
