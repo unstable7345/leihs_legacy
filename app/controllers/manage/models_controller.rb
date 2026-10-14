@@ -179,7 +179,7 @@ class Manage::ModelsController < Manage::ApplicationController
         compatibles: model.compatibles.map do |c|
           {
             id: c.id,
-            label: c.product + (c.version ? ' ' + c.version : '')
+            label: c.name
           }
         end,
         properties: model.properties.map do |p|

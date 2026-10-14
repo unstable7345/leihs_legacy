@@ -463,7 +463,7 @@
                         (d) => {
                           return {
                             id: d.id,
-                            label: d.product + (d.version ? ' ' + d.version : '')
+                            label: d.name || d.product + (d.version ? ' ' + d.version : '')
                           }
                         }
                       )

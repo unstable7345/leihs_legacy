@@ -18,14 +18,6 @@ class window.App.Model extends Spine.Model
 
   @url: => "/models"
 
-  name: -> [@product, @version].join(" ").trim()
+  # like the generated column models.name, e.g. "Audient ASP-800"
+  name: -> [(@manufacturer ? "").trim(), @product, @version].filter((part) -> part).join(" ")
 
-  # e.g. "Audient ASP-800"; without repeating the manufacturer when the
-  # product already starts with it (e.g. "AKG D112")
-  nameWithManufacturer: ->
-    name = @name()
-    manufacturer = (@manufacturer ? "").trim()
-    if manufacturer and name.toLowerCase().indexOf(manufacturer.toLowerCase()) != 0
-      "#{manufacturer} #{name}"
-    else
-      name

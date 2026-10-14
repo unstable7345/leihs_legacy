@@ -396,8 +396,9 @@ class Model < ApplicationRecord
     "#{name}"
   end
 
+  # like the generated column models.name, e.g. "Audient ASP-800"
   def name
-    [product, version].compact.join(' ')
+    [manufacturer.to_s.strip.presence, product, version].compact.join(' ')
   end
 
   # compares two objects in order to sort them

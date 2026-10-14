@@ -343,7 +343,9 @@
     },
 
     _renderModelName(model) {
-      if (model.version) {
+      if (model.name) {
+        return model.name
+      } else if (model.version) {
         return model.product + ' ' + model.version
       } else {
         return model.product

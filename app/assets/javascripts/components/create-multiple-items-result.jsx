@@ -67,7 +67,7 @@
                     <td {...tdProps}>
                       {/* eslint-disable-next-line react/jsx-no-target-blank */}
                       <a target="_blank" href={modelLink}>
-                        {model.product} {model.version}
+                        {model.name}
                       </a>
                     </td>
                   </tr>

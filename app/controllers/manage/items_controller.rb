@@ -481,7 +481,7 @@ class Manage::ItemsController < Manage::ApplicationController
     header = ['inventory code', 'code prefix', 'code numeric', 'item UUID', 'creation date', 'model name', 'model UUID']
     rows = items_data.map do|itm|
       inv_code = itm['inventory_code']
-      name = "#{itm['model']['product']} #{itm['model']['version']}".strip
+      name = itm['model']['name']
       # codes from a pattern (e.g. MIC-TLM-01) don't start with the shortname
       code_prefix, code_numeric =
         if inv_code.start_with?(shortname)
