@@ -117,7 +117,7 @@
               }}
               maxLength={40}
               autoComplete="off"
-              style={{ width: '60%', verticalAlign: 'middle' }}
+              style={{ width: '60%', verticalAlign: 'middle', fontSize: '14px' }}
             />
           </div>
           <div className="col1of5 line-col text-align-center">

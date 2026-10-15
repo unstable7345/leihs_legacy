@@ -1643,17 +1643,17 @@
       return _.map(item.tags || [], (tag) => (
         <span
           key={tag.id}
-          className='font-size-xs'
           title={tag.name}
           style={{
-            display: 'inline-block',
             marginLeft: '6px',
-            padding: '1px 7px',
-            borderRadius: '9px',
+            padding: '0 7px',
+            borderRadius: '8px',
             backgroundColor: tag.color,
             color: '#ffffff',
+            fontSize: '10px',
+            lineHeight: '16px',
             fontWeight: 'bold',
-            verticalAlign: 'middle'
+            whiteSpace: 'nowrap'
           }}>
           {tag.name}
         </span>
@@ -1668,7 +1668,9 @@
             {this._renderItemPackageInfo(item)}
           </div>
           <div className='col2of5 line-col text-align-left'>
-            <div className='row'>{this._itemInventoryCode(item)}{this._renderItemTags(item)}</div>
+            <div className='row' style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
+              {this._itemInventoryCode(item)}{this._renderItemTags(item)}
+            </div>
             {this._renderItemDetail(item)}
           </div>
           <div className='col1of5 line-col text-align-center'>

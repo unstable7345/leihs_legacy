@@ -434,7 +434,7 @@
           highest_code: createItemProps.highest_code
         }
 
-        return CreateItemFieldSwitch.renderField(
+        var renderedField = CreateItemFieldSwitch.renderField(
           fieldModel,
           dependencyValue,
           dataDependency,
@@ -445,6 +445,21 @@
           onClose,
           true
         )
+
+        // NOTE: the tags of the item go right under its model
+        if (
+          this.props.tagsSelector &&
+          (fieldModel.field.id == 'model_id' || fieldModel.field.id == 'software_model_id')
+        ) {
+          return (
+            <React.Fragment>
+              {renderedField}
+              {this.props.tagsSelector}
+            </React.Fragment>
+          )
+        } else {
+          return renderedField
+        }
       }
 
       var formClass = null

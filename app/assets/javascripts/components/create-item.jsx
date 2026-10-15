@@ -194,9 +194,11 @@
                       title={selected ? _jed('Remove') : _jed('Add')}
                       style={{
                         margin: '0 4px 4px 0',
-                        padding: '2px 9px',
-                        borderRadius: '10px',
+                        padding: '1px 8px',
+                        borderRadius: '9px',
                         border: '2px solid ' + tag.color,
+                        fontSize: '11px',
+                        lineHeight: '15px',
                         backgroundColor: selected ? tag.color : '#ffffff',
                         color: selected ? '#ffffff' : tag.color,
                         fontWeight: 'bold',
@@ -430,12 +432,8 @@
           onSelectChildItem={this.onSelectChildItem}
           onRemoveChildItem={this.onRemoveChildItem}
           packageChildItems={this.state.packageChildItems}
-          quantitySelector={
-            <div>
-              {quantitySelector}
-              {this._renderTags()}
-            </div>
-          }
+          quantitySelector={quantitySelector}
+          tagsSelector={this._renderTags()}
         />
       )
     },
