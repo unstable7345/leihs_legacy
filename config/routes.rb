@@ -170,7 +170,10 @@ Rails.application.routes.draw do
       put   'options/:id',        to: "options#update",     as: "update_option"
 
       # Tags
+      get    'tags',                           to: "tags#index",                    as: "tags"
       post   'tags',                           to: "tags#create",                   as: "create_tag"
+      put    'tags/:id',                       to: "tags#update",                   as: "update_tag"
+      delete 'tags/:id',                       to: "tags#destroy",                  as: "destroy_tag"
 
       # Items
       get    'items',                          to: "items#index"

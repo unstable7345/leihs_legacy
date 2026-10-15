@@ -2350,6 +2350,15 @@ msgstr "Étiquettes"
 msgid "New tag"
 msgstr "Nouvelle étiquette"
 
+msgid "Color"
+msgstr "Couleur"
+
+msgid "tags_explanation"
+msgstr "Les étiquettes de ce pool, pour marquer des articles. Elles se mettent dans le formulaire de chaque article et la liste d'inventaire peut être filtrée par elles."
+
+msgid "tags_delete_confirmation"
+msgstr "Supprimer l'étiquette «%s» ? Elle sera retirée de %s articles."
+
 msgid "Inventory pools"
 msgstr "Groupe d'inventaire"
 

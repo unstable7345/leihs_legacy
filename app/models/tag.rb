@@ -9,6 +9,7 @@ class Tag < ApplicationRecord
 
   validates :name, presence: true
   validates :name, uniqueness: { scope: :inventory_pool_id, case_sensitive: false }
+  validates :color, format: { with: /\A#[0-9a-fA-F]{6}\z/ }
 
   before_validation do
     self.name = name.to_s.strip

@@ -3143,6 +3143,18 @@ window.i18n.locale_data = {
          null,
          "Nouvelle étiquette"
       ],
+      "Color": [
+         null,
+         "Couleur"
+      ],
+      "tags_explanation": [
+         null,
+         "Les étiquettes de ce pool, pour marquer des articles. Elles se mettent dans le formulaire de chaque article et la liste d'inventaire peut être filtrée par elles."
+      ],
+      "tags_delete_confirmation": [
+         null,
+         "Supprimer l'étiquette «%s» ? Elle sera retirée de %s articles."
+      ],
       "Inventory pools": [
          null,
          "Groupe d'inventaire"

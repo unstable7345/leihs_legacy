@@ -326,6 +326,15 @@ msgstr "Etiquetes"
 msgid "New tag"
 msgstr "Nova etiqueta"
 
+msgid "Color"
+msgstr "Color"
+
+msgid "tags_explanation"
+msgstr "Les etiquetes d'aquest pool, per marcar articles (per exemple «Etiquetat»). Es posen al formulari de cada article i s'hi pot filtrar a la llista d'Inventari."
+
+msgid "tags_delete_confirmation"
+msgstr "Eliminar l'etiqueta «%s»? Es traurà de %s articles."
+
 msgid "All other columns are ignored."
 msgstr "La resta de columnes s'ignoren."
 

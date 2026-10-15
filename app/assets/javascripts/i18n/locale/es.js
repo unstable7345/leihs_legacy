@@ -465,6 +465,18 @@ window.i18n.locale_data = {
          null,
          "Nueva etiqueta"
       ],
+      "Color": [
+         null,
+         "Color"
+      ],
+      "tags_explanation": [
+         null,
+         "Las etiquetas de este pool, para marcar artículos (por ejemplo «Etiquetado»). Se ponen en el formulario de cada artículo y se puede filtrar por ellas en la lista de Inventario."
+      ],
+      "tags_delete_confirmation": [
+         null,
+         "¿Eliminar la etiqueta «%s»? Se quitará de %s artículos."
+      ],
       "All other columns are ignored.": [
          null,
          "Las demás columnas se ignoran."

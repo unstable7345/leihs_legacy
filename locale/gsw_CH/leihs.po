@@ -2280,6 +2280,15 @@ msgstr "Etikette"
 msgid "New tag"
 msgstr "Neui Etikette"
 
+msgid "Color"
+msgstr "Farb"
+
+msgid "tags_explanation"
+msgstr "D Etikette vo däm Pool, zum Sache markiere. Mer setzt si im Formular vo jedere Sach und cha i de Inventarlischte nach ihne filtere."
+
+msgid "tags_delete_confirmation"
+msgstr "Etikette «%s» lösche? Si wird vo %s Sache entfernt."
+
 msgid "Inventory pools"
 msgstr "Grätepärk"
 

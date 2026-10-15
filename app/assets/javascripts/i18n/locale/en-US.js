@@ -3105,6 +3105,18 @@ window.i18n.locale_data = {
          null,
          "New tag"
       ],
+      "Color": [
+         null,
+         "Color"
+      ],
+      "tags_explanation": [
+         null,
+         "The tags of this pool, to mark items (e.g. \"Labelled\"). They are set in the form of each item, and the inventory list can be filtered by them."
+      ],
+      "tags_delete_confirmation": [
+         null,
+         "Delete the tag \"%s\"? It will be removed from %s items."
+      ],
       "Inventory pools": [
          null,
          ""

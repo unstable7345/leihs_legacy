@@ -316,6 +316,15 @@ msgstr "Etiquetas"
 msgid "New tag"
 msgstr "Nueva etiqueta"
 
+msgid "Color"
+msgstr "Color"
+
+msgid "tags_explanation"
+msgstr "Las etiquetas de este pool, para marcar artículos (por ejemplo «Etiquetado»). Se ponen en el formulario de cada artículo y se puede filtrar por ellas en la lista de Inventario."
+
+msgid "tags_delete_confirmation"
+msgstr "¿Eliminar la etiqueta «%s»? Se quitará de %s artículos."
+
 msgid "All other columns are ignored."
 msgstr "Las demás columnas se ignoran."
 

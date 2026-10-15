@@ -2219,6 +2219,15 @@ msgstr "Tags"
 msgid "New tag"
 msgstr "New tag"
 
+msgid "Color"
+msgstr "Colour"
+
+msgid "tags_explanation"
+msgstr "The tags of this pool, to mark items (e.g. \"Labelled\"). They are set in the form of each item, and the inventory list can be filtered by them."
+
+msgid "tags_delete_confirmation"
+msgstr "Delete the tag \"%s\"? It will be removed from %s items."
+
 msgid "Inventory pools"
 msgstr ""
 

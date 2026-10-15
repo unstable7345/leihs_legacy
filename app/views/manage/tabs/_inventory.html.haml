@@ -25,4 +25,9 @@
           :class => (defined? active_tab and active_tab == :templates) ? "active" : ""}
             = _("Templates")
 
+        %li
+          %a.navigation-tab-item.margin-right-xxs.padding-horizontal-m.float-left{:href => manage_tags_path(current_inventory_pool),
+          :class => (defined? active_tab and active_tab == :tags) ? "active" : ""}
+            = _("Tags")
+
   -#= render :partial => "manage/tabs/current_inventory_pool", :locals => {:current_inventory_pool => current_inventory_pool}

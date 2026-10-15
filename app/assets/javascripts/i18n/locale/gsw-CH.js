@@ -3040,6 +3040,18 @@ window.i18n.locale_data = {
          null,
          "Neui Etikette"
       ],
+      "Color": [
+         null,
+         "Farb"
+      ],
+      "tags_explanation": [
+         null,
+         "D Etikette vo däm Pool, zum Sache markiere. Mer setzt si im Formular vo jedere Sach und cha i de Inventarlischte nach ihne filtere."
+      ],
+      "tags_delete_confirmation": [
+         null,
+         "Etikette «%s» lösche? Si wird vo %s Sache entfernt."
+      ],
       "Inventory pools": [
          null,
          "Grätepärk"

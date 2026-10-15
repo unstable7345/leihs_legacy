@@ -2401,6 +2401,15 @@ msgstr "Etiketten"
 msgid "New tag"
 msgstr "Neue Etikette"
 
+msgid "Color"
+msgstr "Farbe"
+
+msgid "tags_explanation"
+msgstr "Die Etiketten dieses Pools, um Gegenstände zu markieren. Sie werden im Formular jedes Gegenstands gesetzt und können in der Inventarliste gefiltert werden."
+
+msgid "tags_delete_confirmation"
+msgstr "Etikette «%s» löschen? Sie wird von %s Gegenständen entfernt."
+
 msgid "Inventory pools"
 msgstr "Geräteparks"
 

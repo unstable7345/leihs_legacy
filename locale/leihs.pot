@@ -2311,6 +2311,15 @@ msgstr ""
 msgid "New tag"
 msgstr ""
 
+msgid "Color"
+msgstr ""
+
+msgid "tags_explanation"
+msgstr ""
+
+msgid "tags_delete_confirmation"
+msgstr ""
+
 msgid "Inventory pools"
 msgstr ""
 
