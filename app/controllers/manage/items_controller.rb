@@ -61,6 +61,7 @@ class Manage::ItemsController < Manage::ApplicationController
       end
       set_copy_defaults(item) if with_copy_defaults
       item.save
+      assign_tags(item) if item.persisted?
 
       params[:child_items]&.each do |child_id|
         child = Item.find(child_id)
@@ -186,6 +187,7 @@ class Manage::ItemsController < Manage::ApplicationController
           end
 
           @item.update!(item_params)
+          assign_tags(@item)
 
           if params[:child_items]
             @item.children = []
@@ -249,6 +251,7 @@ class Manage::ItemsController < Manage::ApplicationController
   def copy
     fetch_item_by_id
     @type = @item.type.downcase
+    tag_ids = @item.tags.where(inventory_pool_id: current_inventory_pool.id).ids
     @item = @item.dup
     @item.inventory_code = Item.proposed_inventory_code(current_inventory_pool)
     set_copy_defaults(@item)
@@ -268,7 +271,7 @@ class Manage::ItemsController < Manage::ApplicationController
       item: @item.as_json(Manage::ItemsController::JSON_SPEC),
       item_type: @item.type.downcase,
       attachments: []
-    }
+    }.merge(tags_props(tag_ids))
 
     render :new
   end
@@ -319,7 +322,7 @@ class Manage::ItemsController < Manage::ApplicationController
       item_type: (params[:type] == 'license' ? 'license' : 'item'),
       for_package: params[:forPackage] == 'true',
       return_url: (params[:return_url] ? params[:return_url] : nil)
-    }
+    }.merge(tags_props)
   end
 
   def edit
@@ -377,7 +380,7 @@ class Manage::ItemsController < Manage::ApplicationController
       model_attachments: model_attachments,
       return_url: (params[:return_url] ? params[:return_url] : nil),
       for_package: item.model.is_package
-    }
+    }.merge(tags_props(item.tags.where(inventory_pool_id: current_inventory_pool.id).ids))
   end
 
   Mime::Type.register(
@@ -493,6 +496,21 @@ class Manage::ItemsController < Manage::ApplicationController
     end
     data = [header].concat(rows).map {|row| row.to_csv}.join
     send_data(data, type: 'text/csv', disposition: "attachment; filename=#{filename}")
+  end
+
+  # the tags of the current pool, from the form; tags of other pools stay
+  def assign_tags(item)
+    return unless params.key?(:tag_ids)
+
+    item.tags = \
+      item.tags.where.not(inventory_pool_id: current_inventory_pool.id) +
+      current_inventory_pool.tags.where(id: Array(params[:tag_ids]))
+  end
+
+  def tags_props(item_tag_ids = [])
+    { tags: current_inventory_pool.tags.as_json,
+      item_tag_ids: item_tag_ids,
+      create_tag_path: manage_create_tag_path(current_inventory_pool) }
   end
 
   def batch_inventory_codes(quantity)

@@ -2976,6 +2976,18 @@ window.i18n.locale_data = {
          null,
          "All rooms"
       ],
+      "All tags": [
+         null,
+         "All tags"
+      ],
+      "Tags": [
+         null,
+         "Tags"
+      ],
+      "New tag": [
+         null,
+         "New tag"
+      ],
       "Inventory pools": [
          null,
          ""

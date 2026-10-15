@@ -45,7 +45,8 @@ class Manage::InventoryController < Manage::ApplicationController
             .map { |r| { id: r.id, name: "#{r.building} – #{r}" } }
 
         @props = manage_inventory_menu.merge(responsibles: responsibles,
-                                             rooms: rooms)
+                                             rooms: rooms,
+                                             tags: current_inventory_pool.tags.as_json)
       end
       format.json do
         session[:params] = params.to_unsafe_hash.symbolize_keys

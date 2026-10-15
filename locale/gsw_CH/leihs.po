@@ -2271,6 +2271,15 @@ msgstr "Ali Grätepärk"
 msgid "All rooms"
 msgstr "Alli Rüüm"
 
+msgid "All tags"
+msgstr "Alli Etikette"
+
+msgid "Tags"
+msgstr "Etikette"
+
+msgid "New tag"
+msgstr "Neui Etikette"
+
 msgid "Inventory pools"
 msgstr "Grätepärk"
 

@@ -48,6 +48,7 @@ class Item < ApplicationRecord
           class_name: 'Reservation')
 
   has_many :attachments, dependent: :destroy
+  has_and_belongs_to_many :tags
   accepts_nested_attributes_for :attachments, allow_destroy: true
 
   # Note: Rails correctly serializes Jsonb on its own. However, the
@@ -190,6 +191,9 @@ class Item < ApplicationRecord
     end
     items = items.where(model_id: params[:model_ids]) if params[:model_ids]
     items = items.where(room_id: params[:room_id]) if params[:room_id]
+    if params[:tag_id]
+      items = items.where(id: Tag.find(params[:tag_id]).items.select(:id))
+    end
     unless params[:before_last_check].blank?
       items = \
         items

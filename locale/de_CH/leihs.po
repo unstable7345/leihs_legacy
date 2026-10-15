@@ -2392,6 +2392,15 @@ msgstr "Alle Geräteparks"
 msgid "All rooms"
 msgstr "Alle Räume"
 
+msgid "All tags"
+msgstr "Alle Etiketten"
+
+msgid "Tags"
+msgstr "Etiketten"
+
+msgid "New tag"
+msgstr "Neue Etikette"
+
 msgid "Inventory pools"
 msgstr "Geräteparks"
 

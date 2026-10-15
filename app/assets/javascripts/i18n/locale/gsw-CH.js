@@ -3028,6 +3028,18 @@ window.i18n.locale_data = {
          null,
          "Alli Rüüm"
       ],
+      "All tags": [
+         null,
+         "Alli Etikette"
+      ],
+      "Tags": [
+         null,
+         "Etikette"
+      ],
+      "New tag": [
+         null,
+         "Neui Etikette"
+      ],
       "Inventory pools": [
          null,
          "Grätepärk"

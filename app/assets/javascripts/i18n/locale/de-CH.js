@@ -3121,6 +3121,18 @@ window.i18n.locale_data = {
          null,
          "Alle Räume"
       ],
+      "All tags": [
+         null,
+         "Alle Etiketten"
+      ],
+      "Tags": [
+         null,
+         "Etiketten"
+      ],
+      "New tag": [
+         null,
+         "Neue Etikette"
+      ],
       "Inventory pools": [
          null,
          "Geräteparks"

@@ -2210,6 +2210,15 @@ msgstr ""
 msgid "All rooms"
 msgstr "All rooms"
 
+msgid "All tags"
+msgstr "All tags"
+
+msgid "Tags"
+msgstr "Tags"
+
+msgid "New tag"
+msgstr "New tag"
+
 msgid "Inventory pools"
 msgstr ""
 

@@ -19,7 +19,17 @@
                 h
               end
             else
-              @items.as_json(methods: [:current_location, :location, :type, :can_destroy], include: {children: {methods: :to_s}})
+              # the tags of the current pool, e.g. "Etiquetado"
+              tags_by_item_id = \
+                Tag
+                  .joins(:items)
+                  .where(inventory_pool_id: current_inventory_pool.id, items: { id: @items.map(&:id) })
+                  .order(:name)
+                  .select('tags.*, items.id AS item_id')
+                  .group_by(&:item_id)
+              @items
+                .as_json(methods: [:current_location, :location, :type, :can_destroy], include: {children: {methods: :to_s}})
+                .map { |h| h.merge('tags' => (tags_by_item_id[h['id']] || []).as_json) }
             end
   != items.to_json
 

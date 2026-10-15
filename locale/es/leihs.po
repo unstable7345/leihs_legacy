@@ -307,6 +307,15 @@ msgstr "Todos los grupos de inventario"
 msgid "All rooms"
 msgstr "Todas las salas"
 
+msgid "All tags"
+msgstr "Todas las etiquetas"
+
+msgid "Tags"
+msgstr "Etiquetas"
+
+msgid "New tag"
+msgstr "Nueva etiqueta"
+
 msgid "All other columns are ignored."
 msgstr "Las demás columnas se ignoran."
 

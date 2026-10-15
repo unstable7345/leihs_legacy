@@ -67,6 +67,10 @@
         // NOTE: inventory codes when creating multiple items, e.g. MIC-TLM-01, MIC-TLM-02, ...
         codePattern: { parts: ['', '', ''], separator: '-', digits: 2 },
         codePatternPreview: null,
+        // NOTE: tags of the pool ("Etiquetado", ...) and the ones on this item
+        tags: this.props.tags || [],
+        selectedTagIds: this.props.item_tag_ids || [],
+        newTagName: '',
         loadingFields: 'initial',
         fields: null,
         showInvalids: false,
@@ -134,6 +138,97 @@
 
     componentWillUnmount() {
       clearTimeout(this._codePatternPreviewTimeout)
+    },
+
+    _toggleTag(tagId) {
+      const selected = this.state.selectedTagIds
+      this.setState({
+        selectedTagIds: f.includes(selected, tagId) ? f.without(selected, tagId) : selected.concat([tagId])
+      })
+    },
+
+    _createTag(event) {
+      event.preventDefault()
+      const name = this.state.newTagName.trim()
+      if (!name) return
+      $.ajax({
+        url: this.props.create_tag_path,
+        data: JSON.stringify({ name: name }),
+        contentType: 'application/json',
+        dataType: 'json',
+        method: 'POST'
+      })
+        .done((tag) => {
+          this.setState({
+            tags: f.sortBy(this.state.tags.concat([tag]), (t) => t.name.toLowerCase()),
+            selectedTagIds: this.state.selectedTagIds.concat([tag.id]),
+            newTagName: ''
+          })
+        })
+        .error((res) => {
+          this._showErrorMessage(f.get(res, 'responseJSON.message') || res.statusText)
+        })
+    },
+
+    _renderTags() {
+      if (!this.props.create_tag_path) return null
+
+      return (
+        <div
+          className="field row emboss padding-inset-xs margin-vertical-xxs margin-right-xs"
+          data-id="item_tags"
+          data-type="field">
+          <div className="row">
+            <div className="col1of2 padding-vertical-xs" data-type="key">
+              <strong className="font-size-m inline-block">{_jed('Tags')}</strong>
+            </div>
+            <div className="col1of2" data-type="value">
+              <div className="row">
+                {this.state.tags.map((tag) => {
+                  const selected = f.includes(this.state.selectedTagIds, tag.id)
+                  return (
+                    <button
+                      key={tag.id}
+                      type="button"
+                      onClick={() => this._toggleTag(tag.id)}
+                      title={selected ? _jed('Remove') : _jed('Add')}
+                      style={{
+                        margin: '0 4px 4px 0',
+                        padding: '2px 9px',
+                        borderRadius: '10px',
+                        border: '2px solid ' + tag.color,
+                        backgroundColor: selected ? tag.color : '#ffffff',
+                        color: selected ? '#ffffff' : tag.color,
+                        fontWeight: 'bold',
+                        cursor: 'pointer'
+                      }}>
+                      {tag.name}
+                    </button>
+                  )
+                })}
+              </div>
+              <div className="row" style={{ display: 'flex' }}>
+                <input
+                  type="text"
+                  name="new_tag_name"
+                  value={this.state.newTagName}
+                  placeholder={_jed('New tag')}
+                  onChange={(event) => this.setState({ newTagName: event.target.value })}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter') this._createTag(event)
+                  }}
+                  maxLength={40}
+                  autoComplete="off"
+                  style={{ flex: 1, minWidth: 0 }}
+                />
+                <button type="button" className="button small white" onClick={this._createTag}>
+                  {_jed('Add')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
     },
 
     onCodePatternChange(codePattern) {
@@ -331,7 +426,12 @@
           onSelectChildItem={this.onSelectChildItem}
           onRemoveChildItem={this.onRemoveChildItem}
           packageChildItems={this.state.packageChildItems}
-          quantitySelector={quantitySelector}
+          quantitySelector={
+            <div>
+              {quantitySelector}
+              {this._renderTags()}
+            </div>
+          }
         />
       )
     },
@@ -566,6 +666,10 @@
         this.setState({ isSaving: true })
         data.quantity = this.state.quantity
         data.code_pattern = this._codePatternForSubmit()
+      }
+
+      if (this.props.create_tag_path) {
+        data.tag_ids = this.state.selectedTagIds
       }
 
       if (this.props.for_package) {

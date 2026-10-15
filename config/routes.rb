@@ -169,6 +169,9 @@ Rails.application.routes.draw do
       get   'options/:id/edit',   to: "options#edit",       as: "edit_option"
       put   'options/:id',        to: "options#update",     as: "update_option"
 
+      # Tags
+      post   'tags',                           to: "tags#create",                   as: "create_tag"
+
       # Items
       get    'items',                          to: "items#index"
       post   'items',                          to: "items#create",                  as: "create_item"

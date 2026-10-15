@@ -317,6 +317,15 @@ msgstr "Tots els grups d'inventari"
 msgid "All rooms"
 msgstr "Totes les sales"
 
+msgid "All tags"
+msgstr "Totes les etiquetes"
+
+msgid "Tags"
+msgstr "Etiquetes"
+
+msgid "New tag"
+msgstr "Nova etiqueta"
+
 msgid "All other columns are ignored."
 msgstr "La resta de columnes s'ignoren."
 

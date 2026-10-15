@@ -453,6 +453,18 @@ window.i18n.locale_data = {
          null,
          "Todas las salas"
       ],
+      "All tags": [
+         null,
+         "Todas las etiquetas"
+      ],
+      "Tags": [
+         null,
+         "Etiquetas"
+      ],
+      "New tag": [
+         null,
+         "Nueva etiqueta"
+      ],
       "All other columns are ignored.": [
          null,
          "Las demás columnas se ignoran."

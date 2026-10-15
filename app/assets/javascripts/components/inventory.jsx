@@ -198,6 +198,7 @@
         is_borrowable: this.state.is_borrowable,
         responsible_inventory_pool_id: this.state.responsible_inventory_pool_id,
         room_id: this.state.room_id,
+        tag_id: this.state.tag_id,
         search_term: this.state.search_term,
         owned: this.state.owned,
         in_stock: this.state.in_stock,
@@ -255,6 +256,7 @@
             is_borrowable: inventoryFilter.is_borrowable,
             responsible_inventory_pool_id: inventoryFilter.responsible_inventory_pool_id,
             room_id: inventoryFilter.room_id || '',
+            tag_id: inventoryFilter.tag_id || '',
             search_term: inventoryFilter.search_term,
             owned: inventoryFilter.owned,
             in_stock: inventoryFilter.in_stock,
@@ -276,6 +278,7 @@
             is_borrowable: '',
             responsible_inventory_pool_id: '',
             room_id: '',
+            tag_id: '',
             search_term: '',
             owned: false,
             in_stock: false,
@@ -320,6 +323,7 @@
         params.is_borrowable =  this._selectionFromState('is_borrowable')
         params.responsible_inventory_pool_id =  this._selectionFromState('responsible_inventory_pool_id')
         params.room_id =  this._selectionFromState('room_id')
+        params.tag_id =  this._selectionFromState('tag_id')
 
         params.used = this._selectionFromState('used')
 
@@ -966,7 +970,7 @@
       return (
         <div className='row margin-vertical-xs padding-horizontal-s'>
           <form className={formClass} data-filter='true'>
-            <div className='col1of5 padding-right-xs'>
+            <div className='col1of6 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'retired'}
@@ -981,7 +985,7 @@
                 }
               />
             </div>
-            <div className='col1of5 padding-right-xs'>
+            <div className='col1of6 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'used'}
@@ -996,7 +1000,7 @@
                 }
               />
             </div>
-            <div className='col1of5 padding-right-xs'>
+            <div className='col1of6 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'is_borrowable'}
@@ -1011,7 +1015,7 @@
                 }
               />
             </div>
-            <div className='col1of5 padding-right-xs'>
+            <div className='col1of6 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'responsible_inventory_pool_id'}
@@ -1028,7 +1032,7 @@
                 }
               />
             </div>
-            <div className='col1of5 padding-right-xs'>
+            <div className='col1of6 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'room_id'}
@@ -1040,6 +1044,23 @@
                   ].concat(
                     _.map(this.props.rooms, (r) => {
                       return {value: r.id, label: r.name}
+                    })
+                  )
+                }
+              />
+            </div>
+            <div className='col1of6 padding-right-xs'>
+              <InventoryFilterSelect
+                hide={false}
+                name={'tag_id'}
+                onChange={(value) => this.setState({tag_id: value}, this._writeFilterAndReloadList)}
+                value={this.state.tag_id}
+                values= {
+                  [
+                    {value: '', label: _jed('All tags')},
+                  ].concat(
+                    _.map(this.props.tags, (t) => {
+                      return {value: t.id, label: t.name}
                     })
                   )
                 }
@@ -1618,6 +1639,27 @@
 
     },
 
+    _renderItemTags(item) {
+      return _.map(item.tags || [], (tag) => (
+        <span
+          key={tag.id}
+          className='font-size-xs'
+          title={tag.name}
+          style={{
+            display: 'inline-block',
+            marginLeft: '6px',
+            padding: '1px 7px',
+            borderRadius: '9px',
+            backgroundColor: tag.color,
+            color: '#ffffff',
+            fontWeight: 'bold',
+            verticalAlign: 'middle'
+          }}>
+          {tag.name}
+        </span>
+      ))
+    },
+
     _renderItemLine(item) {
 
       return (
@@ -1626,7 +1668,7 @@
             {this._renderItemPackageInfo(item)}
           </div>
           <div className='col2of5 line-col text-align-left'>
-            <div className='row'>{this._itemInventoryCode(item)}</div>
+            <div className='row'>{this._itemInventoryCode(item)}{this._renderItemTags(item)}</div>
             {this._renderItemDetail(item)}
           </div>
           <div className='col1of5 line-col text-align-center'>
