@@ -207,7 +207,7 @@
                   )
                 })}
               </div>
-              <div className="row" style={{ display: 'flex' }}>
+              <div className="row" style={{ display: 'flex', alignItems: 'center' }}>
                 <input
                   type="text"
                   name="new_tag_name"
@@ -219,9 +219,13 @@
                   }}
                   maxLength={40}
                   autoComplete="off"
-                  style={{ flex: 1, minWidth: 0 }}
+                  style={{ flex: 1, minWidth: 0, marginRight: '8px' }}
                 />
-                <button type="button" className="button small white" onClick={this._createTag}>
+                <button
+                  type="button"
+                  className="button small white"
+                  onClick={this._createTag}
+                  style={{ alignSelf: 'center' }}>
                   {_jed('Add')}
                 </button>
               </div>
