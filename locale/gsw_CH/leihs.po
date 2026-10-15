@@ -2268,6 +2268,9 @@ msgstr "abschtiigend"
 msgid "All inventory pools"
 msgstr "Ali Grätepärk"
 
+msgid "All rooms"
+msgstr "Alli Rüüm"
+
 msgid "Inventory pools"
 msgstr "Grätepärk"
 

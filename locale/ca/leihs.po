@@ -314,6 +314,9 @@ msgstr "Tots els %s"
 msgid "All inventory pools"
 msgstr "Tots els grups d'inventari"
 
+msgid "All rooms"
+msgstr "Totes les sales"
+
 msgid "All other columns are ignored."
 msgstr "La resta de columnes s'ignoren."
 

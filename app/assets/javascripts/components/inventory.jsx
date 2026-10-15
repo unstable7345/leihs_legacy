@@ -197,6 +197,7 @@
         used: this.state.used,
         is_borrowable: this.state.is_borrowable,
         responsible_inventory_pool_id: this.state.responsible_inventory_pool_id,
+        room_id: this.state.room_id,
         search_term: this.state.search_term,
         owned: this.state.owned,
         in_stock: this.state.in_stock,
@@ -253,6 +254,7 @@
             used: (filterAllModels ? '' : inventoryFilter.used),
             is_borrowable: inventoryFilter.is_borrowable,
             responsible_inventory_pool_id: inventoryFilter.responsible_inventory_pool_id,
+            room_id: inventoryFilter.room_id || '',
             search_term: inventoryFilter.search_term,
             owned: inventoryFilter.owned,
             in_stock: inventoryFilter.in_stock,
@@ -273,6 +275,7 @@
             used: (filterAllModels ? '' : 'true'),
             is_borrowable: '',
             responsible_inventory_pool_id: '',
+            room_id: '',
             search_term: '',
             owned: false,
             in_stock: false,
@@ -316,6 +319,7 @@
         params.retired = this._selectionFromState('retired')
         params.is_borrowable =  this._selectionFromState('is_borrowable')
         params.responsible_inventory_pool_id =  this._selectionFromState('responsible_inventory_pool_id')
+        params.room_id =  this._selectionFromState('room_id')
 
         params.used = this._selectionFromState('used')
 
@@ -962,7 +966,7 @@
       return (
         <div className='row margin-vertical-xs padding-horizontal-s'>
           <form className={formClass} data-filter='true'>
-            <div className='col1of4 padding-right-xs'>
+            <div className='col1of5 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'retired'}
@@ -977,7 +981,7 @@
                 }
               />
             </div>
-            <div className='col1of4 padding-right-xs'>
+            <div className='col1of5 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'used'}
@@ -992,7 +996,7 @@
                 }
               />
             </div>
-            <div className='col1of4 padding-right-xs'>
+            <div className='col1of5 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'is_borrowable'}
@@ -1007,7 +1011,7 @@
                 }
               />
             </div>
-            <div className='col1of4 padding-right-xs'>
+            <div className='col1of5 padding-right-xs'>
               <InventoryFilterSelect
                 hide={false}
                 name={'responsible_inventory_pool_id'}
@@ -1018,6 +1022,23 @@
                     {value: '', label: _jed('All inventory pools')},
                   ].concat(
                     _.map(this.props.responsibles, (r) => {
+                      return {value: r.id, label: r.name}
+                    })
+                  )
+                }
+              />
+            </div>
+            <div className='col1of5 padding-right-xs'>
+              <InventoryFilterSelect
+                hide={false}
+                name={'room_id'}
+                onChange={(value) => this.setState({room_id: value}, this._writeFilterAndReloadList)}
+                value={this.state.room_id}
+                values= {
+                  [
+                    {value: '', label: _jed('All rooms')},
+                  ].concat(
+                    _.map(this.props.rooms, (r) => {
                       return {value: r.id, label: r.name}
                     })
                   )

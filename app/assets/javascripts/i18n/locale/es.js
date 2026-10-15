@@ -449,6 +449,10 @@ window.i18n.locale_data = {
          null,
          "Todos los grupos de inventario"
       ],
+      "All rooms": [
+         null,
+         "Todas las salas"
+      ],
       "All other columns are ignored.": [
          null,
          "Las demás columnas se ignoran."

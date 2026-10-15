@@ -3127,6 +3127,10 @@ window.i18n.locale_data = {
          null,
          "Tous les inventaires"
       ],
+      "All rooms": [
+         null,
+         "Toutes les salles"
+      ],
       "Inventory pools": [
          null,
          "Groupe d'inventaire"

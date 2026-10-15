@@ -3024,6 +3024,10 @@ window.i18n.locale_data = {
          null,
          "Ali Grätepärk"
       ],
+      "All rooms": [
+         null,
+         "Alli Rüüm"
+      ],
       "Inventory pools": [
          null,
          "Grätepärk"

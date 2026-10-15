@@ -2972,6 +2972,10 @@ window.i18n.locale_data = {
          null,
          ""
       ],
+      "All rooms": [
+         null,
+         "All rooms"
+      ],
       "Inventory pools": [
          null,
          ""

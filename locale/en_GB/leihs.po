@@ -2207,6 +2207,9 @@ msgstr ""
 msgid "All inventory pools"
 msgstr ""
 
+msgid "All rooms"
+msgstr "All rooms"
+
 msgid "Inventory pools"
 msgstr ""
 

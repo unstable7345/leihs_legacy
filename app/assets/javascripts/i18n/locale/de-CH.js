@@ -3117,6 +3117,10 @@ window.i18n.locale_data = {
          null,
          "Alle Geräteparks"
       ],
+      "All rooms": [
+         null,
+         "Alle Räume"
+      ],
       "Inventory pools": [
          null,
          "Geräteparks"

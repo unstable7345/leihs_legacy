@@ -189,6 +189,7 @@ class Item < ApplicationRecord
       items = items.where(inventory_code: params[:inventory_code])
     end
     items = items.where(model_id: params[:model_ids]) if params[:model_ids]
+    items = items.where(room_id: params[:room_id]) if params[:room_id]
     unless params[:before_last_check].blank?
       items = \
         items

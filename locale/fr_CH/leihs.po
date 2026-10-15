@@ -2338,6 +2338,9 @@ msgstr "descendant"
 msgid "All inventory pools"
 msgstr "Tous les inventaires"
 
+msgid "All rooms"
+msgstr "Toutes les salles"
+
 msgid "Inventory pools"
 msgstr "Groupe d'inventaire"
 
