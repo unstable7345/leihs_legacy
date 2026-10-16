@@ -2395,6 +2395,9 @@ msgstr "Alle Räume"
 msgid "All tags"
 msgstr "Alle Etiketten"
 
+msgid "%s tags"
+msgstr "%s Etiketten"
+
 msgid "Tags"
 msgstr "Etiketten"
 

@@ -3125,6 +3125,10 @@ window.i18n.locale_data = {
          null,
          "Alle Etiketten"
       ],
+      "%s tags": [
+         null,
+         "%s Etiketten"
+      ],
       "Tags": [
          null,
          "Etiketten"

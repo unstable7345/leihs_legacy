@@ -2274,6 +2274,9 @@ msgstr "Alli Rüüm"
 msgid "All tags"
 msgstr "Alli Etikette"
 
+msgid "%s tags"
+msgstr "%s Etikette"
+
 msgid "Tags"
 msgstr "Etikette"
 

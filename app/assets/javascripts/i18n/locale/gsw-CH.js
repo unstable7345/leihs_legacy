@@ -3032,6 +3032,10 @@ window.i18n.locale_data = {
          null,
          "Alli Etikette"
       ],
+      "%s tags": [
+         null,
+         "%s Etikette"
+      ],
       "Tags": [
          null,
          "Etikette"

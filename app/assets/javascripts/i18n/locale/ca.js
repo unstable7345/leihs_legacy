@@ -457,6 +457,10 @@ window.i18n.locale_data = {
          null,
          "Totes les etiquetes"
       ],
+      "%s tags": [
+         null,
+         "%s etiquetes"
+      ],
       "Tags": [
          null,
          "Etiquetes"

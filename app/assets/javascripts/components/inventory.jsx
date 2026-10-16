@@ -198,7 +198,7 @@
         is_borrowable: this.state.is_borrowable,
         responsible_inventory_pool_id: this.state.responsible_inventory_pool_id,
         room_id: this.state.room_id,
-        tag_id: this.state.tag_id,
+        tag_ids: this.state.tag_ids,
         search_term: this.state.search_term,
         owned: this.state.owned,
         in_stock: this.state.in_stock,
@@ -256,7 +256,8 @@
             is_borrowable: inventoryFilter.is_borrowable,
             responsible_inventory_pool_id: inventoryFilter.responsible_inventory_pool_id,
             room_id: inventoryFilter.room_id || '',
-            tag_id: inventoryFilter.tag_id || '',
+            // NOTE: earlier only one tag could be chosen (tag_id)
+            tag_ids: inventoryFilter.tag_ids || (inventoryFilter.tag_id ? [inventoryFilter.tag_id] : []),
             search_term: inventoryFilter.search_term,
             owned: inventoryFilter.owned,
             in_stock: inventoryFilter.in_stock,
@@ -278,7 +279,7 @@
             is_borrowable: '',
             responsible_inventory_pool_id: '',
             room_id: '',
-            tag_id: '',
+            tag_ids: [],
             search_term: '',
             owned: false,
             in_stock: false,
@@ -323,7 +324,7 @@
         params.is_borrowable =  this._selectionFromState('is_borrowable')
         params.responsible_inventory_pool_id =  this._selectionFromState('responsible_inventory_pool_id')
         params.room_id =  this._selectionFromState('room_id')
-        params.tag_id =  this._selectionFromState('tag_id')
+        params.tag_ids = _.isEmpty(this.state.tag_ids) ? null : this.state.tag_ids
 
         params.used = this._selectionFromState('used')
 
@@ -1050,19 +1051,16 @@
               />
             </div>
             <div className='col1of6 padding-right-xs'>
-              <InventoryFilterSelect
-                hide={false}
-                name={'tag_id'}
-                onChange={(value) => this.setState({tag_id: value}, this._writeFilterAndReloadList)}
-                value={this.state.tag_id}
-                values= {
-                  [
-                    {value: '', label: _jed('All tags')},
-                  ].concat(
-                    _.map(this.props.tags, (t) => {
-                      return {value: t.id, label: t.name}
-                    })
-                  )
+              <InventoryFilterMultiSelect
+                name={'tag_ids'}
+                onChange={(value) => this.setState({tag_ids: value}, this._writeFilterAndReloadList)}
+                value={this.state.tag_ids}
+                allLabel={_jed('All tags')}
+                severalLabel={(count) => _jed('%s tags', count)}
+                values={
+                  _.map(this.props.tags, (t) => {
+                    return {value: t.id, label: t.name, color: t.color}
+                  })
                 }
               />
             </div>

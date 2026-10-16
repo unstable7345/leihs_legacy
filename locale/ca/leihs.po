@@ -320,6 +320,9 @@ msgstr "Totes les sales"
 msgid "All tags"
 msgstr "Totes les etiquetes"
 
+msgid "%s tags"
+msgstr "%s etiquetes"
+
 msgid "Tags"
 msgstr "Etiquetes"
 

@@ -2344,6 +2344,9 @@ msgstr "Toutes les salles"
 msgid "All tags"
 msgstr "Toutes les étiquettes"
 
+msgid "%s tags"
+msgstr "%s étiquettes"
+
 msgid "Tags"
 msgstr "Étiquettes"
 

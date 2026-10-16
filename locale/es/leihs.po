@@ -310,6 +310,9 @@ msgstr "Todas las salas"
 msgid "All tags"
 msgstr "Todas las etiquetas"
 
+msgid "%s tags"
+msgstr "%s etiquetas"
+
 msgid "Tags"
 msgstr "Etiquetas"
 

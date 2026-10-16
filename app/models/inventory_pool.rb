@@ -282,7 +282,8 @@ class InventoryPool < ApplicationRecord
         :owned,
         :responsible_inventory_pool_id,
         :room_id,
-        :tag_id].all? { |param| params[param].blank? }
+        :tag_id,
+        :tag_ids].all? { |param| params[param].blank? }
       # and one does not explicitly ask for software, models or used/unused models
       unless ['model', 'software'].include?(model_type) or params[:used]
         # then include options
@@ -323,6 +324,7 @@ class InventoryPool < ApplicationRecord
      :responsible_inventory_pool_id,
      :room_id,
      :tag_id,
+     :tag_ids,
      :unused_models]
 
   def self.objects_for_export(inventory_pool, params)

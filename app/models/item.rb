@@ -191,8 +191,11 @@ class Item < ApplicationRecord
     end
     items = items.where(model_id: params[:model_ids]) if params[:model_ids]
     items = items.where(room_id: params[:room_id]) if params[:room_id]
-    if params[:tag_id]
-      items = items.where(id: Tag.find(params[:tag_id]).items.select(:id))
+    # items with any of the tags
+    tag_ids = Array(params[:tag_ids]).presence || Array(params[:tag_id]).presence
+    if tag_ids
+      items = items.where('items.id IN (SELECT item_id FROM items_tags WHERE tag_id IN (?))',
+                          tag_ids)
     end
     unless params[:before_last_check].blank?
       items = \

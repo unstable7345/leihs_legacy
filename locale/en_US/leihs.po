@@ -2335,6 +2335,9 @@ msgstr "All rooms"
 msgid "All tags"
 msgstr "All tags"
 
+msgid "%s tags"
+msgstr "%s tags"
+
 msgid "Tags"
 msgstr "Tags"
 

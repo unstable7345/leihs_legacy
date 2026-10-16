@@ -2305,6 +2305,9 @@ msgstr ""
 msgid "All tags"
 msgstr ""
 
+msgid "%s tags"
+msgstr ""
+
 msgid "Tags"
 msgstr ""
 

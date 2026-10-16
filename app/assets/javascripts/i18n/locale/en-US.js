@@ -3097,6 +3097,10 @@ window.i18n.locale_data = {
          null,
          "All tags"
       ],
+      "%s tags": [
+         null,
+         "%s tags"
+      ],
       "Tags": [
          null,
          "Tags"
