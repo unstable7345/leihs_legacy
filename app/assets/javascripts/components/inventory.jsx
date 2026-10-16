@@ -1660,6 +1660,59 @@
       ))
     },
 
+    // a menu to put and remove the tags of the pool right in the list
+    _renderItemTagsMenu(item) {
+      if(!this._hasEditRights() || _.isEmpty(this.props.tags)) {
+        return null
+      }
+
+      var itemTagIds = _.map(item.tags || [], (t) => t.id)
+
+      return (
+        <div className='dropdown-holder inline-block' style={{marginLeft: '6px'}}>
+          <div
+            className='button white small dropdown-toggle'
+            title={_jed('Tags')}
+            style={{padding: '0 6px', lineHeight: '16px', fontSize: '10px'}}>
+            <i className='fa fa-tag'></i>
+          </div>
+          <ul className='dropdown'>
+            {_.map(this.props.tags, (tag) => {
+              var checked = _.contains(itemTagIds, tag.id)
+              return (
+                <li key={tag.id}>
+                  <a className='dropdown-item' onClick={(event) => this._onToggleItemTag(event, item, tag)}>
+                    <i className={'fa ' + (checked ? 'fa-check-square-o' : 'fa-square-o')} style={{color: tag.color}}></i>
+                    {' '}
+                    {tag.name}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      )
+    },
+
+    _onToggleItemTag(event, item, tag) {
+      event.preventDefault()
+      var tagIds = _.map(item.tags || [], (t) => t.id)
+      tagIds = _.contains(tagIds, tag.id) ? _.without(tagIds, tag.id) : tagIds.concat([tag.id])
+
+      $.ajax({
+        url: App.Inventory.url().replace('/inventory', '') + '/items/' + item.id + '/tags',
+        method: 'PUT',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify({tag_ids: tagIds})
+      }).done((tags) => {
+        item.tags = tags
+        this.forceUpdate()
+      }).error((res) => {
+        App.Flash({type: 'error', message: (res.responseJSON && res.responseJSON.message) || res.statusText})
+      })
+    },
+
     _renderItemLine(item) {
 
       return (
@@ -1669,7 +1722,7 @@
           </div>
           <div className='col2of5 line-col text-align-left'>
             <div className='row' style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
-              {this._itemInventoryCode(item)}{this._renderItemTags(item)}
+              {this._itemInventoryCode(item)}{this._renderItemTags(item)}{this._renderItemTagsMenu(item)}
             </div>
             {this._renderItemDetail(item)}
           </div>

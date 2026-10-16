@@ -7,6 +7,11 @@ class Manage::ItemsController < Manage::ApplicationController
   include BarcodeHelper
 
   BATCH_CREATE_MAX_QUANTITY = 100
+
+  # NOTE: as for the rest of the item, its tags are for lending managers
+  before_action(only: :update_tags) do
+    require_role :lending_manager, current_inventory_pool
+  end
   CODE_PATTERN_MAX_PARTS = 3
   CODE_PATTERN_MAX_DIGITS = 6
   
@@ -111,6 +116,14 @@ class Manage::ItemsController < Manage::ApplicationController
     render(status: :ok, json: { first: codes.first, last: codes.last })
   rescue ArgumentError => e
     render(status: :bad_request, json: { message: e.message })
+  end
+
+  # the tags of the current pool on an item, from the inventory list
+  def update_tags
+    item = fetch_item_by_id
+    assign_tags(item)
+    render json: item.tags.where(inventory_pool_id: current_inventory_pool.id).order(:name),
+           status: :ok
   end
 
   def create_multiple_result
