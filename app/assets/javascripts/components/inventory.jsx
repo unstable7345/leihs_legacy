@@ -1676,13 +1676,16 @@
             style={{padding: '0 6px', lineHeight: '16px', fontSize: '10px'}}>
             <i className='fa fa-tag'></i>
           </div>
-          <ul className='dropdown'>
+          <ul className='dropdown' style={{minWidth: 0, padding: '4px 0'}}>
             {_.map(this.props.tags, (tag) => {
               var checked = _.contains(itemTagIds, tag.id)
               return (
                 <li key={tag.id}>
-                  <a className='dropdown-item' onClick={(event) => this._onToggleItemTag(event, item, tag)}>
-                    <i className={'fa ' + (checked ? 'fa-check-square-o' : 'fa-square-o')} style={{color: tag.color}}></i>
+                  <a
+                    className='dropdown-item'
+                    onClick={(event) => this._onToggleItemTag(event, item, tag)}
+                    style={{fontSize: '12px', lineHeight: '16px', padding: '4px 12px', whiteSpace: 'nowrap', cursor: 'pointer'}}>
+                    <i className={'fa ' + (checked ? 'fa-check-square-o' : 'fa-square-o')} style={{color: tag.color, width: '14px'}}></i>
                     {' '}
                     {tag.name}
                   </a>
@@ -1706,6 +1709,12 @@
         dataType: 'json',
         data: JSON.stringify({tag_ids: tagIds})
       }).done((tags) => {
+        // NOTE: App.Item.find returns clones of the stored item, so the
+        // stored one gets the tags, for the next render too
+        var stored = App.Item.irecords[item.id]
+        if(stored) {
+          stored.tags = tags
+        }
         item.tags = tags
         this.forceUpdate()
       }).error((res) => {
