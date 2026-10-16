@@ -191,11 +191,15 @@ class Item < ApplicationRecord
     end
     items = items.where(model_id: params[:model_ids]) if params[:model_ids]
     items = items.where(room_id: params[:room_id]) if params[:room_id]
-    # items with any of the tags
-    tag_ids = Array(params[:tag_ids]).presence || Array(params[:tag_id]).presence
-    if tag_ids
-      items = items.where('items.id IN (SELECT item_id FROM items_tags WHERE tag_id IN (?))',
-                          tag_ids)
+    # items with all of the tags
+    tag_ids = (Array(params[:tag_ids]).presence || Array(params[:tag_id])).uniq
+    if tag_ids.present?
+      items = items.where(<<~SQL, tag_ids, tag_ids.size)
+        items.id IN (SELECT item_id FROM items_tags
+                     WHERE tag_id IN (?)
+                     GROUP BY item_id
+                     HAVING count(DISTINCT tag_id) = ?)
+      SQL
     end
     unless params[:before_last_check].blank?
       items = \
