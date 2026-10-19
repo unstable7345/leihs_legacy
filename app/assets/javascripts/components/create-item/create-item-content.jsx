@@ -311,11 +311,12 @@
       var liARenderer = (row) => {
         return (
           <a className="ui-menu-item-wrapper">
-            <div className="row text-ellipsis">
-              <div className="col1of3">
-                <strong>{row.inventoryCode}</strong>
-              </div>
-              <div className="col2of3 text-ellipsis" title={this._renderModelName(row.value.model)}>
+            {/* NOTE: the code takes what it needs, the model name the rest, on more lines if needed */}
+            <div className="row" style={{ display: 'flex', alignItems: 'baseline' }}>
+              <strong style={{ flex: '0 0 auto', marginRight: '12px', whiteSpace: 'nowrap' }}>
+                {row.inventoryCode}
+              </strong>
+              <div style={{ flex: '1 1 auto', minWidth: 0 }}>
                 {this._renderModelName(row.value.model)}
               </div>
             </div>
@@ -331,7 +332,7 @@
           inputClassName="has-addon width-full"
           element="div"
           inputId="search-item"
-          dropdownWidth="424px"
+          dropdownWidth="100%"
           label={''}
           _makeCall={makeCall}
           onChange={this.props.onSelectChildItem}
