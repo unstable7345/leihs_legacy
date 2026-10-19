@@ -1763,6 +1763,11 @@
         return this._itemInventoryCode(item)
       }
 
+      // NOTE: the field is as wide as the code, so that the tags still fit
+      // next to it; a click elsewhere cancels, like Escape; the buttons keep
+      // the focus in the field (onMouseDown), so that clicking them is no
+      // click elsewhere
+
       return (
         <span style={{display: 'inline-flex', alignItems: 'center'}}>
           <input
@@ -1778,13 +1783,16 @@
                 this.setState({editingCode: null})
               }
             }}
-            style={{fontSize: '12px', padding: '2px 6px', width: '16em'}}
+            onBlur={() => this.setState({editingCode: null})}
+            style={{fontSize: '12px', padding: '2px 6px', width: Math.max(10, editing.value.length + 3) + 'ch'}}
           />
-          <div className='button white small' title={_jed('Save')} onClick={() => this._saveItemCode(item)}
+          <div className='button white small' title={_jed('Save')}
+            onMouseDown={(event) => event.preventDefault()} onClick={() => this._saveItemCode(item)}
             style={_.extend(this._itemIconButtonStyle(), {marginLeft: '4px'})}>
             <i className='fa fa-check'></i>
           </div>
-          <div className='button white small' title={_jed('Cancel')} onClick={() => this.setState({editingCode: null})}
+          <div className='button white small' title={_jed('Cancel')}
+            onMouseDown={(event) => event.preventDefault()} onClick={() => this.setState({editingCode: null})}
             style={_.extend(this._itemIconButtonStyle(), {marginLeft: '4px'})}>
             <i className='fa fa-times'></i>
           </div>
@@ -1820,7 +1828,7 @@
             </div>
           </div>
           <div className='col2of5 line-col text-align-left'>
-            <div className='row' style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
+            <div className='row' style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', rowGap: '4px'}}>
               {this._renderItemCode(item)}{this._renderItemTags(item)}
             </div>
             {this._renderItemDetail(item)}
