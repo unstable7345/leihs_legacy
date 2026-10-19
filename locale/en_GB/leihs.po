@@ -2216,6 +2216,9 @@ msgstr "All tags"
 msgid "%s tags"
 msgstr "%s tags"
 
+msgid "Edit inventory code"
+msgstr "Edit inventory code"
+
 msgid "Tags"
 msgstr "Tags"
 

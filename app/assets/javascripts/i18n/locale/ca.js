@@ -461,6 +461,10 @@ window.i18n.locale_data = {
          null,
          "%s etiquetes"
       ],
+      "Edit inventory code": [
+         null,
+         "Editar el codi d'inventari"
+      ],
       "Tags": [
          null,
          "Etiquetes"

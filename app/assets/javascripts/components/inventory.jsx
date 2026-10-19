@@ -242,7 +242,10 @@
 
         currentPage: 1,
 
-        delayedReloads: []
+        delayedReloads: [],
+
+        // NOTE: the inventory code being changed right in the list, e.g. {itemId: ..., value: 'MIC-01'}
+        editingCode: null
       }
 
       if(inventoryFilter && !filterReset) {
@@ -1534,27 +1537,6 @@
       }
     },
 
-    _renderItemPackageInfo(item) {
-
-      if(!this._itemIsPackage(item)) {
-        return null
-      }
-
-      return (
-        <div className='row'>
-          <div className='col1of2'></div>
-          <div className='col1of2'>
-            <button onClick={(event) => this._onToggleItem(event, item)} className='button inset small width-full' data-type='inventory-expander'>
-              {this._renderItemArrow(item)}
-              {' '}
-              <span>{this._itemChildCount(item)}</span>
-            </button>
-          </div>
-        </div>
-      )
-
-    },
-
     _itemProblems(item) {
       return item.getProblems()
     },
@@ -1667,11 +1649,11 @@
       var itemTagIds = _.map(item.tags || [], (t) => t.id)
 
       return (
-        <div className='dropdown-holder inline-block' style={{marginLeft: '6px'}}>
+        <div className='dropdown-holder inline-block' style={{marginLeft: '4px'}}>
           <div
             className='button white small dropdown-toggle'
             title={_jed('Tags')}
-            style={{padding: '0 6px', lineHeight: '16px', fontSize: '10px'}}>
+            style={this._itemIconButtonStyle()}>
             <i className='fa fa-tag'></i>
           </div>
           <ul className='dropdown' style={{minWidth: 0, padding: '4px 0'}}>
@@ -1720,16 +1702,126 @@
       })
     },
 
+    _itemIconButtonStyle() {
+      return {padding: '0 6px', lineHeight: '16px', fontSize: '10px', width: '24px', textAlign: 'center'}
+    },
+
+    // NOTE: like the field in the item form: inventory managers of the owner pool
+    _canEditItemCode(item) {
+      return this._appAccessRight().atLeastRole(this._appCurrentUserRole(), 'inventory_manager')
+        && item.owner_id == App.InventoryPool.current.id
+    },
+
+    _renderItemCodeEditButton(item) {
+      if(!this._hasEditRights()) {
+        return null
+      }
+
+      // NOTE: an empty place where the code can't be changed, so that the tags
+      // button stays at the same place in all lines
+      var canEdit = this._canEditItemCode(item)
+      return (
+        <div
+          className='button white small'
+          title={_jed('Edit inventory code')}
+          onClick={() => canEdit && this.setState({editingCode: {itemId: item.id, value: item.inventory_code}})}
+          style={_.extend(this._itemIconButtonStyle(), canEdit ? {} : {visibility: 'hidden'})}>
+          <i className='fa fa-pencil'></i>
+        </div>
+      )
+    },
+
+    _saveItemCode(item) {
+      var code = this.state.editingCode.value.trim()
+      if(code == '' || code == item.inventory_code) {
+        this.setState({editingCode: null})
+        return
+      }
+
+      $.ajax({
+        url: App.Inventory.url().replace('/inventory', '') + '/items/' + item.id + '/inventory_code',
+        method: 'PUT',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify({inventory_code: code})
+      }).done((data) => {
+        // NOTE: App.Item.find returns clones of the stored item (see the tags)
+        var stored = App.Item.irecords[item.id]
+        if(stored) {
+          stored.inventory_code = data.inventory_code
+        }
+        item.inventory_code = data.inventory_code
+        this.setState({editingCode: null})
+      }).error((res) => {
+        App.Flash({type: 'error', message: (res.responseJSON && res.responseJSON.message) || res.statusText})
+      })
+    },
+
+    _renderItemCode(item) {
+      var editing = this.state.editingCode
+      if(!editing || editing.itemId != item.id) {
+        return this._itemInventoryCode(item)
+      }
+
+      return (
+        <span style={{display: 'inline-flex', alignItems: 'center'}}>
+          <input
+            type='text'
+            autoFocus
+            value={editing.value}
+            onChange={(event) => this.setState({editingCode: {itemId: item.id, value: event.target.value}})}
+            onKeyDown={(event) => {
+              if(event.key == 'Enter') {
+                event.preventDefault()
+                this._saveItemCode(item)
+              } else if(event.key == 'Escape') {
+                this.setState({editingCode: null})
+              }
+            }}
+            style={{fontSize: '12px', padding: '2px 6px', width: '16em'}}
+          />
+          <div className='button white small' title={_jed('Save')} onClick={() => this._saveItemCode(item)}
+            style={_.extend(this._itemIconButtonStyle(), {marginLeft: '4px'})}>
+            <i className='fa fa-check'></i>
+          </div>
+          <div className='button white small' title={_jed('Cancel')} onClick={() => this.setState({editingCode: null})}
+            style={_.extend(this._itemIconButtonStyle(), {marginLeft: '4px'})}>
+            <i className='fa fa-times'></i>
+          </div>
+        </span>
+      )
+    },
+
+    _renderItemPackageExpander(item) {
+      if(!this._itemIsPackage(item)) {
+        return null
+      }
+
+      return (
+        <div style={{width: '50%', marginLeft: '8px'}}>
+          <button onClick={(event) => this._onToggleItem(event, item)} className='button inset small width-full' data-type='inventory-expander'>
+            {this._renderItemArrow(item)}
+            {' '}
+            <span>{this._itemChildCount(item)}</span>
+          </button>
+        </div>
+      )
+    },
+
     _renderItemLine(item) {
 
       return (
         <div key={'item_' + item.id} className='line row focus-hover-thin' data-id={item.id} data-type='item'>
           <div className='col1of5 line-col'>
-            {this._renderItemPackageInfo(item)}
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', paddingRight: '12px'}}>
+              {this._renderItemCodeEditButton(item)}
+              {this._renderItemTagsMenu(item)}
+              {this._renderItemPackageExpander(item)}
+            </div>
           </div>
           <div className='col2of5 line-col text-align-left'>
             <div className='row' style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
-              {this._itemInventoryCode(item)}{this._renderItemTags(item)}{this._renderItemTagsMenu(item)}
+              {this._renderItemCode(item)}{this._renderItemTags(item)}
             </div>
             {this._renderItemDetail(item)}
           </div>

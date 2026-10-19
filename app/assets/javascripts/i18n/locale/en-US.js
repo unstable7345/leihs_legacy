@@ -3101,6 +3101,10 @@ window.i18n.locale_data = {
          null,
          "%s tags"
       ],
+      "Edit inventory code": [
+         null,
+         "Edit inventory code"
+      ],
       "Tags": [
          null,
          "Tags"

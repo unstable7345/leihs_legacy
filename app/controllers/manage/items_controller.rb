@@ -8,8 +8,8 @@ class Manage::ItemsController < Manage::ApplicationController
 
   BATCH_CREATE_MAX_QUANTITY = 100
 
-  # NOTE: as for the rest of the item, its tags are for lending managers
-  before_action(only: :update_tags) do
+  # NOTE: as for the rest of the item, its tags and code are for lending managers
+  before_action(only: [:update_tags, :update_inventory_code]) do
     require_role :lending_manager, current_inventory_pool
   end
   CODE_PATTERN_MAX_PARTS = 3
@@ -124,6 +124,24 @@ class Manage::ItemsController < Manage::ApplicationController
     assign_tags(item)
     render json: item.tags.where(inventory_pool_id: current_inventory_pool.id).order(:name),
            status: :ok
+  end
+
+  # the inventory code of an item, from the inventory list; with the same
+  # permission as the field in the item form (inventory manager and owner)
+  def update_inventory_code
+    item = fetch_item_by_id
+    unless Field.find('inventory_code').editable(current_user, current_inventory_pool, item)
+      return render(status: :forbidden,
+                    json: { message: _('You are not the owner of this item') + ', ' +
+                                     _('therefore you may not be able to change some of these fields') })
+    end
+
+    if item.update(inventory_code: params[:inventory_code].to_s.strip)
+      render json: { inventory_code: item.inventory_code }, status: :ok
+    else
+      render json: { message: item.errors.full_messages.uniq.join(', ') },
+             status: :bad_request
+    end
   end
 
   def create_multiple_result

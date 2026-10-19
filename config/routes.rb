@@ -188,6 +188,7 @@ Rails.application.routes.draw do
       get    'items/:id',                      to: "items#show"
       put    'items/:id',                      to: "items#update",                  as: "update_item"
       put    'items/:id/tags',                 to: "items#update_tags",             as: "update_item_tags"
+      put    'items/:id/inventory_code',       to: "items#update_inventory_code",   as: "update_item_inventory_code"
       get    'items/:id/edit',                 to: "items#edit",                    as: "edit_item"
       get    'items/:id/copy',                 to: "items#copy",                    as: "copy_item"
       post   'items/:id/inspect',              to: "items#inspect"

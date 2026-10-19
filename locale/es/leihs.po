@@ -313,6 +313,9 @@ msgstr "Todas las etiquetas"
 msgid "%s tags"
 msgstr "%s etiquetas"
 
+msgid "Edit inventory code"
+msgstr "Editar código de inventario"
+
 msgid "Tags"
 msgstr "Etiquetas"
 

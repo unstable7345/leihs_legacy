@@ -2277,6 +2277,9 @@ msgstr "Alli Etikette"
 msgid "%s tags"
 msgstr "%s Etikette"
 
+msgid "Edit inventory code"
+msgstr "Inventarcode bearbeite"
+
 msgid "Tags"
 msgstr "Etikette"
 
