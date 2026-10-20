@@ -76,7 +76,7 @@
           <a
             onClick={() => this.props.onChange([])}
             style={{ display: 'block', padding: '4px 10px', fontSize: '12px', cursor: 'pointer' }}>
-            {this.props.allLabel}
+            {this.props.clearLabel || this.props.allLabel}
           </a>
           {this.props.values.map((v) => (
             <label

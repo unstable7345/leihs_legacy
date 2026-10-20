@@ -357,11 +357,6 @@
       this.setState({search_term: event.target.value}, this._writeFilterAndDelayedReloadList)
     },
 
-    _onCheckboxChange(event, attribute) {
-      // NOTE: Never preveent default for checkboxes.
-      this.state[attribute] = event.target.checked
-      this.setState(this.state, this._writeFilterAndReloadList)
-    },
 
 
     _inventoryParams(page) {
@@ -718,13 +713,13 @@
       var showCategories = true
       if(showCategories && this.state.tabConfig.type != 'option') {
         return (
-          <div className='row'>
-            <div className='col1of6 padding-right-xs'>
+          <div className='row' style={{display: 'flex'}}>
+            <div className='padding-right-xs' style={{flex: '0 0 48px'}}>
               <button onClick={this._toggleCategories} className='button inset width-full height-full no-padding text-align-center' id='categories-toggle'>
                 <i className='fa fa-reorder vertical-align-middle'></i>
               </button>
             </div>
-            <div className='col5of6'>
+            <div style={{flex: '1 1 auto'}}>
               <input value={this.state.search_term} onChange={this._onSearchChange} autoComplete='off' className='width-full' id='list-search' name='input' placeholder={_jed('Search...')} type='text' />
             </div>
           </div>
@@ -963,13 +958,12 @@
     _renderFilters() {
 
       var formClass = 'row margin-bottom-xs'
-      var formClass2 = 'col6of8'
+      var formClass2 = 'col4of8'
       if(this.state.tabConfig.type == 'option') {
         formClass += ' hidden'
         formClass2 +=  ' hidden'
       }
 
-      var checkboxesStyle = {}
 
       return (
         <div className='row margin-vertical-xs padding-horizontal-s'>
@@ -1069,34 +1063,31 @@
             </div>
           </form>
           <div className='row'>
-            <div className='col2of8 padding-right-xs'>
+            <div className='col4of8 padding-right-xs'>
               {this._renderToggleAndSearch()}
             </div>
             <form className={formClass2} data-filter='true'>
               <div className='row'>
-                <div className='col1of5 padding-right-xs'>
-                  <label className='button inset white width-full height-xxs' htmlFor='owned' style={checkboxesStyle}>
-                    <input checked={this.state.owned} autoComplete='off' id='owned' name='owned' type='checkbox' onChange={(event) => this._onCheckboxChange(event, 'owned')} />
-                    <span>{_jed('Owned')}</span>
-                  </label>
-                </div>
-                <div className='col1of5 padding-right-xs'>
-                  <label className='button inset white width-full height-xxs' htmlFor='in_stock' style={checkboxesStyle}>
-                    <input checked={this.state.in_stock} autoComplete='off' id='in_stock' name='in_stock' type='checkbox' onChange={(event) => this._onCheckboxChange(event, 'in_stock')} />
-                    <span>{_jed('In Stock')}</span>
-                  </label>
-                </div>
-                <div className='col1of5 padding-right-xs'>
-                  <label className='button inset white width-full height-xxs' htmlFor='incomplete' style={checkboxesStyle}>
-                    <input checked={this.state.incomplete} autoComplete='off' id='incomplete' name='incomplete' type='checkbox' onChange={(event) => this._onCheckboxChange(event, 'incomplete')} />
-                    <span>{_jed('Incomplete')}</span>
-                  </label>
-                </div>
-                <div className='col1of5 padding-right-xs'>
-                  <label className='button inset white width-full height-xxs' htmlFor='broken' style={checkboxesStyle}>
-                    <input checked={this.state.broken} autoComplete='off' id='broken' name='broken' type='checkbox' onChange={(event) => this._onCheckboxChange(event, 'broken')} />
-                    <span>{_jed('Broken')}</span>
-                  </label>
+                <div className='col1of2 padding-right-xs'>
+                  <InventoryFilterMultiSelect
+                    name={'status'}
+                    onChange={(values) => this.setState({
+                      owned: _.contains(values, 'owned'),
+                      in_stock: _.contains(values, 'in_stock'),
+                      incomplete: _.contains(values, 'incomplete'),
+                      broken: _.contains(values, 'broken')
+                    }, this._writeFilterAndReloadList)}
+                    value={_.filter(['owned', 'in_stock', 'incomplete', 'broken'], (key) => this.state[key])}
+                    allLabel={_jed('Status')}
+                    clearLabel={_jed('All')}
+                    severalLabel={(count) => _jed('Status') + ' (' + count + ')'}
+                    values={[
+                      {value: 'owned', label: _jed('Owned')},
+                      {value: 'in_stock', label: _jed('In Stock')},
+                      {value: 'incomplete', label: _jed('Incomplete')},
+                      {value: 'broken', label: _jed('Broken')}
+                    ]}
+                  />
                 </div>
                 <DatePickerWithInput value={this.state.before_last_check} onChange={this._onDateChange} customRenderer={this._customRenderer}/>
               </div>
@@ -1114,7 +1105,7 @@
 
     _customRenderer(arguments) {
       return (
-        <div className='col1of5 padding-right-xs'>
+        <div className='col1of2 padding-right-xs'>
           <label className='row'>
           <input value={arguments.value} onChange={arguments.onChange} onFocus={arguments.onFocus} autoComplete='off' className='has-addon hasDatepicker' name='before_last_check' placeholder={_jed('Last checked before')} type='text' id='dp1509973221981' />
           <span className='addon' onClick={arguments.onFocus}>

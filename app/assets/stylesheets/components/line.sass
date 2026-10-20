@@ -44,6 +44,19 @@
   .button
     max-width: 160px
 
+  // NOTE: on wide pages, the buttons keep the size they had at 970px and
+  // stay at the right
+  .multibutton.width-full
+    display: block
+    margin-left: auto
+    max-width: 184px
+
+// the button to open the items of a model or package, at the right of its place
+button[data-type='inventory-expander']
+  display: block
+  margin-left: auto
+  max-width: 90px
+
 .line-col
   float: none
   display: table-cell
