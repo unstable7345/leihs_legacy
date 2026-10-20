@@ -3143,14 +3143,6 @@ window.i18n.locale_data = {
          null,
          "Modifier le code d'inventaire"
       ],
-      "%s results": [
-         null,
-         "%s résultats"
-      ],
-      "Per page": [
-         null,
-         "Par page"
-      ],
       "Tags": [
          null,
          "Étiquettes"

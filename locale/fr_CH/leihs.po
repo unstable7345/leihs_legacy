@@ -2350,12 +2350,6 @@ msgstr "%s étiquettes"
 msgid "Edit inventory code"
 msgstr "Modifier le code d'inventaire"
 
-msgid "%s results"
-msgstr "%s résultats"
-
-msgid "Per page"
-msgstr "Par page"
-
 msgid "Tags"
 msgstr "Étiquettes"
 

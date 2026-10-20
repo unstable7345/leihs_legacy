@@ -465,14 +465,6 @@ window.i18n.locale_data = {
          null,
          "Editar el codi d'inventari"
       ],
-      "%s results": [
-         null,
-         "%s resultats"
-      ],
-      "Per page": [
-         null,
-         "Per pàgina"
-      ],
       "Tags": [
          null,
          "Etiquetes"

@@ -2341,12 +2341,6 @@ msgstr "%s tags"
 msgid "Edit inventory code"
 msgstr "Edit inventory code"
 
-msgid "%s results"
-msgstr "%s results"
-
-msgid "Per page"
-msgstr "Per page"
-
 msgid "Tags"
 msgstr "Tags"
 
