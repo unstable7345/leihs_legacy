@@ -199,6 +199,7 @@
         responsible_inventory_pool_id: this.state.responsible_inventory_pool_id,
         room_id: this.state.room_id,
         tag_ids: this.state.tag_ids,
+        per_page: this.state.per_page,
         search_term: this.state.search_term,
         owned: this.state.owned,
         in_stock: this.state.in_stock,
@@ -261,6 +262,7 @@
             room_id: inventoryFilter.room_id || '',
             // NOTE: earlier only one tag could be chosen (tag_id)
             tag_ids: inventoryFilter.tag_ids || (inventoryFilter.tag_id ? [inventoryFilter.tag_id] : []),
+            per_page: inventoryFilter.per_page || 20,
             search_term: inventoryFilter.search_term,
             owned: inventoryFilter.owned,
             in_stock: inventoryFilter.in_stock,
@@ -283,6 +285,7 @@
             responsible_inventory_pool_id: '',
             room_id: '',
             tag_ids: [],
+            per_page: 20,
             search_term: '',
             owned: false,
             in_stock: false,
@@ -364,6 +367,7 @@
         this._prepareParams(),
         {
           page: page,
+          per_page: this.state.per_page,
           include_package_models: true,
           sort: 'name',
           order: 'ASC'
@@ -1963,6 +1967,28 @@
 
     },
 
+    // how many results the filters give, and how many to load at once
+    _renderResultsBar() {
+      var pagination = this.state.pagination
+      return (
+        <div className='row padding-horizontal-s margin-bottom-xs'
+          style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          <span className='grey-text'>
+            {pagination ? _jed('%s results', pagination.total_count) : ''}
+          </span>
+          <label className='grey-text'>
+            {_jed('Per page')}{' '}
+            <select
+              value={this.state.per_page}
+              onChange={(event) => this.setState({per_page: parseInt(event.target.value, 10)}, this._writeFilterAndReloadList)}
+              style={{width: 'auto'}}>
+              {[20, 50, 100].map((n) => <option key={n} value={n}>{n}</option>)}
+            </select>
+          </label>
+        </div>
+      )
+    },
+
     _renderTable() {
 
       return (
@@ -1995,6 +2021,7 @@
         <div className='row margin-top-l'>
           {this._renderSubTabs()}
           {this._renderFilters()}
+          {this._renderResultsBar()}
           {this._renderTable()}
         </div>
       )

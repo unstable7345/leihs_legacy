@@ -2988,6 +2988,14 @@ window.i18n.locale_data = {
          null,
          "Edit inventory code"
       ],
+      "%s results": [
+         null,
+         "%s results"
+      ],
+      "Per page": [
+         null,
+         "Per page"
+      ],
       "Tags": [
          null,
          "Tags"

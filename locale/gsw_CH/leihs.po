@@ -2280,6 +2280,12 @@ msgstr "%s Etikette"
 msgid "Edit inventory code"
 msgstr "Inventarcode bearbeite"
 
+msgid "%s results"
+msgstr "%s Resultat"
+
+msgid "Per page"
+msgstr "Pro Siite"
+
 msgid "Tags"
 msgstr "Etikette"
 

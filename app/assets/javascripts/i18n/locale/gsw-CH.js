@@ -3040,6 +3040,14 @@ window.i18n.locale_data = {
          null,
          "Inventarcode bearbeite"
       ],
+      "%s results": [
+         null,
+         "%s Resultat"
+      ],
+      "Per page": [
+         null,
+         "Pro Siite"
+      ],
       "Tags": [
          null,
          "Etikette"

@@ -316,6 +316,12 @@ msgstr "%s etiquetas"
 msgid "Edit inventory code"
 msgstr "Editar código de inventario"
 
+msgid "%s results"
+msgstr "%s resultados"
+
+msgid "Per page"
+msgstr "Por página"
+
 msgid "Tags"
 msgstr "Etiquetas"
 

@@ -3133,6 +3133,14 @@ window.i18n.locale_data = {
          null,
          "Inventarcode bearbeiten"
       ],
+      "%s results": [
+         null,
+         "%s Ergebnisse"
+      ],
+      "Per page": [
+         null,
+         "Pro Seite"
+      ],
       "Tags": [
          null,
          "Etiketten"
