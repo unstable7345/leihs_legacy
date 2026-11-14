@@ -1,10 +1,11 @@
 - logo_src = app_settings.try(:logo_light).presence || (app_settings.try(:logo_url).presence && asset_path(app_settings.logo_url))
 - if logo_src
-  -# Centered in the bar (40px inside its borders) whatever the logo's shape.
+  -# Centered in the bar (40px inside its borders) whatever the logo's shape,
+  -# with the corners of the bar's buttons (6px).
   -# Inline styles, so the precompiled assets need no rebuild.
   .table{style: "height: 40px"}
     .table-row
       .table-cell.vertical-align-middle
-        %img{src: logo_src, alt: "Logo", style: "display: block; max-height: 32px; max-width: 120px"}
+        %img{src: logo_src, alt: "Logo", style: "display: block; max-height: 32px; max-width: 120px; border-radius: 6px"}
 - else
   leihs
