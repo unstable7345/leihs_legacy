@@ -1,7 +1,8 @@
-- if app_settings.try(:logo_url)
+- logo_src = app_settings.try(:logo_light).presence || (app_settings.try(:logo_url).presence && asset_path(app_settings.logo_url))
+- if logo_src
   .table
     .table-row
       .table-cell.vertical-align-middle
-        %img{:src => asset_path(app_settings.logo_url)}
+        %img{:src => logo_src, :alt => "Logo"}
 - else
   leihs
