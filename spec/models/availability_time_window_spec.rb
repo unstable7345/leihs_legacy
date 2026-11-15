@@ -120,4 +120,14 @@ describe "availability of time slot reservations" do
     later = reserve("23:58:00", "23:59:00", day: today)
     expect(later.reload).to be_available
   end
+
+  it "keeps an assigned item not handed over yet just for its own time slot" do
+    reserve("14:30:00", "18:30:00", item: @item)
+    morning = reserve("09:00:00", "13:00:00")
+    expect(morning.reload).to be_available
+    today = reserve("23:58:00", "23:59:00", day: Time.zone.today)
+    expect(today.reload).to be_available
+    overlapping = reserve("18:00:00", "19:00:00")
+    expect(overlapping.reload).not_to be_available
+  end
 end

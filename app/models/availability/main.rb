@@ -110,13 +110,19 @@ module Availability
       end
     end
 
-    # With an item already assigned, the reservation keeps it from today on.
+    # A handed over item is missing from today on. One only assigned (not
+    # handed over yet) is kept just for the reservation's own period: with a
+    # single item, e.g. a space, it would block every earlier slot otherwise.
+    def self.handed_over?(reservation)
+      reservation.item_id.present? and reservation.status.to_s == 'signed'
+    end
+
     def self.reservation_period(reservation)
       from, to = period(reservation.start_date,
                         reservation.end_date,
                         [reservation.start_time, reservation.end_time])
       today = date_time(Time.zone.today, '00:00:00')
-      [(reservation.item_id and from > today) ? today : from, to]
+      [(handed_over?(reservation) and from > today) ? today : from, to]
     end
 
     # Late reservations and handed over ones by the hour not returned after
@@ -206,7 +212,7 @@ module Availability
 
         ##################### START DATE: DON'T RECALCULATE PAST ##################
 
-        unavailable_from = if reservation.item_id
+        unavailable_from = if self.class.handed_over?(reservation)
                              Time.zone.today
                            else
                              [reservation.start_date, Time.zone.today].max
