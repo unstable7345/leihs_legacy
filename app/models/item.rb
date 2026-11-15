@@ -43,8 +43,10 @@ class Item < ApplicationRecord
   has_many :item_lines, dependent: :restrict_with_exception
   alias_method :reservations, :item_lines
 
+  # The reservation the item is out with: handed over and not returned yet.
+  # One it is only assigned to (not handed over yet) leaves it in the pool.
   has_one(:current_reservation,
-          -> { where(returned_date: nil) },
+          -> { where(status: :signed, returned_date: nil) },
           class_name: 'Reservation')
 
   has_many :attachments, dependent: :destroy
@@ -234,17 +236,22 @@ class Item < ApplicationRecord
   # temp# scope :packaged, -> {where("parent_id IS NOT NULL")}
 
   # Added parent_id to "in_stock" so items that are
-  # in packages are considered to not be available
+  # in packages are considered to not be available.
+  # In stock = not handed over (an item only assigned to a reservation is
+  # still in the pool); unlike in_stock?, which also counts assigned items
+  # out to keep them from being moved or retired.
   scope(:in_stock,
         (lambda do
           joins('LEFT JOIN reservations AS cl001 ' \
-                'ON items.id=cl001.item_id AND cl001.returned_date IS NULL')
+                "ON items.id=cl001.item_id AND cl001.returned_date IS NULL " \
+                "AND cl001.status = 'signed'")
             .where('cl001.id IS NULL AND items.parent_id IS NULL')
         end))
   scope(:not_in_stock,
         (lambda do
           joins('INNER JOIN reservations AS cl001 ' \
-                'ON items.id=cl001.item_id AND cl001.returned_date IS NULL')
+                "ON items.id=cl001.item_id AND cl001.returned_date IS NULL " \
+                "AND cl001.status = 'signed'")
         end))
 
   scope(:by_owner_or_responsible,
