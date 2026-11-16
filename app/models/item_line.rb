@@ -53,6 +53,25 @@ class ItemLine < Reservation
 
   private
 
+  # The other reservations keeping the item from this one: a handed over
+  # item, until taken back, and an item assigned to a reservation whose
+  # period overlaps this one. With a single item (a space like a BUC) one
+  # assigned in advance to another day must not stop handing it over today.
+  def blocking_reservations
+    own = Availability::Main.period(start_date, end_date,
+                                    [start_time, end_time])
+    item
+      .reservations
+      .handed_over_or_assigned_but_not_returned
+      .where.not(id: id)
+      .select do |r|
+        next true if r.status == :signed
+        from, to = Availability::Main.period(r.start_date, r.end_date,
+                                             [r.start_time, r.end_time])
+        from < own.last and own.first < to
+      end
+  end
+
   # validator
   def validate_item
     if item_id and status == :approved
@@ -61,20 +80,13 @@ class ItemLine < Reservation
         errors.add(:base, _("The item doesn't match with the reserved model"))
       end
 
-      if item \
-        .reservations
-        .handed_over_or_assigned_but_not_returned
-        .where(['id != ? AND user_id = ? AND status = ?', id, user_id, status])
-        .exists?
+      blocking = blocking_reservations
+      if blocking.any? { |r| r.user_id == user_id and r.status == status }
         # check if already assigned to the same contract
         errors.add(:base,
                    _('%s is already assigned to this contract') % \
                    item.inventory_code)
-      elsif item \
-        .reservations
-        .handed_over_or_assigned_but_not_returned
-        .where.not(id: id)
-        .exists?
+      elsif blocking.any?
         # check if available
         errors.add(
           :base,

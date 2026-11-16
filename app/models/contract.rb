@@ -86,6 +86,13 @@ class Contract < ApplicationRecord
         errors.add(:base, _('This contract is not signable because ' \
                             'some reservations are not assigned.'))
       end
+      # An item may be assigned in advance to reservations on other days
+      # (see ItemLine#blocking_reservations), so on handing over check it is
+      # not out with someone else.
+      if new_record? and reservations.any? { |l| handed_over_elsewhere?(l) }
+        errors.add(:base, _('The item is already handed over or assigned ' \
+                            'to a different contract line'))
+      end
       if reservations
         .where(status: :signed)
         .any? { |l| l.end_date < Time.zone.today }
@@ -147,6 +154,15 @@ class Contract < ApplicationRecord
         .reselect(:id)
     )
   end)
+
+  def handed_over_elsewhere?(line)
+    line.item_id.present? and
+      Reservation
+        .signed
+        .where(item_id: line.item_id, returned_date: nil)
+        .where.not(id: line.id)
+        .exists?
+  end
 
   def to_be_verified?
     Contract
