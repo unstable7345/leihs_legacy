@@ -51,8 +51,18 @@ module Availability
             .all? do |a|
               # NOTE doesn't work self.allocated_group_id because
               # is not a running_reservation
-              group_id = \
-                a.running_reservations.detect { |x| x == self }.allocated_group_id
+              running = a.running_reservations.detect { |x| x == self }
+
+              # outside its stored period (e.g. by the hour, handed over
+              # before its start time, see Contract.prepare_time_slot_hand_over!)
+              # it does not compete yet: it needs an item free there
+              if running.nil?
+                next a.maximum_available_in_period_for_groups(start_date,
+                                                              end_date,
+                                                              user.entitlement_group_ids) >= quantity
+              end
+
+              group_id = running.allocated_group_id
 
               # first we check if the user is member of the
               # allocated group (if false, then it's a soft-overbooking)
