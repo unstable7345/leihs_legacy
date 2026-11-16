@@ -54,23 +54,24 @@ module Availability
 
     # The reservations competing with a request for a time window on some
     # day (see Manage::AvailabilityController, which asks for it on each day):
-    # whole-day and late ones, ones by the hour overlapping it on one of their
-    # days (the first from the start time on, the last until the end time, the
-    # ones between entirely) and handed over ones not returned after their end.
+    # whole-day ones (late included) and ones by the hour overlapping it on
+    # one of their days (the first from the start time on, the last until the
+    # end time, the ones between entirely). A reservation by the hour whose
+    # end is over keeps nothing, even if not returned yet (see
+    # conflicts_with_period?).
     def self.conflicting_with_time_window(reservations, time_window)
       start_time, end_time = time_window
-      reservations.where(<<-SQL, end_time, start_time, end_time, start_time, Time.zone.today, Time.zone.now.strftime('%F %T'))
-        reservations.start_time IS NULL
-        OR (reservations.start_date = reservations.end_date
-            AND reservations.start_time < ? AND reservations.end_time > ?)
-        OR (reservations.start_date < reservations.end_date
-            AND (reservations.start_time < ?
-                 OR reservations.end_time > ?
-                 OR reservations.end_date - reservations.start_date > 1))
-        OR reservations.end_date < ?
-        OR (reservations.status = 'signed'
-            AND reservations.returned_date IS NULL
-            AND reservations.end_date + reservations.end_time <= ?::timestamp)
+      reservations.where(<<-SQL, end_time, start_time, end_time, start_time, Time.zone.now.strftime('%F %T'))
+        (reservations.start_time IS NULL
+         OR (reservations.start_date = reservations.end_date
+             AND reservations.start_time < ? AND reservations.end_time > ?)
+         OR (reservations.start_date < reservations.end_date
+             AND (reservations.start_time < ?
+                  OR reservations.end_time > ?
+                  OR reservations.end_date - reservations.start_date > 1)))
+        AND NOT (reservations.start_time IS NOT NULL
+                 AND reservations.end_time IS NOT NULL
+                 AND reservations.end_date + reservations.end_time <= ?::timestamp)
       SQL
     end
 
@@ -125,14 +126,13 @@ module Availability
       [(handed_over?(reservation) and from > today) ? today : from, to]
     end
 
-    # Late reservations and handed over ones by the hour not returned after
-    # their end compete with every period.
-    def self.conflicts_with_period?(period, reservation, now)
-      return true if reservation.end_date < Time.zone.today
-      return true if reservation.start_time and
-                     reservation.status == :signed and
+    # Late whole-day reservations compete with every period. A late one by
+    # the hour does not: once its end time is over it keeps nothing from the
+    # others, so a BUC is free again without waiting for the take back.
+    def self.conflicts_with_period?(period, reservation)
+      return true if reservation.start_time.nil? and
                      reservation.returned_date.nil? and
-                     date_time(reservation.end_date, reservation.end_time) <= now
+                     reservation.end_date < Time.zone.today
 
       from, to = reservation_period(reservation)
       from < period.last and period.first < to
@@ -157,9 +157,8 @@ module Availability
       from, to = period
       # the past does not matter (the changes start today)
       from = today if from < today and today < to
-      now = Time.zone.now.strftime('%F %T')
       intervals([from, to], reservations).map do |interval|
-        reservations.select { |r| conflicts_with_period?(interval, r, now) }
+        reservations.select { |r| conflicts_with_period?(interval, r) }
       end
     end
 

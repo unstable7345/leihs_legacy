@@ -97,13 +97,24 @@ describe "availability of time slot reservations" do
     expect(overlapping.reload).not_to be_available
   end
 
-  it "counts an item not returned after its time slot as missing for the rest of the day" do
+  it "lends an item not returned yet once its time slot is over" do
     today = Time.zone.today
     handed_over = hand_over_and_let_time_slot_end(today)
     expect(handed_over.status).to eq :signed
     expect(handed_over.start_time).to eq "00:00:00"
 
     later = reserve("23:58:00", "23:59:00", day: today)
+    expect(later.reload).to be_available
+    tomorrow = reserve("10:00:00", "12:00:00", day: @day)
+    expect(tomorrow.reload).to be_available
+  end
+
+  it "still counts a late whole-day reservation as missing" do
+    yesterday = Time.zone.today - 1.day
+    line = reserve(item: @item)
+    line.update_columns(status: "signed", start_date: yesterday - 1.day,
+                        end_date: yesterday)
+    later = reserve("10:00:00", "12:00:00", day: @day)
     expect(later.reload).not_to be_available
   end
 
