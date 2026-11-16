@@ -3040,6 +3040,10 @@ window.i18n.locale_data = {
          null,
          "Inventarcode bearbeite"
       ],
+      "In package %s, also booked: %s": [
+         null,
+         "Im Paket %s, ebenfalls reserviert: %s"
+      ],
       "Tags": [
          null,
          "Etikette"

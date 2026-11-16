@@ -30,6 +30,30 @@ window.App.Modules.LineProblems =
       maxAvailableForUser = avail.withoutLines(reservationsToExclude).maxAvailableForGroups(@start_date, @end_date, @user().groupIds)
       if @_isSoftOverbooked(avail, reservationsToExclude) then maxAvailableForUser - quantity else maxAvailableForUser
 
+  _packages: ->
+    return [] unless @model_id?
+    @model().availability()?.packages
+
+  # whether a reservation (of the package) overlaps this line in time
+  _overlapsWith: (r) ->
+    line = if @subreservations? then @subreservations[0] else @
+    return false if r.id is line.id
+    return false if r.start_date > line.end_date or r.end_date < line.start_date
+    # by the hour on one and the same day: the hours have to overlap too
+    if r.start_time? and line.start_time? and r.start_date is r.end_date and line.start_date is line.end_date
+      lineStart = line.start_time.substr(0, 5)
+      lineEnd = line.end_time.substr(0, 5)
+      return r.start_time < lineEnd and r.end_time > lineStart
+    true
+
+  _describeBooking: (r) ->
+    dates = if r.start_date is r.end_date
+      moment(r.start_date).format(i18n.date.L)
+    else
+      "#{moment(r.start_date).format(i18n.date.L)}–#{moment(r.end_date).format(i18n.date.L)}"
+    hours = if r.start_time? then " #{r.start_time}–#{r.end_time}" else ""
+    "#{r.user} #{dates}#{hours}"
+
   getProblems: ->
     problems = []
 
@@ -63,6 +87,15 @@ window.App.Modules.LineProblems =
       problems.push
         type: "availability"
         message: "#{_jed("Not available")} #{effectiveAvailable}(#{maxAvailableInTotal})/#{avail.total_rentable}"
+
+    # PACKAGE: an item lent on its own (e.g. a synth mounted in a buc, lent
+    # to teachers) while the package holding it is booked at the same time
+    for pkg in (@_packages() or [])
+      clashes = _.filter pkg.reservations, (r) => @_overlapsWith(r)
+      if clashes.length
+        problems.push
+          type: "package"
+          message: _jed("In package %s, also booked: %s", [pkg.name, (_.map clashes, (r) => @_describeBooking(r)).join(", ")])
 
     if @item()
 

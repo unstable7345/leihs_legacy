@@ -62,6 +62,9 @@ class Entitlement < ApplicationRecord
 
   def self.query(model_ids: nil, inventory_pool_id: nil)
     # NOTE: this query is duplicated in new leihs-borrow !!
+    # Borrowable items in a package (e.g. a synth mounted in a buc) are lent
+    # on their own only to the named groups entitled to the model (e.g.
+    # teachers), never to the general group.
     <<-SQL
       SELECT model_id,
              entitlement_groups.inventory_pool_id,
@@ -79,7 +82,8 @@ class Entitlement < ApplicationRecord
       SELECT model_id,
              inventory_pool_id,
              NULL as entitlement_group_id,
-             (COUNT(i.id) - COALESCE(
+             LEAST(COUNT(i.id) FILTER (WHERE i.parent_id IS NULL),
+             COUNT(i.id) - COALESCE(
                (SELECT SUM(quantity)
                 FROM entitlements AS es
                 INNER JOIN entitlement_groups
@@ -91,7 +95,6 @@ class Entitlement < ApplicationRecord
              ) as quantity
       FROM items AS i
       WHERE i.retired IS NULL AND i.is_borrowable = true
-        AND i.parent_id IS NULL
      #{"AND i.model_id IN ('#{model_ids.join('\', \'')}') " if model_ids}
      #{"AND i.inventory_pool_id = \'#{inventory_pool_id}\' " if inventory_pool_id}
       GROUP BY i.inventory_pool_id, i.model_id

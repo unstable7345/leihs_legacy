@@ -465,6 +465,10 @@ window.i18n.locale_data = {
          null,
          "Editar el codi d'inventari"
       ],
+      "In package %s, also booked: %s": [
+         null,
+         "Dins de %s, també reservat: %s"
+      ],
       "Tags": [
          null,
          "Etiquetes"

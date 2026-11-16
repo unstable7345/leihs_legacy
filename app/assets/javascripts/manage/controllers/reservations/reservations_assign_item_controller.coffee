@@ -41,7 +41,7 @@ class window.App.ReservationAssignItemController extends Spine.Controller
     klass.ajaxFetch
       data: $.param
         model_ids: [model.id]
-        in_stock: true
+        lendable_in_stock: true
         responsible_inventory_pool_id: App.InventoryPool.current.id
         retired: false
         sort_by_inventory_code: true

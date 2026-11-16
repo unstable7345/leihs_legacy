@@ -186,6 +186,7 @@ class Item < ApplicationRecord
           .where(models: { is_package: (params[:packages] == 'true') })
     end
     items = items.in_stock if params[:in_stock]
+    items = items.lendable_in_stock if params[:lendable_in_stock]
     items = items.incomplete if params[:incomplete]
     items = items.broken if params[:broken]
     if params[:inventory_code]
@@ -246,6 +247,16 @@ class Item < ApplicationRecord
                 "ON items.id=cl001.item_id AND cl001.returned_date IS NULL " \
                 "AND cl001.status = 'signed'")
             .where('cl001.id IS NULL AND items.parent_id IS NULL')
+        end))
+  # In stock and lendable on its own: also the borrowable items in a
+  # package (e.g. a synth mounted in a buc, lent to teachers).
+  scope(:lendable_in_stock,
+        (lambda do
+          joins('LEFT JOIN reservations AS cl001 ' \
+                "ON items.id=cl001.item_id AND cl001.returned_date IS NULL " \
+                "AND cl001.status = 'signed'")
+            .where('cl001.id IS NULL')
+            .where('items.parent_id IS NULL OR items.is_borrowable')
         end))
   scope(:not_in_stock,
         (lambda do

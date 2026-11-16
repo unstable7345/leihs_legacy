@@ -27,8 +27,9 @@ class Manage::AvailabilityController < Manage::ApplicationController
             .items
             .where(inventory_pool_id: current_inventory_pool)
             .unretired
-            .borrowable
+            .where(is_borrowable: true)
             .count,
+        packages: packages_of(model),
         inventory_pool_id: current_inventory_pool.id,
         model_id: model.id
     end
@@ -53,16 +54,16 @@ class Manage::AvailabilityController < Manage::ApplicationController
           model
             .items
             .where(inventory_pool_id: current_inventory_pool)
-            .borrowable
+            .where(is_borrowable: true)
             .unretired
             .count,
         in_stock: \
           model
             .items
             .where(inventory_pool_id: current_inventory_pool)
-            .borrowable
+            .where(is_borrowable: true)
             .unretired
-            .in_stock
+            .lendable_in_stock
             .count,
         entitled_in_groups: entitled_in_groups,
         inventory_pool_id: current_inventory_pool.id,
@@ -72,6 +73,41 @@ class Manage::AvailabilityController < Manage::ApplicationController
   end
 
   private
+
+  # The packages holding borrowable items of the model (e.g. the buc where a
+  # synth lent to teachers is mounted), with the running reservations of each
+  # package's model, so that lending can warn when both are booked at once.
+  def packages_of(model)
+    model
+      .items
+      .where(inventory_pool_id: current_inventory_pool, is_borrowable: true,
+             retired: nil)
+      .where.not(parent_id: nil)
+      .includes(parent: :model)
+      .map(&:parent)
+      .uniq
+      .map do |package|
+        reservations = \
+          current_inventory_pool
+            .reservations
+            .where(model_id: package.model_id,
+                   status: %w[submitted approved signed])
+            .where('reservations.end_date >= ?', Time.zone.today)
+            .includes(:user)
+            .reorder(:start_date, :start_time)
+        { id: package.id,
+          name: "#{package.model.name} #{package.inventory_code}",
+          reservations: reservations.map do |r|
+            { id: r.id,
+              start_date: r.start_date,
+              end_date: r.end_date,
+              start_time: r.start_time.try(:strftime, '%H:%M'),
+              end_time: r.end_time.try(:strftime, '%H:%M'),
+              status: r.status,
+              user: r.user.name }
+          end }
+      end
+  end
 
   # The [start_time, end_time] ("HH:MM:SS") of the params, e.g. the time slot
   # chosen when adding or changing reservations; nil without one.

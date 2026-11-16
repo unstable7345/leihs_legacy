@@ -9,7 +9,7 @@
 
 class window.App.Availability extends Spine.Model
 
-  @configure "Availability", "inventory_pool_id", "model_id", "changes", "changes_by_window", "changes_by_period", "total_borrowable", "total_rentable", "in_stock"
+  @configure "Availability", "inventory_pool_id", "model_id", "changes", "changes_by_window", "changes_by_period", "total_borrowable", "total_rentable", "in_stock", "packages"
   
   @belongsTo "inventory_pool", "App.InventoryPool", "inventory_pool_id"
   @belongsTo "model", "App.Model", "model_id"

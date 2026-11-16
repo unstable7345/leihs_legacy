@@ -2350,6 +2350,9 @@ msgstr "%s étiquettes"
 msgid "Edit inventory code"
 msgstr "Modifier le code d'inventaire"
 
+msgid "In package %s, also booked: %s"
+msgstr "Dans le paquet %s, également réservé : %s"
+
 msgid "Tags"
 msgstr "Étiquettes"
 

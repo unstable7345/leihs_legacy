@@ -94,8 +94,11 @@ class ItemLine < Reservation
         errors.add(:base, _('The item is already retired'))
       end
 
-      # package check
-      errors.add(:base, _('The item belongs to a package')) if item.parent_id
+      # package check: a borrowable item in a package (e.g. a synth mounted
+      # in a buc, lent to teachers) can be lent on its own and stays in it
+      if item.parent_id and not item.is_borrowable
+        errors.add(:base, _('The item belongs to a package'))
+      end
     end
   end
 

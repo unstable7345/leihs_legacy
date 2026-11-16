@@ -34,8 +34,10 @@ class Model < ApplicationRecord
   # TODO: this is used by the filter
   has_many :unretired_items, -> { where(retired: nil) }, class_name: 'Item'
   # TODO:  do we need a :all_items ??
+  # including the borrowable ones in a package, lent on their own only to
+  # the named groups entitled to the model (see Entitlement.query)
   has_many(:borrowable_items,
-           -> { where(retired: nil, is_borrowable: true, parent_id: nil) },
+           -> { where(retired: nil, is_borrowable: true) },
            class_name: 'Item')
   has_many(:unborrowable_items,
            -> { where(retired: nil, is_borrowable: false) },

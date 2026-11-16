@@ -2341,6 +2341,9 @@ msgstr "%s tags"
 msgid "Edit inventory code"
 msgstr "Edit inventory code"
 
+msgid "In package %s, also booked: %s"
+msgstr "In package %s, also booked: %s"
+
 msgid "Tags"
 msgstr "Tags"
 

@@ -3143,6 +3143,10 @@ window.i18n.locale_data = {
          null,
          "Modifier le code d'inventaire"
       ],
+      "In package %s, also booked: %s": [
+         null,
+         "Dans le paquet %s, également réservé : %s"
+      ],
       "Tags": [
          null,
          "Étiquettes"

@@ -2401,6 +2401,9 @@ msgstr "%s Etiketten"
 msgid "Edit inventory code"
 msgstr "Inventarcode bearbeiten"
 
+msgid "In package %s, also booked: %s"
+msgstr "Im Paket %s, ebenfalls reserviert: %s"
+
 msgid "Tags"
 msgstr "Etiketten"
 
