@@ -29,7 +29,8 @@ class MailTemplate < ApplicationRecord
       end,
       comment: comment,
       purpose: order.purpose,
-      order_url: order.edit_url
+      order_url: order.edit_url,
+      rental_url: rental_url(order.customer_order_id || order.id)
     }.deep_stringify_keys
   end
 
@@ -50,7 +51,8 @@ class MailTemplate < ApplicationRecord
          end_date: l.end_date }.merge(time_slot_variables(l))
       end,
       quantity: reservations.to_a.sum(&:quantity),
-      due_date: reservations.first.end_date
+      due_date: reservations.first.end_date,
+      rental_url: rental_url
     }.deep_stringify_keys
   end
 
@@ -64,12 +66,27 @@ class MailTemplate < ApplicationRecord
       time_slot: (start_time and "#{start_time}–#{end_time}") }
   end
 
+  # Where the customer sees an order (or all of them) in borrow.
+  def self.rental_url(id = nil)
+    ebu = SystemAndSecuritySetting.first.external_base_url
+    "#{ebu}/borrow/rentals/#{id}"
+  end
+
+  # A template is plain text or Markdown; Markdown mails are sent as HTML by
+  # the mail service, which reads the format from the mail.
   def self.get_template(inventory_pool, name, language)
     l = language || Language.default_language
-    MailTemplate.find_by!(inventory_pool_id: inventory_pool.id,
-                          name: name,
-                          language: l,
-                          format: 'text')
+    MailTemplate
+      .where(inventory_pool_id: inventory_pool.id,
+             name: name,
+             language: l,
+             format: %w[text markdown])
+      .order(Arel.sql("format = 'markdown' DESC"))
+      .first!
+  end
+
+  def mail_format
+    format == 'markdown' ? 'markdown' : 'text'
   end
 
   private

@@ -29,6 +29,7 @@ module Mailer::User
                             subject: template.subject,
                             body: body,
                             template: name,
+                            format: template.mail_format,
                             source_pool_id: inventory_pool.id)
       visit_ids.each { |visit_id| EmailVisit.create!(email: email, visit_id: visit_id) }
     end
@@ -55,6 +56,7 @@ module Mailer::User
                             subject: template.subject,
                             body: body,
                             template: name,
+                            format: template.mail_format,
                             source_pool_id: inventory_pool.id)
       visit_ids.each { |visit_id| EmailVisit.create!(email: email, visit_id: visit_id) }
     end

@@ -24,6 +24,7 @@ module Mailer::Order
                   subject: template.subject,
                   body: body,
                   template: name,
+                  format: template.mail_format,
                   source_pool_id: order.inventory_pool.id)
   end
 
@@ -45,6 +46,7 @@ module Mailer::Order
                   subject: template.subject,
                   body: body,
                   template: name,
+                  format: template.mail_format,
                   source_pool_id: order.inventory_pool.id)
   end
 end
